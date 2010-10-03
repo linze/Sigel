@@ -1,0 +1,6 @@
+project Maqueta is
+
+   for Object_Dir use "/";
+
+end Maqueta;
+
