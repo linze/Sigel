@@ -14,6 +14,7 @@ package body VisualizarEstado is
         Ada.Text_IO.Put_Line("                   1 2 3 4          5 6 7 8");
         Ada.Text_IO.Put_Line("                                              X -> Comprado");
         Ada.Text_IO.Put_Line("                                              O -> Reservado");
+        Ada.Text_IO.Put_Line("                                              O -> Reservado");
     end MostrarEstado;
 
     procedure MostrarDatosEjemplo is
