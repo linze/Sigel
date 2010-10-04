@@ -1,31 +1,24 @@
 V "GNAT Lib v4.4"
-M P W=b
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U maqueta%b		maqueta.adb		ba01eabd NE OO SU
+U visualizarestado%b	visualizarestado.adb	c24391cb NE OO PK
 W ada%s			ada.ads			ada.ali
-W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
-W comprareserva%s	comprareserva.adb	comprareserva.ali
-W mprincipal%s		mprincipal.adb		mprincipal.ali
+
+U visualizarestado%s	visualizarestado.ads	e46371fa EE NE OO PK
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-except.ads		20090409232307 b54b55de
 D a-finali.ads		20090409232307 9eaacebd
 D a-filico.ads		20090409232307 9299732a
-D a-inteio.ads		20070406091342 03bc737c
 D a-ioexce.ads		20070406091342 be0900a0
 D a-stream.ads		20090409232307 34aca5be
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
-D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
-D comprareserva.ads	20101004105659 b0fe3df0
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
-D maqueta.adb		20101004105716 bd5daa67
-D mprincipal.ads	20101003192049 4a94fa38
 D system.ads		20100127090222 df55302f
 D s-crtl.ads		20090409232307 997234a1
 D s-exctab.ads		20090409232307 5c1c61ae
@@ -43,22 +36,18 @@ D s-stratt.ads		20090409232307 fef7c1da
 D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-wchcon.ads		20090409232307 ab028799
+D visualizarestado.ads	20101004105257 e46371fa
+D visualizarestado.adb	20101004104748 d8aa145f
 X 1 ada.ads
-16K9*Ada 19e8 15|7r6 8r6
-X 5 a-inteio.ads
-18K13*Integer_Text_IO[10|45] 15|8w10
-X 9 a-textio.ads
-48K13*Text_IO 506e16 15|7w10
-X 12 comprareserva.ads
-1K9*CompraReserva 8e18 15|10w6 18r20 19r20 20r20 21r20
-3U14*SimularCompra 15|18r34
-4U14*SimularReserva 15|19r34
-5U14*SimularModReserva 15|20r34
-6U14*VisualizarTeatro 15|21r34
-X 15 maqueta.adb
-12U11*Maqueta 12b11 25l5 25t12
-13i4 Opcion{integer} 15r10 16m7 17r12
-X 16 mprincipal.ads
-1K9*mprincipal 15|9w6 16r17 16|3e15
-2V13*MenuPrincipal{integer} 15|16r28
+16K9*Ada 19e8 30|1r6 5r9 6r9 7r9 8r9 9r9 10r9 11r9 12r9 13r9 14r9 15r9 16r9
+. 21r9 22r9 23r9 24r9 25r9 26r9 27r9 28r9
+X 8 a-textio.ads
+48K13*Text_IO 506e16 30|1w10 5r13 6r13 7r13 8r13 9r13 10r13 11r13 12r13 13r13
+. 14r13 15r13 16r13 21r13 22r13 23r13 24r13 25r13 26r13 27r13 28r13
+263U14*Put_Line 30|5r21 6r21 7r21 8r21 9r21 10r21 11r21 12r21 13r21 14r21
+. 15r21 16r21 21r21 22r21 23r21 24r21 25r21 26r21 27r21 28r21
+X 29 visualizarestado.ads
+1K9*VisualizarEstado 4l5 4e21 30|2b14 30l5 30t21
+2U15*MostrarEstado 30|3b15 17l9 17t22
+3U15*MostrarDatosEjemplo 30|19b15 29l9 29t28
 

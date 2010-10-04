@@ -1,6 +1,7 @@
 with Ada.Strings.Unbounded;
 with Ada.Strings.Unbounded.Text_IO;
 with Ada.Text_IO;
+with visualizarestado;
 
 package body CompraReserva is
 
@@ -14,10 +15,11 @@ package body CompraReserva is
       Ada.Text_IO.Put_Line ("2. Primer piso");
       Ada.Text_IO.Put_Line ("3. Patio");
       Ada.Strings.Unbounded.Text_IO.Get_Line (Tipo);
-      case Integer'Value(Ada.Strings.Ubounded.Text_IO.ToString(Tipo)) is
+      case Integer'Value(Ada.Strings.Unbounded.To_String(Tipo)) is
          when 1 => Ada.Text_IO.Put ("Numero: ");
          when others => Ada.Text_IO.Put ("Fila y butaca: ");
       end case;
+      Ada.Strings.Unbounded.Text_IO.Get_Line (Tmp);
    end PedirLocalidad;
 
 
@@ -53,7 +55,16 @@ package body CompraReserva is
 
    procedure SimularModReserva is
    begin
-      null;
+      Ada.Text_IO.Put_Line("Estado actual del teatro:");
+      visualizarestado.MostrarEstado;
+      visualizarestado.MostrarDatosEjemplo;
    end SimularModReserva;
 
+
+   procedure VisualizarTeatro is
+   begin
+      Ada.Text_IO.Put_Line("Estado actual del teatro:");
+      visualizarestado.MostrarEstado;
+      visualizarestado.MostrarDatosEjemplo;
+   end VisualizarTeatro;
 end CompraReserva;

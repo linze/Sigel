@@ -18,7 +18,7 @@ begin
          when 1 => comprareserva.SimularCompra;
          when 2 => comprareserva.SimularReserva;
          when 3 => comprareserva.SimularModReserva;
-         when 4 => null;
+         when 4 => comprareserva.VisualizarTeatro;
          when others => null;
       end case;
    end loop;

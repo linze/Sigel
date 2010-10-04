@@ -2,7 +2,7 @@ V "GNAT Lib v4.4"
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnvnnnnnnvnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
 
-U comprareserva%b	comprareserva.adb	7d6d9089 NE OO PK
+U comprareserva%b	comprareserva.adb	c6217389 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.strings%s		a-string.ads		a-string.ali
 W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
@@ -18,8 +18,9 @@ W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 W system.string_ops%s	s-strops.adb		s-strops.ali
 W system.val_int%s	s-valint.adb		s-valint.ali
+W visualizarestado%s	visualizarestado.adb	visualizarestado.ali
 
-U comprareserva%s	comprareserva.ads	d7c4d9d4 EE NE OO PK
+U comprareserva%s	comprareserva.ads	b0fe3df0 EE NE OO PK
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-charac.ads		20070912115821 506ce725
@@ -36,8 +37,8 @@ D a-suteio.ads		20090409232307 d857a771
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
 D a-unccon.ads		20070406091342 51e09df2
-D comprareserva.ads	20101003212941 d7c4d9d4
-D comprareserva.adb	20101003214046 7c208646
+D comprareserva.ads	20101004105659 b0fe3df0
+D comprareserva.adb	20101004105744 4435f098
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
 D system.ads		20100127090222 df55302f
@@ -63,37 +64,45 @@ D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-valint.ads		20090409232307 d23209d2
 D s-wchcon.ads		20090409232307 ab028799
+D visualizarestado.ads	20101004105257 e46371fa
 X 1 ada.ads
-16K9*Ada 19e8 17|1r6 2r6 3r6 8r14 9r13 11r7 12r7 13r7 14r10 15r10 16r10 18r10
-. 19r10 25r13 28r7 29r7 30r7 31r7 32r7 33r7 34r26 42r7 43r7 49r7 50r7
+16K9*Ada 19e8 17|1r6 2r6 3r6 9r14 10r13 12r7 13r7 14r7 15r7 16r7 17r7 18r26
+. 19r20 20r25 22r7 27r13 30r7 31r7 32r7 33r7 34r7 35r7 36r26 44r7 45r7 51r7
+. 52r7 58r7 66r7
 X 9 a-string.ads
-16K13*Strings 35e16 17|1r10 2r10 8r18 9r17 13r11 14r14 16r14 19r14 25r17
-. 29r11 31r11 33r11 34r30
+16K13*Strings 35e16 17|1r10 2r10 9r18 10r17 17r11 18r30 22r11 27r17 31r11
+. 33r11 35r11 36r30
 X 11 a-strunb.ads
-39K21*Unbounded 428e26 17|1w18 2r18 8r26 9r25 13r19 14r22 16r22 19r22 25r25
-. 29r19 31r19 33r19 34r38
-42R9*Unbounded_String 395e14 17|8r36 9r35 25r35
-63V13*To_String{string} 17|14r32 34r48
+39K21*Unbounded 428e26 17|1w18 2r18 9r26 10r25 17r19 18r38 22r19 27r25 31r19
+. 33r19 35r19 36r38
+42R9*Unbounded_String 395e14 17|9r36 10r35 27r35
+63V13*To_String{string} 17|18r48 36r48
 X 12 a-suteio.ads
-39K31*Text_IO 61e34 17|2w28 13r29 16r32 19r32 29r29 31r29 33r29
-50U14*Get_Line 17|13r37 16r40 19r40 29r37 31r37 33r37
+39K31*Text_IO 61e34 17|2w28 17r29 22r29 31r29 33r29 35r29
+50U14*Get_Line 17|17r37 22r37 31r37 33r37 35r37
 X 14 a-textio.ads
-48K13*Text_IO 506e16 17|3w10 11r11 12r11 15r14 18r14 28r11 30r11 32r11 42r11
-. 43r11 49r11 50r11
-242U14*Put 17|12r19 15r22 18r22
-263U14*Put_Line 17|11r19 28r19 30r19 32r19 42r19 43r19 49r19 50r19
+48K13*Text_IO 506e16 17|3w10 12r11 13r11 14r11 15r11 16r11 19r24 20r29 30r11
+. 32r11 34r11 44r11 45r11 51r11 52r11 58r11 66r11
+242U14*Put 17|19r32 20r37
+263U14*Put_Line 17|12r19 13r19 14r19 15r19 16r19 30r19 32r19 34r19 44r19
+. 45r19 51r19 52r19 58r19 66r19
 X 16 comprareserva.ads
-1K9*CompraReserva 7l5 7e18 17|5b14 59l5 59t18
-3U14*SimularCompra 17|40b14 45l8 45t21
-4U14*SimularReserva 17|47b14 52l8 52t22
-5U14*SimularModReserva 17|54b14 57l8 57t25
+1K9*CompraReserva 8l5 8e18 17|6b14 70l5 70t18
+3U14*SimularCompra 17|42b14 47l8 47t21
+4U14*SimularReserva 17|49b14 54l8 54t22
+5U14*SimularModReserva 17|56b14 61l8 61t25
+6U14*VisualizarTeatro 17|64b14 69l8 69t24
 X 17 comprareserva.adb
-7U14 PedirLocalidad 7b14 7>30 21l8 21t22 36r10
-7i30 Numero{integer} 11r58
-8r7 Tipo{11|42R9} 13m47 14r42
-9r7 Tmp{11|42R9} 16m49 19m49
-24U14 SimularPedirDatos 24b14 38l8 38t25 44r7 51r7
-25r7 Tmp{11|42R9} 29m46 31m46 33m46 34r58
-26i7 i{integer} 34m7 35r19
-35i11 j{integer} 36r25
+8U14 PedirLocalidad 8b14 8>30 23l8 23t22 38r10
+8i30 Numero{integer} 12r58
+9r7 Tipo{11|42R9} 17m47 18r58
+10r7 Tmp{11|42R9} 22m47
+26U14 SimularPedirDatos 26b14 40l8 40t25 46r7 53r7
+27r7 Tmp{11|42R9} 31m46 33m46 35m46 36r58
+28i7 i{integer} 36m7 37r19
+37i11 j{integer} 38r25
+X 43 visualizarestado.ads
+1K9*VisualizarEstado 17|4w6 59r7 60r7 67r7 68r7 43|4e21
+2U15*MostrarEstado 17|59r24 67r24
+3U15*MostrarDatosEjemplo 17|60r24 68r24
 
