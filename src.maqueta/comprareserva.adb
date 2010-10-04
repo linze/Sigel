@@ -9,15 +9,15 @@ package body CompraReserva is
       Tmp : Ada.Strings.Unbounded.Unbounded_String;
    begin
       Ada.Text_IO.Put_Line("Localidad #" & Integer'Image(Numero) );
-      Ada.Text_IO.Put ("Tipo: ");
+      Ada.Text_IO.Put_Line ("Tipo: ");
+      Ada.Text_IO.Put_Line ("1. Palco");
+      Ada.Text_IO.Put_Line ("2. Primer piso");
+      Ada.Text_IO.Put_Line ("3. Patio");
       Ada.Strings.Unbounded.Text_IO.Get_Line (Tipo);
-      if Ada.Strings.Unbounded.To_String(Tipo) = "palco" then
-         Ada.Text_IO.Put ("Numero: ");
-         Ada.Strings.Unbounded.Text_IO.Get_Line(Tmp);
-      else
-         Ada.Text_IO.Put ("Fila y asiento: ");
-         Ada.Strings.Unbounded.Text_IO.Get_Line(Tmp);
-      end if;
+      case Integer'Value(Ada.Strings.Ubounded.Text_IO.ToString(Tipo)) is
+         when 1 => Ada.Text_IO.Put ("Numero: ");
+         when others => Ada.Text_IO.Put ("Fila y butaca: ");
+      end case;
    end PedirLocalidad;
 
 
