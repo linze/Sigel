@@ -26,6 +26,6 @@ package body VisualizarEstado is
         Ada.Text_IO.Put_Line("  34587654Q   Cornelia Muro         Patio      F2       5        Reservada");
         Ada.Text_IO.Put_Line("                                    Patio      F2       6        Reservada");
         Ada.Text_IO.Put_Line("                                    Patio      F2       7        Reservada");
-        Ada.Text_IO.Put_Line("  69696969F   Senen Gonzalez        P.Fila     F2       5        Comprada");
+        Ada.Text_IO.Put_Line("  69696969F   Senen Gonzalez        P.Piso     F2       5        Comprada");
     end MostrarDatosEjemplo;
 end VisualizarEstado;

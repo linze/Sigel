@@ -2,7 +2,7 @@ V "GNAT Lib v4.4"
 P SS ZX
 R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U visualizarestado%b	visualizarestado.adb	c24391cb NE OO PK
+U visualizarestado%b	visualizarestado.adb	c9c2d917 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 
@@ -37,17 +37,17 @@ D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-wchcon.ads		20090409232307 ab028799
 D visualizarestado.ads	20101004105257 e46371fa
-D visualizarestado.adb	20101004104748 d8aa145f
+D visualizarestado.adb	20101004112902 d32b5c83
 X 1 ada.ads
 16K9*Ada 19e8 30|1r6 5r9 6r9 7r9 8r9 9r9 10r9 11r9 12r9 13r9 14r9 15r9 16r9
-. 21r9 22r9 23r9 24r9 25r9 26r9 27r9 28r9
+. 17r9 22r9 23r9 24r9 25r9 26r9 27r9 28r9 29r9
 X 8 a-textio.ads
 48K13*Text_IO 506e16 30|1w10 5r13 6r13 7r13 8r13 9r13 10r13 11r13 12r13 13r13
-. 14r13 15r13 16r13 21r13 22r13 23r13 24r13 25r13 26r13 27r13 28r13
+. 14r13 15r13 16r13 17r13 22r13 23r13 24r13 25r13 26r13 27r13 28r13 29r13
 263U14*Put_Line 30|5r21 6r21 7r21 8r21 9r21 10r21 11r21 12r21 13r21 14r21
-. 15r21 16r21 21r21 22r21 23r21 24r21 25r21 26r21 27r21 28r21
+. 15r21 16r21 17r21 22r21 23r21 24r21 25r21 26r21 27r21 28r21 29r21
 X 29 visualizarestado.ads
-1K9*VisualizarEstado 4l5 4e21 30|2b14 30l5 30t21
-2U15*MostrarEstado 30|3b15 17l9 17t22
-3U15*MostrarDatosEjemplo 30|19b15 29l9 29t28
+1K9*VisualizarEstado 4l5 4e21 30|2b14 31l5 31t21
+2U15*MostrarEstado 30|3b15 18l9 18t22
+3U15*MostrarDatosEjemplo 30|20b15 30l9 30t28
 
