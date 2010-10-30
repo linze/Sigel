@@ -11,7 +11,7 @@ interface
 
         TSala = class
         private
-        { Atributos }
+            { Atributos }
             FPatio           : array [1..4, 1..8] of TLocalidad;
             FPrimeraPlanta   : array [1..2, 1..8] of TLocalidad;
             FPalco           : array [1..4] of TLocalidad;
@@ -29,7 +29,7 @@ interface
             { Operaciones propias de la clase }
             function Buscar(Tipo :TTipoLocalidad; Numero: Integer;
                            Fila : Integer): TLocalidad;
-            procedure Cambiar(Tipo : TLocalidad);
+            procedure Cambiar(Localidad : TLocalidad);
         end;
 
 implementation
@@ -144,9 +144,15 @@ begin
      end;
 end;
 
-procedure TSala.Cambiar(Tipo: TLocalidad);
+procedure TSala.Cambiar(Localidad: TLocalidad);
 begin
-    // TODO: Implementar
+    case Localidad.GetTipo of
+    Patio:         FPatio[Localidad.GetFila, Localidad.GetNumero] := Localidad;
+    PrimeraPlanta: FPrimeraPlanta[Localidad.GetFila, Localidad.GetNumero] := Localidad;
+    // TODO: Verificar que al grupo le ha quedado claro que para los palcos
+    // usaremos el número y no la fila.
+    Palco:         FPalco[Localidad.GetNumero] := Localidad;
+    end;
 end;
 
 end.
