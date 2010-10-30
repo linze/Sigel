@@ -2,5 +2,6 @@
 *.ppu
 *.bak
 *.lpi
+*.lds
 Sigel
 backup/
