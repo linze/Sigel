@@ -4,27 +4,28 @@ unit CTipoEspera;
 
 interface
 
-	uses
-		CTipoLocalidad, PTipoListaEspera, PTipoEspera;
-	type
-	
-		{ TEspera }
-		
-		TNumero = 1..4;
-		TEspera = class
-		private
-			(*Atributos*)
-			FNombre        : String;
-			FTelefono      : longint;
-			FEmail         : String;
-			FNumero        : TNumero;
-			FTipoLocalidad : TTipoLocalidad;
-			FSiguiente     : TPEspera;
-		public
-			(*Constructor*)
-			Constructor Create();
+    uses
+        CTipoLocalidad, PTipoListaEspera;
+    type
+
+    { TEspera }
+
+        TNumero = 1..4;
+        TPEspera = ^TipoEspera;
+        TEspera = class
+        private
+        (*Atributos*)
+            FNombre        : String;
+            FTelefono      : longint;
+            FEmail         : String;
+            FNumero        : TNumero;
+            FTipoLocalidad : TTipoLocalidad;
+            FSiguiente     : TPEspera;
+        public
+            (*Constructor*)
+            Constructor Create();
 			
-			(* Métodos Set *)
+            (* Métodos Set *)
             procedure SetNombre (Nombre: String);
             procedure SetTelefono (Telefono: longint);
             procedure SetEmail (Email: String);
@@ -40,7 +41,7 @@ interface
             // TODO: Verificar que una función puede devolver estos tipos
             function GetTipoLocalidad: TTipoLocalidad;
             function GetSiguiente: TPEspera;
-		end;
+        end;
 			
 implementation
 
@@ -53,60 +54,60 @@ end.
 
 procedure TEspera.SetNombre (Nombre: String);
 begin
-	self.FNombre := Nombre;
+	Self.FNombre := Nombre;
 end.
 
 procedure TEspera.SetTelefono (Telefono: longint);
 begin
-	self.FTelefono := Telefono;
+	Self.FTelefono := Telefono;
 end;
 
 procedure SetEmail (Email: String);
 begin
-	self.FEmail := Email;
+	Self.FEmail := Email;
 end;
 
 procedure SetNumero (numero: TNumero);
 begin
-	self.FNumero := numero;
+	Self.FNumero := numero;
 end;
 
 procedure SetTipoLocalidad (TipoLocalidad: TTipoLocalidad);
 begin
-	self.FTipoLocalidad := TipoLocalidad;
+	Self.FTipoLocalidad := TipoLocalidad;
 end;
 
 procedure SetSiguiente (Siguiente: TPEspera);
 begin
-	self.FSiguiente := Siguiente;
+	Self.FSiguiente := Siguiente;
 end;
 
 function GetNombre: String;
 begin
-	GetNombre := self.FNombre;
+	GetNombre := Self.FNombre;
 end;
 
 function GetTelefono: longint; 
 begin
-	GetTelefono := self.FTelefono;
+	GetTelefono := Self.FTelefono;
 end;
 
 function GetEmail: String;
 begin
-	GetEmail := self.FEmail;
+	GetEmail := Self.FEmail;
 end;
 
 function GetNumero: TNumero;
 begin
-	GetNumero := self.FNumero;
+	GetNumero := Self.FNumero;
 end;
 
 function GetTipoLocalidad: TTipoLocalidad;
 begin
-	GetTipoLocalidad := self.FTipoLocalidad
+	GetTipoLocalidad := Self.FTipoLocalidad
 end;
 
 function GetSiguiente: TPEspera;
 begin
-	GetSiguiente := self.FSiguiente
+	GetSiguiente := Self.FSiguiente
 end;

@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="4"/>
+      <ActiveEditorIndexAtStart Value="5"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -30,15 +30,15 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="9">
       <Unit0>
         <Filename Value="Sigel.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Sigel"/>
         <CursorPos X="38" Y="14"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="5"/>
-        <UsageCount Value="23"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
@@ -49,7 +49,7 @@
         <UnitName Value="PrincipalFrm"/>
         <CursorPos X="23" Y="12"/>
         <TopLine Value="8"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
       </Unit1>
       <Unit2>
         <Filename Value="ctipolocalidad.pas"/>
@@ -58,27 +58,27 @@
         <CursorPos X="28" Y="7"/>
         <TopLine Value="1"/>
         <EditorIndex Value="2"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="cestadolocalidad.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CEstadoLocalidad"/>
-        <CursorPos X="60" Y="7"/>
+        <CursorPos X="89" Y="11"/>
         <TopLine Value="1"/>
         <EditorIndex Value="3"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="clocalidad.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CLocalidad"/>
-        <CursorPos X="5" Y="93"/>
-        <TopLine Value="33"/>
+        <CursorPos X="5" Y="6"/>
+        <TopLine Value="1"/>
         <EditorIndex Value="4"/>
-        <UsageCount Value="23"/>
+        <UsageCount Value="24"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -88,7 +88,7 @@
         <CursorPos X="18" Y="10"/>
         <TopLine Value="1"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
       </Unit5>
       <Unit6>
@@ -96,12 +96,27 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
         <CursorPos X="77" Y="65"/>
-        <TopLine Value="56"/>
+        <TopLine Value="1"/>
         <EditorIndex Value="0"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
-        <FoldState Value=" T1iP5N0313121 PfiM5Q"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="cptipoespera.pas"/>
+        <UnitName Value="CPTipoEspera"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <UsageCount Value="10"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="ctipoespera.pas"/>
+        <UnitName Value="CTipoEspera"/>
+        <CursorPos X="35" Y="14"/>
+        <TopLine Value="9"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit8>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
