@@ -76,7 +76,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CLocalidad"/>
         <CursorPos X="6" Y="47"/>
-        <TopLine Value="1"/>
+        <TopLine Value="25"/>
         <EditorIndex Value="4"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
@@ -95,8 +95,8 @@
         <Filename Value="csala.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
-        <CursorPos X="11" Y="142"/>
-        <TopLine Value="47"/>
+        <CursorPos X="13" Y="62"/>
+        <TopLine Value="56"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
