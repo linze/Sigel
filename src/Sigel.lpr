@@ -7,7 +7,8 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, PrincipalFrm, LResources, CTipoLocalidad, CEstadoLocalidad, CLocalidad
+  Forms, PrincipalFrm, LResources, CTipoLocalidad, CEstadoLocalidad, CLocalidad,
+CFecha
   { you can add units after this };
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
