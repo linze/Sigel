@@ -11,7 +11,7 @@ interface
     { TEspera }
 
         TNumero = 1..4;
-        TPEspera = ^TipoEspera;
+        TPEspera = ^TEspera;
         TEspera = class
         private
         (*Atributos*)
