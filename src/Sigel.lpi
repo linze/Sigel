@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="10"/>
+      <ActiveEditorIndexAtStart Value="3"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -30,14 +30,14 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="17">
+    <Units Count="18">
       <Unit0>
         <Filename Value="Sigel.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Sigel"/>
-        <CursorPos X="69" Y="7"/>
+        <CursorPos X="125" Y="26"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="9"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -47,9 +47,9 @@
         <ComponentName Value="frmPrincipal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
-        <CursorPos X="41" Y="14"/>
+        <CursorPos X="82" Y="6"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="10"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit1>
@@ -59,7 +59,7 @@
         <UnitName Value="CTipoLocalidad"/>
         <CursorPos X="28" Y="7"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="4"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -67,9 +67,9 @@
         <Filename Value="cestadolocalidad.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CEstadoLocalidad"/>
-        <CursorPos X="89" Y="11"/>
+        <CursorPos X="99" Y="10"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="5"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -79,7 +79,7 @@
         <UnitName Value="CLocalidad"/>
         <CursorPos X="5" Y="6"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="6"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
       </Unit4>
@@ -98,7 +98,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
         <CursorPos X="77" Y="65"/>
-        <TopLine Value="43"/>
+        <TopLine Value="49"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
@@ -115,8 +115,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CTipoEspera"/>
         <CursorPos X="35" Y="14"/>
-        <TopLine Value="9"/>
-        <EditorIndex Value="5"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="7"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit8>
@@ -128,7 +128,7 @@
         <UnitName Value="ComprarFrm"/>
         <CursorPos X="49" Y="9"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="11"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit9>
@@ -140,55 +140,80 @@
         <UnitName Value="ReservaFrm"/>
         <CursorPos X="53" Y="3"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="15"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit10>
       <Unit11>
         <Filename Value="clistareservas.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="clistareservas"/>
+        <UnitName Value="CListaReservas"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="2"/>
         <UsageCount Value="21"/>
-        <SyntaxHighlighter Value="Text"/>
+        <Loaded Value="True"/>
       </Unit11>
       <Unit12>
         <Filename Value="ctipolistaespera.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="ctipolistaespera"/>
+        <UnitName Value="CTipoListaEspera"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="8"/>
         <UsageCount Value="21"/>
-        <SyntaxHighlighter Value="Text"/>
+        <Loaded Value="True"/>
       </Unit12>
       <Unit13>
         <Filename Value="crepresentacion.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="crepresentacion"/>
+        <UnitName Value="CRepresentacion"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="14"/>
         <UsageCount Value="21"/>
-        <SyntaxHighlighter Value="Text"/>
+        <Loaded Value="True"/>
       </Unit13>
       <Unit14>
         <Filename Value="cptlistareservas.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="cptlistareservas"/>
+        <UnitName Value="CPTListaReservas"/>
+        <CursorPos X="9" Y="6"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="13"/>
         <UsageCount Value="21"/>
-        <SyntaxHighlighter Value="Text"/>
+        <Loaded Value="True"/>
       </Unit14>
       <Unit15>
         <Filename Value="cprepresentacion.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="cprepresentacion"/>
+        <UnitName Value="CPRepresentacion"/>
+        <CursorPos X="1" Y="1"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="12"/>
         <UsageCount Value="21"/>
-        <SyntaxHighlighter Value="Text"/>
+        <Loaded Value="True"/>
       </Unit15>
       <Unit16>
         <Filename Value="creserva.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CReserva"/>
-        <CursorPos X="5" Y="157"/>
-        <TopLine Value="138"/>
-        <EditorIndex Value="10"/>
+        <CursorPos X="97" Y="59"/>
+        <TopLine Value="17"/>
+        <EditorIndex Value="16"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit16>
+      <Unit17>
+        <Filename Value="cptreserva.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="CPTReserva"/>
+        <CursorPos X="38" Y="11"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit17>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>

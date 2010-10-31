@@ -10,7 +10,7 @@ uses
   Forms, PrincipalFrm, LResources, CTipoLocalidad, CEstadoLocalidad, CLocalidad,
     CFecha, CSala, ComprarFrm, ReservaFrm, CTipoEspera, clistareservas,
     ctipolistaespera, crepresentacion, cptlistareservas,
-    cprepresentacion, creserva
+    cprepresentacion, creserva, CPTReserva
   { you can add units after this };
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
