@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="5"/>
+      <ActiveEditorIndexAtStart Value="6"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -30,13 +30,13 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="9">
+    <Units Count="11">
       <Unit0>
         <Filename Value="Sigel.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Sigel"/>
-        <CursorPos X="38" Y="14"/>
-        <TopLine Value="1"/>
+        <CursorPos X="5" Y="22"/>
+        <TopLine Value="5"/>
         <EditorIndex Value="6"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
@@ -48,8 +48,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
         <CursorPos X="23" Y="12"/>
-        <TopLine Value="8"/>
+        <TopLine Value="7"/>
+        <EditorIndex Value="7"/>
         <UsageCount Value="24"/>
+        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="ctipolocalidad.pas"/>
@@ -96,7 +98,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
         <CursorPos X="77" Y="65"/>
-        <TopLine Value="1"/>
+        <TopLine Value="43"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
@@ -117,6 +119,30 @@
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit8>
+      <Unit9>
+        <Filename Value="comprarfrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmComprar"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ComprarFrm"/>
+        <CursorPos X="49" Y="9"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="8"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="reservafrm.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmReserva"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="ReservaFrm"/>
+        <CursorPos X="22" Y="8"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="9"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+      </Unit10>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
