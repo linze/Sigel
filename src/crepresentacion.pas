@@ -5,13 +5,15 @@ unit CRepresentacion;
 interface
 
 uses
-  CPRepresentacion,CSala;
+  CSala;
 
 type
+    TPRepresentacion = ^TRepresentacion;
     TRepresentacion = record
                     SiguienteRepresentacion : TPRepresentacion;
                     Sala : TSala;
     end;
+
 
 implementation
 end.

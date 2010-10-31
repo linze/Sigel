@@ -93,7 +93,7 @@ var
 begin
     salir := false;
     i := 1
-    while (i <= 4) adn (not salir) do
+    while (i <= 4) and (not salir) do
     begin
         if Self.FLocalidades[i].EstaOcupado then
         begin
@@ -142,7 +142,7 @@ end;
 
 function TReserva.GetCantidad: 1..4;
 begin
-    GetCantidad := Seld.FCantidad;
+    GetCantidad := Self.FCantidad;
 end;
 
 function TReserva.GetSiguiente: PTReserva;
