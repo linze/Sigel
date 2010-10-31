@@ -8,7 +8,9 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, PrincipalFrm, LResources, CTipoLocalidad, CEstadoLocalidad, CLocalidad,
-CFecha, CSala, ComprarFrm, ReservaFrm, CTipoEspera, clistareservas, ctipolistaespera, crepresentacion, cptlistareservas, cprepresentacion
+    CFecha, CSala, ComprarFrm, ReservaFrm, CTipoEspera, clistareservas,
+    ctipolistaespera, crepresentacion, cptlistareservas,
+    cprepresentacion, creserva
   { you can add units after this };
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
