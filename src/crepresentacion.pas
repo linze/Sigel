@@ -8,9 +8,9 @@ uses
   CSala;
 
 type
-    TPRepresentacion = ^TRepresentacion;
+    PTRepresentacion = ^TRepresentacion;
     TRepresentacion = record
-                    SiguienteRepresentacion : TPRepresentacion;
+                    SiguienteRepresentacion : PTRepresentacion;
                     Sala : TSala;
     end;
 

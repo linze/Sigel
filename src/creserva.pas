@@ -5,46 +5,50 @@ unit CReserva;
 interface
 
     uses
-        CLocalidad,CPTReserva, CFecha;
+        CLocalidad, CFecha;
     type
 
-    { TReserva }
+        { PTReserva }
+        PTReserva = ^TReserva;
+        { TReserva }
 
-    TReserva = class;
-    private
-        FFecha:       TFecha;
-        FNombre:      String;
-        FDNI:         String;
-        FTelefono:    Integer;
-        FEmail:       String;
-        FLocalidades: array [1..4] of TLocalidad;
-        FCantidad:    1..4;
-        FSiguiente:   PTReserva;
-    public
-       { Constructores y destructores }
-        constructor Create;
+        TReserva = class
+        private
+            FFecha:       TFecha;
+            FNombre:      String;
+            FDNI:         String;
+            FTelefono:    Integer;
+            FEmail:       String;
+            FLocalidades: array [1..4] of TLocalidad;
+            FCantidad:    1..4;
+            FSiguiente:   PTReserva;
+        public
+           { Constructores y destructores }
+            constructor Create;
 
-        { Métodos Set }
-        procedure SetFecha(Fecha: TFecha);
-        procedure SetNombre(Nombre: String);
-        procedure SetDNI(DNI: String);
-        procedure SetTelefono(Telefono: Integer);
-        procedure SetEmail(Email: String);
-        procedure SetSiguiente(Reserva: PTReserva);
+            { Métodos Set }
+            procedure SetFecha(Fecha: TFecha);
+            procedure SetNombre(Nombre: String);
+            procedure SetDNI(DNI: String);
+            procedure SetTelefono(Telefono: Integer);
+            procedure SetEmail(Email: String);
+            procedure SetSiguiente(Reserva: PTReserva);
 
-        { Método para añadir una localidad a la reserva }
-        procedure AddLocalidad(Localidad: TLocalidad);
+            { Método para añadir una localidad a la reserva }
+            procedure AddLocalidad(Localidad: TLocalidad);
 
-        { Métodos Get }
-        function GetFecha: TFecha;
-        function GetNombre: String;
-        function GetDNI: String;
-        function GetTelefono: Integer;
-        function GetEmail: String;
-        function GetCantidad: 1..4;
-        function GetSiguiente: PTReserva ;
-        function GetLocalidad(Indice: 1..4): TLocalidad;
-    end;
+            { Métodos Get }
+            function GetFecha: TFecha;
+            function GetNombre: String;
+            function GetDNI: String;
+            function GetTelefono: Integer;
+            function GetEmail: String;
+            // TODO: Esto debería de ser un 1..4, pero ¿no se permite?
+            function GetCantidad: Integer;
+            function GetSiguiente: PTReserva ;
+            // TODO: Esto debería de admitir como parámetro 1..4, pero no
+            function GetLocalidad(Indice: Integer): TLocalidad;
+        end;
 
 
 
@@ -53,7 +57,7 @@ implementation
 
 constructor TReserva.Create();
 begin
-    Self.Cantidad := 0;
+    Self.FCantidad := 0;
 end;
 
 procedure TReserva.SetFecha(Fecha: TFecha);
@@ -78,7 +82,7 @@ end;
 
 procedure TReserva.SetEmail(Email: String);
 begin
-    Self.FEmail := Email,
+    Self.FEmail := Email;
 end;
 
 procedure TReserva.SetSiguiente(Reserva: PTReserva);
@@ -92,7 +96,7 @@ var
     salir: boolean;
 begin
     salir := false;
-    i := 1
+    i := 1;
     while (i <= 4) and (not salir) do
     begin
         if Self.FLocalidades[i].EstaOcupado then
@@ -103,13 +107,13 @@ begin
                 //TODO Excepcion, 4 plazas ocupadas ya, nos e puede añadir
             end;
             i := i + 1;
-        end;
+        end
         //Si no está ocupada una plaza de la reserva, la asignamos a la
         //deseada, incrementamos la cantidad de la reserva y salimos.
         else
         begin
             Self.FLocalidades[i] := Localidad;
-            Self.Cantidad := Self.Cantidad + 1;
+            Self.FCantidad := Self.FCantidad + 1;
             salir := true;
         end;
     end;
@@ -140,7 +144,7 @@ begin
     GetEmail := Self.FEmail;
 end;
 
-function TReserva.GetCantidad: 1..4;
+function TReserva.GetCantidad: Integer;
 begin
     GetCantidad := Self.FCantidad;
 end;
@@ -150,7 +154,7 @@ begin
     GetSiguiente := Self.FSiguiente;
 end;
 
-function TReserva.GetLocalidad(Indice: 1..4): TLocalidad;
+function TReserva.GetLocalidad(Indice: Integer): TLocalidad;
 begin
     GetLocalidad := FLocalidades[Indice];
 end;
