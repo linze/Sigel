@@ -1,4 +1,11 @@
 *.o
 *.ppu
 *.bak
+*.lpi
+Sigel.lpi
+*.lds
+*.lfm
+*.lrs
+
+Sigel
 backup/
