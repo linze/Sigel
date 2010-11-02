@@ -3,6 +3,7 @@ object frmPrincipal: TfrmPrincipal
   Height = 615
   Top = 85
   Width = 1083
+  ActiveControl = Button1
   Caption = 'frmPrincipal'
   ClientHeight = 615
   ClientWidth = 1083

@@ -5,49 +5,39 @@ unit CReserva;
 interface
 
     uses
-        CLocalidad, CFecha;
+        CLocalidad, Classes;
     type
-
-        { PTReserva }
-        PTReserva = ^TReserva;
         { TReserva }
 
         TReserva = class
         private
-            FFecha:       TFecha;
+            FFecha:       TDateTime;
             FNombre:      String;
-            FDNI:         String;
-            FTelefono:    Integer;
+            FDni:         String;
+            FTelefono:    String;
             FEmail:       String;
             FLocalidades: array [1..4] of TLocalidad;
-            FCantidad:    1..4;
-            FSiguiente:   PTReserva;
+            FCantidad:    Integer;
         public
            { Constructores y destructores }
             constructor Create;
 
-            { Métodos Set }
-            procedure SetFecha(Fecha: TFecha);
-            procedure SetNombre(Nombre: String);
-            procedure SetDNI(DNI: String);
-            procedure SetTelefono(Telefono: Integer);
-            procedure SetEmail(Email: String);
-            procedure SetSiguiente(Reserva: PTReserva);
+            { Propiedades }
+            property Fecha: TDateTime read FFecha write FFecha;
+            property Nombre: String read FNombre write FNombre;
+            property Dni: String read FDni write FDni;
+            property Telefono: String read FTelefono write FTelefono;
+            property Email: String read FEmail write FEmail;
+            // Cantidad es sólo lectura
+            property Cantidad : Integer read FCantidad;
 
-            { Método para añadir una localidad a la reserva }
+            { Métodos propios de clase }
             procedure AddLocalidad(Localidad: TLocalidad);
-
-            { Métodos Get }
-            function GetFecha: TFecha;
-            function GetNombre: String;
-            function GetDNI: String;
-            function GetTelefono: Integer;
-            function GetEmail: String;
-            // TODO: Esto debería de ser un 1..4, pero ¿no se permite?
-            function GetCantidad: Integer;
-            function GetSiguiente: PTReserva ;
-            // TODO: Esto debería de admitir como parámetro 1..4, pero no
             function GetLocalidad(Indice: Integer): TLocalidad;
+
+            { Para guardar-extraer desde ficheros }
+            procedure LeerDatos (Lector : TReader);
+            procedure EscribirDatos (Escritor: TWriter);
         end;
 
 
@@ -55,39 +45,9 @@ interface
 implementation
 { TReserva }
 
-constructor TReserva.Create();
+constructor TReserva.Create;
 begin
     Self.FCantidad := 0;
-end;
-
-procedure TReserva.SetFecha(Fecha: TFecha);
-begin
-    Self.FFecha := Fecha;
-end;
-
-procedure TReserva.SetNombre(Nombre: String);
-begin
-    Self.FNombre := Nombre;
-end;
-
-procedure TReserva.SetDNI(DNI: String);
-begin
-    Self.FDNI := DNI;
-end;
-
-procedure TReserva.SetTelefono(Telefono: Integer);
-begin
-    Self.FTelefono := Telefono;
-end;
-
-procedure TReserva.SetEmail(Email: String);
-begin
-    Self.FEmail := Email;
-end;
-
-procedure TReserva.SetSiguiente(Reserva: PTReserva);
-begin
-    Self.FSiguiente := Reserva;
 end;
 
 procedure TReserva.AddLocalidad(Localidad: TLocalidad);
@@ -119,43 +79,35 @@ begin
     end;
 end;
 
-function TReserva.GetFecha: TFecha;
-begin
-    GetFecha := Self.FFecha;
-end;
-
-function TReserva.GetNombre: String;
-begin
-    GetNombre := Self.FNombre;
-end;
-
-function TReserva.GetDNI: String;
-begin
-    GetDNI := Self.FDNI;
-end;
-
-function TReserva.GetTelefono: Integer;
-begin
-    GetTelefono := Self.FTelefono;
-end;
-
-function TReserva.GetEmail: String;
-begin
-    GetEmail := Self.FEmail;
-end;
-
-function TReserva.GetCantidad: Integer;
-begin
-    GetCantidad := Self.FCantidad;
-end;
-
-function TReserva.GetSiguiente: PTReserva;
-begin
-    GetSiguiente := Self.FSiguiente;
-end;
-
 function TReserva.GetLocalidad(Indice: Integer): TLocalidad;
 begin
     GetLocalidad := FLocalidades[Indice];
 end;
+
+procedure TReserva.LeerDatos(Lector: TReader);
+begin
+    Self.FFecha := Lector.ReadDate;
+    Self.FNombre := Lector.ReadString;
+    Self.FDni := Lector.ReadString;
+    Self.FTelefono := Lector.ReadString;
+    Self.FEmail := Lector.ReadString;
+    Self.FLocalidades[1].LeerDatos(Lector);
+    Self.FLocalidades[2].LeerDatos(Lector);
+    Self.FLocalidades[3].LeerDatos(Lector);
+    Self.FLocalidades[4].LeerDatos(Lector);
+end;
+
+procedure TReserva.EscribirDatos(Escritor: TWriter);
+begin
+    Escritor.WriteDate(Self.FFecha);
+    Escritor.WriteString(Self.FNombre);
+    Escritor.WriteString(Self.FDni);
+    Escritor.WriteString(Self.FTelefono);
+    Escritor.WriteString(Self.FEmail);
+    Self.FLocalidades[1].EscribirDatos(Escritor);
+    Self.FLocalidades[2].EscribirDatos(Escritor);
+    Self.FLocalidades[3].EscribirDatos(Escritor);
+    Self.FLocalidades[4].EscribirDatos(Escritor);
+end;
+
 end.

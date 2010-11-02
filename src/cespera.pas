@@ -5,44 +5,32 @@ unit CEspera;
 interface
 
     uses
-        CLocalidad, CTipoLocalidad;
+        CLocalidad, CTipoLocalidad, Classes;
 
     type
-        { PTEspera }
-        PTEspera = ^TEspera;
-
         { TEspera }
-
-        TNumero = 1..4;
         TEspera = class
         private
         (*Atributos*)
             FNombre        : String;
-            FTelefono      : longint;
+            FTelefono      : String;
             FEmail         : String;
-            FNumero        : TNumero;
+            FNumero        : Integer;
             FTipoLocalidad : TTipoLocalidad;
-            FSiguiente     : PTEspera;
         public
-            (*Constructor*)
-            Constructor Create();
+            { Constructor}
+            constructor Create;
 			
-            (* Métodos Set *)
-            procedure SetNombre (Nombre: String);
-            procedure SetTelefono (Telefono: longint);
-            procedure SetEmail (Email: String);
-            procedure SetNumero (numero: TNumero);
-            procedure SetTipoLocalidad (TipoLocalidad: TTipoLocalidad);
-            procedure SetSiguiente (Siguiente: PTEspera);
+            { Propiedades }
+            property Nombre:String read FNombre write FNombre;
+            property Telefono:String read FTelefono write FTelefono;
+            property Email: String read FEmail write FEmail;
+            property Numero: Integer read FNumero write FNumero;
+            property TipoLocalidad: TTipoLocalidad read FTipoLocalidad write FTipoLocalidad;
 
-            (* Métodos Get *)
-            function GetNombre: String;
-            function GetTelefono: longint;
-            function GetEmail: String;
-            function GetNumero: TNumero;
-            // TODO: Verificar que una función puede devolver estos tipos
-            function GetTipoLocalidad: TTipoLocalidad;
-            function GetSiguiente: PTEspera;
+            { Para guardar-extraer desde ficheros }
+            procedure LeerDatos (Lector : TReader);
+            procedure EscribirDatos (Escritor: TWriter);
         end;
 			
 implementation
@@ -54,64 +42,25 @@ begin
 	// TODO: Hacer
 end;
 
-procedure TEspera.SetNombre (Nombre: String);
+procedure TEspera.LeerDatos(Lector: TReader);
 begin
-	Self.FNombre := Nombre;
+    Self.FNombre := Lector.ReadString;
+    Self.FTelefono := Lector.ReadString;
+    Self.FEmail := Lector.ReadString;
+    Self.FNumero := Lector.ReadInteger;
+    // NOTICE: Comprobar si este tipo de casting funciona
+    Self.FTipoLocalidad := TTipoLocalidad(Lector.ReadInteger);
 end;
 
-procedure TEspera.SetTelefono (Telefono: longint);
+procedure TEspera.EscribirDatos(Escritor: TWriter);
 begin
-	Self.FTelefono := Telefono;
+    Escritor.WriteString(Self.FNombre);
+    Escritor.WriteString(Self.FTelefono);
+    Escritor.WriteString(Self.FEmail);
+    Escritor.WriteInteger(Self.FNumero);
+    Escritor.WriteInteger(ord(Self.FTipoLocalidad));
 end;
 
-procedure TEspera.SetEmail (Email: String);
-begin
-	Self.FEmail := Email;
-end;
 
-procedure TEspera.SetNumero (numero: TNumero);
-begin
-	Self.FNumero := numero;
-end;
-
-procedure TEspera.SetTipoLocalidad (TipoLocalidad: TTipoLocalidad);
-begin
-	Self.FTipoLocalidad := TipoLocalidad;
-end;
-
-procedure TEspera.SetSiguiente (Siguiente: PTEspera);
-begin
-	Self.FSiguiente := Siguiente;
-end;
-
-function TEspera.GetNombre: String;
-begin
-	GetNombre := Self.FNombre;
-end;
-
-function TEspera.GetTelefono: longint;
-begin
-	GetTelefono := Self.FTelefono;
-end;
-
-function TEspera.GetEmail: String;
-begin
-	GetEmail := Self.FEmail;
-end;
-
-function TEspera.GetNumero: TNumero;
-begin
-	GetNumero := Self.FNumero;
-end;
-
-function TEspera.GetTipoLocalidad: TTipoLocalidad;
-begin
-	GetTipoLocalidad := Self.FTipoLocalidad
-end;
-
-function TEspera.GetSiguiente: PTEspera;
-begin
-	GetSiguiente := Self.FSiguiente
-end;
 
 end.

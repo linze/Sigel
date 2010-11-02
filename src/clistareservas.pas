@@ -5,37 +5,25 @@ unit CListaReservas;
 interface
 
     uses
-        CFecha, CReserva, CEstadoLocalidad;
+        CReserva, CEstadoLocalidad, Classes, SysUtils;
 
     type
-        {PTListaReservas}
-
-        PTListaReservas = ^TListaReservas;
-
         {TListaReservas}
 
-        TListaReservas = class
+        // TODO: Implementar como clase hija de TFileObjectList
+        TListaReservas = class (TList)
         private
             { Atributos }
-
-            FFecha : TFecha;
-            FReservas : PTReserva;
-            FSiguienteLista : PTListaReservas;
+            FFecha : TDateTime;
 
         public
             { Constructores y destructores }
             constructor Create();
 
-            { Métodos de asignación de atributos }
-            procedure SetFecha(Fecha: TFecha);
-            procedure SetSiguiente(ListaReservas : TListaReservas);
-
-            { Métodos de obtención de atributos }
-            function GetFecha: TFecha;
-            function GetSiguiente: PTListaReservas;
+            { Propiedades }
+            property Fecha: TDateTime read FFecha write FFecha;
 
             { Operaciones propias de la clase }
-            procedure AddReserva(Reserva : PTReserva);
             function BuscarReserva(Telefono : integer; Nombre : String):TReserva;
             procedure AnularReserva(Telefono : integer; Nombre : String);
             function ExisteReserva(Telefono : integer; Nombre : String):boolean;
@@ -49,44 +37,9 @@ implementation
 
 constructor TListaReservas.Create();
 begin
-    Self.FReservas := NIL;
-    Self.FSiguienteLista := NIL;
+
 end;
-
-{ Métodos de asignación de atributos }
-
-procedure TListaReservas.SetFecha(Fecha: TFecha);
-begin
-    Self.FFecha.Dia := Fecha.Dia;
-    Self.FFecha.Mes := Fecha.Mes;
-end;
-
-procedure TListaReservas.SetSiguiente(ListaReservas : TListaReservas);
-begin
-    Self.FSiguienteLista^ :=  ListaReservas;
-end;
-
-{ Métodos de obtención de atributos }
-
-function TListaReservas.GetFecha: TFecha;
-begin
-    GetFecha:=Self.FFecha;
-end;
-
-function TListaReservas.GetSiguiente: PTListaReservas;
-begin
-    GetSiguiente := Self.FSiguienteLista;
-end;
-
-{ Operaciones propias de la clase }
-
-{AddReserva}
-procedure TListaReservas.AddReserva(Reserva : PTReserva);
-begin
-    Reserva^.SetSiguiente(Self.FReservas);
-    // TODO: ¿Es esto lo que se pretende hacer?
-    Self.FReservas := Reserva;
-end;
+ { Operaciones propias de la clase }
 
 {BuscarReserva}
 // TODO: Revisar si este método funciona.
@@ -95,42 +48,10 @@ end;
 function TListaReservas.BuscarReserva(Telefono : integer; Nombre : String):TReserva;
 var
     encontrado : boolean;
-    auxFecha : PTListaReservas;
-    auxRes : PTReserva;
 begin
     encontrado := false;
-    // Empieza a buscar por el principio
-    auxFecha^ := Self;
-    auxRes := auxFecha^.FReservas;
-    while not encontrado do
-    begin
-        // Si encuentra la reserva o llega al final de la lista
-        // devuelve el puntero que corresponda
-        if ((auxRes^.GetNombre() = Nombre) and (auxRes^.GetTelefono() = Telefono)) then
-        begin
-            encontrado := true;
-            BuscarReserva := auxRes^;
-        end
-        // Si no la encuentra continua por el siguiente
-        // hasta que lo haga o llegue al final de la lista de reservas
-        else
-        begin
-            auxRes := FReservas^.GetSiguiente;
-            if  (auxRes = NIL) then
-            begin
-                // TODO: ¿Es esto lo que se pretende?
-                auxFecha^ := Self.FSiguienteLista^;
-                if (auxFecha = NIL) then
-                begin
-                    encontrado := true;
-                    BuscarReserva := auxRes^;
-                end
-                else
-                    auxRes := auxFecha^.FReservas;
-            end; // if
-        end; // sentencia else
-    end; // while
-end; // BuscarReserva
+    // TODO: Implementar
+end;
 
 {AnularReserva}
 // TODO: Chequear método.
@@ -144,10 +65,10 @@ var
 begin
     if Self.ExisteReserva(Telefono,Nombre) then
     begin
-        index := Self.BuscarReserva(Telefono,Nombre).GetCantidad();
+        index := Self.BuscarReserva(Telefono,Nombre).Cantidad;
         for i := 1 to index do
         begin
-              Self.BuscarReserva(Telefono,Nombre).GetLocalidad(index).SetEstado (Libre);
+              Self.BuscarReserva(Telefono,Nombre).GetLocalidad(index).Estado := Libre;
         end;
     end;
 end;

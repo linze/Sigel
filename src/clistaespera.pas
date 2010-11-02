@@ -3,15 +3,15 @@ unit CListaEspera;
 {$mode objfpc}{$H+}
 
 interface
-    uses
-        CFecha, CEspera;
-    type
 
-        PTListaEspera = ^TListaEspera;
-        TListaEspera = record
-            FFechas        : TFecha;
-            FEsperas       : PTEspera;
-            FSiguiente     : PTListaEspera;
+    type
+        // TODO: Implementar herencia desde TObjectList
+        // NOTE: Contendrá items TEspera
+        TListaEspera = class
+        private
+            FFecha        : TDateTime;
+        public
+            property Fecha:TDateTime read FFecha write FFecha;
         end;
         
 implementation

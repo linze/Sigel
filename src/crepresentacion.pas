@@ -4,15 +4,9 @@ unit CRepresentacion;
 
 interface
 
-uses
-  CSala;
 
-type
-    PTRepresentacion = ^TRepresentacion;
-    TRepresentacion = record
-                    SiguienteRepresentacion : PTRepresentacion;
-                    Sala : TSala;
-    end;
+
+    // TODO: Borrar fichero
 
 
 implementation
