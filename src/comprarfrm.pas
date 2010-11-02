@@ -21,7 +21,7 @@ var
 implementation
 
 initialization
-  {$I comprarfrm.lrs}
+  { $I comprarfrm.lrs }
 
 end.
 

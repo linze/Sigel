@@ -4,8 +4,7 @@
 *.lpi
 Sigel.lpi
 *.lds
-*.lfm
-*.lrs
+Sigel.compiled
 
 Sigel
 backup/
