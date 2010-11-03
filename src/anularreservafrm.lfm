@@ -1,0 +1,8 @@
+object frmAnularReserva: TfrmAnularReserva
+  Left = 290
+  Height = 300
+  Top = 200
+  Width = 400
+  Caption = 'frmAnularReserva'
+  LCLVersion = '0.9.28.2'
+end

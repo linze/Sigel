@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, Spin, LoginFrm, FechaFrm;
+  ExtCtrls, StdCtrls, Spin, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
+  CSala;
 
 type
 
@@ -20,6 +21,7 @@ type
       btnLEspera: TButton;
       btnVisualizarEstado: TButton;
       btnSalir: TButton;
+      Button1: TButton;
       GroupBox1: TGroupBox;
       Label1: TLabel;
       Label2: TLabel;
@@ -34,6 +36,7 @@ type
       procedure btnCompraClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
       procedure btnSalirClick(Sender: TObject);
+      procedure Button1Click(Sender: TObject);
       procedure FormCreate(Sender: TObject);
       procedure lbAdminClick(Sender: TObject);
   private
@@ -107,6 +110,15 @@ end;
 procedure TfrmPrincipal.btnSalirClick(Sender: TObject);
 begin
     Application.Terminate;
+end;
+
+procedure TfrmPrincipal.Button1Click(Sender: TObject);
+var
+    frmSB : TFrmSeleccionButacas;
+begin
+    frmSB := TFrmSeleccionButacas.Create(Self);
+    frmSeleccionButacas.ShowModal;
+    frmSB.Free;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
