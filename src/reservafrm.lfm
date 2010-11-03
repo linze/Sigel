@@ -1,8 +1,10 @@
 object frmReserva: TfrmReserva
-  Left = 290
+  Left = 767
   Height = 300
-  Top = 200
+  Top = 256
   Width = 400
-  Caption = 'frmReserva'
+  Caption = 'Reserva de localidades'
+  OnCreate = FormCreate
+  Position = poScreenCenter
   LCLVersion = '0.9.28.2'
 end
