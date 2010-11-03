@@ -5,7 +5,7 @@ unit CListaReservas;
 interface
 
     uses
-        CReserva, CEstadoLocalidad, Classes, CObjectList;
+        CReserva, CEstadoLocalidad, Classes, CObjectList, SysUtils, DateUtils;
 
     type
         {TListaReservas}
@@ -25,6 +25,9 @@ interface
             function BuscarReserva(Telefono : string; Nombre : String):TReserva;
             procedure AnularReserva(Telefono : string; Nombre : String);
             function ExisteReserva(Telefono : string; Nombre : String):boolean;
+
+            { Para guardar los que no sean antiguos }
+            procedure AddReaded(Objeto: TPersistent); override;
 
             { Para guardar la fecha }
             procedure LeerDatos (Lector : TReader); override;
@@ -94,6 +97,13 @@ begin
         ExisteReserva := true
     else
         ExisteReserva := false;
+end;
+
+procedure TListaReservas.AddReaded(Objeto: TPersistent);
+begin
+    // NOTICE: Añadimos únicamente los días actuales o futuros
+    if CompareDate((Objeto as TReserva).Fecha, DateOf(Now)) <> -1 then
+        Self.Add(Objeto);
 end;
 
 procedure TListaReservas.LeerDatos(Lector: TReader);

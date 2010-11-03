@@ -64,7 +64,6 @@ object frmPrincipal: TfrmPrincipal
       Caption = 'Button1'
       OnClick = Button1Click
       TabOrder = 0
-      Visible = False
     end
   end
   object Panel2: TPanel

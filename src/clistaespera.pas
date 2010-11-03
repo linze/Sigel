@@ -4,10 +4,9 @@ unit CListaEspera;
 
 interface
     uses
-        CObjectList, Classes;
+        CObjectList, Classes, SysUtils, DateUtils;
 
     type
-
         { TListaEspera }
 
         TListaEspera = class (TObjectList)

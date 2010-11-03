@@ -29,6 +29,7 @@ interface
             procedure LoadFromStream (Stream: TStream);
             procedure SaveToFile (const FileName: string);
             procedure LoadFromFile (const FileName: string);
+            procedure AddReaded (Objeto : TPersistent); virtual; abstract;
 
             { Para guardar sus propios valores }
             // NOTICE: Hacer override a ambos
@@ -122,7 +123,7 @@ begin
                     Objeto.Free;
                     raise;
                 end;
-                Add(Objeto);
+                AddReaded(Objeto);
             end;
         end;
         Reader.ReadListEnd;

@@ -4,15 +4,17 @@ unit CListaSalas;
 
 interface
     uses
-        CObjectList, Classes, CSala;
+        CObjectList, Classes, CSala, DateUtils, SysUtils;
 
     type
-
         { TListaSalas }
         TListaSalas = class (TObjectList)
-        private
         public
             function BuscarSala(Fecha : TDateTime): TSala;
+
+            { Para guardar los que no sean antiguos }
+            procedure AddReaded(Objeto: TPersistent); override;
+
             { Para guardar la fecha }
             procedure LeerDatos (Lector : TReader); override;
             procedure EscribirDatos (Escritor: TWriter); override;
@@ -21,6 +23,13 @@ interface
 implementation
 
 { TListaSalas }
+
+procedure TListaSalas.AddReaded(Objeto: TPersistent);
+begin
+    // NOTICE: Añadimos únicamente los días actuales o futuros
+    if CompareDate((Objeto as TSala).Fecha, DateOf(Now)) <> -1 then
+        Self.Add(Objeto);
+end;
 
 function TListaSalas.BuscarSala(Fecha: TDateTime): TSala;
 var
