@@ -32,8 +32,8 @@ interface
 
             { Para guardar sus propios valores }
             // NOTICE: Hacer override a ambos
-            procedure LeerDatos (Lector : TReader);
-            procedure EscribirDatos (Escritor: TWriter);
+            procedure LeerDatos (Lector : TReader); virtual; abstract;
+            procedure EscribirDatos (Escritor: TWriter); virtual; abstract;
         end;
 
 implementation
@@ -154,17 +154,6 @@ begin
         FStream.Free;
     end;
 end;
-
-procedure TObjectList.LeerDatos(Lector: TReader);
-begin
-    // TODO: Leer datos de la lista
-end;
-
-procedure TObjectList.EscribirDatos(Escritor: TWriter);
-begin
-    // TODO: Guardar datos de la lista
-end;
-
 
 end.
 

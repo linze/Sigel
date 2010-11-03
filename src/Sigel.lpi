@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="0"/>
+      <ActiveEditorIndexAtStart Value="8"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -37,7 +37,7 @@
         <UnitName Value="Sigel"/>
         <CursorPos X="44" Y="12"/>
         <TopLine Value="3"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="43"/>
       </Unit0>
       <Unit1>
         <Filename Value="principalfrm.pas"/>
@@ -45,10 +45,10 @@
         <ComponentName Value="frmPrincipal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
-        <CursorPos X="59" Y="8"/>
+        <CursorPos X="88" Y="6"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="10"/>
-        <UsageCount Value="42"/>
+        <EditorIndex Value="9"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit1>
       <Unit2>
@@ -57,8 +57,8 @@
         <UnitName Value="CTipoLocalidad"/>
         <CursorPos X="46" Y="8"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="7"/>
-        <UsageCount Value="42"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
@@ -67,16 +67,16 @@
         <UnitName Value="CEstadoLocalidad"/>
         <CursorPos X="99" Y="10"/>
         <TopLine Value="1"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="43"/>
       </Unit3>
       <Unit4>
         <Filename Value="clocalidad.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CLocalidad"/>
         <CursorPos X="67" Y="7"/>
-        <TopLine Value="1"/>
+        <TopLine Value="17"/>
         <EditorIndex Value="3"/>
-        <UsageCount Value="42"/>
+        <UsageCount Value="43"/>
         <Loaded Value="True"/>
       </Unit4>
       <Unit5>
@@ -85,16 +85,16 @@
         <UnitName Value="CFecha"/>
         <CursorPos X="10" Y="5"/>
         <TopLine Value="1"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="41"/>
       </Unit5>
       <Unit6>
         <Filename Value="csala.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
-        <CursorPos X="52" Y="33"/>
-        <TopLine Value="25"/>
+        <CursorPos X="67" Y="34"/>
+        <TopLine Value="1"/>
         <EditorIndex Value="0"/>
-        <UsageCount Value="40"/>
+        <UsageCount Value="41"/>
         <Loaded Value="True"/>
       </Unit6>
       <Unit7>
@@ -119,7 +119,7 @@
         <UnitName Value="ComprarFrm"/>
         <CursorPos X="78" Y="8"/>
         <TopLine Value="3"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
       </Unit9>
       <Unit10>
         <Filename Value="reservafrm.pas"/>
@@ -129,16 +129,16 @@
         <UnitName Value="ReservaFrm"/>
         <CursorPos X="14" Y="5"/>
         <TopLine Value="3"/>
-        <UsageCount Value="38"/>
+        <UsageCount Value="39"/>
       </Unit10>
       <Unit11>
         <Filename Value="clistareservas.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CListaReservas"/>
-        <CursorPos X="57" Y="56"/>
-        <TopLine Value="40"/>
-        <EditorIndex Value="9"/>
-        <UsageCount Value="38"/>
+        <CursorPos X="53" Y="25"/>
+        <TopLine Value="17"/>
+        <EditorIndex Value="8"/>
+        <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit11>
       <Unit12>
@@ -154,9 +154,7 @@
         <UnitName Value="CRepresentacion"/>
         <CursorPos X="1" Y="7"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="5"/>
-        <UsageCount Value="38"/>
-        <Loaded Value="True"/>
+        <UsageCount Value="39"/>
       </Unit13>
       <Unit14>
         <Filename Value="cptlistareservas.pas"/>
@@ -176,10 +174,10 @@
         <Filename Value="creserva.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CReserva"/>
-        <CursorPos X="31" Y="7"/>
-        <TopLine Value="1"/>
-        <EditorIndex Value="8"/>
-        <UsageCount Value="37"/>
+        <CursorPos X="67" Y="40"/>
+        <TopLine Value="61"/>
+        <EditorIndex Value="7"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
       </Unit16>
       <Unit17>
@@ -194,29 +192,29 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CEspera"/>
         <CursorPos X="60" Y="37"/>
-        <TopLine Value="25"/>
-        <EditorIndex Value="6"/>
-        <UsageCount Value="30"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit18>
       <Unit19>
         <Filename Value="clistaespera.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CListaEspera"/>
-        <CursorPos X="12" Y="6"/>
-        <TopLine Value="1"/>
+        <CursorPos X="1" Y="30"/>
+        <TopLine Value="20"/>
         <EditorIndex Value="4"/>
-        <UsageCount Value="30"/>
+        <UsageCount Value="31"/>
         <Loaded Value="True"/>
       </Unit19>
       <Unit20>
         <Filename Value="cobjectlist.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CObjectList"/>
-        <CursorPos X="28" Y="51"/>
-        <TopLine Value="12"/>
+        <CursorPos X="5" Y="156"/>
+        <TopLine Value="139"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
       </Unit20>
       <Unit21>
@@ -226,130 +224,130 @@
         <CursorPos X="46" Y="10"/>
         <TopLine Value="1"/>
         <EditorIndex Value="2"/>
-        <UsageCount Value="20"/>
+        <UsageCount Value="21"/>
         <Loaded Value="True"/>
       </Unit21>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="14" Column="14" TopLine="3"/>
+        <Caret Line="93" Column="35" TopLine="86"/>
       </Position1>
       <Position2>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="16" Column="12" TopLine="6"/>
+        <Caret Line="122" Column="14" TopLine="115"/>
       </Position2>
       <Position3>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="14" Column="36" TopLine="4"/>
+        <Caret Line="121" Column="31" TopLine="111"/>
       </Position3>
       <Position4>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="16" Column="27" TopLine="9"/>
+        <Caret Line="134" Column="50" TopLine="122"/>
       </Position4>
       <Position5>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="17" Column="56" TopLine="7"/>
+        <Caret Line="17" Column="46" TopLine="1"/>
       </Position5>
       <Position6>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="16" Column="53" TopLine="12"/>
+        <Caret Line="78" Column="19" TopLine="109"/>
       </Position6>
       <Position7>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="26" Column="52" TopLine="13"/>
+        <Caret Line="115" Column="56" TopLine="101"/>
       </Position7>
       <Position8>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="22" Column="61" TopLine="15"/>
+        <Caret Line="22" Column="41" TopLine="12"/>
       </Position8>
       <Position9>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="101" Column="50" TopLine="65"/>
+        <Caret Line="35" Column="34" TopLine="25"/>
       </Position9>
       <Position10>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="93" Column="35" TopLine="86"/>
+        <Caret Line="18" Column="46" TopLine="8"/>
       </Position10>
       <Position11>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="122" Column="14" TopLine="115"/>
+        <Caret Line="19" Column="46" TopLine="9"/>
       </Position11>
       <Position12>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="121" Column="31" TopLine="111"/>
+        <Caret Line="20" Column="42" TopLine="10"/>
       </Position12>
       <Position13>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="134" Column="50" TopLine="122"/>
+        <Caret Line="21" Column="45" TopLine="11"/>
       </Position13>
       <Position14>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="17" Column="46" TopLine="1"/>
+        <Caret Line="22" Column="41" TopLine="12"/>
       </Position14>
       <Position15>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="78" Column="19" TopLine="109"/>
+        <Caret Line="35" Column="34" TopLine="25"/>
       </Position15>
       <Position16>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="115" Column="56" TopLine="101"/>
+        <Caret Line="36" Column="38" TopLine="26"/>
       </Position16>
       <Position17>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="22" Column="41" TopLine="12"/>
+        <Filename Value="cobjectlistitem.pas"/>
+        <Caret Line="13" Column="65" TopLine="1"/>
       </Position17>
       <Position18>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="35" Column="34" TopLine="25"/>
+        <Filename Value="cespera.pas"/>
+        <Caret Line="61" Column="53" TopLine="37"/>
       </Position18>
       <Position19>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="18" Column="46" TopLine="8"/>
+        <Filename Value="cespera.pas"/>
+        <Caret Line="8" Column="19" TopLine="1"/>
       </Position19>
       <Position20>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="19" Column="46" TopLine="9"/>
+        <Caret Line="54" Column="45" TopLine="36"/>
       </Position20>
       <Position21>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="20" Column="42" TopLine="10"/>
+        <Caret Line="25" Column="23" TopLine="15"/>
       </Position21>
       <Position22>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="21" Column="45" TopLine="11"/>
+        <Filename Value="clistaespera.pas"/>
+        <Caret Line="21" Column="67" TopLine="1"/>
       </Position22>
       <Position23>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="22" Column="41" TopLine="12"/>
+        <Filename Value="clistareservas.pas"/>
+        <Caret Line="27" Column="81" TopLine="1"/>
       </Position23>
       <Position24>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="35" Column="34" TopLine="25"/>
+        <Filename Value="clistaespera.pas"/>
+        <Caret Line="7" Column="30" TopLine="1"/>
       </Position24>
       <Position25>
         <Filename Value="cobjectlist.pas"/>
-        <Caret Line="36" Column="38" TopLine="26"/>
+        <Caret Line="36" Column="76" TopLine="20"/>
       </Position25>
       <Position26>
-        <Filename Value="cobjectlistitem.pas"/>
-        <Caret Line="13" Column="65" TopLine="1"/>
+        <Filename Value="clistaespera.pas"/>
+        <Caret Line="22" Column="51" TopLine="12"/>
       </Position26>
       <Position27>
-        <Filename Value="cespera.pas"/>
-        <Caret Line="61" Column="53" TopLine="37"/>
+        <Filename Value="clistareservas.pas"/>
+        <Caret Line="93" Column="10" TopLine="73"/>
       </Position27>
       <Position28>
-        <Filename Value="cespera.pas"/>
-        <Caret Line="8" Column="19" TopLine="1"/>
+        <Filename Value="clistareservas.pas"/>
+        <Caret Line="90" Column="25" TopLine="75"/>
       </Position28>
       <Position29>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="54" Column="45" TopLine="36"/>
+        <Filename Value="clistareservas.pas"/>
+        <Caret Line="88" Column="54" TopLine="65"/>
       </Position29>
       <Position30>
-        <Filename Value="cobjectlist.pas"/>
-        <Caret Line="25" Column="23" TopLine="15"/>
+        <Filename Value="clistareservas.pas"/>
+        <Caret Line="55" Column="27" TopLine="45"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

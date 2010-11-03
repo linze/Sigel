@@ -5,13 +5,11 @@ unit CListaReservas;
 interface
 
     uses
-        CReserva, CEstadoLocalidad, Classes, SysUtils;
+        CReserva, CEstadoLocalidad, Classes, CObjectList;
 
     type
         {TListaReservas}
-
-        // TODO: Implementar como clase hija de TFileObjectList
-        TListaReservas = class (TList)
+        TListaReservas = class (TObjectList)
         private
             { Atributos }
             FFecha : TDateTime;
@@ -24,11 +22,13 @@ interface
             property Fecha: TDateTime read FFecha write FFecha;
 
             { Operaciones propias de la clase }
-            function BuscarReserva(Telefono : integer; Nombre : String):TReserva;
-            procedure AnularReserva(Telefono : integer; Nombre : String);
-            function ExisteReserva(Telefono : integer; Nombre : String):boolean;
+            function BuscarReserva(Telefono : string; Nombre : String):TReserva;
+            procedure AnularReserva(Telefono : string; Nombre : String);
+            function ExisteReserva(Telefono : string; Nombre : String):boolean;
 
-
+            { Para guardar la fecha }
+            procedure LeerDatos (Lector : TReader); override;
+            procedure EscribirDatos (Escritor: TWriter); override;
         end;
 
 implementation
@@ -42,15 +42,29 @@ end;
  { Operaciones propias de la clase }
 
 {BuscarReserva}
-// TODO: Revisar si este método funciona.
-// TODO: He reformateado el código por un begin-end roto. Revisar que mantenga
-// coherencia.
-function TListaReservas.BuscarReserva(Telefono : integer; Nombre : String):TReserva;
+// NOTICE: Al devolver una clase se devuelve un puntero. En caso de que tras
+// modificar una reserva buscada de esta manera no se modificase el original,
+// ojito a esto.
+function TListaReservas.BuscarReserva(Telefono : string; Nombre : String):TReserva;
 var
-    encontrado : boolean;
+    encontrado  : boolean;
+    i           : integer;
 begin
-    encontrado := false;
-    // TODO: Implementar
+    Encontrado := false;
+    i := 0;
+    while not (Encontrado) and (i < Count - 1) do
+    begin
+        if (TReserva(Items[i]).Telefono = Telefono) and
+            (TReserva(Items[i]).Nombre = Nombre) then
+            Encontrado := True
+        else
+            i := i + 1;
+    end;
+
+    if Encontrado then
+        Result := TReserva(Items[i])
+    else
+        Result := nil;
 end;
 
 {AnularReserva}
@@ -58,28 +72,38 @@ end;
 // No se si este metodo está correcto.
 // No entiendo bien la implementacion de TReserva
 // Creo que este método debería implementarse en TReserva
-procedure TListaReservas.AnularReserva(Telefono : integer; Nombre : String);
+procedure TListaReservas.AnularReserva(Telefono : string; Nombre : String);
 var
     index : 1..4;
     i :integer;
 begin
     if Self.ExisteReserva(Telefono,Nombre) then
     begin
-        index := Self.BuscarReserva(Telefono,Nombre).Cantidad;
+        index := BuscarReserva(Telefono,Nombre).Cantidad;
         for i := 1 to index do
         begin
-              Self.BuscarReserva(Telefono,Nombre).GetLocalidad(index).Estado := Libre;
+              BuscarReserva(Telefono,Nombre).GetLocalidad(index).Estado := Libre;
         end;
     end;
 end;
 
 {ExisteReserva}
-function TListaReservas.ExisteReserva(Telefono : integer; Nombre : String):boolean;
+function TListaReservas.ExisteReserva(Telefono : string; Nombre : String):boolean;
 begin
-    if (Self.BuscarReserva(Telefono,Nombre) <> NIL) then
+    if (BuscarReserva(Telefono,Nombre) <> nil) then
         ExisteReserva := true
     else
         ExisteReserva := false;
+end;
+
+procedure TListaReservas.LeerDatos(Lector: TReader);
+begin
+    Self.FFecha := Lector.ReadDate;
+end;
+
+procedure TListaReservas.EscribirDatos(Escritor: TWriter);
+begin
+    Escritor.WriteDate(Self.FFecha);
 end;
 end.
 

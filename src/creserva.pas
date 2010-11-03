@@ -64,7 +64,7 @@ begin
             //Si la cuarta plaza está ocupada no hay huecos para más reservas
             if (i = 4) then
             begin
-                //TODO Excepcion, 4 plazas ocupadas ya, nos e puede añadir
+                //TODO Excepcion, 4 plazas ocupadas ya, no se puede añadir
             end;
             i := i + 1;
         end
@@ -79,6 +79,9 @@ begin
     end;
 end;
 
+// NOTICE: En teoria, una clase devuelve siempre un puntero, luego
+// tras realizar el GetLocalidad si se modifica, debería de modificarse
+// el original.
 function TReserva.GetLocalidad(Indice: Integer): TLocalidad;
 begin
     GetLocalidad := FLocalidades[Indice];
