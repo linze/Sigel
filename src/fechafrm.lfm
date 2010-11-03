@@ -3,6 +3,7 @@ object frmFecha: TfrmFecha
   Height = 242
   Top = 255
   Width = 383
+  ActiveControl = btnAceptar
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Selección de fecha'

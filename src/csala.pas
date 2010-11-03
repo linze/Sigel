@@ -4,7 +4,7 @@ unit CSala;
 
 interface
     uses
-        CTipoLocalidad, CLocalidad, Classes, CObjectListItem;
+        CLocalidad, Classes, CObjectListItem, CTipoLocalidad, CEstadoLocalidad;
     type
 
         { TSala }
@@ -39,8 +39,36 @@ implementation
 { TSala }
 
 constructor TSala.Create;
+var
+    i, j: integer;
 begin
-    // TODO: Evaluar si es necesario e implementar
+    for i:=0 to 3 do
+        for j:=0 to 7 do
+        begin
+            Self.FPatio[i,j] := TLocalidad.Create;
+            Self.FPatio[i,j].Tipo := Patio;
+            Self.FPatio[i,j].Estado := Libre;
+            Self.FPatio[i,j].Fila := i + 1;
+            Self.FPatio[i,j].Numero := j + 1;
+        end;
+
+    for i:=0 to 1 do
+        for j:=0 to 7 do
+        begin
+            Self.FPrimeraPlanta[i,j] := TLocalidad.Create;
+            Self.FPrimeraPlanta[i,j].Tipo := PrimeraPlanta;
+            Self.FPrimeraPlanta[i,j].Estado := Libre;
+            Self.FPrimeraPlanta[i,j].Fila := i + 1;
+            Self.FPrimeraPlanta[i,j].Numero := j + 1;
+        end;
+
+    for i:=0 to 3 do
+    begin
+        Self.FPalco[i] := TLocalidad.Create;
+        Self.FPalco[i].Tipo := Palco;
+        Self.FPalco[i].Estado := Libre;
+        Self.FPalco[i].Numero := i + 1;
+    end;
 end;
 
 // TODO: Estudiar si este método ha de separarse en varios métodos

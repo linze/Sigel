@@ -8,8 +8,9 @@ uses
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
   Forms, PrincipalFrm, LResources, CEstadoLocalidad, CLocalidad, CSala, ComprarFrm, ReservaFrm, CEspera, CListareservas,
-    CListaEspera, CRepresentacion, CReserva, CTipoLocalidad, CObjectList, 
-CObjectListItem, LoginFrm, FechaFrm;
+    CListaEspera, CReserva, CTipoLocalidad, CObjectList, 
+    CObjectListItem, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos, 
+CListaSalas, AnularReservaFrm, AnularCompraFrm;
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
 
@@ -17,10 +18,9 @@ begin
     {$I Sigel.lrs}
     Application.Initialize;
     Application.CreateForm(TfrmPrincipal, frmPrincipal);
-    Application.CreateForm(TfrmComprar, frmComprar);
-    Application.CreateForm(TfrmReserva, frmReserva);
-    Application.CreateForm(TfrmLogin, frmLogin);
-    Application.CreateForm(TfrmFecha, frmFecha);
+    Application.CreateForm(TfrmSeleccionButacas, frmSeleccionButacas);
+    Application.CreateForm(TfrmAnularReserva, frmAnularReserva);
+    Application.CreateForm(TfrmAnularCompra, frmAnularCompra);
     Application.Run;
 end.
 

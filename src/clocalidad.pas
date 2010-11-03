@@ -39,7 +39,6 @@ implementation
 
 constructor TLocalidad.Create;
 begin
-    // TODO: Evaluar si es necesario e implementar
 end;
 
 function TLocalidad.EstaOcupado : boolean;

@@ -3,6 +3,7 @@ object frmLogin: TfrmLogin
   Height = 100
   Top = 299
   Width = 232
+  ActiveControl = ePassword
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Acceso'
