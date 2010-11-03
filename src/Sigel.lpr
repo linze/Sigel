@@ -9,7 +9,8 @@ uses
   Interfaces, // this includes the LCL widgetset
   Forms, PrincipalFrm, LResources, CEstadoLocalidad, CLocalidad,
     CFecha, CSala, ComprarFrm, ReservaFrm, CEspera, CListareservas,
-    CListaEspera, CRepresentacion, CReserva, CTipoLocalidad
+    CListaEspera, CRepresentacion, CReserva, CTipoLocalidad, CObjectList, 
+CObjectListItem
   { you can add units after this };
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}

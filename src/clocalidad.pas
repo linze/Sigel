@@ -4,10 +4,10 @@ unit CLocalidad;
 
 interface
     uses
-        CTipoLocalidad, CEstadoLocalidad, Classes;
+        CTipoLocalidad, CEstadoLocalidad, Classes, CObjectListItem;
     type
         { TLocalidad }
-        TLocalidad = class
+        TLocalidad = class (TObjectListItem)
         private
             { Atributos }
             FTipo       : TTipoLocalidad;
@@ -28,8 +28,8 @@ interface
             function EstaOcupado: boolean;
 
             { Para guardar-extraer desde ficheros }
-            procedure LeerDatos (Lector : TReader);
-            procedure EscribirDatos (Escritor: TWriter);
+            procedure LeerDatos (Lector : TReader); override;
+            procedure EscribirDatos (Escritor: TWriter); override;
         end;
 
 

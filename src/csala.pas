@@ -4,12 +4,12 @@ unit CSala;
 
 interface
     uses
-        CTipoLocalidad, CLocalidad, Classes;
+        CTipoLocalidad, CLocalidad, Classes, CObjectListItem;
     type
 
         { TSala }
 
-        TSala = class
+        TSala = class (TObjectListItem)
         private
             { Atributos }
             FFecha           : TDateTime;
@@ -30,8 +30,8 @@ interface
             procedure Cambiar(Localidad : TLocalidad);
 
             { Para guardar-extraer desde ficheros }
-            procedure LeerDatos (Lector : TReader);
-            procedure EscribirDatos (Escritor: TWriter);
+            procedure LeerDatos (Lector : TReader); override;
+            procedure EscribirDatos (Escritor: TWriter); override;
         end;
 
 implementation

@@ -5,11 +5,11 @@ unit CEspera;
 interface
 
     uses
-        CLocalidad, CTipoLocalidad, Classes;
+        CTipoLocalidad, Classes, CObjectListItem;
 
     type
         { TEspera }
-        TEspera = class
+        TEspera = class (TObjectListItem)
         private
         (*Atributos*)
             FNombre        : String;
@@ -29,8 +29,8 @@ interface
             property TipoLocalidad: TTipoLocalidad read FTipoLocalidad write FTipoLocalidad;
 
             { Para guardar-extraer desde ficheros }
-            procedure LeerDatos (Lector : TReader);
-            procedure EscribirDatos (Escritor: TWriter);
+            procedure LeerDatos (Lector : TReader); override;
+            procedure EscribirDatos (Escritor: TWriter); override;
         end;
 			
 implementation
