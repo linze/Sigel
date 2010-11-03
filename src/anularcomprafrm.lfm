@@ -1,7 +1,7 @@
 object frmAnularCompra: TfrmAnularCompra
-  Left = 290
+  Left = 328
   Height = 300
-  Top = 200
+  Top = 258
   Width = 400
   Caption = 'frmAnularCompra'
   LCLVersion = '0.9.28.2'
