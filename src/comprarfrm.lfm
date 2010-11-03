@@ -1,0 +1,8 @@
+object frmComprar: TfrmComprar
+  Left = 394
+  Height = 300
+  Top = 212
+  Width = 400
+  Caption = 'frmComprar'
+  LCLVersion = '0.9.28.2'
+end

@@ -1,0 +1,59 @@
+object frmFecha: TfrmFecha
+  Left = 519
+  Height = 242
+  Top = 255
+  Width = 383
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Selección de fecha'
+  ClientHeight = 242
+  ClientWidth = 383
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 8
+    Width = 150
+    Caption = 'Indique la fecha:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object clCalendario: TCalendar
+    Left = 16
+    Height = 190
+    Top = 41
+    Width = 220
+    DateTime = 40485
+  end
+  object btnAceptar: TButton
+    Left = 272
+    Height = 40
+    Top = 41
+    Width = 99
+    Caption = 'Aceptar'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnAceptarClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object btnCancelar: TButton
+    Left = 272
+    Height = 40
+    Top = 89
+    Width = 99
+    Caption = 'Cancelar'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnCancelarClick
+    ParentFont = False
+    TabOrder = 2
+  end
+end

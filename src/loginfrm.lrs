@@ -1,0 +1,15 @@
+LazarusResources.Add('TfrmLogin','FORMDATA',[
+  'TPF0'#9'TfrmLogin'#8'frmLogin'#4'Left'#3#253#1#6'Height'#2'd'#3'Top'#3'+'#1#5
+  +'Width'#3#232#0#11'BorderIcons'#11#12'biSystemMenu'#0#11'BorderStyle'#7#8'bs'
+  +'Dialog'#7'Caption'#6#6'Acceso'#12'ClientHeight'#2'd'#11'ClientWidth'#3#232#0
+  +#8'OnCreate'#7#10'FormCreate'#8'Position'#7#14'poScreenCenter'#10'LCLVersion'
+  +#6#8'0.9.28.2'#0#6'TLabel'#6'Label1'#4'Left'#2#10#6'Height'#2#18#3'Top'#2#10
+  +#5'Width'#3#165#0#7'Caption'#6#26'Introduzca la contrase'#195#177'a:'#11'Par'
+  +'entColor'#8#0#0#7'TButton'#10'btnAceptar'#4'Left'#2'@'#6'Height'#2#25#3'Top'
+  +#2'C'#5'Width'#2'K'#7'Caption'#6#7'Aceptar'#7'OnClick'#7#15'btnAceptarClick'
+  +#8'TabOrder'#2#0#0#0#7'TButton'#11'btnCancelar'#4'Left'#3#149#0#6'Height'#2
+  +#25#3'Top'#2'C'#5'Width'#2'K'#7'Caption'#6#8'Cancelar'#7'OnClick'#7#16'btnCa'
+  +'ncelarClick'#8'TabOrder'#2#1#0#0#5'TEdit'#9'ePassword'#4'Left'#2#10#6'Heigh'
+  +'t'#2#27#3'Top'#2' '#5'Width'#3#214#0#8'EchoMode'#7#10'emPassword'#14'Parent'
+  +'ShowHint'#8#12'PasswordChar'#6#1'*'#8'TabOrder'#2#2#4'Text'#6#1'a'#0#0#0
+]);

@@ -4,11 +4,10 @@ unit CLocalidad;
 
 interface
     uses
-        CTipoLocalidad, CEstadoLocalidad;
+        CTipoLocalidad, CEstadoLocalidad, Classes, CObjectListItem;
     type
         { TLocalidad }
-        TLocalidad = class
-
+        TLocalidad = class (TObjectListItem)
         private
             { Atributos }
             FTipo       : TTipoLocalidad;
@@ -19,20 +18,18 @@ interface
             { Constructores y destructores }
             constructor Create;
 
-            { Métodos de asignación de atributos }
-            procedure SetFila(Fila: integer);
-            procedure SetTipo(Tipo: TTipoLocalidad);
-            procedure SetEstado(Estado: TEstadoLocalidad);
-            procedure SetNumero(Numero: integer);
-
-            { Métodos de obtención de atributos }
-            function GetTipo: TTipoLocalidad;
-            function GetEstado: TEstadoLocalidad;
-            function GetNumero: integer;
-            function GetFila: integer;
+            { Propiedades }
+            property Tipo : TTipoLocalidad read FTipo write FTipo;
+            property Estado : TEstadoLocalidad read FEstado write FEstado;
+            property Numero : integer read FNumero write FNumero;
+            property Fila : integer read FFila write FFila;
 
             { Operaciones propias de la clase }
             function EstaOcupado: boolean;
+
+            { Para guardar-extraer desde ficheros }
+            procedure LeerDatos (Lector : TReader); override;
+            procedure EscribirDatos (Escritor: TWriter); override;
         end;
 
 
@@ -45,49 +42,27 @@ begin
     // TODO: Evaluar si es necesario e implementar
 end;
 
-procedure TLocalidad.SetTipo (Tipo: TTipoLocalidad);
-begin
-    Self.FTipo := Tipo;
-end;
-
-procedure TLocalidad.SetEstado (Estado: TEstadoLocalidad);
-begin
-    Self.FEstado := Estado;
-end;
-
-procedure TLocalidad.SetNumero (Numero: integer);
-begin
-    Self.FNumero := Numero;
-end;
-
-procedure TLocalidad.SetFila (Fila: integer);
-begin
-    Self.FFila := Fila;
-end;
-
-function TLocalidad.GetTipo : TTipoLocalidad;
-begin
-    GetTipo := Self.FTipo;
-end;
-
-function TLocalidad.GetEstado : TEstadoLocalidad;
-begin
-    GetEstado := Self.FEstado;
-end;
-
-function TLocalidad.GetNumero : integer;
-begin
-    GetNumero := Self.FNumero;
-end;
-
-function TLocalidad.GetFila : integer;
-begin
-    GetFila := Self.FFila;
-end;
-
 function TLocalidad.EstaOcupado : boolean;
 begin
-    EstaOcupado := (Self.GetEstado <> Libre);
+    EstaOcupado := (Self.FEstado <> Libre);
+end;
+
+procedure TLocalidad.LeerDatos(Lector: TReader);
+begin
+    // NOTICE: Desconozco si ReadValue es lo correcto. Si
+    // hay conflictos, usar IntVar := Ord (MyEnumVal);
+    Self.FTipo := TTipoLocalidad(Lector.ReadInteger);
+    Self.FEstado := TEstadoLocalidad(Lector.ReadInteger);
+    Self.FNumero := Lector.ReadInteger;
+    Self.FFila := Lector.ReadInteger;
+end;
+
+procedure TLocalidad.EscribirDatos(Escritor: TWriter);
+begin
+    Escritor.WriteInteger(ord(Self.FTipo));
+    Escritor.WriteInteger(ord(Self.FEstado));
+    Escritor.WriteInteger(Self.FNumero);
+    Escritor.WriteInteger(Self.FFila);
 end;
 
 end.

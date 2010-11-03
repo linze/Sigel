@@ -1,0 +1,51 @@
+object frmLogin: TfrmLogin
+  Left = 509
+  Height = 100
+  Top = 299
+  Width = 232
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Acceso'
+  ClientHeight = 100
+  ClientWidth = 232
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 10
+    Height = 18
+    Top = 10
+    Width = 165
+    Caption = 'Introduzca la contraseña:'
+    ParentColor = False
+  end
+  object btnAceptar: TButton
+    Left = 64
+    Height = 25
+    Top = 67
+    Width = 75
+    Caption = 'Aceptar'
+    OnClick = btnAceptarClick
+    TabOrder = 0
+  end
+  object btnCancelar: TButton
+    Left = 149
+    Height = 25
+    Top = 67
+    Width = 75
+    Caption = 'Cancelar'
+    OnClick = btnCancelarClick
+    TabOrder = 1
+  end
+  object ePassword: TEdit
+    Left = 10
+    Height = 27
+    Top = 32
+    Width = 214
+    EchoMode = emPassword
+    ParentShowHint = False
+    PasswordChar = '*'
+    TabOrder = 2
+    Text = 'a'
+  end
+end
