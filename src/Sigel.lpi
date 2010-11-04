@@ -94,13 +94,8 @@
         <Filename Value="csala.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
-<<<<<<< HEAD
         <CursorPos X="9" Y="207"/>
         <TopLine Value="178"/>
-=======
-        <CursorPos X="79" Y="215"/>
-        <TopLine Value="199"/>
->>>>>>> 55b67842747858cd27446796af0ed7b2857133cc
         <EditorIndex Value="0"/>
         <UsageCount Value="74"/>
         <Loaded Value="True"/>
@@ -507,19 +502,11 @@
       </Position28>
       <Position29>
         <Filename Value="csala.pas"/>
-<<<<<<< HEAD
         <Caret Line="186" Column="44" TopLine="175"/>
       </Position29>
       <Position30>
         <Filename Value="csala.pas"/>
         <Caret Line="209" Column="22" TopLine="179"/>
-=======
-        <Caret Line="152" Column="36" TopLine="145"/>
-      </Position29>
-      <Position30>
-        <Filename Value="csala.pas"/>
-        <Caret Line="217" Column="127" TopLine="199"/>
->>>>>>> 55b67842747858cd27446796af0ed7b2857133cc
       </Position30>
     </JumpHistory>
   </ProjectOptions>
