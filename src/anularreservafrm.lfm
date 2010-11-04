@@ -1,19 +1,20 @@
 object frmAnularReserva: TfrmAnularReserva
   Left = 573
-  Height = 300
+  Height = 228
   Top = 162
   Width = 400
   ActiveControl = DNI
   Caption = 'frmAnularReserva'
-  ClientHeight = 300
+  ClientHeight = 228
   ClientWidth = 400
+  OnCreate = FormCreate
   LCLVersion = '0.9.28.2'
   object Label1: TLabel
     Left = 32
     Height = 18
     Top = 40
-    Width = 346
-    Caption = 'Para anular reserva debe identificarse correctamente'
+    Width = 280
+    Caption = 'Para anular reserva debe introducir su DNI:'
     ParentColor = False
   end
   object Label2: TLabel
@@ -29,23 +30,23 @@ object frmAnularReserva: TfrmAnularReserva
     Left = 112
     Height = 27
     Top = 96
-    Width = 80
+    Width = 176
+    OnChange = DNIChange
     TabOrder = 0
-    Text = 'DNI'
   end
   object btnAceptar: TButton
-    Left = 160
-    Height = 25
-    Top = 192
-    Width = 75
+    Left = 152
+    Height = 41
+    Top = 160
+    Width = 104
     Caption = 'Aceptar'
     TabOrder = 1
   end
   object btnCancelar: TButton
-    Left = 264
-    Height = 25
-    Top = 192
-    Width = 75
+    Left = 274
+    Height = 41
+    Top = 160
+    Width = 104
     Caption = 'Cancelar'
     TabOrder = 2
   end

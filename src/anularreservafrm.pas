@@ -18,6 +18,7 @@ type
     numDNI: TEdit;
     Label1: TLabel;
     Label2: TLabel;
+    procedure DNIChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnAceptarClick(Sender: TObject);
@@ -35,6 +36,11 @@ implementation
 procedure TfrmAnularReserva.FormCreate(Sender: TObject);
 begin
     ValidDNI := False;
+end;
+
+procedure TfrmAnularReserva.DNIChange(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmAnularReserva.btnCancelarClick(Sender: TObject);
