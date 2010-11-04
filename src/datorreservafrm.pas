@@ -5,10 +5,15 @@ unit DatosReservaFrm;
 interface
 
 uses
-  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs; 
+  Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
+  StdCtrls;
 
 type
-  TForm1 = class(TForm)
+
+  { TfrmDatosReserva }
+
+  TfrmDatosReserva = class(TForm)
+    Button1: TButton;
   private
     { private declarations }
   public
@@ -16,7 +21,7 @@ type
   end; 
 
 var
-  Form1: TForm1; 
+  frmDatosReserva: TfrmDatosReserva;
 
 implementation
 

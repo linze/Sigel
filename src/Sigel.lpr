@@ -11,7 +11,7 @@ uses
     CListaEspera, CReserva, CTipoLocalidad, CObjectList, 
     CObjectListItem, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos, 
 CListaSalas, AnularReservaFrm, AnularCompraFrm, CObjectListList, 
-CGestionListaEspera, Unit1;
+CGestionListaEspera, DatosReservaFrm, CreditosFrm;
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
 
@@ -22,6 +22,8 @@ begin
     Application.CreateForm(TfrmSeleccionButacas, frmSeleccionButacas);
     Application.CreateForm(TfrmAnularReserva, frmAnularReserva);
     Application.CreateForm(TfrmAnularCompra, frmAnularCompra);
+  Application.CreateForm(TfrmDatosReserva, frmDatosReserva);
+  Application.CreateForm(TfrmCreditos, frmCreditos);
     Application.Run;
 end.
 

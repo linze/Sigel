@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs; 
 
 type
-  TForm2 = class(TForm)
+  TfrmCreditos = class(TForm)
   private
     { private declarations }
   public
@@ -16,7 +16,7 @@ type
   end; 
 
 var
-  Form2: TForm2; 
+  frmCreditos: TfrmCreditos;
 
 implementation
 
