@@ -26,6 +26,7 @@ type
     { private declarations }
   public
     ValidDNI : boolean;
+    DNIrecibido : TEdit;
   end; 
 
 var
@@ -50,13 +51,10 @@ end;
 
 procedure TfrmAnularReserva.btnAceptarClick(Sender: TObject);
 begin
-    if numDNI.Text = 'a' then
-    begin
-        ValidDNI := True;
-        Close;
-    end
-    else
-        ShowMessage ('DNI no válido.');
+    // TODO validar comprobar si el DNI es válido
+    ValidDNI := True;
+    DNIrecibido := numDNI;
+    Close;
 end;
 
 

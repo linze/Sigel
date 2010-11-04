@@ -48,6 +48,7 @@ object frmAnularReserva: TfrmAnularReserva
     Top = 160
     Width = 104
     Caption = 'Cancelar'
+    OnClick = btnCancelarClick
     TabOrder = 2
   end
 end

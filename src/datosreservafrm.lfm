@@ -54,6 +54,7 @@ object frmDatosReserva: TfrmDatosReserva
     Top = 256
     Width = 96
     Caption = 'Cancelar'
+    OnClick = btnCancelarClick
     TabOrder = 1
   end
   object eNombre: TEdit

@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="5"/>
+      <ActiveEditorIndexAtStart Value="7"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -76,8 +76,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CLocalidad"/>
         <CursorPos X="26" Y="29"/>
-        <TopLine Value="25"/>
-        <EditorIndex Value="6"/>
+        <TopLine Value="16"/>
+        <EditorIndex Value="8"/>
         <UsageCount Value="78"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -95,7 +95,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
         <CursorPos X="23" Y="213"/>
-        <TopLine Value="191"/>
+        <TopLine Value="174"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="76"/>
         <Loaded Value="True"/>
@@ -268,12 +268,12 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SeleccionButacaFrm"/>
         <CursorPos X="29" Y="108"/>
-        <TopLine Value="1"/>
+        <TopLine Value="56"/>
         <EditorIndex Value="5"/>
         <UsageCount Value="49"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-        <FoldState Value=" T4lc0ZU"/>
+        <FoldState Value=" T4lc0Z01111="/>
       </Unit25>
       <Unit26>
         <Filename Value="udatos.pas"/>
@@ -281,7 +281,7 @@
         <UnitName Value="uDatos"/>
         <CursorPos X="28" Y="11"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="10"/>
         <UsageCount Value="46"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -301,8 +301,10 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularReservaFrm"/>
         <CursorPos X="95" Y="64"/>
-        <TopLine Value="40"/>
+        <TopLine Value="18"/>
+        <EditorIndex Value="7"/>
         <UsageCount Value="40"/>
+        <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit28>
       <Unit29>
@@ -372,9 +374,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DatosReservaFrm"/>
-        <CursorPos X="10" Y="41"/>
-        <TopLine Value="29"/>
+        <CursorPos X="80" Y="29"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="6"/>
         <UsageCount Value="10"/>
+        <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit37>
       <Unit38>
@@ -383,13 +387,13 @@
         <UnitName Value="CListaObjetos"/>
         <CursorPos X="15" Y="14"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="9"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit38>
     </Units>
-    <JumpHistory Count="28" HistoryIndex="27">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="udatos.pas"/>
         <Caret Line="9" Column="80" TopLine="1"/>
@@ -502,6 +506,10 @@
         <Filename Value="seleccionbutacafrm.pas"/>
         <Caret Line="124" Column="40" TopLine="112"/>
       </Position28>
+      <Position29>
+        <Filename Value="datosreservafrm.pas"/>
+        <Caret Line="41" Column="10" TopLine="1"/>
+      </Position29>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

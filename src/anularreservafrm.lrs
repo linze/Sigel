@@ -13,5 +13,6 @@ LazarusResources.Add('TfrmAnularReserva','FORMDATA',[
   +'TabOrder'#2#0#0#0#7'TButton'#10'btnAceptar'#4'Left'#3#152#0#6'Height'#2')'#3
   +'Top'#3#160#0#5'Width'#2'h'#7'Caption'#6#7'Aceptar'#8'TabOrder'#2#1#0#0#7'TB'
   +'utton'#11'btnCancelar'#4'Left'#3#18#1#6'Height'#2')'#3'Top'#3#160#0#5'Width'
-  +#2'h'#7'Caption'#6#8'Cancelar'#8'TabOrder'#2#2#0#0#0
+  +#2'h'#7'Caption'#6#8'Cancelar'#7'OnClick'#7#16'btnCancelarClick'#8'TabOrder'
+  +#2#2#0#0#0
 ]);

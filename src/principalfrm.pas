@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, Spin, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
-  CSala, AnularReservaFrm;
+  CSala, AnularReservaFrm, DatosReservaFrm;
 
 type
 
@@ -118,6 +118,7 @@ end;
 procedure TfrmPrincipal.btnReservaClick(Sender: TObject);
 var
     frmFecha : TfrmFecha;
+    frmDatos : TfrmDatosReserva;
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
@@ -126,7 +127,8 @@ begin
         if frmFecha.FechaMarcada then
         begin
             // TODO: Adapta esto. Seguir proceso
-            ShowMessage ('Fecha marcada correctamente');
+            frmDatos := TfrmDatosReserva.Create(Self);
+            frmDatos.ShowModal;
         end
         else
             // TODO: Adapta esto
