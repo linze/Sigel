@@ -18,7 +18,9 @@ type
     numDNI: TEdit;
     Label1: TLabel;
     Label2: TLabel;
-    procedure DNIChange(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+    procedure btnAceptarClick(Sender: TObject);
   private
     { private declarations }
   public
@@ -54,10 +56,6 @@ end;
 
 { TfrmAnularReserva }
 
-procedure TfrmAnularReserva.DNIChange(Sender: TObject);
-begin
-
-end;
 
 initialization
   {$I anularreservafrm.lrs}

@@ -1,6 +1,5 @@
 unit CListaSalas;
 
-{$mode objfpc}{$H+}
 
 interface
     uses
@@ -38,7 +37,7 @@ var
 begin
     Found := False;
     i := 0;
-    while not (Found) and (i < Self.Count - 1 )  do
+    while not (Found) and (i < Count )  do
     begin
         if TSala(Self.Items[i]).Fecha = Fecha then
             Found := True

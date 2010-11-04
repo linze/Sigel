@@ -57,9 +57,9 @@ object frmPrincipal: TfrmPrincipal
       OnClick = lbAdminClick
     end
     object Button1: TButton
-      Left = 34
+      Left = 55
       Height = 25
-      Top = 38
+      Top = 31
       Width = 75
       Caption = 'Button1'
       OnClick = Button1Click

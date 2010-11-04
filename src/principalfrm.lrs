@@ -16,7 +16,7 @@ LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   +#176#2#6'Height'#2#14#3'Top'#2#2#5'Width'#2'|'#9'Alignment'#7#14'taRightJust'
   +'ify'#7'Caption'#6#22'Acceso administraci'#195#179'n'#11'Font.Height'#2#245#9
   +'Font.Name'#6#4'Sans'#11'ParentColor'#8#10'ParentFont'#8#7'OnClick'#7#12'lbA'
-  +'dminClick'#0#0#7'TButton'#7'Button1'#4'Left'#2'"'#6'Height'#2#25#3'Top'#2'&'
+  +'dminClick'#0#0#7'TButton'#7'Button1'#4'Left'#2'7'#6'Height'#2#25#3'Top'#2#31
   +#5'Width'#2'K'#7'Caption'#6#7'Button1'#7'OnClick'#7#12'Button1Click'#8'TabOr'
   +'der'#2#0#0#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'Height'#2'9'#3'Top'#3#213#1
   +#5'Width'#3'0'#3#5'Align'#7#8'alBottom'#12'ClientHeight'#2'9'#11'ClientWidth'

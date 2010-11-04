@@ -68,6 +68,8 @@ end;
 procedure TfrmPrincipal.btnCompraClick(Sender: TObject);
 var
     frmFecha : TfrmFecha;
+    frmSeleccionButaca : TfrmSeleccionButacas;
+    Fecha    : TDateTime;
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
@@ -75,8 +77,13 @@ begin
         frmFecha.ShowModal;
         if frmFecha.FechaMarcada then
         begin
-            // TODO: Adapta esto. Seguir proceso
-            ShowMessage ('Fecha marcada correctamente');
+            Fecha := frmFecha.Fecha;
+            frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+            try
+                frmSeleccionButaca.Fecha := Fecha;
+                frmSeleccionButaca.ShowModal;
+            finally
+            end;
         end
         else
             // TODO: Adapta esto
@@ -113,17 +120,14 @@ begin
 end;
 
 procedure TfrmPrincipal.Button1Click(Sender: TObject);
-var
-    frmSB : TFrmSeleccionButacas;
 begin
-    frmSB := TFrmSeleccionButacas.Create(Self);
-    frmSeleccionButacas.ShowModal;
-    frmSB.Free;
+    uDatos.Guardado;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
     Self.Autenticado := False;
+    uDatos.CargaInicial;
 end;
 
 procedure TfrmPrincipal.lbAdminClick(Sender: TObject);

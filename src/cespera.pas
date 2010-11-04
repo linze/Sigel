@@ -39,7 +39,7 @@ implementation
 
 constructor TEspera.Create;
 begin
-	// TODO: Hacer
+	inherited Create;
 end;
 
 procedure TEspera.LeerDatos(Lector: TReader);
@@ -60,6 +60,9 @@ begin
     Escritor.WriteInteger(Self.FNumero);
     Escritor.WriteInteger(ord(Self.FTipoLocalidad));
 end;
+
+initialization
+    RegisterClass (TEspera);
 
 
 

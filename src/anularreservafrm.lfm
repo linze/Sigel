@@ -1,8 +1,9 @@
 object frmAnularReserva: TfrmAnularReserva
-  Left = 433
+  Left = 573
   Height = 300
-  Top = 289
+  Top = 162
   Width = 400
+  ActiveControl = DNI
   Caption = 'frmAnularReserva'
   ClientHeight = 300
   ClientWidth = 400
@@ -20,7 +21,6 @@ object frmAnularReserva: TfrmAnularReserva
     Height = 18
     Top = 104
     Width = 33
-    BidiMode = bdLeftToRight
     Caption = 'DNI: '
     ParentBidiMode = False
     ParentColor = False
@@ -30,7 +30,6 @@ object frmAnularReserva: TfrmAnularReserva
     Height = 27
     Top = 96
     Width = 80
-    OnChange = DNIChange
     TabOrder = 0
     Text = 'DNI'
   end

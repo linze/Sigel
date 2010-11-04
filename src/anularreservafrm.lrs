@@ -1,15 +1,17 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmAnularReserva','FORMDATA',[
-  'TPF0'#17'TfrmAnularReserva'#16'frmAnularReserva'#4'Left'#3#177#1#6'Height'#3
-  +','#1#3'Top'#3'!'#1#5'Width'#3#144#1#7'Caption'#6#16'frmAnularReserva'#12'Cl'
-  +'ientHeight'#3','#1#11'ClientWidth'#3#144#1#10'LCLVersion'#6#8'0.9.28.2'#0#6
-  +'TLabel'#6'Label1'#4'Left'#2' '#6'Height'#2#18#3'Top'#2'('#5'Width'#3'Z'#1#7
-  +'Caption'#6'4Para anular reserva debe identificarse correctamente'#11'Parent'
-  +'Color'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2'@'#6'Height'#2#18#3'Top'#2'h'#5
-  +'Width'#2'!'#8'BidiMode'#7#13'bdLeftToRight'#7'Caption'#6#5'DNI: '#14'Parent'
-  +'BidiMode'#8#11'ParentColor'#8#0#0#5'TEdit'#3'DNI'#4'Left'#2'p'#6'Height'#2
-  +#27#3'Top'#2'`'#5'Width'#2'P'#8'OnChange'#7#9'DNIChange'#8'TabOrder'#2#0#4'T'
-  +'ext'#6#3'DNI'#0#0#7'TButton'#10'btnAceptar'#4'Left'#3#160#0#6'Height'#2#25#3
-  +'Top'#3#192#0#5'Width'#2'K'#7'Caption'#6#7'Aceptar'#8'TabOrder'#2#1#0#0#7'TB'
-  +'utton'#11'btnCancelar'#4'Left'#3#8#1#6'Height'#2#25#3'Top'#3#192#0#5'Width'
-  +#2'K'#7'Caption'#6#8'Cancelar'#8'TabOrder'#2#2#0#0#0
+  'TPF0'#17'TfrmAnularReserva'#16'frmAnularReserva'#4'Left'#3'='#2#6'Height'#3
+  +','#1#3'Top'#3#162#0#5'Width'#3#144#1#13'ActiveControl'#7#3'DNI'#7'Caption'#6
+  +#16'frmAnularReserva'#12'ClientHeight'#3','#1#11'ClientWidth'#3#144#1#10'LCL'
+  +'Version'#6#8'0.9.28.2'#0#6'TLabel'#6'Label1'#4'Left'#2' '#6'Height'#2#18#3
+  +'Top'#2'('#5'Width'#3'Z'#1#7'Caption'#6'4Para anular reserva debe identifica'
+  +'rse correctamente'#11'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2'@'#6
+  +'Height'#2#18#3'Top'#2'h'#5'Width'#2'!'#7'Caption'#6#5'DNI: '#14'ParentBidiM'
+  +'ode'#8#11'ParentColor'#8#0#0#5'TEdit'#3'DNI'#4'Left'#2'p'#6'Height'#2#27#3
+  +'Top'#2'`'#5'Width'#2'P'#8'TabOrder'#2#0#4'Text'#6#3'DNI'#0#0#7'TButton'#10
+  +'btnAceptar'#4'Left'#3#160#0#6'Height'#2#25#3'Top'#3#192#0#5'Width'#2'K'#7'C'
+  +'aption'#6#7'Aceptar'#8'TabOrder'#2#1#0#0#7'TButton'#11'btnCancelar'#4'Left'
+  +#3#8#1#6'Height'#2#25#3'Top'#3#192#0#5'Width'#2'K'#7'Caption'#6#8'Cancelar'#8
+  +'TabOrder'#2#2#0#0#0
 ]);

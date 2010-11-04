@@ -16,7 +16,7 @@ interface
 
         public
             { Constructores y destructores }
-            constructor Create();
+            constructor Create;
 
             { Propiedades }
             property Fecha: TDateTime read FFecha write FFecha;
@@ -32,15 +32,18 @@ interface
             { Para guardar la fecha }
             procedure LeerDatos (Lector : TReader); override;
             procedure EscribirDatos (Escritor: TWriter); override;
+
+            { Para comprobar si está caducado }
+            function CanBeAdded: boolean;
         end;
 
 implementation
 
 {Constructor}
 
-constructor TListaReservas.Create();
+constructor TListaReservas.Create;
 begin
-
+    inherited Create;
 end;
  { Operaciones propias de la clase }
 
@@ -115,5 +118,11 @@ procedure TListaReservas.EscribirDatos(Escritor: TWriter);
 begin
     Escritor.WriteDate(Self.FFecha);
 end;
+
+function TListaReservas.CanBeAdded: boolean;
+begin
+    Result := (CompareDate(Self.Fecha, DateOf(Now)) <> -1)
+end;
+
 end.
 

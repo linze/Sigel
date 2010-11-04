@@ -6,12 +6,15 @@ interface
 
 uses
   Classes, CSala, CEspera, CReserva, Sysutils, CListaSalas, CListaEspera,
-  CListaReservas, DateUtils;
+  CListaReservas, DateUtils, CGestionListaEspera, CGestionListaReserva, Dialogs;
+
+  procedure CargaInicial;
+  procedure Guardado;
 
 var
     ListaSalas : TListaSalas;
-    ListaEspera : TListaEspera;
-    ListaReservas : TListaReservas;
+    GestionListaEspera : TGestionListaEspera;
+    GEstionListaReserva : TGestionListaReserva;
 
 
 implementation
@@ -21,31 +24,36 @@ var
     FechaTope : TDateTime;
     TmpFecha  : TDateTime;
 
-    Sala      : TSala;
-    Reserva   : TReserva;
-    // TODO: Añadir
-    //Espera    : TEspera;
+    Sala           : TSala;
+    ListaReserva   : TListaReservas;
+    ListaEspera    : TListaEspera;
 begin
     FechaTope := IncMonth(DateOf(Now));
     TmpFecha := DateOf(Desde);
+    ShowMessage(DateToStr(TmpFecha) + '--' + DateToStr(FechaTope));
     while (TmpFecha <> FechaTope) do
     begin
         Sala := TSala.Create;
         Sala.Fecha := TmpFecha;
         ListaSalas.Add(Sala);
 
-        Reserva := TReserva.Create;
-        Reserva.Fecha := TmpFecha;
-        ListaReservas.Add(Reserva);
+        ListaReserva := TListaReservas.Create;
+        ListaReserva.Fecha := TmpFecha;
+        GestionListaReserva.Add(ListaReserva);
+
+        ListaEspera := TListaEspera.Create;
+        ListaEspera.Fecha := TmpFecha;
+        GestionListaEspera.Add(ListaEspera);
+
+        TmpFecha := IncDay(TmpFecha);
     end;
 end;
 
 procedure CargaInicial;
 begin
     ListaSalas := TListaSalas.Create;
-    ListaReservas := TListaReservas.Create;
-    // TODO: Añadir
-    //ListaEspera := TListaEspera.Create;
+    GestionListaReserva := TGestionListaReserva.Create;
+    GestionListaEspera := TGestionListaEspera.Create;
     if not FileExists('salas.bin') then
     begin
         CrearMes(Now);
@@ -53,7 +61,8 @@ begin
     else
     begin
         ListaSalas.LoadFromFile('salas.bin');
-        ListaReservas.LoadFromFile('reservas.bin');
+        GestionListaReserva.LoadFromFile('reservas.bin');
+        GestionListaEspera.LoadFromFile('esperas.bin');
 
         // Rellenamos el mes con los huecos que faltan.
         if ListaSalas.Count <> 0 then
@@ -61,6 +70,13 @@ begin
         else
             CrearMes(Now);
     end;
+end;
+
+procedure Guardado;
+begin
+    ListaSalas.SaveToFile('salas.bin');
+    GestionListaReserva.SaveToFile('reservas.bin');
+    GestionListaEspera.SaveToFile('esperas.bin');
 end;
 
 end.

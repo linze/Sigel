@@ -1,10 +1,10 @@
 unit CSala;
 
-{$mode objfpc}{$H+}
+{$mode DELPHI}{$H+}{$RangeChecks On}
 
 interface
     uses
-        CLocalidad, Classes, CObjectListItem, CTipoLocalidad, CEstadoLocalidad;
+        CLocalidad, Classes, CObjectListItem, CTipoLocalidad, CEstadoLocalidad, Dialogs;
     type
 
         { TSala }
@@ -42,33 +42,35 @@ constructor TSala.Create;
 var
     i, j: integer;
 begin
-    for i:=0 to 3 do
-        for j:=0 to 7 do
+    for i:=1 to 4 do
+        for j:=1 to 8 do
         begin
             Self.FPatio[i,j] := TLocalidad.Create;
             Self.FPatio[i,j].Tipo := Patio;
             Self.FPatio[i,j].Estado := Libre;
-            Self.FPatio[i,j].Fila := i + 1;
-            Self.FPatio[i,j].Numero := j + 1;
+            Self.FPatio[i,j].Fila := i;
+            Self.FPatio[i,j].Numero := j;
         end;
 
-    for i:=0 to 1 do
-        for j:=0 to 7 do
+    for i:=1 to 2 do
+        for j:=1 to 8 do
         begin
             Self.FPrimeraPlanta[i,j] := TLocalidad.Create;
             Self.FPrimeraPlanta[i,j].Tipo := PrimeraPlanta;
             Self.FPrimeraPlanta[i,j].Estado := Libre;
-            Self.FPrimeraPlanta[i,j].Fila := i + 1;
-            Self.FPrimeraPlanta[i,j].Numero := j + 1;
+            Self.FPrimeraPlanta[i,j].Fila := i;
+            Self.FPrimeraPlanta[i,j].Numero := j;
         end;
 
-    for i:=0 to 3 do
+    for i:=1 to 4 do
     begin
         Self.FPalco[i] := TLocalidad.Create;
         Self.FPalco[i].Tipo := Palco;
         Self.FPalco[i].Estado := Libre;
-        Self.FPalco[i].Numero := i + 1;
+        Self.FPalco[i].Numero := i;
     end;
+
+    inherited Create;
 end;
 
 // TODO: Estudiar si este método ha de separarse en varios métodos
@@ -91,7 +93,7 @@ begin
         while (not Encontrado) and (not Fin_Busqueda) do
         begin
             Encontrado := (FPatio[i,j].Numero = Numero) and
-                            (FPatio[i,j].Fila = Fila);
+                          (FPatio[i,j].Fila = Fila);
             // Comprobamos que no hemos llegado al final
             if (i = 4) and (j = 8) then
                 Fin_Busqueda := True
@@ -116,8 +118,8 @@ begin
         while (not Encontrado) and (not Fin_Busqueda) do
         begin
             Encontrado := (FPrimeraPlanta[i,j].Numero = Numero) and
-                            (FPrimeraPlanta[i,j].Fila = Fila);
-            // Comprobamos que no hemos llegado al final
+                           (FPrimeraPlanta[i,j].Fila = Fila);
+           // Comprobamos que no hemos llegado al final
             if (i = 2) and (j = 8) then
                 Fin_Busqueda := True
             else if (not Encontrado) then
@@ -160,7 +162,7 @@ begin
      end
      else
      begin
-        // TODO: Elevar excepción
+        Buscar := nil;
      end;
 end;
 
@@ -184,8 +186,9 @@ begin
     // Leemos el patio del stream
     for i:=1 to 4 do
         for j:=1 to 8 do
+        begin
             Self.FPatio[i,j].LeerDatos(Lector);
-
+        end;
     // Leemos la primera planta del stream
     for i:=1 to 2 do
         for j:=1 to 8 do
@@ -217,6 +220,9 @@ begin
         Self.FPalco[i].EscribirDatos(Escritor);
 
 end;
+
+initialization
+    RegisterClass (TSala);
 
 end.
 

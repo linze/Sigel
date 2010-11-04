@@ -15,5 +15,8 @@ interface
 
 implementation
 
+initialization
+    RegisterClass (TObjectListItem);
+
 end.
 

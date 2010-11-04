@@ -46,8 +46,12 @@ implementation
 { TReserva }
 
 constructor TReserva.Create;
+var
+    i: integer;
 begin
     Self.FCantidad := 0;
+
+    inherited Create;
 end;
 
 procedure TReserva.AddLocalidad(Localidad: TLocalidad);
@@ -112,5 +116,8 @@ begin
     Self.FLocalidades[3].EscribirDatos(Escritor);
     Self.FLocalidades[4].EscribirDatos(Escritor);
 end;
+
+initialization
+    RegisterClass (TReserva);
 
 end.

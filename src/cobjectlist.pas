@@ -5,7 +5,7 @@ unit CObjectList;
 interface
 
     uses
-      Classes, SysUtils, CObjectListItem;
+      Classes, SysUtils, CObjectListItem, CSala, CEspera, CReserva;
 
     type
 
@@ -35,6 +35,12 @@ interface
             // NOTICE: Hacer override a ambos
             procedure LeerDatos (Lector : TReader); virtual; abstract;
             procedure EscribirDatos (Escritor: TWriter); virtual; abstract;
+
+            { Para guardar sus propios valores actuando como una lista
+              en otra lista }
+            procedure LeerDatosLista (Lector : TReader);
+            procedure EscribirDatosLista (Escritor: TWriter);
+            function CanBeAdded: boolean; virtual; abstract;
         end;
 
 implementation
@@ -77,7 +83,7 @@ var
     Writer : TWriter;
     i : integer;
 begin
-    Writer := TWriter.Create(Stream, $ff);
+    Writer := TWriter.Create(Stream, $ffffff);
     try
         EscribirDatos(Writer);
         Writer.WriteInteger(Count);
@@ -105,7 +111,7 @@ var
     i : integer;
     ItemsCount : integer;
 begin
-    Reader := TReader.Create(Stream, $ff);
+    Reader := TReader.Create(Stream, $ffffff);
     try
         LeerDatos(Reader);
         ItemsCount := Reader.ReadInteger;
@@ -116,7 +122,14 @@ begin
             TipoClase := GetClass(NombreClase);
             if Assigned (TipoClase) then
             begin
-                Objeto := TipoClase.Create;
+                if TipoClase = TSala then
+                    Objeto := TSala.Create
+                else if TipoClase = TEspera then
+                    Objeto := TEspera.Create
+                else if TipoClase = TReserva then
+                    Objeto := TReserva.Create
+                else
+                    Objeto := TipoClase.Create;
                 try
                     LeerDatosElemento(Reader, Objeto, TipoClase);
                 except
@@ -155,6 +168,51 @@ begin
         FStream.Free;
     end;
 end;
+
+procedure TObjectList.LeerDatosLista(Lector: TReader);
+var
+    Objeto      : TPersistent;
+    TipoClase   : TPersistentClass;
+    NombreClase : string;
+    ItemsCount  : integer;
+    i           : integer;
+begin
+    //LeerDatos(Lector);
+    ItemsCount := Lector.ReadInteger;
+    for i:=0 to ItemsCount -1 do
+    begin
+        NombreClase := Lector.ReadString;
+        TipoClase := GetClass(NombreClase);
+        if Assigned (TipoClase) then
+        begin
+            Objeto := TipoClase.Create;
+            try
+                LeerDatosElemento(Lector, Objeto, TipoClase);
+            except
+                Objeto.Free;
+                raise;
+            end;
+            AddReaded(Objeto);
+        end;
+    end;
+end;
+
+procedure TObjectList.EscribirDatosLista(Escritor: TWriter);
+var
+    i : integer;
+begin
+    //EscribirDatos(Escritor);
+    Escritor.WriteInteger(Count);
+    for i:=0 to Count - 1 do
+    begin
+        if TObject(Items[i]) is TPersistent then
+        begin
+            Escritor.WriteString(TPersistent(Items[i]).ClassName);
+            EscribirDatosElemento(Escritor, i);
+        end;
+    end;
+end;
+
 
 end.
 

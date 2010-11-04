@@ -1,6 +1,6 @@
 unit CLocalidad;
 
-{$mode objfpc}{$H+}
+{$mode objfpc}{$H+}{$RangeChecks On}
 
 interface
     uses
@@ -39,6 +39,7 @@ implementation
 
 constructor TLocalidad.Create;
 begin
+    inherited Create;
 end;
 
 function TLocalidad.EstaOcupado : boolean;

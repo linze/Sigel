@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, CLocalidad, CTipoLocalidad, uDatos;
+  ExtCtrls, StdCtrls, CLocalidad, CTipoLocalidad, uDatos, CSala;
 
 type
 
@@ -51,6 +51,7 @@ type
       Image2: TImage;
       Image3: TImage;
       ilButacas: TImageList;
+      ilPalco: TImageList;
       Label10: TLabel;
       Label4: TLabel;
       Label5: TLabel;
@@ -88,10 +89,18 @@ type
       pplanta26: TImage;
       pplanta27: TImage;
       pplanta28: TImage;
+      procedure btnAceptarClick(Sender: TObject);
       procedure btnCancelarClick(Sender: TObject);
+      procedure FormCreate(Sender: TObject);
       procedure OnClickButaca(Sender :TObject);
   private
+    function NumDeMarcadas: integer;
+    procedure CambiarSegunEstado (var Imagen : TImage; Localidad: TLocalidad);
+    procedure CargarEstado;
     procedure ChangeColor(var Imagen: TImage; ColorButaca :TColorButaca);
+    function ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
+    function ObtenerHuecoVacio: integer;
+    function EstaSeleccionada (Tipo: TTipoLocalidad; Numero, Fila: integer): Integer;
   public
     // TODO: Hacer TList
     Localidades : array [1..4] of TLocalidad;
@@ -111,36 +120,142 @@ begin
     Self.Close;
 end;
 
+procedure TfrmSeleccionButacas.btnAceptarClick(Sender: TObject);
+begin
+    if NumDeMarcadas = 0 then
+        ShowMessage('Ha de seleccionarse al menos una localidad')
+    else
+        Self.Close;
+end;
+
+procedure TfrmSeleccionButacas.FormCreate(Sender: TObject);
+var
+    i: integer;
+begin
+    for i:=1 to 4 do
+        Self.Marcadas[i] := False;
+end;
+
+function TfrmSeleccionButacas.NumDeMarcadas: integer;
+var
+    i, count : integer;
+begin
+    count := 0;
+    for i:=1 to 4 do
+    begin
+        if Self.Marcadas[i] = true then
+            count := count + 1;
+    end;
+    Result := count;
+end;
+
+procedure TfrmSeleccionButacas.CambiarSegunEstado (var Imagen : TImage; Localidad: TLocalidad);
+begin
+    if Localidad.EstaOcupado then
+        ChangeColor(Imagen, Ocupada)
+    else
+        ChangeColor(Imagen, Libre);
+end;
+
+procedure TfrmSeleccionButacas.CargarEstado;
+var
+    Sala : TSala;
+begin
+    Sala := ListaSalas.BuscarSala(Fecha);
+
+    // Butacas
+    CambiarSegunEstado(butaca11, Sala.Buscar(Patio, 1, 1));
+    CambiarSegunEstado(butaca12, Sala.Buscar(Patio, 1, 2));
+    CambiarSegunEstado(butaca13, Sala.Buscar(Patio, 1, 3));
+    CambiarSegunEstado(butaca14, Sala.Buscar(Patio, 1, 4));
+    CambiarSegunEstado(butaca15, Sala.Buscar(Patio, 1, 5));
+    CambiarSegunEstado(butaca16, Sala.Buscar(Patio, 1, 6));
+    CambiarSegunEstado(butaca17, Sala.Buscar(Patio, 1, 7));
+    CambiarSegunEstado(butaca18, Sala.Buscar(Patio, 1, 8));
+    CambiarSegunEstado(butaca21, Sala.Buscar(Patio, 2, 1));
+    CambiarSegunEstado(butaca22, Sala.Buscar(Patio, 2, 2));
+    CambiarSegunEstado(butaca23, Sala.Buscar(Patio, 2, 3));
+    CambiarSegunEstado(butaca24, Sala.Buscar(Patio, 2, 4));
+    CambiarSegunEstado(butaca25, Sala.Buscar(Patio, 2, 5));
+    CambiarSegunEstado(butaca26, Sala.Buscar(Patio, 2, 6));
+    CambiarSegunEstado(butaca27, Sala.Buscar(Patio, 2, 7));
+    CambiarSegunEstado(butaca28, Sala.Buscar(Patio, 2, 8));
+    CambiarSegunEstado(butaca32, Sala.Buscar(Patio, 3, 2));
+    CambiarSegunEstado(butaca33, Sala.Buscar(Patio, 3, 3));
+    CambiarSegunEstado(butaca34, Sala.Buscar(Patio, 3, 4));
+    CambiarSegunEstado(butaca35, Sala.Buscar(Patio, 3, 5));
+    CambiarSegunEstado(butaca36, Sala.Buscar(Patio, 3, 6));
+    CambiarSegunEstado(butaca37, Sala.Buscar(Patio, 3, 7));
+    CambiarSegunEstado(butaca43, Sala.Buscar(Patio, 4, 3));
+    CambiarSegunEstado(butaca44, Sala.Buscar(Patio, 4, 4));
+    CambiarSegunEstado(butaca45, Sala.Buscar(Patio, 4, 5));
+    CambiarSegunEstado(butaca46, Sala.Buscar(Patio, 4, 6));
+
+    // Primera planta
+    CambiarSegunEstado(pplanta11, Sala.Buscar(PrimeraPlanta, 1, 1));
+    CambiarSegunEstado(pplanta12, Sala.Buscar(PrimeraPlanta, 1, 2));
+    CambiarSegunEstado(pplanta13, Sala.Buscar(PrimeraPlanta, 1, 3));
+    CambiarSegunEstado(pplanta14, Sala.Buscar(PrimeraPlanta, 1, 4));
+    CambiarSegunEstado(pplanta15, Sala.Buscar(PrimeraPlanta, 1, 5));
+    CambiarSegunEstado(pplanta16, Sala.Buscar(PrimeraPlanta, 1, 6));
+    CambiarSegunEstado(pplanta17, Sala.Buscar(PrimeraPlanta, 1, 7));
+    CambiarSegunEstado(pplanta18, Sala.Buscar(PrimeraPlanta, 1, 8));
+    CambiarSegunEstado(pplanta21, Sala.Buscar(PrimeraPlanta, 2, 1));
+    CambiarSegunEstado(pplanta22, Sala.Buscar(PrimeraPlanta, 2, 2));
+    CambiarSegunEstado(pplanta23, Sala.Buscar(PrimeraPlanta, 2, 3));
+    CambiarSegunEstado(pplanta24, Sala.Buscar(PrimeraPlanta, 2, 4));
+    CambiarSegunEstado(pplanta25, Sala.Buscar(PrimeraPlanta, 2, 5));
+    CambiarSegunEstado(pplanta26, Sala.Buscar(PrimeraPlanta, 2, 6));
+    CambiarSegunEstado(pplanta27, Sala.Buscar(PrimeraPlanta, 2, 7));
+    CambiarSegunEstado(pplanta28, Sala.Buscar(PrimeraPlanta, 2, 8));
+
+    // TODO: Palco
+end;
+
 procedure TfrmSeleccionButacas.ChangeColor(var Imagen: TImage; ColorButaca :TColorButaca);
 var
     ImagenLista : TBitmap;
+    Tipo : TTipoLocalidad;
 begin
-    ImagenLista := TBitmap.Create;
-    case ColorButaca of
-        Libre:
-            begin
-                ilButacas.GetBitmap(0, ImagenLista);
-                Imagen.Picture.Bitmap := ImagenLista;
-            end;
-        Ocupada:
-            begin
-                ilButacas.GetBitmap(2, ImagenLista);
-                Imagen.Picture.Bitmap := ImagenLista;
-            end;
-        Seleccionada:
-            begin
-                ilButacas.GetBitmap(3, ImagenLista);
-                Imagen.Picture.Bitmap := ImagenLista;
-            end;
+    try
+        ImagenLista := TBitmap.Create;
+        Tipo := ObtenerTipoByHint(Imagen);
+        case ColorButaca of
+            Libre:
+                begin
+                    if Tipo <> Palco then
+                        ilButacas.GetBitmap(0, ImagenLista)
+                    else
+                        ilPalco.GetBitmap(0, ImagenLista);
+                end;
+            Ocupada:
+                begin
+                    if Tipo <> Palco then
+                        ilButacas.GetBitmap(2, ImagenLista)
+                    else
+                        ilPalco.GetBitmap(2, ImagenLista);
+                end;
+            Seleccionada:
+                begin
+                    if Tipo <> Palco then
+                        ilButacas.GetBitmap(3, ImagenLista)
+                    else
+                        ilPalco.GetBitmap(3, ImagenLista);
+                end;
+        end;
+        Imagen.Picture.Bitmap := ImagenLista;
+    except
+        ShowMessage ('Error al cambiar la localidad de color');
     end;
 end;
 
-procedure TfrmSeleccionButacas.OnClickButaca(Sender :TObject);
-    function EstaSeleccionada (Tipo: TTipoLocalidad; Numero, Fila: integer): boolean;
-    var
-        i       : integer;
-        found   : boolean;
-    begin
+// Devuelve -1 si no se encuentra seleccionada, y el índice si se encuentra
+function TfrmSeleccionButacas.EstaSeleccionada (Tipo: TTipoLocalidad; Numero, Fila: integer): integer;
+var
+    i       : integer;
+    found   : boolean;
+begin
+    try
         i := 0;
         Found := false;
         while not Found and (i < 4) do
@@ -160,18 +275,42 @@ procedure TfrmSeleccionButacas.OnClickButaca(Sender :TObject);
                 end;
             if not Found then i := i + 1;
         end;
-        result := found;
+        if found then
+            result := i
+        else
+            result := -1;
+    except
+        ShowMessage('Error al encontrar el estado de la localidad');
     end;
+end;
+
+function TfrmSeleccionButacas.ObtenerHuecoVacio: integer;
 var
-    Tipo       : TTipoLocalidad;
-    Fila       : Integer;
-    Numero     : Integer;
-    TmpStr     : String;
-    Localidad  : TLocalidad;
+    Found : boolean;
+    i     : integer;
+begin
+    Found := False;
+    i := 1;
+    while (not Found) and (i <= 4) do
+    begin
+        if Self.Marcadas[i] = True then
+            i := i + 1
+        else
+            Found := True;
+    end;
+    if Found then
+        result := i
+    else
+        result := -1;
+end;
+
+function TfrmSeleccionButacas.ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
+var
+    TmpStr : String;
+    Tipo   : TTipoLocalidad;
 begin
     // Obtenemos del Hint la información de la localidad
-    TmpStr := (Sender as TImage).Hint[1];
-
+    TmpStr := Imagen.Hint[1];
     // Parseamos la información
     if (TmpStr = 'B') then
         Tipo := Patio
@@ -180,17 +319,70 @@ begin
     else
         Tipo := Palco;
 
-    Fila := StrToInt((Sender as TImage).Hint[2]);
-    if Tipo <> Palco then Numero := StrToInt((Sender as TImage).Hint[3]);
+    Result := Tipo;
+end;
 
-    // Obtenemos el estado actual de la localidad
-    Localidad := ListaSalas.BuscarSala(Fecha).Buscar(Tipo, Numero, Fila);
-    if not Localidad.EstaOcupado then
-    begin
-        if EstaSeleccionada(Tipo, Numero, Fila) then
-            Self.ChangeColor(TImage(Sender), Libre)
+procedure TfrmSeleccionButacas.OnClickButaca(Sender :TObject);
+var
+    Tipo       : TTipoLocalidad;
+    Fila       : Integer;
+    Numero     : Integer;
+    Localidad  : TLocalidad;
+    hueco      : integer;
+begin
+    try
+        Tipo := ObtenerTipoByHint (Sender as TImage);
+        if Tipo = Palco then
+        begin
+            Numero := StrToInt((Sender as TImage).Hint[2]);
+            Fila := Numero;
+        end
         else
-            Self.ChangeColor(TImage(Sender), Seleccionada)
+        begin
+            Fila := StrToInt((Sender as TImage).Hint[2]);
+            Numero := StrToInt((Sender as TImage).Hint[3]);
+        end;
+
+        // Obtenemos el estado actual de la localidad
+        if (ListaSalas.BuscarSala(Fecha) <> nil) then
+        begin
+            if  (ListaSalas.BuscarSala(Fecha).Buscar(Tipo, Numero, Fila) <> nil) then
+            begin
+                Localidad := ListaSalas.BuscarSala(Fecha).Buscar(Tipo, Numero, Fila);
+                if not Localidad.EstaOcupado then
+                begin
+                    hueco := EstaSeleccionada(Tipo, Numero, Fila);
+                    if hueco <> -1 then
+                    begin
+                        Self.Marcadas[hueco] := False;
+                        Self.ChangeColor(TImage(Sender), Libre)
+                    end
+                    else
+                    begin
+                        hueco := ObtenerHuecoVacio;
+                        if hueco = -1 then
+                            ShowMessage('No se puede reservar más de cuatro localidades o un palco.')
+                        else
+                        begin
+                            if ((Tipo = Palco) and (NumDeMarcadas > 0)) then
+                                ShowMessage ('No se puede reservar más de cuatro localidades o un palco' + IntToStr(NumDeMarcadas))
+                            else
+                            begin
+                                Self.Marcadas[hueco] := True;
+                                Self.Localidades[hueco] := Localidad;
+                                Self.ChangeColor(TImage(Sender), Seleccionada);
+                            end;
+                        end;
+                    end;
+                end
+            end
+            else
+                ShowMessage('Butaca no encontrada');
+        end
+        else
+            ShowMessage('Sala no disponible para dicho día');
+    except
+        ShowMessage ('Error al marcar la butaca');
     end;
 end;
 
