@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, Spin, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
-  CSala;
+  CSala, AnularReservaFrm;
 
 type
 
@@ -33,6 +33,7 @@ type
       Panel4: TPanel;
       procedure BotonMouseLeave(Sender: TObject);
       procedure BotonMouseEnter(Sender: TObject);
+      procedure btnAnularReservaClick(Sender: TObject);
       procedure btnCompraClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
       procedure btnSalirClick(Sender: TObject);
@@ -63,6 +64,27 @@ procedure TfrmPrincipal.BotonMouseEnter(Sender: TObject);
 begin
     lbDescripcion.Caption := (Sender as TButton).Hint;
     lbDescripcion.Visible := True;
+end;
+
+procedure TfrmPrincipal.btnAnularReservaClick(Sender: TObject);
+var
+   frmFecha :TfrmFecha;
+   Fecha :TDateTime;
+   frmAnular : TfrmAnularReserva;
+begin
+  frmFecha := TFrmFecha.Create(Self);
+  try
+  frmFecha.ShowModal;
+  if frmFecha.FechaMarcada then
+  begin
+       Fecha := frmFecha.Fecha;
+       frmAnular := TfrmAnularReserva.Create(Self);
+       frmAnular.ShowModal;
+  end;
+
+  finally
+         frmFecha.Free;
+  end;
 end;
 
 procedure TfrmPrincipal.btnCompraClick(Sender: TObject);
