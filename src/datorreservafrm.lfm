@@ -7,12 +7,52 @@ object frmDatosReserva: TfrmDatosReserva
   ClientHeight = 300
   ClientWidth = 400
   LCLVersion = '0.9.28.2'
+  object Intro: TLabel
+    Left = 88
+    Height = 18
+    Top = 40
+    Width = 207
+    Caption = 'Introduzca los siguientes datos:'
+    ParentColor = False
+  end
+  object NombreCompleto: TLabel
+    Left = 24
+    Height = 18
+    Top = 64
+    Width = 132
+    Caption = 'Nombre y apellidos:'
+    ParentColor = False
+  end
+  object DNI: TLabel
+    Left = 24
+    Height = 18
+    Top = 136
+    Width = 33
+    Caption = 'DNI: '
+    ParentColor = False
+  end
+  object Contacto: TLabel
+    Left = 24
+    Height = 18
+    Top = 192
+    Width = 193
+    Caption = 'Teléfono o email de contacto:'
+    ParentColor = False
+  end
   object Button1: TButton
-    Left = 187
+    Left = 192
     Height = 25
-    Top = 121
+    Top = 232
     Width = 75
     Caption = 'Button1'
     TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 280
+    Height = 25
+    Top = 232
+    Width = 75
+    Caption = 'Button2'
+    TabOrder = 1
   end
 end

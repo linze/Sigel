@@ -14,6 +14,11 @@ type
 
   TfrmDatosReserva = class(TForm)
     Button1: TButton;
+    Button2: TButton;
+    Intro: TLabel;
+    NombreCompleto: TLabel;
+    DNI: TLabel;
+    Contacto: TLabel;
   private
     { private declarations }
   public
