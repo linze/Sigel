@@ -4,7 +4,8 @@ unit CSala;
 
 interface
     uses
-        CLocalidad, Classes, CTipoLocalidad, CEstadoLocalidad, Dialogs;
+        CLocalidad, Classes, CTipoLocalidad, CEstadoLocalidad, SysUtils,
+        typinfo, Dialogs;
     type
 
         { TSala }
@@ -24,13 +25,15 @@ interface
 
 
             { Operaciones propias de la clase }
-            function Buscar(Tipo :TTipoLocalidad; Numero: Integer;
-                           Fila : Integer): TLocalidad;
+            function Buscar(Tipo :TTipoLocalidad; Fila: Integer;
+                           Numero : Integer): TLocalidad;
             procedure Cambiar(Localidad : TLocalidad);
 
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
             procedure EscribirDatos (Escritor: TWriter); dynamic;
+
+            procedure LogEnFichero;
         end;
 
 implementation
@@ -75,104 +78,30 @@ end;
 // TODO: Estudiar si este método ha de separarse en varios métodos
 // privados de búsqueda para cada tipo de localidad. Implementarlo
 // todo en el mismo puede llegar a ser engorroso.
-function TSala.Buscar(Tipo: TTipoLocalidad; Numero: Integer;
-  Fila: Integer): TLocalidad;
-var
-    Encontrado   : boolean;
-    Fin_Busqueda : boolean;
-    i,j          : integer;
+function TSala.Buscar(Tipo: TTipoLocalidad; Fila: Integer;
+  Numero: Integer): TLocalidad;
 begin
-    Encontrado := False;
-    Fin_Busqueda := False;
-
-    i := 1;
-    if Tipo = Patio then
-    begin
-        j := 1;
-        while (not Encontrado) and (not Fin_Busqueda) do
-        begin
-            Encontrado := (FPatio[i,j].Numero = Numero) and
-                          (FPatio[i,j].Fila = Fila);
-            // Comprobamos que no hemos llegado al final
-            if (i = 4) and (j = 8) then
-                Fin_Busqueda := True
-            else if (not Encontrado) then
-            begin
-                // Mientras no sea el final, avanzamos
-                // de asiento
-                if (j <> 8) then
-                    j := j + 1
-                else
-                // ... o de fila
-                begin
-                    i := i + 1;
-                    j := 1;
-                end;
-            end;
-        end;
-    end
-    else if Tipo = PrimeraPlanta then
-    begin
-        j := 1;
-        while (not Encontrado) and (not Fin_Busqueda) do
-        begin
-            Encontrado := (FPrimeraPlanta[i,j].Numero = Numero) and
-                           (FPrimeraPlanta[i,j].Fila = Fila);
-           // Comprobamos que no hemos llegado al final
-            if (i = 2) and (j = 8) then
-                Fin_Busqueda := True
-            else if (not Encontrado) then
-            begin
-                // Mientras no sea el final, avanzamos
-                // de asiento
-                if (j <> 8) then
-                    j := j + 1
-                else
-                // ... o de fila
-                begin
-                    i := i + 1;
-                    j := 1;
-                end;
-            end;
-        end;
-    end
-    else
-    begin
-        while (not Encontrado) and (not Fin_Busqueda) do
-        begin
-            Encontrado := (FPalco[i].Numero = Numero);
-            // Comprobamos que no hemos llegado al final
-            if (i = 4) then
-                Fin_Busqueda := True
-            else if (not Encontrado) then
-            begin
-                i := i + 1;
-            end;
-       end;
-    end;
-
-     if Encontrado then
-     begin
+    try
         case Tipo of
-            Patio:         Buscar := FPatio[i,j];
-            PrimeraPlanta: Buscar := FPrimeraPlanta[i,j];
-            Palco:         Buscar := FPalco[i];
+        Patio:  result := FPatio[Fila,Numero];
+        PrimeraPlanta: result := FPrimeraPlanta[Fila, Numero];
+        Palco:  result := FPalco[Numero];
         end;
-     end
-     else
-     begin
-        Buscar := nil;
-     end;
+    except
+        ShowMessage('[CSala:Buscar] Fuera de índice. Valores: [' + IntToStr(Numero) + ',' + IntToStr(Fila) + ']');
+    end;
 end;
 
 procedure TSala.Cambiar(Localidad: TLocalidad);
 begin
-    case Localidad.Tipo of
-    Patio:         FPatio[Localidad.Fila, Localidad.Numero] := Localidad;
-    PrimeraPlanta: FPrimeraPlanta[Localidad.Fila, Localidad.Numero] := Localidad;
-    // TODO: Verificar que al grupo le ha quedado claro que para los palcos
-    // usaremos el número y no la fila.
-    Palco:         FPalco[Localidad.Numero] := Localidad;
+    try
+        case Localidad.Tipo of
+        Patio:         FPatio[Localidad.Fila, Localidad.Numero] := Localidad;
+        PrimeraPlanta: FPrimeraPlanta[Localidad.Fila, Localidad.Numero] := Localidad;
+        Palco:         FPalco[Localidad.Numero] := Localidad;
+        end;
+    except
+        ShowMessage('[CSala:Buscar] Fuera de índice');
     end;
 end;
 
@@ -217,6 +146,40 @@ begin
     // Escribimos el paco del stream
     for i:=1 to 4 do
         Self.FPalco[i].EscribirDatos(Escritor);
+
+end;
+
+procedure TSala.LogEnFichero;
+    procedure AppendEstado (Localidad : TLocalidad);
+    var
+       Log : TextFile;
+    begin
+        AssignFile(Log, 'log_sala.txt');
+        Append(Log);
+        WriteLn(Log, '');
+        WriteLn(Log, 'Fila: ' + IntToStr(Localidad.Fila) + ', Numero: ' + IntToStr(Localidad.Numero));
+        if Localidad.EstaOcupado then
+            WriteLn(Log, 'Estado: OCUPADA')
+        else
+            WriteLn(Log, 'Estado: Libre');
+        Close(Log);
+    end;
+var
+    i, j: integer;
+begin
+    // Escribimos el patio del stream
+    for i:=1 to 4 do
+        for j:=1 to 8 do
+            AppendEstado(Self.FPatio[i,j]);
+
+    // Escribimos la primera planta del stream
+    for i:=1 to 2 do
+        for j:=1 to 8 do
+            AppendEstado(Self.FPrimeraPlanta[i,j]);
+
+    // Escribimos el paco del stream
+    for i:=1 to 4 do
+        AppendEstado(Self.FPalco[i]);
 
 end;
 

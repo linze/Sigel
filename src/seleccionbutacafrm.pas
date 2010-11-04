@@ -93,16 +93,15 @@ type
       procedure btnCancelarClick(Sender: TObject);
       procedure FormCreate(Sender: TObject);
       procedure OnClickButaca(Sender :TObject);
+      function NumDeMarcadas: integer;
   private
-    function NumDeMarcadas: integer;
     procedure CambiarSegunEstado (var Imagen : TImage; Localidad: TLocalidad);
     procedure CargarEstado;
     procedure ChangeColor(var Imagen: TImage; ColorButaca :TColorButaca);
     function ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
     function ObtenerHuecoVacio: integer;
-    function EstaSeleccionada (Tipo: TTipoLocalidad; Numero, Fila: integer): Integer;
+    function EstaSeleccionada (Tipo: TTipoLocalidad; Fila, Numero: integer): Integer;
   public
-    // TODO: Hacer TList
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
     Fecha       : TDateTime;
@@ -134,6 +133,8 @@ var
 begin
     for i:=1 to 4 do
         Self.Marcadas[i] := False;
+    uDatos.Sala.LogEnFichero;
+    CargarEstado;
 end;
 
 function TfrmSeleccionButacas.NumDeMarcadas: integer;
@@ -152,9 +153,13 @@ end;
 procedure TfrmSeleccionButacas.CambiarSegunEstado (var Imagen : TImage; Localidad: TLocalidad);
 begin
     if Localidad.EstaOcupado then
+    begin
         ChangeColor(Imagen, Ocupada)
+    end
     else
+    begin
         ChangeColor(Imagen, Libre);
+    end;
 end;
 
 procedure TfrmSeleccionButacas.CargarEstado;
@@ -205,7 +210,11 @@ begin
     CambiarSegunEstado(pplanta27, Sala.Buscar(PrimeraPlanta, 2, 7));
     CambiarSegunEstado(pplanta28, Sala.Buscar(PrimeraPlanta, 2, 8));
 
-    // TODO: Palco
+    CambiarSegunEstado(palco1, Sala.Buscar(Palco, 1, 1));
+    CambiarSegunEstado(palco2, Sala.Buscar(Palco, 2, 2));
+    CambiarSegunEstado(palco3, Sala.Buscar(Palco, 3, 3));
+    CambiarSegunEstado(palco4, Sala.Buscar(Palco, 4, 4));
+
 end;
 
 procedure TfrmSeleccionButacas.ChangeColor(var Imagen: TImage; ColorButaca :TColorButaca);
@@ -246,7 +255,8 @@ begin
 end;
 
 // Devuelve -1 si no se encuentra seleccionada, y el índice si se encuentra
-function TfrmSeleccionButacas.EstaSeleccionada (Tipo: TTipoLocalidad; Numero, Fila: integer): integer;
+function TfrmSeleccionButacas.EstaSeleccionada (Tipo: TTipoLocalidad;
+                                                Fila, Numero: integer): integer;
 var
     i       : integer;
     found   : boolean;
@@ -339,10 +349,10 @@ begin
     end;
 
     // Obtenemos el estado actual de la localidad
-    Localidad := Sala.Buscar(Tipo, Numero, Fila);
+    Localidad := Sala.Buscar(Tipo, Fila, Numero);
     if not Localidad.EstaOcupado then
     begin
-        hueco := EstaSeleccionada(Tipo, Numero, Fila);
+        hueco := EstaSeleccionada(Tipo, Fila, Numero);
         if hueco <> -1 then
         begin
             Self.Marcadas[hueco] := False;
@@ -352,11 +362,11 @@ begin
         begin
             hueco := ObtenerHuecoVacio;
             if hueco = -1 then
-                ShowMessage('No se puede reservar más de cuatro localidades o un palco.')
+                ShowMessage('No se puede seleccionar más de cuatro localidades o un palco.')
             else
             begin
                 if ((Tipo = Palco) and (NumDeMarcadas > 0)) then
-                    ShowMessage ('No se puede reservar más de cuatro localidades o un palco' + IntToStr(NumDeMarcadas))
+                    ShowMessage ('No se puede seleccionar más de cuatro localidades o un palco')
                 else
                 begin
                     Self.Marcadas[hueco] := True;

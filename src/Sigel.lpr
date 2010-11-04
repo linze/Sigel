@@ -18,11 +18,6 @@ begin
     {$I Sigel.lrs}
     Application.Initialize;
     Application.CreateForm(TfrmPrincipal, frmPrincipal);
-    Application.CreateForm(TfrmSeleccionButacas, frmSeleccionButacas);
-    Application.CreateForm(TfrmAnularReserva, frmAnularReserva);
-    Application.CreateForm(TfrmAnularCompra, frmAnularCompra);
-  Application.CreateForm(TfrmDatosReserva, frmDatosReserva);
-  Application.CreateForm(TfrmCreditos, frmCreditos);
     Application.Run;
 end.
 

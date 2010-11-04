@@ -1,54 +1,78 @@
 object frmAnularReserva: TfrmAnularReserva
-  Left = 573
-  Height = 228
-  Top = 162
-  Width = 400
-  ActiveControl = DNI
-  Caption = 'frmAnularReserva'
-  ClientHeight = 228
-  ClientWidth = 400
+  Left = 551
+  Height = 139
+  Top = 187
+  Width = 265
+  ActiveControl = eDNI
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'Introducir datos'
+  ClientHeight = 139
+  ClientWidth = 265
   OnCreate = FormCreate
   LCLVersion = '0.9.28.2'
   object Label1: TLabel
-    Left = 32
-    Height = 18
-    Top = 40
-    Width = 280
-    Caption = 'Para anular reserva debe introducir su DNI:'
+    Left = 5
+    Height = 20
+    Top = 8
+    Width = 167
+    Caption = 'Introduzca su DNI:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
     ParentColor = False
+    ParentFont = False
   end
   object Label2: TLabel
-    Left = 64
-    Height = 18
-    Top = 104
-    Width = 33
+    Left = 16
+    Height = 20
+    Top = 48
+    Width = 45
     Caption = 'DNI: '
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
     ParentBidiMode = False
     ParentColor = False
+    ParentFont = False
   end
-  object DNI: TEdit
-    Left = 112
-    Height = 27
-    Top = 96
+  object eDNI: TEdit
+    Left = 64
+    Height = 29
+    Top = 40
     Width = 176
-    OnChange = DNIChange
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    MaxLength = 9
+    OnChange = eDNIChange
+    ParentFont = False
     TabOrder = 0
   end
   object btnAceptar: TButton
-    Left = 152
+    Left = 14
     Height = 41
-    Top = 160
+    Top = 88
     Width = 104
-    Caption = 'Aceptar'
+    Caption = 'ACEPTAR'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnAceptarClick
+    ParentFont = False
     TabOrder = 1
   end
   object btnCancelar: TButton
-    Left = 274
+    Left = 136
     Height = 41
-    Top = 160
+    Top = 88
     Width = 104
-    Caption = 'Cancelar'
+    Caption = 'CANCELAR'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
     OnClick = btnCancelarClick
+    ParentFont = False
     TabOrder = 2
   end
 end

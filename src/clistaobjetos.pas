@@ -53,11 +53,11 @@ begin
             if TObject(Items[i]) is TPersistent then
             begin
                 Writer.WriteString(TPersistent(Items[i]).ClassName);
-                if (TPersistent(Items[i]) is TSala) then
+                if TPersistent(Items[i]).ClassType = TSala then
                     TSala(Items[i]).EscribirDatos(Writer)
-                else if (TPersistent(Items[i]) is TEspera) then
+                else if TPersistent(Items[i]).ClassType = TEspera then
                     TEspera(Items[i]).EscribirDatos(Writer)
-                else if (TPersistent(Items[i]) is TReserva) then
+                else if TPersistent(Items[i]).ClassType = TReserva then
                     TReserva(Items[i]).EscribirDatos(Writer)
             end;
         end;
@@ -84,20 +84,20 @@ begin
             TipoClase := GetClass(NombreClase);
             if Assigned (TipoClase) then
             begin
-                if TPersistent(TipoClase) is TSala then
+                if TipoClase = TSala then
                     Objeto := TSala.Create
-                else if TPersistent(TipoClase) is TReserva then
+                else if TipoClase = TReserva then
                     Objeto := TReserva.Create
-                else if TPersistent(TipoClase) is TEspera then
+                else if TipoClase = TEspera then
                     Objeto := TEspera.Create
                 else
                     Objeto := TipoClase.Create;
                 try
-                    if Objeto is TSala then
+                    if TipoClase = TSala then
                         TSala(Objeto).LeerDatos(Reader)
-                    else if Objeto is TReserva then
+                    else if TipoClase = TReserva then
                         TReserva(Objeto).LeerDatos(Reader)
-                    else if Objeto is TEspera then
+                    else if TipoClase = TEspera then
                         TEspera(Objeto).LeerDatos(Reader);
                 except
                     Objeto.Free;

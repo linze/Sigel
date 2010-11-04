@@ -6,8 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, Spin, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
-  CSala, AnularReservaFrm, DatosReservaFrm;
+  ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
+  CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva;
 
 type
 
@@ -21,7 +21,6 @@ type
       btnLEspera: TButton;
       btnVisualizarEstado: TButton;
       btnSalir: TButton;
-      Button1: TButton;
       GroupBox1: TGroupBox;
       Label1: TLabel;
       Label2: TLabel;
@@ -69,19 +68,16 @@ end;
 procedure TfrmPrincipal.btnAnularReservaClick(Sender: TObject);
 var
    frmFecha :TfrmFecha;
-   Fecha :TDateTime;
    frmAnular : TfrmAnularReserva;
 begin
   frmFecha := TFrmFecha.Create(Self);
   try
-  frmFecha.ShowModal;
-  if frmFecha.FechaMarcada then
-  begin
-       Fecha := frmFecha.Fecha;
-       frmAnular := TfrmAnularReserva.Create(Self);
-       frmAnular.ShowModal;
-  end;
-
+      frmFecha.ShowModal;
+      if frmFecha.FechaMarcada then
+      begin
+           frmAnular := TfrmAnularReserva.Create(Self);
+           frmAnular.ShowModal;
+      end;
   finally
          frmFecha.Free;
   end;
@@ -90,22 +86,40 @@ end;
 procedure TfrmPrincipal.btnCompraClick(Sender: TObject);
 var
     frmFecha : TfrmFecha;
-    frmSeleccionButaca : TfrmSeleccionButacas;
-    Fecha    : TDateTime;
+    frmSeleccionButaca : TFrmSeleccionButacas;
+    frmDatos : TfrmDatosReserva;
+    Reserva : TReserva;
+    i       : integer;
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
-        frmFecha.EsReserva := False;
+        frmFecha.EsReserva := True;
         frmFecha.ShowModal;
         if frmFecha.FechaMarcada then
         begin
-            Fecha := frmFecha.Fecha;
+            uDatos.Cargar(frmFecha.Fecha);
             frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
             try
-                frmSeleccionButaca.Fecha := Fecha;
                 frmSeleccionButaca.ShowModal;
+                if frmSeleccionButaca.NumDeMarcadas > 0 then
+                begin
+                    begin
+                        for i:=1 to 4 do
+                        begin
+                            if frmSeleccionButaca.Marcadas[i] then
+                            begin
+                                frmSeleccionButaca.Localidades[i].Estado := Comprada;
+                                uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[1]);
+                            end;
+                        end;
+                        uDatos.Guardar(frmFecha.Fecha);
+                        ShowMessage('Operación realizada con éxito');
+                    end;
+                end;
             finally
+                frmSeleccionButaca.Free;
             end;
+            uDatos.LiberarDatos;
         end
         else
             // TODO: Adapta esto
@@ -118,7 +132,10 @@ end;
 procedure TfrmPrincipal.btnReservaClick(Sender: TObject);
 var
     frmFecha : TfrmFecha;
+    frmSeleccionButaca : TFrmSeleccionButacas;
     frmDatos : TfrmDatosReserva;
+    Reserva  : TReserva;
+    i       : integer;
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
@@ -126,9 +143,43 @@ begin
         frmFecha.ShowModal;
         if frmFecha.FechaMarcada then
         begin
-            // TODO: Adapta esto. Seguir proceso
-            frmDatos := TfrmDatosReserva.Create(Self);
-            frmDatos.ShowModal;
+            uDatos.Cargar(frmFecha.Fecha);
+            frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+            try
+                frmSeleccionButaca.ShowModal;
+                if frmSeleccionButaca.NumDeMarcadas > 0 then
+                begin
+                    frmDatos := TfrmDatosReserva.Create(Self);
+                    try
+                        frmDatos.ShowModal;
+                        if frmDatos.DatosIntroducidos then
+                        begin
+                            for i:= 1 to 4 do
+                            begin
+                                if frmSeleccionButaca.Marcadas[i] then
+                                begin
+                                    frmSeleccionButaca.Localidades[i].Estado := Reservada;
+                                    Reserva := TReserva.Create;
+                                    Reserva.Nombre := frmDatos.Nombre;
+                                    Reserva.Dni := frmDatos.Dni;
+                                    Reserva.Telefono := frmDatos.Telefono;
+                                    Reserva.Email := frmDatos.Email;
+                                    Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                    uDatos.Reservas.Add(Reserva);
+                                    uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[1]);
+                                end;
+                            end;
+                            uDatos.Guardar(frmFecha.Fecha);
+                            ShowMessage('Operación realizada con éxito');
+                        end;
+                    finally
+                        frmDatos.Free;
+                    end;
+                end;
+            finally
+                frmSeleccionButaca.Free;
+            end;
+            uDatos.LiberarDatos;
         end
         else
             // TODO: Adapta esto
@@ -145,13 +196,11 @@ end;
 
 procedure TfrmPrincipal.Button1Click(Sender: TObject);
 begin
-    //uDatos.Guardado;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
     Self.Autenticado := False;
-    //uDatos.CargaInicial;
 end;
 
 procedure TfrmPrincipal.lbAdminClick(Sender: TObject);

@@ -15,18 +15,26 @@ type
   TfrmDatosReserva = class(TForm)
     btnAceptar: TButton;
     btnCancelar: TButton;
+    eEmail: TEdit;
     eNombre: TEdit;
     eDNI: TEdit;
-    eContacto: TEdit;
+    eTelefono: TEdit;
     Intro: TLabel;
+    Label1: TLabel;
     NombreCompleto: TLabel;
-    DNI: TLabel;
-    Contacto: TLabel;
+    lbDNI: TLabel;
+    lbContacto: TLabel;
+    procedure btnAceptarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { private declarations }
   public
-    { public declarations }
+    DatosIntroducidos : boolean;
+    Nombre : String;
+    DNI : String;
+    Telefono : String;
+    Email : String;
   end; 
 
 var
@@ -42,8 +50,28 @@ begin
     Self.Close;
 end;
 
+procedure TfrmDatosReserva.FormCreate(Sender: TObject);
+begin
+    Self.DatosIntroducidos := False;
+end;
+
+procedure TfrmDatosReserva.btnAceptarClick(Sender: TObject);
+begin
+    if (eNombre.Text <> '') and (eDNI.Text <> '') and ((eTelefono.Text <> '') or (eEmail.Text <> '')) then
+    begin
+        Self.DatosIntroducidos := True;
+        Nombre := eNombre.Text;
+        DNI := UpperCase(eDni.Text);
+        Telefono := eTelefono.Text;
+        Email := eEmail.Text;
+        Self.Close;
+    end
+    else
+        ShowMessage ('Se han de introducir todos los datos');
+end;
+
 initialization
-  {$I datorreservafrm.lrs}
+  {$I datosreservafrm.lrs}
 
 end.
 

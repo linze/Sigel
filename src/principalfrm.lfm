@@ -22,9 +22,9 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 0
     object Label1: TLabel
       Left = 292
-      Height = 79
+      Height = 102
       Top = 13
-      Width = 164
+      Width = 210
       Caption = 'Sigel'
       Font.Color = 7039851
       Font.Height = -91
@@ -34,9 +34,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object Label2: TLabel
       Left = 288
-      Height = 79
+      Height = 102
       Top = 8
-      Width = 164
+      Width = 210
       Caption = 'Sigel'
       Font.Height = -91
       Font.Name = 'Sans'
@@ -45,9 +45,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object lbAdmin: TLabel
       Left = 688
-      Height = 11
+      Height = 14
       Top = 2
-      Width = 89
+      Width = 124
       Alignment = taRightJustify
       Caption = 'Acceso administración'
       Font.Height = -11
@@ -55,15 +55,6 @@ object frmPrincipal: TfrmPrincipal
       ParentColor = False
       ParentFont = False
       OnClick = lbAdminClick
-    end
-    object Button1: TButton
-      Left = 55
-      Height = 25
-      Top = 31
-      Width = 75
-      Caption = 'Button1'
-      OnClick = Button1Click
-      TabOrder = 0
     end
   end
   object Panel2: TPanel

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls;
+  StdCtrls, uDatos, CReserva, CEstadoLocalidad;
 
 type
 
@@ -15,18 +15,18 @@ type
   TfrmAnularReserva = class(TForm)
     btnAceptar: TButton;
     btnCancelar: TButton;
-    numDNI: TEdit;
+    eDNI: TEdit;
     Label1: TLabel;
     Label2: TLabel;
-    procedure DNIChange(Sender: TObject);
+    procedure eDNIChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure btnAceptarClick(Sender: TObject);
   private
-    { private declarations }
+    procedure Anular(sDni : String);
   public
-    ValidDNI : boolean;
-    DNIrecibido : TEdit;
+    IntroducidoDni : boolean;
+    DNI : String;
   end; 
 
 var
@@ -36,10 +36,10 @@ implementation
 
 procedure TfrmAnularReserva.FormCreate(Sender: TObject);
 begin
-    ValidDNI := False;
+    IntroducidoDni := False;
 end;
 
-procedure TfrmAnularReserva.DNIChange(Sender: TObject);
+procedure TfrmAnularReserva.eDNIChange(Sender: TObject);
 begin
 
 end;
@@ -51,12 +51,47 @@ end;
 
 procedure TfrmAnularReserva.btnAceptarClick(Sender: TObject);
 begin
-    // TODO validar comprobar si el DNI es válido
-    ValidDNI := True;
-    DNIrecibido := numDNI;
-    Close;
+    if (eDNI.Text <> '') and (Length(eDNI.Text) = 9) then
+    begin
+        eDNI.Text := UpperCase(eDNI.Text);
+        IntroducidoDNI := True;
+        DNI := eDNI.Text;
+        Anular(DNI);
+        Self.Close;
+    end;
 end;
 
+procedure TfrmAnularReserva.Anular(sDni : String);
+var
+    existeReserva : boolean;
+    seguirBuscando : boolean;
+    i,j, cantidad : integer;
+begin
+    existeReserva := False;
+    seguirBuscando := True;
+    i := uDatos.Reservas.Count;
+    while seguirBuscando do
+    begin
+        if TReserva(Reservas.Items[i]).Dni = sDni then
+        begin
+            existeReserva := True;
+            seguirBuscando := False;
+            Reservas.Delete(i);
+            cantidad := TReserva(Reservas.Items[i]).Cantidad;
+            for j := 1 to cantidad do
+                TReserva(Reservas.Items[i]).GetLocalidad(j).Estado := Libre;
+        end
+        else
+        begin
+            if i = 0 then
+                seguirBuscando := False
+            else
+                i := i - 1;
+        end;
+    end;
+    if not existeReserva then
+        ShowMessage('No hay ninguna reserva que corresponda con ese DNI');
+end;
 
 { TfrmAnularReserva }
 

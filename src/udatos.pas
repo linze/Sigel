@@ -9,6 +9,7 @@ interface
     procedure Cargar(Fecha : TDateTime);
     procedure Guardar(Fecha : TDateTime);
     procedure LiberarDatos;
+    procedure CrearVacio;
 
     var
         Sala     : TSala;
@@ -24,15 +25,20 @@ var
 begin
     NombreFichero := DateToStr(Fecha);
 
-    ListaSala := TListaObjetos.Create;
-    ListaSala.LoadFromFile(NombreFichero + '.sala');
-    Sala := TSala(ListaSala.Items[ListaSala.Count - 1]);
+    if FileExists(NombreFichero + '.sala') then
+    begin
+        ListaSala := TListaObjetos.Create;
+        ListaSala.LoadFromFile(NombreFichero + '.sala');
+        Sala := TSala(ListaSala.Items[ListaSala.Count - 1]);
 
-    Reservas := TListaObjetos.Create;
-    Reservas.LoadFromFile(NombreFichero + '.reservas');
+        Reservas := TListaObjetos.Create;
+        Reservas.LoadFromFile(NombreFichero + '.reservas');
 
-    Esperas := TListaObjetos.Create;
-    Esperas.LoadFromFile(NombreFichero + '.esperas');
+        Esperas := TListaObjetos.Create;
+        Esperas.LoadFromFile(NombreFichero + '.esperas');
+    end
+    else
+        CrearVacio;
 end;
 
 procedure Guardar(Fecha : TDateTime);
@@ -56,6 +62,13 @@ begin
     Sala.Free;
     Reservas.Free;
     Esperas.Free;
+end;
+
+procedure CrearVacio;
+begin
+    Sala  := TSala.Create;
+    Reservas := TListaObjetos.Create;
+    Esperas := TListaObjetos.Create;
 end;
 
 end.
