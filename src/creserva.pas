@@ -5,11 +5,11 @@ unit CReserva;
 interface
 
     uses
-        CLocalidad, Classes, CObjectListItem;
+        CLocalidad, Classes;
     type
         { TReserva }
 
-        TReserva = class (TObjectListItem)
+        TReserva = class (TPersistent)
         private
             FFecha:       TDateTime;
             FNombre:      String;
@@ -36,8 +36,8 @@ interface
             function GetLocalidad(Indice: Integer): TLocalidad;
 
             { Para guardar-extraer desde ficheros }
-            procedure LeerDatos (Lector : TReader); override;
-            procedure EscribirDatos (Escritor: TWriter); override;
+            procedure LeerDatos (Lector : TReader); dynamic;
+            procedure EscribirDatos (Escritor: TWriter); dynamic;
         end;
 
 

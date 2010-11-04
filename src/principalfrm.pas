@@ -121,13 +121,13 @@ end;
 
 procedure TfrmPrincipal.Button1Click(Sender: TObject);
 begin
-    uDatos.Guardado;
+    //uDatos.Guardado;
 end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
     Self.Autenticado := False;
-    uDatos.CargaInicial;
+    //uDatos.CargaInicial;
 end;
 
 procedure TfrmPrincipal.lbAdminClick(Sender: TObject);
