@@ -1,5 +1,5 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 255
+  Left = 206
   Height = 526
   Top = 151
   Width = 816
@@ -22,9 +22,9 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 0
     object Label1: TLabel
       Left = 292
-      Height = 102
+      Height = 79
       Top = 13
-      Width = 210
+      Width = 164
       Caption = 'Sigel'
       Font.Color = 7039851
       Font.Height = -91
@@ -34,9 +34,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object Label2: TLabel
       Left = 288
-      Height = 102
+      Height = 79
       Top = 8
-      Width = 210
+      Width = 164
       Caption = 'Sigel'
       Font.Height = -91
       Font.Name = 'Sans'
@@ -45,9 +45,9 @@ object frmPrincipal: TfrmPrincipal
     end
     object lbAdmin: TLabel
       Left = 688
-      Height = 14
+      Height = 11
       Top = 2
-      Width = 124
+      Width = 89
       Alignment = taRightJustify
       Caption = 'Acceso administración'
       Font.Height = -11
@@ -131,7 +131,7 @@ object frmPrincipal: TfrmPrincipal
       Width = 816
       Align = alClient
       Caption = 'Elija la operación a realizar'
-      ClientHeight = 343
+      ClientHeight = 328
       ClientWidth = 812
       TabOrder = 0
       object btnCompra: TButton
@@ -176,6 +176,7 @@ object frmPrincipal: TfrmPrincipal
         Font.Height = -17
         Font.Name = 'Sans'
         Font.Style = [fsBold]
+        OnClick = btnAnularReservaClick
         OnMouseEnter = BotonMouseEnter
         OnMouseLeave = BotonMouseLeave
         ParentFont = False

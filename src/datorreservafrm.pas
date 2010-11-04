@@ -13,8 +13,11 @@ type
   { TfrmDatosReserva }
 
   TfrmDatosReserva = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
+    btnAceptar: TButton;
+    btnCancelar: TButton;
+    eNombre: TEdit;
+    eDNI: TEdit;
+    eContacto: TEdit;
     Intro: TLabel;
     NombreCompleto: TLabel;
     DNI: TLabel;

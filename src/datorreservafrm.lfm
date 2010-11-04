@@ -1,22 +1,22 @@
 object frmDatosReserva: TfrmDatosReserva
   Left = 290
-  Height = 300
+  Height = 318
   Top = 199
   Width = 400
   Caption = 'frmDatosReserva'
-  ClientHeight = 300
+  ClientHeight = 318
   ClientWidth = 400
   LCLVersion = '0.9.28.2'
   object Intro: TLabel
-    Left = 88
+    Left = 24
     Height = 18
-    Top = 40
+    Top = 32
     Width = 207
     Caption = 'Introduzca los siguientes datos:'
     ParentColor = False
   end
   object NombreCompleto: TLabel
-    Left = 24
+    Left = 40
     Height = 18
     Top = 64
     Width = 132
@@ -24,35 +24,56 @@ object frmDatosReserva: TfrmDatosReserva
     ParentColor = False
   end
   object DNI: TLabel
-    Left = 24
+    Left = 40
     Height = 18
-    Top = 136
+    Top = 120
     Width = 33
     Caption = 'DNI: '
     ParentColor = False
   end
   object Contacto: TLabel
-    Left = 24
+    Left = 40
     Height = 18
-    Top = 192
+    Top = 176
     Width = 193
     Caption = 'Teléfono o email de contacto:'
     ParentColor = False
   end
-  object Button1: TButton
-    Left = 192
-    Height = 25
-    Top = 232
-    Width = 75
-    Caption = 'Button1'
+  object btnAceptar: TButton
+    Left = 176
+    Height = 41
+    Top = 256
+    Width = 99
+    Caption = 'Aceptar'
     TabOrder = 0
   end
-  object Button2: TButton
-    Left = 280
-    Height = 25
-    Top = 232
-    Width = 75
-    Caption = 'Button2'
+  object btnCancelar: TButton
+    Left = 288
+    Height = 41
+    Top = 256
+    Width = 96
+    Caption = 'Cancelar'
     TabOrder = 1
+  end
+  object eNombre: TEdit
+    Left = 40
+    Height = 27
+    Top = 88
+    Width = 288
+    TabOrder = 2
+  end
+  object eDNI: TEdit
+    Left = 40
+    Height = 27
+    Top = 144
+    Width = 288
+    TabOrder = 3
+  end
+  object eContacto: TEdit
+    Left = 40
+    Height = 27
+    Top = 200
+    Width = 288
+    TabOrder = 4
   end
 end

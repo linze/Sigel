@@ -4,5 +4,44 @@ object frmCreditos: TfrmCreditos
   Top = 199
   Width = 400
   Caption = 'frmCreditos'
+  ClientHeight = 300
+  ClientWidth = 400
+  OnCreate = FormCreate
   LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 48
+    Height = 24
+    Top = 32
+    Width = 61
+    Caption = 'SIGEL'
+    Font.Height = -25
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 120
+    Height = 18
+    Top = 38
+    Width = 224
+    Caption = 'Sistema de gestión de localidades'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 64
+    Height = 123
+    Top = 85
+    Width = 172
+    Caption = 'Creado por:'#10'   - Javier Benito Díaz'#10'   - Francisco José Canela'#10'   - Mario Fernandez Hevia'#10'   - David Marin Del Pino'#10'   - Laura Núñez González'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 48
+    Height = 18
+    Top = 255
+    Width = 95
+    Caption = 'Licencia: GPL2'
+    ParentColor = False
+  end
 end
