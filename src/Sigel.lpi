@@ -94,8 +94,8 @@
         <Filename Value="csala.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
-        <CursorPos X="44" Y="186"/>
-        <TopLine Value="177"/>
+        <CursorPos X="79" Y="215"/>
+        <TopLine Value="199"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="74"/>
         <Loaded Value="True"/>
@@ -363,7 +363,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CGestionListaReserva"/>
         <CursorPos X="61" Y="9"/>
-        <TopLine Value="65"/>
+        <TopLine Value="9"/>
         <EditorIndex Value="11"/>
         <UsageCount Value="25"/>
         <Loaded Value="True"/>
@@ -390,123 +390,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="udatos.pas"/>
-        <Caret Line="45" Column="1" TopLine="35"/>
+        <Caret Line="33" Column="1" TopLine="23"/>
       </Position1>
       <Position2>
         <Filename Value="udatos.pas"/>
-        <Caret Line="47" Column="1" TopLine="37"/>
+        <Caret Line="35" Column="1" TopLine="25"/>
       </Position2>
       <Position3>
         <Filename Value="udatos.pas"/>
-        <Caret Line="33" Column="1" TopLine="23"/>
+        <Caret Line="36" Column="1" TopLine="26"/>
       </Position3>
       <Position4>
         <Filename Value="udatos.pas"/>
-        <Caret Line="35" Column="1" TopLine="25"/>
+        <Caret Line="37" Column="1" TopLine="27"/>
       </Position4>
       <Position5>
         <Filename Value="udatos.pas"/>
-        <Caret Line="36" Column="1" TopLine="26"/>
+        <Caret Line="39" Column="1" TopLine="29"/>
       </Position5>
       <Position6>
         <Filename Value="udatos.pas"/>
-        <Caret Line="37" Column="1" TopLine="27"/>
+        <Caret Line="40" Column="1" TopLine="30"/>
       </Position6>
       <Position7>
         <Filename Value="udatos.pas"/>
-        <Caret Line="39" Column="1" TopLine="29"/>
+        <Caret Line="41" Column="1" TopLine="31"/>
       </Position7>
       <Position8>
         <Filename Value="udatos.pas"/>
-        <Caret Line="40" Column="1" TopLine="30"/>
+        <Caret Line="43" Column="1" TopLine="33"/>
       </Position8>
       <Position9>
         <Filename Value="udatos.pas"/>
-        <Caret Line="41" Column="1" TopLine="31"/>
+        <Caret Line="39" Column="65" TopLine="34"/>
       </Position9>
       <Position10>
         <Filename Value="udatos.pas"/>
-        <Caret Line="43" Column="1" TopLine="33"/>
+        <Caret Line="48" Column="65" TopLine="43"/>
       </Position10>
       <Position11>
         <Filename Value="udatos.pas"/>
-        <Caret Line="39" Column="65" TopLine="34"/>
+        <Caret Line="54" Column="1" TopLine="44"/>
       </Position11>
       <Position12>
         <Filename Value="udatos.pas"/>
-        <Caret Line="48" Column="65" TopLine="43"/>
+        <Caret Line="55" Column="1" TopLine="45"/>
       </Position12>
       <Position13>
         <Filename Value="udatos.pas"/>
-        <Caret Line="54" Column="1" TopLine="44"/>
+        <Caret Line="56" Column="1" TopLine="46"/>
       </Position13>
       <Position14>
         <Filename Value="udatos.pas"/>
-        <Caret Line="55" Column="1" TopLine="45"/>
+        <Caret Line="58" Column="1" TopLine="48"/>
       </Position14>
       <Position15>
         <Filename Value="udatos.pas"/>
-        <Caret Line="56" Column="1" TopLine="46"/>
+        <Caret Line="72" Column="1" TopLine="62"/>
       </Position15>
       <Position16>
-        <Filename Value="udatos.pas"/>
-        <Caret Line="58" Column="1" TopLine="48"/>
+        <Filename Value="principalfrm.pas"/>
+        <Caret Line="131" Column="1" TopLine="121"/>
       </Position16>
       <Position17>
         <Filename Value="udatos.pas"/>
-        <Caret Line="72" Column="1" TopLine="62"/>
+        <Caret Line="71" Column="69" TopLine="62"/>
       </Position17>
       <Position18>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="131" Column="1" TopLine="121"/>
+        <Filename Value="udatos.pas"/>
+        <Caret Line="62" Column="1" TopLine="52"/>
       </Position18>
       <Position19>
         <Filename Value="udatos.pas"/>
-        <Caret Line="71" Column="69" TopLine="62"/>
+        <Caret Line="63" Column="1" TopLine="53"/>
       </Position19>
       <Position20>
         <Filename Value="udatos.pas"/>
-        <Caret Line="62" Column="1" TopLine="52"/>
+        <Caret Line="64" Column="1" TopLine="54"/>
       </Position20>
       <Position21>
         <Filename Value="udatos.pas"/>
-        <Caret Line="63" Column="1" TopLine="53"/>
+        <Caret Line="67" Column="1" TopLine="57"/>
       </Position21>
       <Position22>
         <Filename Value="udatos.pas"/>
-        <Caret Line="64" Column="1" TopLine="54"/>
+        <Caret Line="68" Column="18" TopLine="58"/>
       </Position22>
       <Position23>
         <Filename Value="udatos.pas"/>
-        <Caret Line="67" Column="1" TopLine="57"/>
+        <Caret Line="31" Column="28" TopLine="20"/>
       </Position23>
       <Position24>
         <Filename Value="udatos.pas"/>
-        <Caret Line="68" Column="18" TopLine="58"/>
+        <Caret Line="62" Column="1" TopLine="52"/>
       </Position24>
       <Position25>
         <Filename Value="udatos.pas"/>
-        <Caret Line="31" Column="28" TopLine="20"/>
+        <Caret Line="31" Column="1" TopLine="21"/>
       </Position25>
       <Position26>
         <Filename Value="udatos.pas"/>
-        <Caret Line="62" Column="1" TopLine="52"/>
+        <Caret Line="32" Column="1" TopLine="22"/>
       </Position26>
       <Position27>
         <Filename Value="udatos.pas"/>
-        <Caret Line="31" Column="1" TopLine="21"/>
+        <Caret Line="36" Column="67" TopLine="30"/>
       </Position27>
       <Position28>
         <Filename Value="udatos.pas"/>
-        <Caret Line="32" Column="1" TopLine="22"/>
+        <Caret Line="9" Column="80" TopLine="1"/>
       </Position28>
       <Position29>
-        <Filename Value="udatos.pas"/>
-        <Caret Line="36" Column="67" TopLine="30"/>
+        <Filename Value="csala.pas"/>
+        <Caret Line="152" Column="36" TopLine="145"/>
       </Position29>
       <Position30>
-        <Filename Value="udatos.pas"/>
-        <Caret Line="9" Column="80" TopLine="1"/>
+        <Filename Value="csala.pas"/>
+        <Caret Line="217" Column="127" TopLine="199"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -532,12 +532,6 @@
     </Other>
   </CompilerOptions>
   <Debugging>
-    <BreakPoints Count="1">
-      <Item1>
-        <Source Value="csala.pas"/>
-        <Line Value="208"/>
-      </Item1>
-    </BreakPoints>
     <Watches Count="2">
       <Item1>
         <Expression Value="i"/>
