@@ -106,7 +106,6 @@ type
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
     Fecha       : TDateTime;
-    Sala        : TSala;
   end; 
 
 var

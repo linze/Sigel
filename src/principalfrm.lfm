@@ -131,7 +131,7 @@ object frmPrincipal: TfrmPrincipal
       Width = 816
       Align = alClient
       Caption = 'Elija la operación a realizar'
-      ClientHeight = 328
+      ClientHeight = 343
       ClientWidth = 812
       TabOrder = 0
       object btnCompra: TButton

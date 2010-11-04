@@ -34,7 +34,7 @@ var
 implementation
 
 initialization
-  {$I datorreservafrm.lrs}
+  {$I datosreservafrm.lrs}
 
 end.
 

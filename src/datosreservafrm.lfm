@@ -3,6 +3,7 @@ object frmDatosReserva: TfrmDatosReserva
   Height = 318
   Top = 199
   Width = 400
+  ActiveControl = eNombre
   Caption = 'frmDatosReserva'
   ClientHeight = 318
   ClientWidth = 400
