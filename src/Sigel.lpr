@@ -7,11 +7,10 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Forms, PrincipalFrm, LResources, CEstadoLocalidad, CLocalidad, CSala, ComprarFrm, ReservaFrm, CEspera, CListareservas,
-    CListaEspera, CReserva, CTipoLocalidad, CObjectList, 
-    CObjectListItem, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos, 
-CListaSalas, AnularReservaFrm, AnularCompraFrm, CObjectListList, 
-CGestionListaEspera, DatosReservaFrm, CreditosFrm;
+  Forms, PrincipalFrm, LResources, CEstadoLocalidad, CLocalidad, CSala,
+  ComprarFrm, ReservaFrm, CEspera, CReserva, CTipoLocalidad, LoginFrm, FechaFrm,
+  SeleccionButacaFrm, uDatos, AnularReservaFrm, AnularCompraFrm,
+  DatosReservaFrm, CreditosFrm;
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
 

@@ -106,6 +106,7 @@ type
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
     Fecha       : TDateTime;
+    Sala        : TSala;
   end; 
 
 var
@@ -158,11 +159,7 @@ begin
 end;
 
 procedure TfrmSeleccionButacas.CargarEstado;
-var
-    Sala : TSala;
 begin
-    Sala := ListaSalas.BuscarSala(Fecha);
-
     // Butacas
     CambiarSegunEstado(butaca11, Sala.Buscar(Patio, 1, 1));
     CambiarSegunEstado(butaca12, Sala.Buscar(Patio, 1, 2));
@@ -330,59 +327,45 @@ var
     Localidad  : TLocalidad;
     hueco      : integer;
 begin
-    try
-        Tipo := ObtenerTipoByHint (Sender as TImage);
-        if Tipo = Palco then
-        begin
-            Numero := StrToInt((Sender as TImage).Hint[2]);
-            Fila := Numero;
-        end
-        else
-        begin
-            Fila := StrToInt((Sender as TImage).Hint[2]);
-            Numero := StrToInt((Sender as TImage).Hint[3]);
-        end;
+    Tipo := ObtenerTipoByHint (Sender as TImage);
+    if Tipo = Palco then
+    begin
+        Numero := StrToInt((Sender as TImage).Hint[2]);
+        Fila := Numero;
+    end
+    else
+    begin
+        Fila := StrToInt((Sender as TImage).Hint[2]);
+        Numero := StrToInt((Sender as TImage).Hint[3]);
+    end;
 
-        // Obtenemos el estado actual de la localidad
-        if (ListaSalas.BuscarSala(Fecha) <> nil) then
+    // Obtenemos el estado actual de la localidad
+    Localidad := Sala.Buscar(Tipo, Numero, Fila);
+    if not Localidad.EstaOcupado then
+    begin
+        hueco := EstaSeleccionada(Tipo, Numero, Fila);
+        if hueco <> -1 then
         begin
-            if  (ListaSalas.BuscarSala(Fecha).Buscar(Tipo, Numero, Fila) <> nil) then
-            begin
-                Localidad := ListaSalas.BuscarSala(Fecha).Buscar(Tipo, Numero, Fila);
-                if not Localidad.EstaOcupado then
-                begin
-                    hueco := EstaSeleccionada(Tipo, Numero, Fila);
-                    if hueco <> -1 then
-                    begin
-                        Self.Marcadas[hueco] := False;
-                        Self.ChangeColor(TImage(Sender), Libre)
-                    end
-                    else
-                    begin
-                        hueco := ObtenerHuecoVacio;
-                        if hueco = -1 then
-                            ShowMessage('No se puede reservar más de cuatro localidades o un palco.')
-                        else
-                        begin
-                            if ((Tipo = Palco) and (NumDeMarcadas > 0)) then
-                                ShowMessage ('No se puede reservar más de cuatro localidades o un palco' + IntToStr(NumDeMarcadas))
-                            else
-                            begin
-                                Self.Marcadas[hueco] := True;
-                                Self.Localidades[hueco] := Localidad;
-                                Self.ChangeColor(TImage(Sender), Seleccionada);
-                            end;
-                        end;
-                    end;
-                end
-            end
-            else
-                ShowMessage('Butaca no encontrada');
+            Self.Marcadas[hueco] := False;
+            Self.ChangeColor(TImage(Sender), Libre)
         end
         else
-            ShowMessage('Sala no disponible para dicho día');
-    except
-        ShowMessage ('Error al marcar la butaca');
+        begin
+            hueco := ObtenerHuecoVacio;
+            if hueco = -1 then
+                ShowMessage('No se puede reservar más de cuatro localidades o un palco.')
+            else
+            begin
+                if ((Tipo = Palco) and (NumDeMarcadas > 0)) then
+                    ShowMessage ('No se puede reservar más de cuatro localidades o un palco' + IntToStr(NumDeMarcadas))
+                else
+                begin
+                    Self.Marcadas[hueco] := True;
+                    Self.Localidades[hueco] := Localidad;
+                    Self.ChangeColor(TImage(Sender), Seleccionada);
+                end;
+            end;
+        end;
     end;
 end;
 

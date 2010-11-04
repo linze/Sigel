@@ -5,11 +5,11 @@ unit CEspera;
 interface
 
     uses
-        CTipoLocalidad, Classes, CObjectListItem;
+        CTipoLocalidad, Classes;
 
     type
         { TEspera }
-        TEspera = class (TObjectListItem)
+        TEspera = class (TPersistent)
         private
         (*Atributos*)
             FNombre        : String;
@@ -29,8 +29,8 @@ interface
             property TipoLocalidad: TTipoLocalidad read FTipoLocalidad write FTipoLocalidad;
 
             { Para guardar-extraer desde ficheros }
-            procedure LeerDatos (Lector : TReader); override;
-            procedure EscribirDatos (Escritor: TWriter); override;
+            procedure LeerDatos (Lector : TReader); dynamic;
+            procedure EscribirDatos (Escritor: TWriter); dynamic;
         end;
 			
 implementation
@@ -48,7 +48,6 @@ begin
     Self.FTelefono := Lector.ReadString;
     Self.FEmail := Lector.ReadString;
     Self.FNumero := Lector.ReadInteger;
-    // NOTICE: Comprobar si este tipo de casting funciona
     Self.FTipoLocalidad := TTipoLocalidad(Lector.ReadInteger);
 end;
 
