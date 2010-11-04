@@ -1,8 +1,6 @@
 *.o
 *.ppu
 *.bak
-*.lpi
-Sigel.lpi
 *.lds
 Sigel.compiled
 Sigel
