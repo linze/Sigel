@@ -1,3 +1,5 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmSeleccionButacas','FORMDATA',[
   'TPF0'#20'TfrmSeleccionButacas'#19'frmSeleccionButacas'#4'Left'#3#19#1#6'Heig'
   +'ht'#3'n'#1#3'Top'#3#183#0#5'Width'#3#200#2#13'ActiveControl'#7#6'Panel2'#7
@@ -2351,7 +2353,7 @@ LazarusResources.Add('TfrmSeleccionButacas','FORMDATA',[
   +'gn'#7#7'alRight'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'n'#1#11'Clie'
   +'ntWidth'#3#170#0#8'TabOrder'#2#0#0#9'TGroupBox'#9'GroupBox1'#4'Left'#2#0#6
   +'Height'#3#128#0#3'Top'#2#0#5'Width'#3#170#0#5'Align'#7#5'alTop'#7'Caption'#6
-  +#7'Importe'#12'ClientHeight'#2'n'#11'ClientWidth'#3#168#0#8'TabOrder'#2#0#0#6
+  +#7'Importe'#12'ClientHeight'#2'|'#11'ClientWidth'#3#166#0#8'TabOrder'#2#0#0#6
   +'TLabel'#6'Label1'#4'Left'#2#5#6'Height'#2#18#3'Top'#2#7#5'Width'#2'%'#7'Cap'
   +'tion'#6#6'Patio:'#11'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2#5#6'H'
   +'eight'#2#18#3'Top'#2#31#5'Width'#2'a'#7'Caption'#6#14'Primera Planta'#11'Pa'
@@ -2372,8 +2374,8 @@ LazarusResources.Add('TfrmSeleccionButacas','FORMDATA',[
   +'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'O'
   +'nClick'#7#15'btnAceptarClick'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#9'TGroup'
   +'Box'#9'GroupBox2'#4'Left'#2#0#6'Height'#3#128#0#3'Top'#3#128#0#5'Width'#3
-  +#170#0#5'Align'#7#5'alTop'#7'Caption'#6#7'Leyenda'#12'ClientHeight'#2'n'#11
-  +'ClientWidth'#3#168#0#8'TabOrder'#2#2#0#6'TImage'#6'Image1'#4'Left'#2#5#6'He'
+  +#170#0#5'Align'#7#5'alTop'#7'Caption'#6#7'Leyenda'#12'ClientHeight'#2'|'#11
+  +'ClientWidth'#3#166#0#8'TabOrder'#2#2#0#6'TImage'#6'Image1'#4'Left'#2#5#6'He'
   +'ight'#2#30#3'Top'#2#3#5'Width'#2#30#8'AutoSize'#9#12'Picture.Data'#10#0#7#0
   +#0#23'TPortableNetworkGraphic'#228#6#0#0#137'PNG'#13#10#26#10#0#0#0#13'IHDR'
   +#0#0#0#30#0#0#0#30#8#2#0#0#0#180'R9'#245#0#0#0#9'pHYs'#0#0#14#196#0#0#14#196

@@ -3,6 +3,7 @@ object frmVerListaEspera: TfrmVerListaEspera
   Height = 418
   Top = 164
   Width = 947
+  ActiveControl = Panel4
   Caption = 'Estado actual de la lista de espera'
   ClientHeight = 418
   ClientWidth = 947
@@ -29,7 +30,7 @@ object frmVerListaEspera: TfrmVerListaEspera
       Top = 0
       Width = 947
       Align = alClient
-      ColCount = 6
+      FixedCols = 0
       Font.Height = -14
       Font.Name = 'Sans'
       Font.Style = [fsBold]
@@ -39,8 +40,7 @@ object frmVerListaEspera: TfrmVerListaEspera
       TitleFont.Name = 'Sans'
       TitleFont.Style = [fsBold]
       ColWidths = (
-        64
-        171
+        294
         108
         186
         105
@@ -48,19 +48,19 @@ object frmVerListaEspera: TfrmVerListaEspera
       )
       Cells = (
         5
-        1
+        0
         0
         'Nombre'
-        2
+        1
         0
         'Teléfono'
-        3
+        2
         0
         'Email'
-        4
+        3
         0
         'Asignada'
-        5
+        4
         0
         'Localidades'
       )

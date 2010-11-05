@@ -111,3 +111,19 @@ Fila: 4, Numero: 4
 Estado: OCUPADA
 Fila: 4, Numero: 5
 Estado: OCUPADA
+
+Nombre: Francisco Canela Cantidad: 4
+Dni: 111111111 Telefono: 111111111 Email: 111111111
+Fila: 3, Numero: 7
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: aaaaaaaa Cantidad: 1
+Dni: AAAAAAAAA Telefono: aaaaaaaa Email: 
+Fila: 1, Numero: 8
+Estado: OCUPADA
