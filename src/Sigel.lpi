@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="2"/>
+      <ActiveEditorIndexAtStart Value="6"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -495,7 +495,7 @@
         <ComponentName Value="frmDatosEspera"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DatosEspera"/>
-        <CursorPos X="5" Y="47"/>
+        <CursorPos X="85" Y="44"/>
         <TopLine Value="31"/>
         <EditorIndex Value="2"/>
         <UsageCount Value="21"/>
