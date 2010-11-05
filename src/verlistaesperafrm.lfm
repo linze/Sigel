@@ -3,13 +3,14 @@ object frmVerListaEspera: TfrmVerListaEspera
   Height = 418
   Top = 164
   Width = 947
-  Caption = 'frmVerListaEspera'
+  Caption = 'Estado actual de la lista de espera'
   ClientHeight = 418
   ClientWidth = 947
   Font.Height = -14
   Font.Name = 'Sans'
   Font.Style = [fsBold]
   OnCreate = FormCreate
+  Position = poScreenCenter
   LCLVersion = '0.9.28.2'
   object Panel1: TPanel
     Left = 0

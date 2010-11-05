@@ -7,7 +7,8 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
-  CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva, AnularCompraFrm;
+  CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
+  AnularCompraFrm, VerListaEsperaFrm;
 
 type
 
@@ -35,6 +36,7 @@ type
       procedure btnAnularCompraClick(Sender: TObject);
       procedure btnAnularReservaClick(Sender: TObject);
       procedure btnCompraClick(Sender: TObject);
+      procedure btnLEsperaClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
       procedure btnSalirClick(Sender: TObject);
       procedure Button1Click(Sender: TObject);
@@ -163,6 +165,29 @@ begin
     finally
         frmFecha.Free;
     end;
+end;
+
+procedure TfrmPrincipal.btnLEsperaClick(Sender: TObject);
+var
+    frmFecha : TFrmFecha;
+    frmVerListaEspera : TfrmVerListaEspera;
+begin
+    frmFecha := TfrmFecha.Create(Self);
+    try
+        frmFecha.ShowModal;
+        if frmFecha.FechaMarcada then
+        begin
+            uDatos.Cargar(frmFecha.Fecha);
+            frmVerListaEspera := TfrmVerListaEspera.Create(Self);
+            try
+                frmVerListaEspera.ShowModal;
+            finally
+            end;
+        end;
+    finally
+        frmFecha.Free;
+    end;
+    uDatos.LiberarDatos;
 end;
 
 procedure TfrmPrincipal.btnReservaClick(Sender: TObject);
