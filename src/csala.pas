@@ -28,14 +28,15 @@ interface
             function Buscar(Tipo :TTipoLocalidad; Fila: Integer;
                            Numero : Integer): TLocalidad;
             procedure Cambiar(Localidad : TLocalidad);
+            function LocalidadValida(Localidad: TLocalidad): boolean;
+            function EstaCompleto : boolean;
 
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
             procedure EscribirDatos (Escritor: TWriter); dynamic;
 
             procedure LogEnFichero;
-            function EstaCompleto : boolean;
-            function NumeroDeLibres : integer;
+
         end;
 
 implementation
@@ -185,6 +186,13 @@ begin
 
 end;
 
+function TSala.LocalidadValida(Localidad: TLocalidad): boolean;
+begin
+     LocalidadValida := not (((Localidad.Fila = 3) and ((Localidad.Numero = 1) or (Localidad.Numero = 8)))
+                            or ((Localidad.Fila = 4) and((Localidad.Numero = 1) or (Localidad.Numero = 2)
+                            or (Localidad.Numero = 7) or (Localidad.Numero = 8))));
+end;
+
 function TSala.EstaCompleto: boolean;
 var
     i,j : integer;
@@ -196,9 +204,10 @@ begin
     while (not EncontradoLibre) and (i <=4) do
     begin
         j := 1;
-        while (not EncontradoLibre) and (i <= 8) do
+        while (not EncontradoLibre) and (j <= 8) do
         begin
-            EncontradoLibre := not Self.FPatio[i,j].EstaOcupado;
+             if LocalidadValida(Self.FPatio[i,j]) then
+                EncontradoLibre := not Self.FPatio[i,j].EstaOcupado;
             j := j + 1;
         end;
         i := i + 1;
@@ -208,7 +217,7 @@ begin
     while (not EncontradoLibre) and (i <=2) do
     begin
         j := 1;
-        while (not EncontradoLibre) and (i <= 8) do
+        while (not EncontradoLibre) and (j <= 8) do
         begin
             EncontradoLibre := not Self.FPrimeraPlanta[i,j].EstaOcupado;
             j := j + 1;
@@ -224,30 +233,6 @@ begin
     end;
 
     EstaCompleto := not EncontradoLibre;
-end;
-
-function TSala.NumeroDeLibres: integer;
-var
-    i,j : integer;
-    cuenta : integer;
-begin
-    cuenta := 0;
-
-    for i:=1 to 4 do
-        for j:=1 to 8
-            if not Self.FPatio[i,j].EstaOcupado then
-                cuenta := cuenta + 1;
-
-    for i:=1 to 2 do
-        for j:=1 to 8 do
-            if not Self.FPrimeraPlanta.EstaOcupado then
-                cuenta := cuenta + 1;
-
-    for i:=1 to 4 do
-            if not Self.FPalco[i].EstaOcupado then
-                cuenta := cuenta + 1;
-
-    result := cuenta;
 end;
 
 initialization

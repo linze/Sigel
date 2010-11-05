@@ -1,0 +1,146 @@
+object frmDatosReserva: TfrmDatosReserva
+  Left = 699
+  Height = 318
+  Top = 284
+  Width = 319
+  ActiveControl = eNombre
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Datos de la reserva'
+  ClientHeight = 318
+  ClientWidth = 319
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '0.9.28.2'
+  object Intro: TLabel
+    Left = 8
+    Height = 23
+    Top = 8
+    Width = 311
+    Caption = 'Introduzca los siguientes datos:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object NombreCompleto: TLabel
+    Left = 24
+    Height = 23
+    Top = 40
+    Width = 197
+    Caption = 'Nombre y apellidos:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbDNI: TLabel
+    Left = 24
+    Height = 23
+    Top = 96
+    Width = 49
+    Caption = 'DNI: '
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbContacto: TLabel
+    Left = 24
+    Height = 23
+    Top = 152
+    Width = 92
+    Caption = 'Teléfono:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 23
+    Top = 208
+    Width = 190
+    Caption = 'Correo electrónico:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object btnAceptar: TButton
+    Left = 104
+    Height = 41
+    Top = 272
+    Width = 99
+    Caption = 'Aceptar'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnAceptarClick
+    ParentFont = False
+    TabOrder = 0
+  end
+  object btnCancelar: TButton
+    Left = 216
+    Height = 41
+    Top = 272
+    Width = 96
+    Caption = 'Cancelar'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnCancelarClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object eNombre: TEdit
+    Left = 24
+    Height = 32
+    Top = 64
+    Width = 288
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object eDNI: TEdit
+    Left = 24
+    Height = 32
+    Top = 120
+    Width = 288
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    MaxLength = 9
+    ParentFont = False
+    TabOrder = 3
+  end
+  object eTelefono: TEdit
+    Left = 24
+    Height = 32
+    Top = 176
+    Width = 288
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+  end
+  object eEmail: TEdit
+    Left = 24
+    Height = 32
+    Top = 232
+    Width = 288
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+  end
+end

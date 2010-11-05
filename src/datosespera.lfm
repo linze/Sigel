@@ -3,6 +3,7 @@ object frmDatosEspera: TfrmDatosEspera
   Height = 347
   Top = 208
   Width = 400
+  ActiveControl = eNombre
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Datos para la espera'
@@ -12,9 +13,9 @@ object frmDatosEspera: TfrmDatosEspera
   LCLVersion = '0.9.28.2'
   object Label6: TLabel
     Left = 12
-    Height = 20
+    Height = 23
     Top = 6
-    Width = 290
+    Width = 311
     Caption = 'Introduzca los siguientes datos:'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -28,14 +29,14 @@ object frmDatosEspera: TfrmDatosEspera
     Top = 35
     Width = 377
     Caption = 'Datos de contacto'
-    ClientHeight = 133
-    ClientWidth = 375
+    ClientHeight = 132
+    ClientWidth = 373
     TabOrder = 0
     object Label1: TLabel
       Left = 5
-      Height = 20
+      Height = 23
       Top = 7
-      Width = 78
+      Width = 86
       Caption = 'Nombre:'
       Font.Height = -17
       Font.Name = 'Sans'
@@ -45,9 +46,9 @@ object frmDatosEspera: TfrmDatosEspera
     end
     object Label2: TLabel
       Left = 5
-      Height = 20
+      Height = 23
       Top = 69
-      Width = 83
+      Width = 92
       Caption = 'Teléfono:'
       Font.Height = -17
       Font.Name = 'Sans'
@@ -57,9 +58,9 @@ object frmDatosEspera: TfrmDatosEspera
     end
     object Label4: TLabel
       Left = 168
-      Height = 20
+      Height = 23
       Top = 69
-      Width = 56
+      Width = 62
       Caption = 'Email:'
       Font.Height = -17
       Font.Name = 'Sans'
@@ -68,9 +69,9 @@ object frmDatosEspera: TfrmDatosEspera
       ParentFont = False
     end
     object eNombre: TEdit
-      Left = 5
-      Height = 29
-      Top = 31
+      Left = 6
+      Height = 32
+      Top = 36
       Width = 363
       Font.Height = -17
       Font.Name = 'Sans'
@@ -80,7 +81,7 @@ object frmDatosEspera: TfrmDatosEspera
     end
     object eTelefono: TEdit
       Left = 5
-      Height = 29
+      Height = 32
       Top = 87
       Width = 149
       Font.Height = -17
@@ -91,7 +92,7 @@ object frmDatosEspera: TfrmDatosEspera
     end
     object eEmail: TEdit
       Left = 168
-      Height = 29
+      Height = 32
       Top = 87
       Width = 200
       Font.Height = -17
@@ -107,15 +108,15 @@ object frmDatosEspera: TfrmDatosEspera
     Top = 195
     Width = 377
     Caption = 'Datos de la localidad:'
-    ClientHeight = 62
-    ClientWidth = 375
+    ClientHeight = 61
+    ClientWidth = 373
     TabOrder = 1
     OnClick = GroupBox2Click
     object Label3: TLabel
       Left = 6
-      Height = 20
+      Height = 23
       Top = -1
-      Width = 39
+      Width = 43
       Caption = 'Tipo'
       Font.Height = -17
       Font.Name = 'Sans'
@@ -125,9 +126,9 @@ object frmDatosEspera: TfrmDatosEspera
     end
     object Label5: TLabel
       Left = 284
-      Height = 20
+      Height = 23
       Top = 1
-      Width = 81
+      Width = 88
       Caption = 'Cantidad'
       Font.Height = -17
       Font.Name = 'Sans'
@@ -137,7 +138,7 @@ object frmDatosEspera: TfrmDatosEspera
     end
     object seCantidad: TSpinEdit
       Left = 284
-      Height = 29
+      Height = 32
       Top = 19
       Width = 80
       Font.Height = -17
@@ -158,6 +159,12 @@ object frmDatosEspera: TfrmDatosEspera
       Font.Name = 'Sans'
       Font.Style = [fsBold]
       ItemHeight = 0
+      Items.Strings = (
+        'Patio'
+        'Primera Planta'
+        'Palco'
+      )
+      OnChange = cbTipoChange
       ParentFont = False
       Style = csDropDownList
       TabOrder = 1
@@ -172,6 +179,7 @@ object frmDatosEspera: TfrmDatosEspera
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    OnClick = btnAceptarClick
     ParentFont = False
     TabOrder = 2
   end
@@ -184,6 +192,7 @@ object frmDatosEspera: TfrmDatosEspera
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    OnClick = btnCancelarClick
     ParentFont = False
     TabOrder = 3
   end

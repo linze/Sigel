@@ -13414,3 +13414,315 @@ Estado: Libre
 
 Fila: 0, Numero: 4
 Estado: Libre
+
+Fila: 1, Numero: 1
+Estado: Libre
+
+Fila: 1, Numero: 2
+Estado: Libre
+
+Fila: 1, Numero: 3
+Estado: Libre
+
+Fila: 1, Numero: 4
+Estado: Libre
+
+Fila: 1, Numero: 5
+Estado: Libre
+
+Fila: 1, Numero: 6
+Estado: Libre
+
+Fila: 1, Numero: 7
+Estado: Libre
+
+Fila: 1, Numero: 8
+Estado: Libre
+
+Fila: 2, Numero: 1
+Estado: Libre
+
+Fila: 2, Numero: 2
+Estado: Libre
+
+Fila: 2, Numero: 3
+Estado: Libre
+
+Fila: 2, Numero: 4
+Estado: Libre
+
+Fila: 2, Numero: 5
+Estado: Libre
+
+Fila: 2, Numero: 6
+Estado: Libre
+
+Fila: 2, Numero: 7
+Estado: Libre
+
+Fila: 2, Numero: 8
+Estado: Libre
+
+Fila: 3, Numero: 1
+Estado: Libre
+
+Fila: 3, Numero: 2
+Estado: Libre
+
+Fila: 3, Numero: 3
+Estado: Libre
+
+Fila: 3, Numero: 4
+Estado: Libre
+
+Fila: 3, Numero: 5
+Estado: Libre
+
+Fila: 3, Numero: 6
+Estado: Libre
+
+Fila: 3, Numero: 7
+Estado: Libre
+
+Fila: 3, Numero: 8
+Estado: Libre
+
+Fila: 4, Numero: 1
+Estado: Libre
+
+Fila: 4, Numero: 2
+Estado: Libre
+
+Fila: 4, Numero: 3
+Estado: Libre
+
+Fila: 4, Numero: 4
+Estado: Libre
+
+Fila: 4, Numero: 5
+Estado: Libre
+
+Fila: 4, Numero: 6
+Estado: Libre
+
+Fila: 4, Numero: 7
+Estado: Libre
+
+Fila: 4, Numero: 8
+Estado: Libre
+
+Fila: 1, Numero: 1
+Estado: Libre
+
+Fila: 1, Numero: 2
+Estado: Libre
+
+Fila: 1, Numero: 3
+Estado: Libre
+
+Fila: 1, Numero: 4
+Estado: Libre
+
+Fila: 1, Numero: 5
+Estado: Libre
+
+Fila: 1, Numero: 6
+Estado: Libre
+
+Fila: 1, Numero: 7
+Estado: Libre
+
+Fila: 1, Numero: 8
+Estado: Libre
+
+Fila: 2, Numero: 1
+Estado: Libre
+
+Fila: 2, Numero: 2
+Estado: Libre
+
+Fila: 2, Numero: 3
+Estado: Libre
+
+Fila: 2, Numero: 4
+Estado: Libre
+
+Fila: 2, Numero: 5
+Estado: Libre
+
+Fila: 2, Numero: 6
+Estado: Libre
+
+Fila: 2, Numero: 7
+Estado: Libre
+
+Fila: 2, Numero: 8
+Estado: Libre
+
+Fila: 0, Numero: 1
+Estado: Libre
+
+Fila: 0, Numero: 2
+Estado: Libre
+
+Fila: 0, Numero: 3
+Estado: Libre
+
+Fila: 0, Numero: 4
+Estado: Libre
+
+Fila: 1, Numero: 1
+Estado: OCUPADA
+
+Fila: 1, Numero: 2
+Estado: OCUPADA
+
+Fila: 1, Numero: 3
+Estado: OCUPADA
+
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Fila: 1, Numero: 5
+Estado: OCUPADA
+
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Fila: 1, Numero: 7
+Estado: OCUPADA
+
+Fila: 1, Numero: 8
+Estado: OCUPADA
+
+Fila: 2, Numero: 1
+Estado: OCUPADA
+
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Fila: 2, Numero: 3
+Estado: OCUPADA
+
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Fila: 2, Numero: 5
+Estado: OCUPADA
+
+Fila: 2, Numero: 6
+Estado: OCUPADA
+
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Fila: 2, Numero: 8
+Estado: OCUPADA
+
+Fila: 3, Numero: 1
+Estado: Libre
+
+Fila: 3, Numero: 2
+Estado: OCUPADA
+
+Fila: 3, Numero: 3
+Estado: OCUPADA
+
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Fila: 3, Numero: 5
+Estado: OCUPADA
+
+Fila: 3, Numero: 6
+Estado: OCUPADA
+
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Fila: 3, Numero: 8
+Estado: Libre
+
+Fila: 4, Numero: 1
+Estado: Libre
+
+Fila: 4, Numero: 2
+Estado: Libre
+
+Fila: 4, Numero: 3
+Estado: OCUPADA
+
+Fila: 4, Numero: 4
+Estado: OCUPADA
+
+Fila: 4, Numero: 5
+Estado: OCUPADA
+
+Fila: 4, Numero: 6
+Estado: OCUPADA
+
+Fila: 4, Numero: 7
+Estado: Libre
+
+Fila: 4, Numero: 8
+Estado: Libre
+
+Fila: 1, Numero: 1
+Estado: OCUPADA
+
+Fila: 1, Numero: 2
+Estado: OCUPADA
+
+Fila: 1, Numero: 3
+Estado: OCUPADA
+
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Fila: 1, Numero: 5
+Estado: OCUPADA
+
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Fila: 1, Numero: 7
+Estado: OCUPADA
+
+Fila: 1, Numero: 8
+Estado: OCUPADA
+
+Fila: 2, Numero: 1
+Estado: OCUPADA
+
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Fila: 2, Numero: 3
+Estado: OCUPADA
+
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Fila: 2, Numero: 5
+Estado: OCUPADA
+
+Fila: 2, Numero: 6
+Estado: OCUPADA
+
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Fila: 2, Numero: 8
+Estado: OCUPADA
+
+Fila: 0, Numero: 1
+Estado: OCUPADA
+
+Fila: 0, Numero: 2
+Estado: OCUPADA
+
+Fila: 0, Numero: 3
+Estado: OCUPADA
+
+Fila: 0, Numero: 4
+Estado: OCUPADA

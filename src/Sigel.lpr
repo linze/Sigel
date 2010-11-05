@@ -18,7 +18,6 @@ begin
     {$I Sigel.lrs}
     Application.Initialize;
     Application.CreateForm(TfrmPrincipal, frmPrincipal);
-    Application.CreateForm(TfrmDatosEspera, frmDatosEspera);
     Application.Run;
 end.
 
