@@ -264,7 +264,7 @@ begin
     try
         i := 0;
         Found := false;
-        while not Found and (i < 4) do
+        while not Found and (i <= 4) do
         begin
             if Marcadas[i] then
                 if (Localidades[i].Tipo = Tipo) and (Localidades[i].Numero = Numero) then
