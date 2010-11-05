@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="18"/>
+      <ActiveEditorIndexAtStart Value="9"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -30,15 +30,15 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="51">
+    <Units Count="52">
       <Unit0>
         <Filename Value="Sigel.lpr"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Sigel"/>
         <CursorPos X="2" Y="12"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="10"/>
-        <UsageCount Value="93"/>
+        <EditorIndex Value="9"/>
+        <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -50,8 +50,8 @@
         <UnitName Value="PrincipalFrm"/>
         <CursorPos X="28" Y="183"/>
         <TopLine Value="180"/>
-        <EditorIndex Value="5"/>
-        <UsageCount Value="93"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit1>
@@ -61,8 +61,8 @@
         <UnitName Value="CTipoLocalidad"/>
         <CursorPos X="27" Y="7"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="13"/>
-        <UsageCount Value="93"/>
+        <EditorIndex Value="12"/>
+        <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit2>
@@ -72,8 +72,8 @@
         <UnitName Value="CEstadoLocalidad"/>
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="12"/>
-        <UsageCount Value="93"/>
+        <EditorIndex Value="11"/>
+        <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit3>
@@ -83,8 +83,8 @@
         <UnitName Value="CLocalidad"/>
         <CursorPos X="23" Y="31"/>
         <TopLine Value="16"/>
-        <EditorIndex Value="17"/>
-        <UsageCount Value="93"/>
+        <EditorIndex Value="16"/>
+        <UsageCount Value="94"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit4>
@@ -100,10 +100,10 @@
         <Filename Value="csala.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
-        <CursorPos X="33" Y="180"/>
-        <TopLine Value="158"/>
+        <CursorPos X="70" Y="7"/>
+        <TopLine Value="1"/>
         <EditorIndex Value="0"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="92"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit6>
@@ -131,7 +131,7 @@
         <UnitName Value="ComprarFrm"/>
         <CursorPos X="78" Y="8"/>
         <TopLine Value="3"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="90"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit9>
       <Unit10>
@@ -142,7 +142,7 @@
         <UnitName Value="ReservaFrm"/>
         <CursorPos X="5" Y="31"/>
         <TopLine Value="14"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="90"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit10>
       <Unit11>
@@ -191,8 +191,8 @@
         <UnitName Value="CReserva"/>
         <CursorPos X="89" Y="113"/>
         <TopLine Value="107"/>
-        <EditorIndex Value="4"/>
-        <UsageCount Value="88"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="89"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit16>
@@ -210,8 +210,8 @@
         <UnitName Value="CEspera"/>
         <CursorPos X="26" Y="51"/>
         <TopLine Value="35"/>
-        <EditorIndex Value="2"/>
-        <UsageCount Value="81"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="82"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit18>
@@ -247,7 +247,7 @@
         <UnitName Value="LoginFrm"/>
         <CursorPos X="5" Y="26"/>
         <TopLine Value="26"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="69"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit22>
       <Unit23>
@@ -259,7 +259,7 @@
         <CursorPos X="25" Y="62"/>
         <TopLine Value="46"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="67"/>
+        <UsageCount Value="68"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit23>
@@ -277,8 +277,8 @@
         <UnitName Value="SeleccionButacaFrm"/>
         <CursorPos X="24" Y="105"/>
         <TopLine Value="90"/>
-        <EditorIndex Value="14"/>
-        <UsageCount Value="64"/>
+        <EditorIndex Value="13"/>
+        <UsageCount Value="65"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit25>
@@ -288,8 +288,8 @@
         <UnitName Value="uDatos"/>
         <CursorPos X="22" Y="18"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="19"/>
-        <UsageCount Value="61"/>
+        <EditorIndex Value="18"/>
+        <UsageCount Value="62"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit26>
@@ -309,8 +309,8 @@
         <UnitName Value="AnularReservaFrm"/>
         <CursorPos X="33" Y="77"/>
         <TopLine Value="74"/>
-        <EditorIndex Value="16"/>
-        <UsageCount Value="55"/>
+        <EditorIndex Value="15"/>
+        <UsageCount Value="56"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit28>
@@ -322,8 +322,8 @@
         <UnitName Value="AnularCompraFrm"/>
         <CursorPos X="46" Y="33"/>
         <TopLine Value="33"/>
-        <EditorIndex Value="3"/>
-        <UsageCount Value="55"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="56"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit29>
@@ -383,7 +383,7 @@
         <UnitName Value="DatosReservaFrm"/>
         <CursorPos X="58" Y="51"/>
         <TopLine Value="36"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="14"/>
         <UsageCount Value="18"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -392,10 +392,10 @@
         <Filename Value="clistaobjetos.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CListaObjetos"/>
-        <CursorPos X="22" Y="106"/>
-        <TopLine Value="93"/>
-        <EditorIndex Value="18"/>
-        <UsageCount Value="36"/>
+        <CursorPos X="61" Y="22"/>
+        <TopLine Value="15"/>
+        <EditorIndex Value="17"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit38>
@@ -403,7 +403,7 @@
         <Filename Value="Sigel.lrs"/>
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="10"/>
         <UsageCount Value="15"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -459,7 +459,7 @@
         <UnitName Value="frmDatosCompra"/>
         <CursorPos X="83" Y="19"/>
         <TopLine Value="15"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="8"/>
         <UsageCount Value="24"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
@@ -472,8 +472,8 @@
         <UnitName Value="VerListaEsperaFrm"/>
         <CursorPos X="44" Y="39"/>
         <TopLine Value="17"/>
-        <EditorIndex Value="8"/>
-        <UsageCount Value="26"/>
+        <EditorIndex Value="7"/>
+        <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit48>
@@ -481,18 +481,27 @@
         <Filename Value="../../../../../../../usr/share/fpcsrc/2.4.0/rtl/objpas/classes/classesh.inc"/>
         <CursorPos X="14" Y="276"/>
         <TopLine Value="266"/>
-        <EditorIndex Value="6"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
       </Unit49>
       <Unit50>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/control.inc"/>
         <CursorPos X="1" Y="2228"/>
         <TopLine Value="2218"/>
-        <EditorIndex Value="7"/>
         <UsageCount Value="11"/>
-        <Loaded Value="True"/>
       </Unit50>
+      <Unit51>
+        <Filename Value="datosespera.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="frmDatosEspera"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="DatosEspera"/>
+        <CursorPos X="46" Y="7"/>
+        <TopLine Value="1"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="20"/>
+        <Loaded Value="True"/>
+        <SyntaxHighlighter Value="Delphi"/>
+      </Unit51>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>

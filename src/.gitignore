@@ -1,7 +1,6 @@
 *.o
 *.ppu
 *.bak
-*.lds
 Sigel.compiled
 Sigel
 backup/
