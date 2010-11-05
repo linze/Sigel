@@ -48,7 +48,7 @@
         <ComponentName Value="frmPrincipal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
-        <CursorPos X="28" Y="182"/>
+        <CursorPos X="68" Y="179"/>
         <TopLine Value="172"/>
         <EditorIndex Value="6"/>
         <UsageCount Value="96"/>
