@@ -30,7 +30,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="51">
+    <Units Count="49">
       <Unit0>
         <Filename Value="Sigel.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -82,7 +82,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CLocalidad"/>
         <CursorPos X="23" Y="31"/>
-        <TopLine Value="42"/>
+        <TopLine Value="16"/>
         <EditorIndex Value="15"/>
         <UsageCount Value="90"/>
         <Loaded Value="True"/>
@@ -101,7 +101,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
         <CursorPos X="47" Y="9"/>
-        <TopLine Value="43"/>
+        <TopLine Value="9"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="88"/>
         <Loaded Value="True"/>
@@ -190,7 +190,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CReserva"/>
         <CursorPos X="51" Y="84"/>
-        <TopLine Value="73"/>
+        <TopLine Value="52"/>
         <EditorIndex Value="4"/>
         <UsageCount Value="85"/>
         <Loaded Value="True"/>
@@ -287,7 +287,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="uDatos"/>
         <CursorPos X="1" Y="58"/>
-        <TopLine Value="34"/>
+        <TopLine Value="22"/>
         <EditorIndex Value="17"/>
         <UsageCount Value="58"/>
         <Loaded Value="True"/>
@@ -308,7 +308,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularReservaFrm"/>
         <CursorPos X="30" Y="92"/>
-        <TopLine Value="62"/>
+        <TopLine Value="50"/>
         <EditorIndex Value="14"/>
         <UsageCount Value="52"/>
         <Loaded Value="True"/>
@@ -321,7 +321,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularCompraFrm"/>
         <CursorPos X="85" Y="56"/>
-        <TopLine Value="25"/>
+        <TopLine Value="13"/>
         <EditorIndex Value="3"/>
         <UsageCount Value="52"/>
         <Loaded Value="True"/>
@@ -382,7 +382,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DatosReservaFrm"/>
         <CursorPos X="15" Y="63"/>
-        <TopLine Value="36"/>
+        <TopLine Value="24"/>
         <EditorIndex Value="13"/>
         <UsageCount Value="16"/>
         <Loaded Value="True"/>
@@ -393,19 +393,13 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CListaObjetos"/>
         <CursorPos X="1" Y="124"/>
-        <TopLine Value="98"/>
+        <TopLine Value="86"/>
         <EditorIndex Value="16"/>
         <UsageCount Value="33"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit38>
       <Unit39>
-        <Filename Value="../../../../../../../usr/share/fpcsrc/2.4.0/rtl/objpas/classes/classesh.inc"/>
-        <CursorPos X="17" Y="256"/>
-        <TopLine Value="246"/>
-        <UsageCount Value="9"/>
-      </Unit39>
-      <Unit40>
         <Filename Value="Sigel.lrs"/>
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
@@ -413,58 +407,52 @@
         <UsageCount Value="13"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit40>
-      <Unit41>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/messagedialogs.inc"/>
+      </Unit39>
+      <Unit40>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/messagedialogs.inc"/>
         <CursorPos X="1" Y="230"/>
         <TopLine Value="220"/>
         <UsageCount Value="10"/>
-      </Unit41>
-      <Unit42>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/lclintf.inc"/>
+      </Unit40>
+      <Unit41>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/lclintf.inc"/>
         <CursorPos X="120" Y="393"/>
         <TopLine Value="380"/>
         <UsageCount Value="10"/>
-      </Unit42>
-      <Unit43>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/control.inc"/>
-        <CursorPos X="1" Y="1594"/>
-        <TopLine Value="1584"/>
-        <UsageCount Value="10"/>
-      </Unit43>
-      <Unit44>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/buttoncontrol.inc"/>
+      </Unit41>
+      <Unit42>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/buttoncontrol.inc"/>
         <CursorPos X="1" Y="27"/>
         <TopLine Value="17"/>
         <UsageCount Value="10"/>
-      </Unit44>
-      <Unit45>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/buttons.inc"/>
+      </Unit42>
+      <Unit43>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/buttons.inc"/>
         <CursorPos X="1" Y="332"/>
         <TopLine Value="317"/>
         <UsageCount Value="10"/>
-      </Unit45>
-      <Unit46>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/wincontrol.inc"/>
+      </Unit43>
+      <Unit44>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/wincontrol.inc"/>
         <CursorPos X="1" Y="4921"/>
         <TopLine Value="4911"/>
         <UsageCount Value="10"/>
-      </Unit46>
-      <Unit47>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/lclmessageglue.pas"/>
+      </Unit44>
+      <Unit45>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/lclmessageglue.pas"/>
         <UnitName Value="LCLMessageGlue"/>
         <CursorPos X="1" Y="121"/>
         <TopLine Value="111"/>
         <UsageCount Value="10"/>
-      </Unit47>
-      <Unit48>
-        <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/interfaces/gtk2/gtk2wsstdctrls.pp"/>
+      </Unit45>
+      <Unit46>
+        <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/interfaces/gtk2/gtk2wsstdctrls.pp"/>
         <UnitName Value="Gtk2WSStdCtrls"/>
         <CursorPos X="4" Y="1846"/>
         <TopLine Value="1836"/>
         <UsageCount Value="10"/>
-      </Unit48>
-      <Unit49>
+      </Unit46>
+      <Unit47>
         <Filename Value="frmdatoscompra.pas"/>
         <ComponentName Value="frmDatosCompra"/>
         <ResourceBaseClass Value="Form"/>
@@ -475,20 +463,20 @@
         <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit49>
-      <Unit50>
+      </Unit47>
+      <Unit48>
         <Filename Value="verlistaesperafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVerListaEspera"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="VerListaEsperaFrm"/>
         <CursorPos X="44" Y="39"/>
-        <TopLine Value="28"/>
+        <TopLine Value="1"/>
         <EditorIndex Value="6"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit50>
+      </Unit48>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>

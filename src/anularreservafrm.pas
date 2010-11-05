@@ -69,7 +69,7 @@ var
 begin
     existeReserva := False;
     seguirBuscando := True;
-    i := uDatos.Reservas.Count;
+    i := uDatos.Reservas.Count - 1;
     while seguirBuscando do
     begin
         if TReserva(Reservas.Items[i]).Dni = sDni then
