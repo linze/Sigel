@@ -5,7 +5,7 @@ unit CReserva;
 interface
 
     uses
-        CLocalidad, Classes;
+        CLocalidad, Classes, SysUtils;
     type
         { TReserva }
 
@@ -36,6 +36,8 @@ interface
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
             procedure EscribirDatos (Escritor: TWriter); dynamic;
+
+            procedure LogEnFichero;
         end;
 
 
@@ -78,12 +80,16 @@ begin
     Self.FDni := Lector.ReadString;
     Self.FTelefono := Lector.ReadString;
     Self.FEmail := Lector.ReadString;
-    Self.FCantidad := Lector.ReadInteger;
-    for i:=1 to Self.FCantidad do
+    //Self.FCantidad := Lector.ReadInteger;
+    Lector.ReadListBegin;
+    i := 0;
+    while not Lector.EndOfList do
     begin
+        i := i + 1;
         Self.FLocalidades[i] := TLocalidad.Create;
         Self.FLocalidades[i].LeerDatos(Lector);
     end;
+    Self.FCantidad := i;
 end;
 
 procedure TReserva.EscribirDatos(Escritor: TWriter);
@@ -94,9 +100,32 @@ begin
     Escritor.WriteString(Self.FDni);
     Escritor.WriteString(Self.FTelefono);
     Escritor.WriteString(Self.FEmail);
-    Escritor.WriteInteger(Self.FCantidad);
+    //Escritor.WriteInteger(Self.FCantidad);
+    Escritor.WriteListBegin;
     for i:=1 to Self.FCantidad do
         Self.FLocalidades[i].EscribirDatos(Escritor);
+    Escritor.WriteListEnd;
+end;
+
+procedure TReserva.LogEnFichero;
+var
+    i : integer;
+    Log : TextFile;
+begin
+    AssignFile(Log, 'log_reserva.txt');
+    Append(Log);
+    WriteLn(Log, '');
+    WriteLn(Log, 'Nombre: ' + Self.Nombre + ' Cantidad: ' + IntToStr(Self.Cantidad));
+    WriteLn(Log, 'Dni: ' + Self.Dni + ' Telefono: ' + Self.Telefono + ' Email: ' + Self.Email);
+    for i:=1 to Self.FCantidad do
+    begin
+        WriteLn(Log, 'Fila: ' + IntToStr(Self.FLocalidades[i].Fila) + ', Numero: ' + IntToStr(Self.FLocalidades[i].Numero));
+        if Self.FLocalidades[i].EstaOcupado then
+            WriteLn(Log, 'Estado: OCUPADA')
+        else
+            WriteLn(Log, 'Estado: Libre');
+    end;
+    Close(Log);
 end;
 
 initialization

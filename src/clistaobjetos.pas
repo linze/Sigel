@@ -36,7 +36,7 @@ begin
     for i:=0 to Count - 1 do
     begin
         TObject(Items[i]).Free;
-        Delete(0);
+        Delete(i);
     end;
 end;
 
@@ -103,7 +103,7 @@ begin
                     Objeto.Free;
                     raise;
                 end;
-                Add(Objeto);
+                Self.Add(Objeto);
             end;
         end;
         Reader.ReadListEnd;

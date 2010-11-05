@@ -69,24 +69,31 @@ var
 begin
     existeReserva := False;
     seguirBuscando := True;
-    i := uDatos.Reservas.Count - 1;
+    i := 0;
+    uDatos.LogearReservas;
     while seguirBuscando do
     begin
+        ShowMessage('i= ' + IntToStr(i) + '/' + IntToStr(Reservas.Count));
+        ShowMessage('"' + TReserva(Reservas.Items[i]).Dni + '" = "' + sDni + '"');
         if TReserva(Reservas.Items[i]).Dni = sDni then
         begin
             existeReserva := True;
             seguirBuscando := False;
             Reservas.Delete(i);
             cantidad := TReserva(Reservas.Items[i]).Cantidad;
-            for j := 1 to cantidad do
+            for j := 0 to cantidad do
+            begin
                 TReserva(Reservas.Items[i]).GetLocalidad(j).Estado := Libre;
+                ShowMessage('j= ' + IntToStr(j) + '/' + IntToStr(cantidad));
+            end;
         end
         else
         begin
-            if i = 0 then
+            // NOTICE : limite del count
+            if i = uDatos.Reservas.Count then
                 seguirBuscando := False
             else
-                i := i - 1;
+                i := i + 1;
         end;
     end;
     if not existeReserva then

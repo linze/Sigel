@@ -105,8 +105,9 @@ begin
       if frmFecha.FechaMarcada then
       begin
             uDatos.Cargar(frmFecha.Fecha);
-           frmAnular := TfrmAnularReserva.Create(Self);
-           frmAnular.ShowModal;
+            uDatos.LogearReservas;
+            frmAnular := TfrmAnularReserva.Create(Self);
+            frmAnular.ShowModal;
             if frmAnular.IntroducidoDni then
             begin
                 uDatos.Guardar(frmFecha.Fecha);
@@ -204,8 +205,11 @@ begin
                                         uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                     end;
                                 end;
+                                ShowMessage(IntToStr(uDatos.Reservas.Count));
                                 uDatos.Reservas.Add(Reserva);
+                                ShowMessage(IntToStr(uDatos.Reservas.Count));
                                 uDatos.Guardar(frmFecha.Fecha);
+                                uDatos.LogearReservas;
                                 ShowMessage('Operación realizada con éxito');
                             end;
                         finally
@@ -215,7 +219,8 @@ begin
                 finally
                     frmSeleccionButaca.Free;
                 end;
-                uDatos.LiberarDatos;
+                //TODO: Liberar memoria
+                //uDatos.LiberarDatos;
             end
             else
                 // TODO: Adapta esto

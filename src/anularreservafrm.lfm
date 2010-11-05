@@ -4,8 +4,8 @@ object frmAnularReserva: TfrmAnularReserva
   Top = 187
   Width = 265
   ActiveControl = eDNI
-  BorderIcons = []
-  BorderStyle = bsNone
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Introducir datos'
   ClientHeight = 139
   ClientWidth = 265
@@ -13,9 +13,9 @@ object frmAnularReserva: TfrmAnularReserva
   LCLVersion = '0.9.28.2'
   object Label1: TLabel
     Left = 5
-    Height = 16
+    Height = 20
     Top = 8
-    Width = 127
+    Width = 167
     Caption = 'Introduzca su DNI:'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -25,9 +25,9 @@ object frmAnularReserva: TfrmAnularReserva
   end
   object Label2: TLabel
     Left = 16
-    Height = 16
+    Height = 20
     Top = 48
-    Width = 34
+    Width = 45
     Caption = 'DNI: '
     Font.Height = -17
     Font.Name = 'Sans'
@@ -38,7 +38,7 @@ object frmAnularReserva: TfrmAnularReserva
   end
   object eDNI: TEdit
     Left = 64
-    Height = 25
+    Height = 29
     Top = 40
     Width = 176
     Font.Height = -17

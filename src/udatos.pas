@@ -4,12 +4,13 @@ unit uDatos;
 
 interface
     uses
-        CSala, CListaObjetos, SysUtils, DateUtils;
+        CSala, CListaObjetos, SysUtils, DateUtils, CReserva;
 
     procedure Cargar(Fecha : TDateTime);
     procedure Guardar(Fecha : TDateTime);
     procedure LiberarDatos;
     procedure CrearVacio;
+    procedure LogearReservas;
 
     var
         Sala     : TSala;
@@ -69,6 +70,14 @@ begin
     Sala  := TSala.Create;
     Reservas := TListaObjetos.Create;
     Esperas := TListaObjetos.Create;
+end;
+
+procedure LogearReservas;
+var
+    i: integer;
+begin
+    for i:=0 to Reservas.Count-1 do
+        TReserva(Reservas.Items[i]).LogEnFichero;
 end;
 
 end.

@@ -3,6 +3,7 @@ object frmVerListaEspera: TfrmVerListaEspera
   Height = 418
   Top = 168
   Width = 440
+  ActiveControl = ListBox1
   Caption = 'frmVerListaEspera'
   ClientHeight = 418
   ClientWidth = 440
