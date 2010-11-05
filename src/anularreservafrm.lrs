@@ -1,3 +1,5 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmAnularReserva','FORMDATA',[
   'TPF0'#17'TfrmAnularReserva'#16'frmAnularReserva'#4'Left'#3''''#2#6'Height'#3
   +#139#0#3'Top'#3#187#0#5'Width'#3#9#1#13'ActiveControl'#7#4'eDNI'#11'BorderIc'

@@ -144,7 +144,7 @@ begin
                             if frmSeleccionButaca.Marcadas[i] then
                             begin
                                 frmSeleccionButaca.Localidades[i].Estado := Comprada;
-                                uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[1]);
+                                uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                             end;
                         end;
                         uDatos.Guardar(frmFecha.Fecha);
@@ -200,8 +200,8 @@ begin
                                     if frmSeleccionButaca.Marcadas[i] then
                                     begin
                                         frmSeleccionButaca.Localidades[i].Estado := Reservada;
-                                        {Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);}
-                                        uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[1]);
+                                        Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                        uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                     end;
                                 end;
                                 uDatos.Reservas.Add(Reserva);

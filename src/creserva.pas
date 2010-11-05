@@ -54,7 +54,12 @@ end;
 procedure TReserva.AddLocalidad(Localidad: TLocalidad);
 begin
     Self.FCantidad := Self.FCantidad + 1;
-    Self.FLocalidades[Self.FCantidad] := Localidad;
+
+    FLocalidades[FCantidad] := TLocalidad.Create;
+    FLocalidades[FCantidad].Tipo := Localidad.Tipo;
+    FLocalidades[FCantidad].Estado := Localidad.Estado;
+    FLocalidades[FCantidad].Numero := Localidad.Numero;
+    FLocalidades[FCantidad].Fila := Localidad.Fila;
 end;
 
 // NOTICE: En teoria, una clase devuelve siempre un puntero, luego
@@ -75,7 +80,10 @@ begin
     Self.FEmail := Lector.ReadString;
     Self.FCantidad := Lector.ReadInteger;
     for i:=1 to Self.FCantidad do
+    begin
+        Self.FLocalidades[i] := TLocalidad.Create;
         Self.FLocalidades[i].LeerDatos(Lector);
+    end;
 end;
 
 procedure TReserva.EscribirDatos(Escritor: TWriter);

@@ -1,3 +1,5 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmAnularCompra','FORMDATA',[
   'TPF0'#16'TfrmAnularCompra'#15'frmAnularCompra'#4'Left'#3'H'#1#6'Height'#3#174
   +#0#3'Top'#3#2#1#5'Width'#3#127#1#7'Caption'#6#13'Anular compra'#12'ClientHei'
