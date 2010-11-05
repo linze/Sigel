@@ -1,10 +1,190 @@
 object frmDatosEspera: TfrmDatosEspera
-  Left = 290
-  Height = 300
-  Top = 200
+  Left = 371
+  Height = 347
+  Top = 208
   Width = 400
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Datos para la espera'
+  ClientHeight = 347
+  ClientWidth = 400
+  Position = poScreenCenter
   LCLVersion = '0.9.28.2'
+  object Label6: TLabel
+    Left = 12
+    Height = 20
+    Top = 6
+    Width = 290
+    Caption = 'Introduzca los siguientes datos:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 151
+    Top = 35
+    Width = 377
+    Caption = 'Datos de contacto'
+    ClientHeight = 133
+    ClientWidth = 375
+    TabOrder = 0
+    object Label1: TLabel
+      Left = 5
+      Height = 20
+      Top = 7
+      Width = 78
+      Caption = 'Nombre:'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 5
+      Height = 20
+      Top = 69
+      Width = 83
+      Caption = 'Teléfono:'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 168
+      Height = 20
+      Top = 69
+      Width = 56
+      Caption = 'Email:'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object eNombre: TEdit
+      Left = 5
+      Height = 29
+      Top = 31
+      Width = 363
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+    end
+    object eTelefono: TEdit
+      Left = 5
+      Height = 29
+      Top = 87
+      Width = 149
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+    object eEmail: TEdit
+      Left = 168
+      Height = 29
+      Top = 87
+      Width = 200
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 80
+    Top = 195
+    Width = 377
+    Caption = 'Datos de la localidad:'
+    ClientHeight = 62
+    ClientWidth = 375
+    TabOrder = 1
+    OnClick = GroupBox2Click
+    object Label3: TLabel
+      Left = 6
+      Height = 20
+      Top = -1
+      Width = 39
+      Caption = 'Tipo'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 284
+      Height = 20
+      Top = 1
+      Width = 81
+      Caption = 'Cantidad'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object seCantidad: TSpinEdit
+      Left = 284
+      Height = 29
+      Top = 19
+      Width = 80
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      MaxValue = 4
+      MinValue = 1
+      ParentFont = False
+      TabOrder = 0
+      Value = 1
+    end
+    object cbTipo: TComboBox
+      Left = 6
+      Height = 31
+      Top = 19
+      Width = 257
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ItemHeight = 0
+      ParentFont = False
+      Style = csDropDownList
+      TabOrder = 1
+    end
+  end
+  object btnAceptar: TButton
+    Left = 120
+    Height = 41
+    Top = 296
+    Width = 123
+    Caption = 'ACEPTAR'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnCancelar: TButton
+    Left = 262
+    Height = 41
+    Top = 296
+    Width = 123
+    Caption = 'CANCELAR'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+  end
 end
