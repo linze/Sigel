@@ -6,16 +6,23 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, uDatos, CEspera;
+  StdCtrls, Grids, ExtCtrls, uDatos, CEspera;
 
 type
 
   { TfrmVerListaEspera }
 
   TfrmVerListaEspera = class(TForm)
-      Button1: TButton;
-      ListBox1: TListBox;
+      btnCerrar: TButton;
+      Panel1: TPanel;
+      Panel2: TPanel;
+      Panel3: TPanel;
+      Panel4: TPanel;
+      gridVisualizacion: TStringGrid;
+      procedure btnCerrarClick(Sender: TObject);
       procedure FormCreate(Sender: TObject);
+      procedure ListBox1Click(Sender: TObject);
+      procedure Panel3Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -35,10 +42,31 @@ var
 begin
     for i:=0 to uDatos.Esperas.Count -1 do
     begin
-        ListBox1.Items.Add(TEspera(uDatos.Esperas.Items[i]).Nombre + '   ' +
-                            TEspera(uDatos.Esperas.Items[i]).Telefono + '  ' +
-                            TEspera(uDatos.Esperas.Items[i]).Email);
+        gridVisualizacion.Cells[i,0] := TEspera(uDatos.Esperas.Items[i]).Nombre;
+        gridVisualizacion.Cells[i,1] := TEspera(uDatos.Esperas.Items[i]).Dni;
+        gridVisualizacion.Cells[i,2] := TEspera(uDatos.Esperas.Items[i]).Telefono;
+        gridVisualizacion.Cells[i,3] := TEspera(uDatos.Esperas.Items[i]).Email;
+        if TEspera(uDatos.Esperas.Items[i]).Asignada then
+            gridVisualizacion.Cells[i,4] := 'Si'
+        else
+            gridVisualizacion.Cells[i,4] := 'No';
+        gridVisualizacion.Cells[i,5] := TEspera(uDatos.Esperas.Items[i]).Localidades;
     end;
+end;
+
+procedure TfrmVerListaEspera.btnCerrarClick(Sender: TObject);
+begin
+    Self.Close;
+end;
+
+procedure TfrmVerListaEspera.ListBox1Click(Sender: TObject);
+begin
+
+end;
+
+procedure TfrmVerListaEspera.Panel3Click(Sender: TObject);
+begin
+
 end;
 
 initialization

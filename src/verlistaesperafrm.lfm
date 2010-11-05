@@ -1,40 +1,119 @@
 object frmVerListaEspera: TfrmVerListaEspera
-  Left = 284
+  Left = 300
   Height = 418
-  Top = 168
-  Width = 440
-  ActiveControl = ListBox1
+  Top = 164
+  Width = 947
   Caption = 'frmVerListaEspera'
   ClientHeight = 418
-  ClientWidth = 440
+  ClientWidth = 947
   Font.Height = -14
   Font.Name = 'Sans'
   Font.Style = [fsBold]
   OnCreate = FormCreate
   LCLVersion = '0.9.28.2'
-  object ListBox1: TListBox
-    Left = 8
-    Height = 288
-    Top = 56
-    Width = 416
-    Font.Height = -17
-    Font.Name = 'Sans'
-    ItemHeight = 0
-    ParentFont = False
-    Style = lbOwnerDrawFixed
+  object Panel1: TPanel
+    Left = 0
+    Height = 330
+    Top = 28
+    Width = 947
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'Panel1'
+    ClientHeight = 330
+    ClientWidth = 947
     TabOrder = 0
-    TopIndex = -1
+    object gridVisualizacion: TStringGrid
+      Left = 0
+      Height = 330
+      Top = 0
+      Width = 947
+      Align = alClient
+      ColCount = 7
+      Font.Height = -14
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Height = -14
+      TitleFont.Name = 'Sans'
+      TitleFont.Style = [fsBold]
+      ColWidths = (
+        64
+        171
+        89
+        108
+        186
+        105
+        190
+      )
+      Cells = (
+        6
+        1
+        0
+        'Nombre'
+        2
+        0
+        'DNI'
+        3
+        0
+        'Teléfono'
+        4
+        0
+        'Email'
+        5
+        0
+        'Asignada'
+        6
+        0
+        'Localidades'
+      )
+    end
   end
-  object Button1: TButton
-    Left = 344
-    Height = 25
-    Top = 360
-    Width = 75
-    Caption = 'Cerrar'
-    Font.Height = -17
-    Font.Name = 'Sans'
-    Font.Style = [fsBold]
-    ParentFont = False
+  object Panel2: TPanel
+    Left = 0
+    Height = 60
+    Top = 358
+    Width = 947
+    Align = alBottom
+    BevelOuter = bvNone
+    ClientHeight = 60
+    ClientWidth = 947
     TabOrder = 1
+    object Panel3: TPanel
+      Left = 827
+      Height = 60
+      Top = 0
+      Width = 120
+      Align = alRight
+      Caption = 'Panel3'
+      ClientHeight = 60
+      ClientWidth = 120
+      TabOrder = 0
+      OnClick = Panel3Click
+      object btnCerrar: TButton
+        Left = 8
+        Height = 41
+        Top = 8
+        Width = 107
+        Caption = 'CERRAR'
+        Font.Height = -17
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
+        OnClick = btnCerrarClick
+        ParentFont = False
+        TabOrder = 0
+      end
+    end
+  end
+  object Panel4: TPanel
+    Left = 0
+    Height = 28
+    Top = 0
+    Width = 947
+    Align = alTop
+    Alignment = taLeftJustify
+    BevelOuter = bvNone
+    Caption = '  Estado de la lista de espera'
+    TabOrder = 2
   end
 end

@@ -1,13 +1,31 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmVerListaEspera','FORMDATA',[
-  'TPF0'#18'TfrmVerListaEspera'#17'frmVerListaEspera'#4'Left'#3#28#1#6'Height'#3
-  +#162#1#3'Top'#3#168#0#5'Width'#3#184#1#13'ActiveControl'#7#8'ListBox1'#7'Cap'
-  +'tion'#6#17'frmVerListaEspera'#12'ClientHeight'#3#162#1#11'ClientWidth'#3#184
-  +#1#11'Font.Height'#2#242#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0
-  +#8'OnCreate'#7#10'FormCreate'#10'LCLVersion'#6#8'0.9.28.2'#0#8'TListBox'#8'L'
-  +'istBox1'#4'Left'#2#8#6'Height'#3' '#1#3'Top'#2'8'#5'Width'#3#160#1#11'Font.'
-  +'Height'#2#239#9'Font.Name'#6#4'Sans'#10'ItemHeight'#2#0#10'ParentFont'#8#5
-  +'Style'#7#16'lbOwnerDrawFixed'#8'TabOrder'#2#0#8'TopIndex'#2#255#0#0#7'TButt'
-  +'on'#7'Button1'#4'Left'#3'X'#1#6'Height'#2#25#3'Top'#3'h'#1#5'Width'#2'K'#7
-  +'Caption'#6#6'Cerrar'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.S'
-  +'tyle'#11#6'fsBold'#0#10'ParentFont'#8#8'TabOrder'#2#1#0#0#0
+  'TPF0'#18'TfrmVerListaEspera'#17'frmVerListaEspera'#4'Left'#3','#1#6'Height'#3
+  +#162#1#3'Top'#3#164#0#5'Width'#3#179#3#7'Caption'#6#17'frmVerListaEspera'#12
+  +'ClientHeight'#3#162#1#11'ClientWidth'#3#179#3#11'Font.Height'#2#242#9'Font.'
+  +'Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#8'OnCreate'#7#10'FormCreate'
+  +#10'LCLVersion'#6#8'0.9.28.2'#0#6'TPanel'#6'Panel1'#4'Left'#2#0#6'Height'#3
+  +'J'#1#3'Top'#2#28#5'Width'#3#179#3#5'Align'#7#8'alClient'#10'BevelOuter'#7#6
+  +'bvNone'#7'Caption'#6#6'Panel1'#12'ClientHeight'#3'J'#1#11'ClientWidth'#3#179
+  +#3#8'TabOrder'#2#0#0#11'TStringGrid'#17'gridVisualizacion'#4'Left'#2#0#6'Hei'
+  +'ght'#3'J'#1#3'Top'#2#0#5'Width'#3#179#3#5'Align'#7#8'alClient'#8'ColCount'#2
+  +#7#11'Font.Height'#2#242#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0
+  +#10'ParentFont'#8#8'TabOrder'#2#0#16'TitleFont.Height'#2#242#14'TitleFont.Na'
+  +'me'#6#4'Sans'#15'TitleFont.Style'#11#6'fsBold'#0#9'ColWidths'#1#2'@'#3#171#0
+  +#2'Y'#2'l'#3#186#0#2'i'#3#190#0#0#5'Cells'#1#2#6#2#1#2#0#6#6'Nombre'#2#2#2#0
+  +#6#3'DNI'#2#3#2#0#6#9'Tel'#195#169'fono'#2#4#2#0#6#5'Email'#2#5#2#0#6#8'Asig'
+  +'nada'#2#6#2#0#6#11'Localidades'#0#0#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'H'
+  +'eight'#2'<'#3'Top'#3'f'#1#5'Width'#3#179#3#5'Align'#7#8'alBottom'#10'BevelO'
+  +'uter'#7#6'bvNone'#12'ClientHeight'#2'<'#11'ClientWidth'#3#179#3#8'TabOrder'
+  +#2#1#0#6'TPanel'#6'Panel3'#4'Left'#3';'#3#6'Height'#2'<'#3'Top'#2#0#5'Width'
+  +#2'x'#5'Align'#7#7'alRight'#7'Caption'#6#6'Panel3'#12'ClientHeight'#2'<'#11
+  +'ClientWidth'#2'x'#8'TabOrder'#2#0#7'OnClick'#7#11'Panel3Click'#0#7'TButton'
+  +#9'btnCerrar'#4'Left'#2#8#6'Height'#2')'#3'Top'#2#8#5'Width'#2'k'#7'Caption'
+  +#6#6'CERRAR'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6
+  +'fsBold'#0#7'OnClick'#7#14'btnCerrarClick'#10'ParentFont'#8#8'TabOrder'#2#0#0
+  +#0#0#0#6'TPanel'#6'Panel4'#4'Left'#2#0#6'Height'#2#28#3'Top'#2#0#5'Width'#3
+  +#179#3#5'Align'#7#5'alTop'#9'Alignment'#7#13'taLeftJustify'#10'BevelOuter'#7
+  +#6'bvNone'#7'Caption'#6#30'  Estado de la lista de espera'#8'TabOrder'#2#2#0
+  +#0#0
 ]);
