@@ -31,13 +31,13 @@ implementation
 
 procedure TfrmVerListaEspera.FormCreate(Sender: TObject);
 var
-    i: boolean;
+    i: integer;
 begin
     for i:=0 to uDatos.Esperas.Count -1 do
     begin
-        ListBox1.Items.Add(TEspera(uDatos.Esperas.Items).Nombre + '   ' +
-                            TEspera(uDatos.Esperas.Items).Telefono + '  ' +
-                            TEspera(uDatos.Esperas.Items).Email);
+        ListBox1.Items.Add(TEspera(uDatos.Esperas.Items[i]).Nombre + '   ' +
+                            TEspera(uDatos.Esperas.Items[i]).Telefono + '  ' +
+                            TEspera(uDatos.Esperas.Items[i]).Email);
     end;
 end;
 
