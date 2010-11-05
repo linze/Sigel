@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
-  CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva;
+  CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva, AnularCompraFrm;
 
 type
 
@@ -32,6 +32,7 @@ type
       Panel4: TPanel;
       procedure BotonMouseLeave(Sender: TObject);
       procedure BotonMouseEnter(Sender: TObject);
+      procedure btnAnularCompraClick(Sender: TObject);
       procedure btnAnularReservaClick(Sender: TObject);
       procedure btnCompraClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
@@ -65,6 +66,34 @@ begin
     lbDescripcion.Visible := True;
 end;
 
+procedure TfrmPrincipal.btnAnularCompraClick(Sender: TObject);
+var
+   frmFecha :TfrmFecha;
+   frmAnularCompra : TfrmAnularCompra;
+begin
+  frmFecha := TFrmFecha.Create(Self);
+  try
+      frmFecha.ShowModal;
+      if frmFecha.FechaMarcada then
+      begin
+            uDatos.Cargar(frmFecha.Fecha);
+            frmAnularCompra := TfrmAnularCompra.Create(Self);
+            try
+                frmAnularCompra.ShowModal;
+                if frmAnularCompra.LocalidadAnulada then
+                begin
+                    uDatos.Guardar(frmFecha.Fecha);
+                end;
+                uDatos.LiberarDatos;
+            finally
+                frmAnularCompra.Free;
+            end;
+      end;
+  finally
+         frmFecha.Free;
+  end;
+end;
+
 procedure TfrmPrincipal.btnAnularReservaClick(Sender: TObject);
 var
    frmFecha :TfrmFecha;
@@ -75,8 +104,14 @@ begin
       frmFecha.ShowModal;
       if frmFecha.FechaMarcada then
       begin
+            uDatos.Cargar(frmFecha.Fecha);
            frmAnular := TfrmAnularReserva.Create(Self);
            frmAnular.ShowModal;
+            if frmAnular.IntroducidoDni then
+            begin
+                uDatos.Guardar(frmFecha.Fecha);
+            end;
+            uDatos.LiberarDatos;
       end;
   finally
          frmFecha.Free;
@@ -93,7 +128,7 @@ var
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
-        frmFecha.EsReserva := True;
+        frmFecha.EsReserva := False;
         frmFecha.ShowModal;
         if frmFecha.FechaMarcada then
         begin
@@ -137,55 +172,58 @@ var
     Reserva  : TReserva;
     i       : integer;
 begin
-    frmFecha := TFrmFecha.Create(Self);
     try
-        frmFecha.EsReserva := True;
-        frmFecha.ShowModal;
-        if frmFecha.FechaMarcada then
-        begin
-            uDatos.Cargar(frmFecha.Fecha);
-            frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
-            try
-                frmSeleccionButaca.ShowModal;
-                if frmSeleccionButaca.NumDeMarcadas > 0 then
-                begin
-                    frmDatos := TfrmDatosReserva.Create(Self);
-                    try
-                        frmDatos.ShowModal;
-                        if frmDatos.DatosIntroducidos then
-                        begin
-                            for i:= 1 to 4 do
+        frmFecha := TFrmFecha.Create(Self);
+        try
+            frmFecha.EsReserva := True;
+            frmFecha.ShowModal;
+            if frmFecha.FechaMarcada then
+            begin
+                uDatos.Cargar(frmFecha.Fecha);
+                frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+                try
+                    frmSeleccionButaca.ShowModal;
+                    if frmSeleccionButaca.NumDeMarcadas > 0 then
+                    begin
+                        frmDatos := TfrmDatosReserva.Create(Self);
+                        try
+                            frmDatos.ShowModal;
+                            if frmDatos.DatosIntroducidos then
                             begin
-                                if frmSeleccionButaca.Marcadas[i] then
+                                Reserva := TReserva.Create;
+                                Reserva.Nombre := frmDatos.Nombre;
+                                Reserva.Dni := frmDatos.Dni;
+                                Reserva.Telefono := frmDatos.Telefono;
+                                Reserva.Email := frmDatos.Email;
+                                for i:= 1 to 4 do
                                 begin
-                                    frmSeleccionButaca.Localidades[i].Estado := Reservada;
-                                    Reserva := TReserva.Create;
-                                    Reserva.Nombre := frmDatos.Nombre;
-                                    Reserva.Dni := frmDatos.Dni;
-                                    Reserva.Telefono := frmDatos.Telefono;
-                                    Reserva.Email := frmDatos.Email;
-                                    Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
-                                    uDatos.Reservas.Add(Reserva);
-                                    uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[1]);
+                                    if frmSeleccionButaca.Marcadas[i] then
+                                    begin
+                                        frmSeleccionButaca.Localidades[i].Estado := Reservada;
+                                        {Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);}
+                                        uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[1]);
+                                    end;
                                 end;
+                                uDatos.Reservas.Add(Reserva);
+                                uDatos.Guardar(frmFecha.Fecha);
+                                ShowMessage('Operación realizada con éxito');
                             end;
-                            uDatos.Guardar(frmFecha.Fecha);
-                            ShowMessage('Operación realizada con éxito');
+                        finally
+                            frmDatos.Free;
                         end;
-                    finally
-                        frmDatos.Free;
                     end;
+                finally
+                    frmSeleccionButaca.Free;
                 end;
-            finally
-                frmSeleccionButaca.Free;
-            end;
-            uDatos.LiberarDatos;
-        end
-        else
-            // TODO: Adapta esto
-            ShowMessage ('No hay fecha. Cancelar proceso');
-    finally
-        frmFecha.Free;
+                uDatos.LiberarDatos;
+            end
+            else
+                // TODO: Adapta esto
+                ShowMessage ('No hay fecha. Cancelar proceso');
+        finally
+            frmFecha.Free;
+        end;
+    except
     end;
 end;
 

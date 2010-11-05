@@ -1,0 +1,39 @@
+object frmVerListaEspera: TfrmVerListaEspera
+  Left = 284
+  Height = 418
+  Top = 168
+  Width = 440
+  Caption = 'frmVerListaEspera'
+  ClientHeight = 418
+  ClientWidth = 440
+  Font.Height = -14
+  Font.Name = 'Sans'
+  Font.Style = [fsBold]
+  OnCreate = FormCreate
+  LCLVersion = '0.9.28.2'
+  object ListBox1: TListBox
+    Left = 8
+    Height = 288
+    Top = 56
+    Width = 416
+    Font.Height = -17
+    Font.Name = 'Sans'
+    ItemHeight = 0
+    ParentFont = False
+    Style = lbOwnerDrawFixed
+    TabOrder = 0
+    TopIndex = -1
+  end
+  object Button1: TButton
+    Left = 344
+    Height = 25
+    Top = 360
+    Width = 75
+    Caption = 'Cerrar'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 1
+  end
+end

@@ -10,7 +10,7 @@ uses
   Forms, PrincipalFrm, LResources, CEstadoLocalidad, CLocalidad, CSala,
   ComprarFrm, ReservaFrm, CEspera, CReserva, CTipoLocalidad, LoginFrm, FechaFrm,
   SeleccionButacaFrm, uDatos, AnularReservaFrm, AnularCompraFrm,
-  DatosReservaFrm, CreditosFrm, CListaObjetos;
+  DatosReservaFrm, CreditosFrm, CListaObjetos, VerListaEsperaFrm;
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
 
@@ -18,6 +18,7 @@ begin
     {$I Sigel.lrs}
     Application.Initialize;
     Application.CreateForm(TfrmPrincipal, frmPrincipal);
+    Application.CreateForm(TfrmVerListaEspera, frmVerListaEspera);
     Application.Run;
 end.
 

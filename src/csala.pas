@@ -34,6 +34,7 @@ interface
             procedure EscribirDatos (Escritor: TWriter); dynamic;
 
             procedure LogEnFichero;
+            function EstaCompleto : boolean;
         end;
 
 implementation
@@ -181,6 +182,47 @@ begin
     for i:=1 to 4 do
         AppendEstado(Self.FPalco[i]);
 
+end;
+
+function TSala.EstaCompleto: boolean;
+var
+    i,j : integer;
+    EncontradoLibre : boolean;
+begin
+    EncontradoLibre := False;
+
+    i := 1;
+    while (not EncontradoLibre) and (i <=4) do
+    begin
+        j := 1;
+        while (not EncontradoLibre) and (i <= 8) do
+        begin
+            EncontradoLibre := not Self.FPatio[i,j].EstaOcupado;
+            j := j + 1;
+        end;
+        i := i + 1;
+    end;
+
+    i := 1;
+    while (not EncontradoLibre) and (i <=2) do
+    begin
+        j := 1;
+        while (not EncontradoLibre) and (i <= 8) do
+        begin
+            EncontradoLibre := not Self.FPrimeraPlanta[i,j].EstaOcupado;
+            j := j + 1;
+        end;
+        i := i + 1;
+    end;
+
+    i := 1;
+    while (not EncontradoLibre) and (i <= 4) do
+    begin
+        EncontradoLibre := not Self.FPalco[i].EstaOcupado;
+        i := i + 1;
+    end;
+
+    EstaCompleto := not EncontradoLibre;
 end;
 
 initialization

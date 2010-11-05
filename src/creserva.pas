@@ -48,14 +48,13 @@ var
     i: integer;
 begin
     Self.FCantidad := 0;
-
     inherited Create;
 end;
 
 procedure TReserva.AddLocalidad(Localidad: TLocalidad);
 begin
     Self.FCantidad := Self.FCantidad + 1;
-    Self.FLocalidades[FCantidad] := Localidad;
+    Self.FLocalidades[Self.FCantidad] := Localidad;
 end;
 
 // NOTICE: En teoria, una clase devuelve siempre un puntero, luego

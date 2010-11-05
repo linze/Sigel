@@ -1,7 +1,7 @@
 object frmDatosReserva: TfrmDatosReserva
-  Left = 290
+  Left = 784
   Height = 318
-  Top = 199
+  Top = 284
   Width = 319
   ActiveControl = eNombre
   BorderIcons = [biSystemMenu]

@@ -1,0 +1,13 @@
+LazarusResources.Add('TfrmVerListaEspera','FORMDATA',[
+  'TPF0'#18'TfrmVerListaEspera'#17'frmVerListaEspera'#4'Left'#3#28#1#6'Height'#3
+  +#162#1#3'Top'#3#168#0#5'Width'#3#184#1#7'Caption'#6#17'frmVerListaEspera'#12
+  +'ClientHeight'#3#162#1#11'ClientWidth'#3#184#1#11'Font.Height'#2#242#9'Font.'
+  +'Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#8'OnCreate'#7#10'FormCreate'
+  +#10'LCLVersion'#6#8'0.9.28.2'#0#8'TListBox'#8'ListBox1'#4'Left'#2#8#6'Height'
+  +#3' '#1#3'Top'#2'8'#5'Width'#3#160#1#11'Font.Height'#2#239#9'Font.Name'#6#4
+  +'Sans'#10'ItemHeight'#2#0#10'ParentFont'#8#5'Style'#7#16'lbOwnerDrawFixed'#8
+  +'TabOrder'#2#0#8'TopIndex'#2#255#0#0#7'TButton'#7'Button1'#4'Left'#3'X'#1#6
+  +'Height'#2#25#3'Top'#3'h'#1#5'Width'#2'K'#7'Caption'#6#6'Cerrar'#11'Font.Hei'
+  +'ght'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#10'ParentFo'
+  +'nt'#8#8'TabOrder'#2#1#0#0#0
+]);

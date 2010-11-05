@@ -182,6 +182,7 @@ object frmPrincipal: TfrmPrincipal
         Font.Height = -17
         Font.Name = 'Sans'
         Font.Style = [fsBold]
+        OnClick = btnAnularCompraClick
         ParentFont = False
         TabOrder = 3
         Visible = False

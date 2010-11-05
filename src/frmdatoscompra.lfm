@@ -1,11 +1,14 @@
-object frmAnularCompra: TfrmAnularCompra
-  Left = 328
-  Height = 174
-  Top = 258
-  Width = 383
-  Caption = 'Anular compra'
-  ClientHeight = 174
-  ClientWidth = 383
+object frmDatosCompra: TfrmDatosCompra
+  Left = 290
+  Height = 166
+  Top = 200
+  Width = 395
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Inserte datos'
+  ClientHeight = 166
+  ClientWidth = 395
+  OnCreate = FormCreate
   LCLVersion = '0.9.28.2'
   object Label1: TLabel
     Left = 214
@@ -18,6 +21,7 @@ object frmAnularCompra: TfrmAnularCompra
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+    OnClick = Label1Click
   end
   object Label2: TLabel
     Left = 288
@@ -30,6 +34,7 @@ object frmAnularCompra: TfrmAnularCompra
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+    OnClick = Label2Click
   end
   object Label3: TLabel
     Left = 14
@@ -97,6 +102,7 @@ object frmAnularCompra: TfrmAnularCompra
       'Primera Planta'
       'Palco'
     )
+    OnChange = cbTipoChange
     ParentBidiMode = False
     ParentFont = False
     Style = csDropDownList
@@ -124,6 +130,7 @@ object frmAnularCompra: TfrmAnularCompra
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    OnClick = Button2Click
     ParentFont = False
     TabOrder = 4
   end
