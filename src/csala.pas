@@ -35,6 +35,7 @@ interface
 
             procedure LogEnFichero;
             function EstaCompleto : boolean;
+            function NumeroDeLibres : integer;
         end;
 
 implementation
@@ -223,6 +224,30 @@ begin
     end;
 
     EstaCompleto := not EncontradoLibre;
+end;
+
+function TSala.NumeroDeLibres: integer;
+var
+    i,j : integer;
+    cuenta : integer;
+begin
+    cuenta := 0;
+
+    for i:=1 to 4 do
+        for j:=1 to 8
+            if not Self.FPatio[i,j].EstaOcupado then
+                cuenta := cuenta + 1;
+
+    for i:=1 to 2 do
+        for j:=1 to 8 do
+            if not Self.FPrimeraPlanta.EstaOcupado then
+                cuenta := cuenta + 1;
+
+    for i:=1 to 4 do
+            if not Self.FPalco[i].EstaOcupado then
+                cuenta := cuenta + 1;
+
+    result := cuenta;
 end;
 
 initialization
