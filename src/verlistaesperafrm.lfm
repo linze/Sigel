@@ -28,7 +28,7 @@ object frmVerListaEspera: TfrmVerListaEspera
       Top = 0
       Width = 947
       Align = alClient
-      ColCount = 7
+      ColCount = 6
       Font.Height = -14
       Font.Name = 'Sans'
       Font.Style = [fsBold]
@@ -40,30 +40,26 @@ object frmVerListaEspera: TfrmVerListaEspera
       ColWidths = (
         64
         171
-        89
         108
         186
         105
         190
       )
       Cells = (
-        6
+        5
         1
         0
         'Nombre'
         2
         0
-        'DNI'
+        'Teléfono'
         3
         0
-        'Teléfono'
+        'Email'
         4
         0
-        'Email'
-        5
-        0
         'Asignada'
-        6
+        5
         0
         'Localidades'
       )

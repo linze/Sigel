@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="6"/>
+      <ActiveEditorIndexAtStart Value="7"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -38,7 +38,7 @@
         <CursorPos X="2" Y="12"/>
         <TopLine Value="1"/>
         <EditorIndex Value="9"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -51,7 +51,7 @@
         <CursorPos X="28" Y="183"/>
         <TopLine Value="180"/>
         <EditorIndex Value="6"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit1>
@@ -62,7 +62,7 @@
         <CursorPos X="27" Y="7"/>
         <TopLine Value="1"/>
         <EditorIndex Value="12"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit2>
@@ -73,7 +73,7 @@
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
         <EditorIndex Value="11"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit3>
@@ -84,7 +84,7 @@
         <CursorPos X="23" Y="31"/>
         <TopLine Value="16"/>
         <EditorIndex Value="16"/>
-        <UsageCount Value="94"/>
+        <UsageCount Value="95"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit4>
@@ -103,7 +103,7 @@
         <CursorPos X="70" Y="7"/>
         <TopLine Value="1"/>
         <EditorIndex Value="0"/>
-        <UsageCount Value="92"/>
+        <UsageCount Value="93"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit6>
@@ -131,7 +131,7 @@
         <UnitName Value="ComprarFrm"/>
         <CursorPos X="78" Y="8"/>
         <TopLine Value="3"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="91"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit9>
       <Unit10>
@@ -142,7 +142,7 @@
         <UnitName Value="ReservaFrm"/>
         <CursorPos X="5" Y="31"/>
         <TopLine Value="14"/>
-        <UsageCount Value="90"/>
+        <UsageCount Value="91"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit10>
       <Unit11>
@@ -189,10 +189,10 @@
         <Filename Value="creserva.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CReserva"/>
-        <CursorPos X="89" Y="113"/>
-        <TopLine Value="107"/>
+        <CursorPos X="45" Y="103"/>
+        <TopLine Value="92"/>
         <EditorIndex Value="5"/>
-        <UsageCount Value="89"/>
+        <UsageCount Value="90"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit16>
@@ -208,10 +208,10 @@
         <Filename Value="cespera.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CEspera"/>
-        <CursorPos X="26" Y="51"/>
-        <TopLine Value="35"/>
+        <CursorPos X="52" Y="69"/>
+        <TopLine Value="8"/>
         <EditorIndex Value="3"/>
-        <UsageCount Value="82"/>
+        <UsageCount Value="83"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit18>
@@ -247,7 +247,7 @@
         <UnitName Value="LoginFrm"/>
         <CursorPos X="5" Y="26"/>
         <TopLine Value="26"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="70"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit22>
       <Unit23>
@@ -256,10 +256,10 @@
         <ComponentName Value="frmFecha"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FechaFrm"/>
-        <CursorPos X="25" Y="62"/>
-        <TopLine Value="46"/>
+        <CursorPos X="53" Y="10"/>
+        <TopLine Value="74"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="68"/>
+        <UsageCount Value="69"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit23>
@@ -278,7 +278,7 @@
         <CursorPos X="24" Y="105"/>
         <TopLine Value="90"/>
         <EditorIndex Value="13"/>
-        <UsageCount Value="65"/>
+        <UsageCount Value="66"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit25>
@@ -289,7 +289,7 @@
         <CursorPos X="22" Y="18"/>
         <TopLine Value="1"/>
         <EditorIndex Value="18"/>
-        <UsageCount Value="62"/>
+        <UsageCount Value="63"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit26>
@@ -310,7 +310,7 @@
         <CursorPos X="33" Y="77"/>
         <TopLine Value="74"/>
         <EditorIndex Value="15"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit28>
@@ -323,7 +323,7 @@
         <CursorPos X="46" Y="33"/>
         <TopLine Value="33"/>
         <EditorIndex Value="4"/>
-        <UsageCount Value="56"/>
+        <UsageCount Value="57"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit29>
@@ -395,7 +395,7 @@
         <CursorPos X="61" Y="22"/>
         <TopLine Value="15"/>
         <EditorIndex Value="17"/>
-        <UsageCount Value="37"/>
+        <UsageCount Value="38"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit38>
@@ -470,10 +470,10 @@
         <ComponentName Value="frmVerListaEspera"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="VerListaEsperaFrm"/>
-        <CursorPos X="44" Y="39"/>
-        <TopLine Value="17"/>
+        <CursorPos X="94" Y="52"/>
+        <TopLine Value="42"/>
         <EditorIndex Value="7"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="28"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit48>
@@ -495,10 +495,10 @@
         <ComponentName Value="frmDatosEspera"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DatosEspera"/>
-        <CursorPos X="85" Y="44"/>
-        <TopLine Value="31"/>
+        <CursorPos X="31" Y="36"/>
+        <TopLine Value="28"/>
         <EditorIndex Value="2"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="22"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit51>
@@ -506,123 +506,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="207" Column="118" TopLine="193"/>
+        <Caret Line="208" Column="33" TopLine="195"/>
       </Position1>
       <Position2>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="205" Column="134" TopLine="193"/>
+        <Caret Line="210" Column="48" TopLine="202"/>
       </Position2>
       <Position3>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="84" Column="54" TopLine="73"/>
+        <Filename Value="udatos.pas"/>
+        <Caret Line="80" Column="60" TopLine="65"/>
       </Position3>
       <Position4>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="3" Column="12" TopLine="1"/>
+        <Filename Value="creserva.pas"/>
+        <Caret Line="120" Column="22" TopLine="108"/>
       </Position4>
       <Position5>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="3" Column="27" TopLine="1"/>
+        <Caret Line="208" Column="72" TopLine="195"/>
       </Position5>
       <Position6>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="8" Column="77" TopLine="1"/>
+        <Caret Line="183" Column="28" TopLine="180"/>
       </Position6>
       <Position7>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="9" Column="26" TopLine="1"/>
-      </Position7>
-      <Position8>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="247" Column="23" TopLine="237"/>
-      </Position8>
-      <Position9>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="251" Column="28" TopLine="237"/>
-      </Position9>
-      <Position10>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="253" Column="19" TopLine="237"/>
-      </Position10>
-      <Position11>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="254" Column="22" TopLine="237"/>
-      </Position11>
-      <Position12>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="173" Column="56" TopLine="169"/>
-      </Position12>
-      <Position13>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="105" Column="43" TopLine="97"/>
-      </Position13>
-      <Position14>
-        <Filename Value="creserva.pas"/>
-        <Caret Line="118" Column="36" TopLine="107"/>
-      </Position14>
-      <Position15>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="208" Column="33" TopLine="195"/>
-      </Position15>
-      <Position16>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="210" Column="48" TopLine="202"/>
-      </Position16>
-      <Position17>
-        <Filename Value="udatos.pas"/>
-        <Caret Line="80" Column="60" TopLine="65"/>
-      </Position17>
-      <Position18>
-        <Filename Value="creserva.pas"/>
-        <Caret Line="120" Column="22" TopLine="108"/>
-      </Position18>
-      <Position19>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="208" Column="72" TopLine="195"/>
-      </Position19>
-      <Position20>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="183" Column="28" TopLine="180"/>
-      </Position20>
-      <Position21>
         <Filename Value="udatos.pas"/>
         <Caret Line="36" Column="23" TopLine="22"/>
-      </Position21>
-      <Position22>
+      </Position7>
+      <Position8>
         <Filename Value="clistaobjetos.pas"/>
         <Caret Line="101" Column="44" TopLine="85"/>
-      </Position22>
-      <Position23>
+      </Position8>
+      <Position9>
         <Filename Value="datosespera.pas"/>
         <Caret Line="6" Column="78" TopLine="1"/>
-      </Position23>
-      <Position24>
+      </Position9>
+      <Position10>
         <Filename Value="datosespera.pas"/>
         <Caret Line="2" Column="115" TopLine="1"/>
-      </Position24>
-      <Position25>
+      </Position10>
+      <Position11>
         <Filename Value="datosespera.pas"/>
         <Caret Line="43" Column="5" TopLine="31"/>
-      </Position25>
-      <Position26>
+      </Position11>
+      <Position12>
         <Filename Value="datosespera.pas"/>
         <Caret Line="44" Column="5" TopLine="31"/>
-      </Position26>
-      <Position27>
+      </Position12>
+      <Position13>
         <Filename Value="datosespera.pas"/>
         <Caret Line="45" Column="5" TopLine="31"/>
-      </Position27>
-      <Position28>
+      </Position13>
+      <Position14>
         <Filename Value="datosespera.pas"/>
         <Caret Line="46" Column="5" TopLine="31"/>
-      </Position28>
-      <Position29>
+      </Position14>
+      <Position15>
         <Filename Value="datosespera.pas"/>
         <Caret Line="47" Column="5" TopLine="31"/>
-      </Position29>
-      <Position30>
+      </Position15>
+      <Position16>
         <Filename Value="datosespera.pas"/>
         <Caret Line="46" Column="5" TopLine="31"/>
+      </Position16>
+      <Position17>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="24" Column="45" TopLine="17"/>
+      </Position17>
+      <Position18>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="42" Column="46" TopLine="35"/>
+      </Position18>
+      <Position19>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="43" Column="46" TopLine="35"/>
+      </Position19>
+      <Position20>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="44" Column="46" TopLine="35"/>
+      </Position20>
+      <Position21>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="43" Column="46" TopLine="35"/>
+      </Position21>
+      <Position22>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="44" Column="46" TopLine="35"/>
+      </Position22>
+      <Position23>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="46" Column="46" TopLine="35"/>
+      </Position23>
+      <Position24>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="56" Column="5" TopLine="44"/>
+      </Position24>
+      <Position25>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="57" Column="5" TopLine="44"/>
+      </Position25>
+      <Position26>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="58" Column="5" TopLine="44"/>
+      </Position26>
+      <Position27>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="45" Column="9" TopLine="37"/>
+      </Position27>
+      <Position28>
+        <Filename Value="creserva.pas"/>
+        <Caret Line="32" Column="107" TopLine="16"/>
+      </Position28>
+      <Position29>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="56" Column="43" TopLine="35"/>
+      </Position29>
+      <Position30>
+        <Filename Value="verlistaesperafrm.pas"/>
+        <Caret Line="52" Column="36" TopLine="43"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

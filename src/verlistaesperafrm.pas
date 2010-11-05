@@ -43,14 +43,13 @@ begin
     for i:=0 to uDatos.Esperas.Count -1 do
     begin
         gridVisualizacion.Cells[i,0] := TEspera(uDatos.Esperas.Items[i]).Nombre;
-        gridVisualizacion.Cells[i,1] := TEspera(uDatos.Esperas.Items[i]).Dni;
-        gridVisualizacion.Cells[i,2] := TEspera(uDatos.Esperas.Items[i]).Telefono;
-        gridVisualizacion.Cells[i,3] := TEspera(uDatos.Esperas.Items[i]).Email;
+        gridVisualizacion.Cells[i,1] := TEspera(uDatos.Esperas.Items[i]).Telefono;
+        gridVisualizacion.Cells[i,2] := TEspera(uDatos.Esperas.Items[i]).Email;
         if TEspera(uDatos.Esperas.Items[i]).Asignada then
-            gridVisualizacion.Cells[i,4] := 'Si'
+            gridVisualizacion.Cells[i,3] := 'Si'
         else
-            gridVisualizacion.Cells[i,4] := 'No';
-        gridVisualizacion.Cells[i,5] := TEspera(uDatos.Esperas.Items[i]).Localidades;
+            gridVisualizacion.Cells[i,3] := 'No';
+        gridVisualizacion.Cells[i,4] := TEspera(uDatos.Esperas.Items[i]).LocalidadesAsignadas;
     end;
 end;
 
