@@ -48,7 +48,7 @@
         <ComponentName Value="frmPrincipal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
-        <CursorPos X="25" Y="190"/>
+        <CursorPos X="28" Y="182"/>
         <TopLine Value="172"/>
         <EditorIndex Value="6"/>
         <UsageCount Value="96"/>
@@ -498,7 +498,7 @@
         <CursorPos X="31" Y="36"/>
         <TopLine Value="28"/>
         <EditorIndex Value="2"/>
-        <UsageCount Value="22"/>
+        <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit51>
