@@ -5,7 +5,7 @@ unit CReserva;
 interface
 
     uses
-        CLocalidad, Classes, SysUtils, Dialogs;
+        CLocalidad, Classes, SysUtils, Dialogs, CTipoLocalidad, CEstadoLocalidad;
     type
         { TReserva }
 
@@ -15,12 +15,15 @@ interface
             FDni:         String;
             FTelefono:    String;
             FEmail:       String;
-            FLocalidades: array [1..4] of TLocalidad;
+            FLocalidades: String;
             FCantidad:    Integer;
+            function StrToLocalidad(Cadena: String): TLocalidad;
+            function LocalidadToStr (Localidad: TLocalidad): String;
+            function GetFLocalidad (Indice: integer) : TLocalidad;
+            procedure SetFLocalidad(Indice: integer; Localidad: TLocalidad);
         public
            { Constructores y destructores }
             constructor Create;
-            destructor Destroy; override;
 
             { Propiedades }
             property Nombre: String read FNombre write FNombre;
@@ -46,35 +49,100 @@ interface
 implementation
 { TReserva }
 
+function TReserva.StrToLocalidad(Cadena: String): TLocalidad;
+var
+    Localidad : TLocalidad;
+begin
+    Localidad := TLocalidad.Create;
+    Localidad.Estado := Reservada;
+
+    case Cadena[1] of
+    'A': Localidad.Tipo := Patio;
+    'B': Localidad.Tipo := PrimeraPlanta;
+    'C': Localidad.Tipo := Palco;
+    end;
+
+    Localidad.Fila := StrToInt(Cadena[2]);
+    Localidad.Numero := StrToInt(Cadena[3]);
+
+    if Localidad.Tipo = Palco then
+        Localidad.Fila := Localidad.Numero;
+end;
+
+function TReserva.LocalidadToStr(Localidad: TLocalidad): String;
+var
+    TmpStr : String;
+begin
+    if Localidad = nil then
+        Result := 'X00'
+    else
+    begin
+        case Localidad.Tipo of
+        Patio: TmpStr := 'A';
+        PrimeraPlanta: TmpStr := 'B';
+        Palco: TmpStr := 'C';
+        end;
+
+        if Localidad.Tipo = Palco then
+            TmpStr := TmpStr + '0'
+        else
+            TmpStr := TmpStr + IntToStr(Localidad.Fila);
+        TmpStr := TmpStr + IntToStr(Localidad.Numero);
+    end;
+end;
+
+function TReserva.GetFLocalidad(Indice: integer): TLocalidad;
+var
+    TmpStr : String;
+begin
+    {* Formato:
+     * -TFN
+     * Donde T es el tipo, F la Fila y N el numero
+     * En el caso del paco, F es siempre 0.
+     * En caso de estar vacío, F y N son 0.
+     * T valdra A(Patio) B(P.Planta), C(Palco) o X(Vacio) }
+    TmpStr := Copy(Self.FLocalidades,Indice + 1,3);
+    Result := StrToLocalidad(TmpStr);
+end;
+
+procedure TReserva.SetFLocalidad(Indice: integer; Localidad: TLocalidad);
+var
+    Localidades : array [1..4] of TLocalidad;
+    TmpStr : string;
+    i      : integer;
+begin
+    for i:=1 to 4 do
+    begin
+        Localidades[i] := TLocalidad.Create;
+        Localidades[i] := StrToLocalidad(Copy(Self.FLocalidades,Indice + 1,3));
+    end;
+
+    Localidades[Indice] := Localidad;
+
+    TmpStr := '';
+    for i:=1 to 4 do
+    begin
+        TmpStr := TmpStr + LocalidadToStr(Localidades[Indice]);
+        Localidades[Indice].Free;
+    end;
+    Self.FLocalidades := TmpStr;
+end;
+
 constructor TReserva.Create;
 begin
     Self.FCantidad := 0;
     inherited Create;
 end;
 
-destructor TReserva.Destroy;
-var
-    i: integer;
-begin
-    for i:=1 to Cantidad do
-        FLocalidades[i].Free;
-    inherited Destroy;
-end;
-
 procedure TReserva.AddLocalidad(Localidad: TLocalidad);
 begin
     Self.FCantidad := Self.FCantidad + 1;
-
-    FLocalidades[FCantidad] := TLocalidad.Create;
-    FLocalidades[FCantidad].Tipo := Localidad.Tipo;
-    FLocalidades[FCantidad].Estado := Localidad.Estado;
-    FLocalidades[FCantidad].Numero := Localidad.Numero;
-    FLocalidades[FCantidad].Fila := Localidad.Fila;
+    SetFLocalidad(FCantidad, Localidad);
 end;
 
 function TReserva.GetLocalidad(Indice: Integer): TLocalidad;
 begin
-    GetLocalidad := FLocalidades[Indice];
+    GetLocalidad := GetFLocalidad(Indice);
 end;
 
 procedure TReserva.LeerDatos(Lector: TReader);
@@ -85,18 +153,8 @@ begin
     Self.FDni := Lector.ReadString;
     Self.FTelefono := Lector.ReadString;
     Self.FEmail := Lector.ReadString;
-    Lector.ReadListBegin;
-    i := 0;
-    while not Lector.EndOfList do
-    begin
-        i := i + 1;
-        Self.FLocalidades[i] := TLocalidad.Create;
-        Self.FLocalidades[i].LeerDatos(Lector);
-    end;
-    Self.FCantidad := i;
-    if Self.FCantidad > 4 then
-        ShowMessage ('[Reserva:LeerDatos] La cantidad no debería de ser mayor de 4 y es ' +
-                        IntToStr(Self.FCantidad));
+    Self.FCantidad := Lector.ReadInteger;
+    Self.FLocalidades := Lector.ReadString;
 end;
 
 procedure TReserva.EscribirDatos(Escritor: TWriter);
@@ -107,13 +165,8 @@ begin
     Escritor.WriteString(Self.FDni);
     Escritor.WriteString(Self.FTelefono);
     Escritor.WriteString(Self.FEmail);
-    Escritor.WriteListBegin;
-    if Self.FCantidad > 4 then
-        ShowMessage ('[Reserva:EscribirDatos] La cantidad no debería de ser mayor de 4 y es ' +
-                        IntToStr(Self.FCantidad));
-    for i:=1 to Self.FCantidad do
-        Self.FLocalidades[i].EscribirDatos(Escritor);
-    Escritor.WriteListEnd;
+    Escritor.WriteInteger(Self.FCantidad);
+    Escritor.WriteString(Self.FLocalidades);
 end;
 
 procedure TReserva.LogEnFichero;
@@ -128,8 +181,8 @@ begin
     WriteLn(Log, 'Dni: ' + Self.Dni + ' Telefono: ' + Self.Telefono + ' Email: ' + Self.Email);
     for i:=1 to Self.FCantidad do
     begin
-        WriteLn(Log, 'Fila: ' + IntToStr(Self.FLocalidades[i].Fila) + ', Numero: ' + IntToStr(Self.FLocalidades[i].Numero));
-        if Self.FLocalidades[i].EstaOcupado then
+        WriteLn(Log, 'Fila: ' + IntToStr(GetFLocalidad(i).Fila) + ', Numero: ' + IntToStr(GetFLocalidad(i).Numero));
+        if GetFLocalidad(i).EstaOcupado then
             WriteLn(Log, 'Estado: OCUPADA')
         else
             WriteLn(Log, 'Estado: Libre');
