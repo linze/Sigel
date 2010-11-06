@@ -2133,28 +2133,36 @@ object frmSeleccionButacas: TfrmSeleccionButacas
         ParentColor = False
       end
       object lbImportePatio: TLabel
-        Left = 66
-        Height = 21
+        Left = 140
+        Height = 18
         Top = 7
-        Width = 99
+        Width = 9
         Alignment = taRightJustify
+        BidiMode = bdRightToLeft
+        Caption = '0'
+        ParentBidiMode = False
         ParentColor = False
       end
       object lbImportePPlanta: TLabel
-        Left = 118
-        Height = 21
-        Top = 28
-        Width = 47
+        Left = 140
+        Height = 18
+        Top = 31
+        Width = 9
         Alignment = taRightJustify
+        BidiMode = bdRightToLeft
+        Caption = '0'
+        ParentBidiMode = False
         ParentColor = False
       end
       object lbImportePalco: TLabel
-        Left = 67
+        Left = 140
         Height = 18
         Top = 52
-        Width = 98
+        Width = 9
         Alignment = taRightJustify
-        Caption = 'lbImportePalco'
+        BidiMode = bdRightToLeft
+        Caption = '0'
+        ParentBidiMode = False
         ParentColor = False
       end
       object Bevel1: TBevel
@@ -2172,13 +2180,15 @@ object frmSeleccionButacas: TfrmSeleccionButacas
         Caption = 'Total:'
         ParentColor = False
       end
-      object Label8: TLabel
-        Left = 121
+      object lbImporteTotal: TLabel
+        Left = 140
         Height = 18
-        Top = 79
-        Width = 44
+        Top = 77
+        Width = 9
         Alignment = taRightJustify
-        Caption = 'Label8'
+        BidiMode = bdRightToLeft
+        Caption = '0'
+        ParentBidiMode = False
         ParentColor = False
       end
     end

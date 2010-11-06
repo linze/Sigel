@@ -73,7 +73,7 @@ type
       lbImportePPlanta: TLabel;
       lbImportePalco: TLabel;
       Label7: TLabel;
-      Label8: TLabel;
+      lbImporteTotal: TLabel;
       Panel1: TPanel;
       pplanta12: TImage;
       pplanta13: TImage;
@@ -102,6 +102,7 @@ type
     function ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
     function ObtenerHuecoVacio: integer;
     function EstaSeleccionada (Tipo: TTipoLocalidad; Fila, Numero: integer): Integer;
+    procedure CambiarImportes (Tipo: TTipoLocalidad; Seleccionada : boolean);
     function CalcularPrecio (Tipo: TTipoLocalidad): integer;
   public
     Localidades : array [1..4] of TLocalidad;
@@ -301,6 +302,36 @@ begin
     end;
 end;
 
+procedure TfrmSeleccionButacas.CambiarImportes(Tipo: TTipoLocalidad;
+    Seleccionada: boolean);
+var
+    IPatio, IPP, IPalco: integer;
+begin
+    IPatio := StrToInt(lbImportePatio.Caption);
+    IPP := StrToInt(lbImportePPlanta.Caption);
+    IPalco := StrToInt(lbImportePalco.Caption);
+
+    case Tipo of
+    Patio           :   if Seleccionada then
+                            IPatio := IPatio + CalcularPrecio(Tipo)
+                        else
+                            IPatio := IPatio - CalcularPrecio(Tipo);
+    PrimeraPlanta   :   if Seleccionada then
+                            IPP := IPP + CalcularPrecio(Tipo)
+                        else
+                            IPP := IPP - CalcularPrecio(Tipo);
+    Palco           :   if Seleccionada then
+                            IPalco := IPalco + CalcularPrecio(Tipo)
+                        else
+                            IPalco := IPalco - CalcularPrecio(Tipo);
+    end;
+
+    lbImportePatio.Caption := IntToStr(IPatio);
+    lbImportePPlanta.Caption := IntToStr(IPP);
+    lbImportePalco.Caption := IntToStr(IPalco);
+    lbImporteTotal.Caption := IntToStr(IPatio + IPP + IPalco);
+end;
+
 function TfrmSeleccionButacas.CalcularPrecio(Tipo: TTipoLocalidad): integer;
 begin
     if Self.Modo = Reserva then
@@ -384,11 +415,14 @@ begin
         begin
             Self.Marcadas[hueco] := False;
             Self.ChangeColor(TImage(Sender), Libre);
+
             case Tipo of
             Patio : Self.NumeroVirtual := Self.NumeroVirtual - 1;
             PrimeraPlanta : Self.NumeroVirtual := Self.NumeroVirtual - 1;
             Palco : Self.NumeroVirtual := Self.NumeroVirtual - 4;
             end;
+
+            CambiarImportes(Tipo, False);
         end
         else
         begin
@@ -408,6 +442,7 @@ begin
                     else
                         NumeroVirtual := NumeroVirtual + 1;
                     Self.ChangeColor(TImage(Sender), Seleccionada);
+                    CambiarImportes(Tipo, True);
                 end;
             end;
         end;
