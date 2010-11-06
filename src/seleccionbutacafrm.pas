@@ -335,9 +335,6 @@ var
     Numero     : Integer;
     Localidad  : TLocalidad;
     hueco      : integer;
-    haypalco   : boolean;
-    huecopas   : integer;
-    i          : integer;
 begin
     Tipo := ObtenerTipoByHint (Sender as TImage);
     if Tipo = Palco then
@@ -368,14 +365,7 @@ begin
                 ShowMessage('No se puede seleccionar más de cuatro localidades o un palco.')
             else
             begin
-                haypalco := false;
-                for i := 1 to 4 do
-                begin
-                    huecopas := EstaSeleccionada(Palco, 0, i);
-                    if (huecopas <> -1) then
-                        haypalco := true;
-                end;
-                if (((Tipo = Palco) and (NumDeMarcadas > 0)) or ((haypalco) and (NumDeMarcadas > 0))) then
+                if ((Tipo = Palco) and (NumDeMarcadas > 0)) then
                     ShowMessage ('No se puede seleccionar más de cuatro localidades o un palco')
                 else
                 begin
