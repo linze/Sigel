@@ -71,7 +71,7 @@ type
       Label3: TLabel;
       lbImportePatio: TLabel;
       lbImportePPlanta: TLabel;
-      Label6: TLabel;
+      lbImportePalco: TLabel;
       Label7: TLabel;
       Label8: TLabel;
       Panel1: TPanel;
@@ -106,10 +106,12 @@ type
   public
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
+    NumeroVirtual : integer;
     Fecha       : TDateTime;
     Modo        : TModoSeleccion;
-    NumeroVirtual : integer;
     Aceptado    : boolean;
+
+    GastoTotal  : integer;
   end; 
 
 var
@@ -381,7 +383,12 @@ begin
         if hueco <> -1 then
         begin
             Self.Marcadas[hueco] := False;
-            Self.ChangeColor(TImage(Sender), Libre)
+            Self.ChangeColor(TImage(Sender), Libre);
+            case Tipo of
+            Patio : Self.NumeroVirtual := Self.NumeroVirtual - 1;
+            PrimeraPlanta : Self.NumeroVirtual := Self.NumeroVirtual - 1;
+            Palco : Self.NumeroVirtual := Self.NumeroVirtual - 4;
+            end;
         end
         else
         begin

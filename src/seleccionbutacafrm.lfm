@@ -2134,31 +2134,31 @@ object frmSeleccionButacas: TfrmSeleccionButacas
       end
       object lbImportePatio: TLabel
         Left = 66
-        Height = 20
+        Height = 21
         Top = 7
-        Width = 98
+        Width = 99
         Alignment = taRightJustify
         ParentColor = False
       end
       object lbImportePPlanta: TLabel
-        Left = 112
-        Height = 20
-        Top = 31
-        Width = 46
+        Left = 118
+        Height = 21
+        Top = 28
+        Width = 47
         Alignment = taRightJustify
         ParentColor = False
       end
-      object Label6: TLabel
-        Left = 112
+      object lbImportePalco: TLabel
+        Left = 67
         Height = 18
         Top = 52
-        Width = 44
+        Width = 98
         Alignment = taRightJustify
-        Caption = 'Label6'
+        Caption = 'lbImportePalco'
         ParentColor = False
       end
       object Bevel1: TBevel
-        Left = 104
+        Left = 107
         Height = 11
         Top = 63
         Width = 58
@@ -2173,7 +2173,7 @@ object frmSeleccionButacas: TfrmSeleccionButacas
         ParentColor = False
       end
       object Label8: TLabel
-        Left = 112
+        Left = 121
         Height = 18
         Top = 79
         Width = 44

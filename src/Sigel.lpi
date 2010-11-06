@@ -275,8 +275,8 @@
         <ComponentName Value="frmSeleccionButacas"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SeleccionButacaFrm"/>
-        <CursorPos X="23" Y="302"/>
-        <TopLine Value="296"/>
+        <CursorPos X="65" Y="390"/>
+        <TopLine Value="383"/>
         <EditorIndex Value="12"/>
         <UsageCount Value="88"/>
         <Loaded Value="True"/>
@@ -580,7 +580,7 @@
         <SyntaxHighlighter Value="Delphi"/>
       </Unit61>
     </Units>
-    <JumpHistory Count="17" HistoryIndex="16">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="seleccionbutacafrm.pas"/>
         <Caret Line="396" Column="1" TopLine="386"/>
@@ -649,6 +649,18 @@
         <Filename Value="seleccionbutacafrm.pas"/>
         <Caret Line="305" Column="63" TopLine="295"/>
       </Position17>
+      <Position18>
+        <Filename Value="seleccionbutacafrm.pas"/>
+        <Caret Line="308" Column="28" TopLine="293"/>
+      </Position18>
+      <Position19>
+        <Filename Value="seleccionbutacafrm.pas"/>
+        <Caret Line="100" Column="81" TopLine="141"/>
+      </Position19>
+      <Position20>
+        <Filename Value="seleccionbutacafrm.pas"/>
+        <Caret Line="166" Column="62" TopLine="159"/>
+      </Position20>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
