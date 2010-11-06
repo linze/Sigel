@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="0"/>
+      <ActiveEditorIndexAtStart Value="1"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -98,8 +98,8 @@
         <Filename Value="csala.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CSala"/>
-        <CursorPos X="52" Y="212"/>
-        <TopLine Value="196"/>
+        <CursorPos X="59" Y="182"/>
+        <TopLine Value="182"/>
         <EditorIndex Value="0"/>
         <UsageCount Value="121"/>
         <Loaded Value="True"/>
@@ -257,7 +257,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FechaFrm"/>
         <CursorPos X="86" Y="16"/>
-        <TopLine Value="1"/>
+        <TopLine Value="43"/>
         <EditorIndex Value="1"/>
         <UsageCount Value="97"/>
         <Loaded Value="True"/>
@@ -320,8 +320,8 @@
         <ComponentName Value="frmAnularCompra"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularCompraFrm"/>
-        <CursorPos X="31" Y="47"/>
-        <TopLine Value="39"/>
+        <CursorPos X="69" Y="62"/>
+        <TopLine Value="46"/>
         <EditorIndex Value="4"/>
         <UsageCount Value="85"/>
         <Loaded Value="True"/>
@@ -574,7 +574,7 @@
         <UnitName Value="uFuncionesComunes"/>
         <CursorPos X="10" Y="14"/>
         <TopLine Value="8"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit61>
     </Units>
