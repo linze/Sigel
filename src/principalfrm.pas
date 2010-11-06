@@ -44,7 +44,7 @@ type
       procedure FormCreate(Sender: TObject);
       procedure lbAdminClick(Sender: TObject);
   private
-    { private declarations }
+    procedure ProcesarListaEspera;
   public
     // Indica si se esta autenticado como administrador o no
     Autenticado : boolean;
@@ -249,6 +249,8 @@ begin
                             Espera.TipoLocalidad:= frmDatosEspera.Tipo;
                             Espera.Numero:= frmDatosEspera.Cantidad;
                             Espera.Email:= frmDatosEspera.Email;
+                            Espera.Asignada := False;
+                            Espera.LocalidadesAsignadas := '';
                             Esperas.Add(Espera);
                             uDatos.Guardar(frmFecha.Fecha);
                         end;
@@ -373,6 +375,11 @@ begin
         lbAdmin.Caption := 'Acceso administración';
         Autenticado := False;
     end;
+end;
+
+procedure TfrmPrincipal.ProcesarListaEspera;
+begin
+
 end;
 
 initialization

@@ -30,6 +30,8 @@ interface
             procedure Cambiar(Localidad : TLocalidad);
             function LocalidadValida(Localidad: TLocalidad): boolean;
             function EstaCompleto : boolean;
+            // Devuelve un número de 1..4
+            function NumeroLibres : integer;
 
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
@@ -233,6 +235,61 @@ begin
     end;
 
     EstaCompleto := not EncontradoLibre;
+end;
+
+function TSala.NumeroLibres: integer;
+var
+    i,j     : integer;
+    cuenta  : integer;
+    EncontradasCuatro : boolean;
+begin
+    EncontradasCuatro := False;
+    cuenta := 0;
+
+    i := 1;
+    while (not EncontradasCuatro) and (i <=4) do
+    begin
+        j := 1;
+        while (not EncontradasCuatro) and (j <= 8) do
+        begin
+             if LocalidadValida(Self.FPatio[i,j]) then
+                if not Self.FPatio[i,j].EstaOcupado then
+                begin
+                    cuenta := cuenta + 1;
+                    EncontradasCuatro := (cuenta >= 4);
+                end;
+            j := j + 1;
+        end;
+        i := i + 1;
+    end;
+
+    i := 1;
+    while (not EncontradasCuatro) and (i <=2) do
+    begin
+        j := 1;
+        while (not EncontradasCuatro) and (j <= 8) do
+        begin
+            if not Self.FPrimeraPlanta[i,j].EstaOcupado then
+            begin
+                cuenta := cuenta + 1;
+                EncontradasCuatro := (cuenta >= 4);
+            end;
+        end;
+        i := i + 1;
+    end;
+
+    i := 1;
+    while (not EncontradasCuatro) and (i <= 4) do
+    begin
+        if not Self.FPalco[i].EstaOcupado then
+        begin
+            cuenta := cuenta + 4;
+            EncontradasCuatro := (cuenta >= 4);
+        end;
+        i := i + 1;
+    end;
+
+    result := cuenta;
 end;
 
 initialization
