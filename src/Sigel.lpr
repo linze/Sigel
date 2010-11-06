@@ -11,7 +11,7 @@ uses
   ComprarFrm, ReservaFrm, CEspera, CReserva, CTipoLocalidad, LoginFrm, FechaFrm,
   SeleccionButacaFrm, uDatos, AnularReservaFrm, AnularCompraFrm,
   DatosReservaFrm, CreditosFrm, CListaObjetos, VerListaEsperaFrm, DatosEspera,
-  VerEstadoSalaFrm;
+  VerEstadoSalaFrm, VerListaReservas;
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
 

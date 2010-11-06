@@ -145,3 +145,66 @@ Fila: 1, Numero: 3
 Estado: OCUPADA
 Fila: 1, Numero: 4
 Estado: OCUPADA
+
+Nombre: Francisco Canela Cantidad: 2
+Dni: 111111111 Telefono: 605998975 Email: darkydelphi@gmail.com
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: Francisco Canela Cantidad: 2
+Dni: 111111111 Telefono: 605998975 Email: darkydelphi@gmail.com
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: Francisco Canela Cantidad: 2
+Dni: 111111111 Telefono: 605998975 Email: darkydelphi@gmail.com
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: Pepito Cantidad: 2
+Dni: 222222222 Telefono: 222222222 Email: 22222222222
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+
+Nombre: Pepito Cantidad: 2
+Dni: 222222222 Telefono: 222222222 Email: 22222222222
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+
+Nombre: Pepito Cantidad: 2
+Dni: 222222222 Telefono: 222222222 Email: 22222222222
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+
+Nombre: pAPAPAPANamericano Cantidad: 2
+Dni: 333333333 Telefono: 123123123 Email: dasdafds@asdfas.com
+Fila: 4, Numero: 3
+Estado: OCUPADA
+Fila: 4, Numero: 4
+Estado: OCUPADA
+
+Nombre: pAPAPAPANamericano Cantidad: 2
+Dni: 333333333 Telefono: 123123123 Email: dasdafds@asdfas.com
+Fila: 4, Numero: 3
+Estado: OCUPADA
+Fila: 4, Numero: 4
+Estado: OCUPADA
+
+Nombre: pAPAPAPANamericano Cantidad: 2
+Dni: 333333333 Telefono: 123123123 Email: dasdafds@asdfas.com
+Fila: 4, Numero: 3
+Estado: OCUPADA
+Fila: 4, Numero: 4
+Estado: OCUPADA

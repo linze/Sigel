@@ -8,7 +8,8 @@ uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
-  AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm;
+  AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm,
+  VerListaReservas;
 
 type
 
@@ -38,12 +39,14 @@ type
       procedure btnAnularReservaClick(Sender: TObject);
       procedure btnCompraClick(Sender: TObject);
       procedure btnLEsperaClick(Sender: TObject);
+      procedure btnLReservasClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
       procedure btnSalirClick(Sender: TObject);
       procedure btnVisualizarEstadoClick(Sender: TObject);
       procedure Button1Click(Sender: TObject);
       procedure FormCreate(Sender: TObject);
       procedure lbAdminClick(Sender: TObject);
+      procedure Panel2Click(Sender: TObject);
   private
     procedure ProcesarListaEspera;
   public
@@ -163,7 +166,7 @@ begin
                 frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
                 try
                     frmSeleccionButaca.ShowModal;
-                    if frmSeleccionButaca.NumDeMarcadas > 0 then
+                    if (frmSeleccionButaca.NumDeMarcadas > 0) and (frmSeleccionButaca.Aceptado) then
                     begin
                         for i:=1 to 4 do
                         begin
@@ -211,6 +214,29 @@ begin
         end;
         uDatos.LiberarDatos;
     except
+    end;
+end;
+
+procedure TfrmPrincipal.btnLReservasClick(Sender: TObject);
+var
+    frmFecha : TfrmFecha;
+    frmVerListaReservas : TfrmVerListaReservas;
+begin
+    frmFecha := TFrmFecha.Create(Self);
+    try
+        frmFecha.ShowModal;
+        if frmFecha.FechaMarcada then
+        begin
+            uDatos.Cargar(frmFecha.Fecha);
+            frmVerListaReservas := TFrmVerListaReservas.Create(Self);
+            try
+                frmVerListaReservas.ShowModal;
+            finally
+                frmVerListaReservas.Free;
+            end;
+        end;
+    finally
+        frmFecha.Free;
     end;
 end;
 
@@ -263,7 +289,7 @@ begin
             frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
             try
                 frmSeleccionButaca.ShowModal;
-                if frmSeleccionButaca.NumDeMarcadas > 0 then
+                if (frmSeleccionButaca.Aceptado) and (frmSeleccionButaca.NumDeMarcadas > 0) then
                 begin
                     frmDatos := TfrmDatosReserva.Create(Self);
                     try
@@ -376,6 +402,11 @@ begin
         lbAdmin.Caption := 'Acceso administración';
         Autenticado := False;
     end;
+end;
+
+procedure TfrmPrincipal.Panel2Click(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmPrincipal.ProcesarListaEspera;

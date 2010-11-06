@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, uDatos, CReserva, CEstadoLocalidad;
+  StdCtrls, uDatos, CReserva, CEstadoLocalidad, CLocalidad;
 
 type
 
@@ -66,6 +66,7 @@ var
     existeReserva : boolean;
     seguirBuscando : boolean;
     i,j, cantidad : integer;
+    Localidad : TLocalidad;
 begin
     existeReserva := False;
     seguirBuscando := True;
@@ -73,23 +74,21 @@ begin
     uDatos.LogearReservas;
     while seguirBuscando do
     begin
-        ShowMessage('i= ' + IntToStr(i) + '/' + IntToStr(Reservas.Count));
-        ShowMessage('"' + TReserva(Reservas.Items[i]).Dni + '" = "' + sDni + '"');
         if TReserva(Reservas.Items[i]).Dni = sDni then
         begin
             existeReserva := True;
             seguirBuscando := False;
-            Reservas.Delete(i);
             cantidad := TReserva(Reservas.Items[i]).Cantidad;
             for j := 0 to cantidad do
             begin
-                TReserva(Reservas.Items[i]).GetLocalidad(j).Estado := Libre;
-                ShowMessage('j= ' + IntToStr(j) + '/' + IntToStr(cantidad));
+                Localidad := TReserva(Reservas.Items[i]).GetLocalidad(j);
+                Localidad.Estado := Libre;
+                Sala.Cambiar(Localidad);
             end;
+            Reservas.Delete(i);
         end
         else
         begin
-            // NOTICE : limite del count
             if i = uDatos.Reservas.Count then
                 seguirBuscando := False
             else

@@ -1,34 +1,31 @@
-object frmVerListaEspera: TfrmVerListaEspera
-  Left = 258
-  Height = 418
-  Top = 222
-  Width = 947
+object frmVerListaReservas: TfrmVerListaReservas
+  Left = 241
+  Height = 414
+  Top = 125
+  Width = 934
   ActiveControl = Panel4
-  Caption = 'Estado actual de la lista de espera'
-  ClientHeight = 418
-  ClientWidth = 947
-  Font.Height = -14
-  Font.Name = 'Sans'
-  Font.Style = [fsBold]
+  Caption = 'Lista de reservas realizadas'
+  ClientHeight = 414
+  ClientWidth = 934
   OnCreate = FormCreate
-  Position = poScreenCenter
+  OnShow = FormShow
   LCLVersion = '0.9.28.2'
   object Panel1: TPanel
     Left = 0
-    Height = 330
+    Height = 326
     Top = 28
-    Width = 947
+    Width = 934
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel1'
-    ClientHeight = 330
-    ClientWidth = 947
+    ClientHeight = 326
+    ClientWidth = 934
     TabOrder = 0
     object gridVisualizacion: TStringGrid
       Left = 0
-      Height = 330
+      Height = 326
       Top = 0
-      Width = 947
+      Width = 934
       Align = alClient
       FixedCols = 0
       Font.Height = -14
@@ -41,9 +38,9 @@ object frmVerListaEspera: TfrmVerListaEspera
       TitleFont.Style = [fsBold]
       ColWidths = (
         294
+        83
         108
-        186
-        105
+        205
         190
       )
       Cells = (
@@ -53,13 +50,13 @@ object frmVerListaEspera: TfrmVerListaEspera
         'Nombre'
         1
         0
-        'Teléfono'
+        'Dni'
         2
         0
-        'Email'
+        'Teléfono'
         3
         0
-        'Asignada'
+        'Email'
         4
         0
         'Localidades'
@@ -69,15 +66,15 @@ object frmVerListaEspera: TfrmVerListaEspera
   object Panel2: TPanel
     Left = 0
     Height = 60
-    Top = 358
-    Width = 947
+    Top = 354
+    Width = 934
     Align = alBottom
     BevelOuter = bvNone
     ClientHeight = 60
-    ClientWidth = 947
+    ClientWidth = 934
     TabOrder = 1
     object Panel3: TPanel
-      Left = 827
+      Left = 814
       Height = 60
       Top = 0
       Width = 120
@@ -86,7 +83,6 @@ object frmVerListaEspera: TfrmVerListaEspera
       ClientHeight = 60
       ClientWidth = 120
       TabOrder = 0
-      OnClick = Panel3Click
       object btnCerrar: TButton
         Left = 8
         Height = 41
@@ -106,15 +102,16 @@ object frmVerListaEspera: TfrmVerListaEspera
     Left = 0
     Height = 28
     Top = 0
-    Width = 947
+    Width = 934
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone
-    Caption = '  Estado de la lista de espera'
+    Caption = '  Reservas realizadas'
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 2
+    OnClick = Panel4Click
   end
 end

@@ -1,3 +1,5 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3#209#0#6'Height'#3#14#2#3
   +'Top'#2'l'#5'Width'#3'0'#3#13'ActiveControl'#7#6'Panel1'#7'Caption'#6#5'Sige'
@@ -16,51 +18,51 @@ LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   +'ame'#6#4'Sans'#11'ParentColor'#8#10'ParentFont'#8#7'OnClick'#7#12'lbAdminCl'
   +'ick'#0#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'Height'#2'9'#3'Top'#3#213#1#5
   +'Width'#3'0'#3#5'Align'#7#8'alBottom'#12'ClientHeight'#2'9'#11'ClientWidth'#3
-  +'0'#3#8'TabOrder'#2#1#0#6'TLabel'#13'lbDescripcion'#4'Left'#2#8#6'Height'#2
-  +'0'#3'Top'#2#3#5'Width'#3'H'#2#8'AutoSize'#8#7'Caption'#6#12'Descripci'#195
-  +#179'n'#11'Font.Height'#2#233#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsB'
-  +'old'#0#11'ParentColor'#8#10'ParentFont'#8#7'Visible'#8#0#0#6'TPanel'#6'Pane'
-  +'l4'#4'Left'#3'Y'#2#6'Height'#2'7'#3'Top'#2#1#5'Width'#3#214#0#5'Align'#7#7
-  +'alRight'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'7'#11'ClientWidth'#3
-  +#214#0#8'TabOrder'#2#0#0#7'TButton'#8'btnSalir'#4'Left'#2#9#6'Height'#2'4'#3
-  +'Top'#2#2#5'Width'#3#203#0#7'Caption'#6#5'SALIR'#11'Font.Height'#2#239#9'Fon'
-  +'t.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#13'btnSalirCli'
-  +'ck'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#0#0#6'TPanel'#6'Panel3'#4'Left'#2#0
-  +#6'Height'#3'['#1#3'Top'#2'z'#5'Width'#3'0'#3#5'Align'#7#8'alClient'#10'Beve'
-  +'lOuter'#7#6'bvNone'#12'ClientHeight'#3'['#1#11'ClientWidth'#3'0'#3#8'TabOrd'
-  +'er'#2#2#0#9'TGroupBox'#9'GroupBox1'#4'Left'#2#0#6'Height'#3'['#1#3'Top'#2#0
-  +#5'Width'#3'0'#3#5'Align'#7#8'alClient'#7'Caption'#6#30'Elija la operaci'#195
-  +#179'n a realizar'#12'ClientHeight'#3'I'#1#11'ClientWidth'#3'.'#3#8'TabOrder'
-  +#2#0#0#7'TButton'#9'btnCompra'#4'Left'#3#245#1#6'Height'#2'4'#4'Hint'#6'#Evi'
-  +'te colas y compre ya su entrada.'#3'Top'#2#23#5'Width'#3#203#0#7'Caption'#6
-  +#7'COMPRAR'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6
-  +'fsBold'#0#7'OnClick'#7#14'btnCompraClick'#12'OnMouseEnter'#7#15'BotonMouseE'
-  +'nter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2
-  +#0#0#0#7'TButton'#10'btnReserva'#4'Left'#2']'#6'Height'#2'4'#4'Hint'#6'9Real'
-  +'ize su reserva abonando '#195#186'nicamente un 10% del total.'#3'Top'#2#23#5
-  +'Width'#3#203#0#7'Caption'#6#8'RESERVAR'#11'Font.Height'#2#239#9'Font.Name'#6
-  +#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#15'btnReservaClick'#12'O'
-  +'nMouseEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10
-  +'ParentFont'#8#8'TabOrder'#2#1#0#0#7'TButton'#16'btnAnularReserva'#4'Left'#2
-  +']'#6'Height'#2'4'#4'Hint'#6'<'#194#161'Aviso! La anulaci'#195#179'n conllev'
-  +'a la p'#195#169'rdida del 10% abonado.'#3'Top'#2'g'#5'Width'#3#203#0#7'Capt'
-  +'ion'#6#14'ANULAR RESERVA'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'F'
-  +'ont.Style'#11#6'fsBold'#0#7'OnClick'#7#21'btnAnularReservaClick'#12'OnMouse'
-  +'Enter'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'Pare'
-  +'ntFont'#8#8'TabOrder'#2#2#0#0#7'TButton'#15'btnAnularCompra'#4'Left'#3#245#1
-  +#6'Height'#2'4'#3'Top'#2'g'#5'Width'#3#203#0#7'Caption'#6#13'ANULAR COMPRA'
+  +'0'#3#8'TabOrder'#2#1#7'OnClick'#7#11'Panel2Click'#0#6'TLabel'#13'lbDescripc'
+  +'ion'#4'Left'#2#8#6'Height'#2'0'#3'Top'#2#3#5'Width'#3'H'#2#8'AutoSize'#8#7
+  +'Caption'#6#12'Descripci'#195#179'n'#11'Font.Height'#2#233#9'Font.Name'#6#4
+  +'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#7'Vi'
+  +'sible'#8#0#0#6'TPanel'#6'Panel4'#4'Left'#3'Y'#2#6'Height'#2'7'#3'Top'#2#1#5
+  +'Width'#3#214#0#5'Align'#7#7'alRight'#10'BevelOuter'#7#6'bvNone'#12'ClientHe'
+  +'ight'#2'7'#11'ClientWidth'#3#214#0#8'TabOrder'#2#0#0#7'TButton'#8'btnSalir'
+  +#4'Left'#2#9#6'Height'#2'4'#3'Top'#2#2#5'Width'#3#203#0#7'Caption'#6#5'SALIR'
   +#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7
-  +'OnClick'#7#20'btnAnularCompraClick'#10'ParentFont'#8#8'TabOrder'#2#3#7'Visi'
-  +'ble'#8#0#0#7'TButton'#10'btnLEspera'#4'Left'#2']'#6'Height'#2'4'#3'Top'#3
-  +#182#0#5'Width'#3#203#0#7'Caption'#6#15'LISTA DE ESPERA'#11'Font.Height'#2
-  +#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#15'bt'
-  +'nLEsperaClick'#10'ParentFont'#8#8'TabOrder'#2#4#7'Visible'#8#0#0#7'TButton'
-  +#19'btnVisualizarEstado'#4'Left'#2']'#6'Height'#2'4'#3'Top'#3#5#1#5'Width'#3
-  +#203#0#7'Caption'#6#17'VISUALIZAR ESTADO'#11'Font.Height'#2#239#9'Font.Name'
-  +#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#24'btnVisualizarEstado'
-  +'Click'#10'ParentFont'#8#8'TabOrder'#2#5#7'Visible'#8#0#0#7'TButton'#12'btnL'
-  +'Reservas'#4'Left'#3#245#1#6'Height'#2'4'#3'Top'#3#182#0#5'Width'#3#203#0#7
-  +'Caption'#6#17'LISTA DE RESERVAS'#11'Font.Height'#2#239#9'Font.Name'#6#4'San'
-  +'s'#10'Font.Style'#11#6'fsBold'#0#10'ParentFont'#8#8'TabOrder'#2#6#7'Visible'
-  +#8#0#0#0#0#0
+  +'OnClick'#7#13'btnSalirClick'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#0#0#6'TPa'
+  +'nel'#6'Panel3'#4'Left'#2#0#6'Height'#3'['#1#3'Top'#2'z'#5'Width'#3'0'#3#5'A'
+  +'lign'#7#8'alClient'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'['#1#11'C'
+  +'lientWidth'#3'0'#3#8'TabOrder'#2#2#0#9'TGroupBox'#9'GroupBox1'#4'Left'#2#0#6
+  +'Height'#3'['#1#3'Top'#2#0#5'Width'#3'0'#3#5'Align'#7#8'alClient'#7'Caption'
+  +#6#30'Elija la operaci'#195#179'n a realizar'#12'ClientHeight'#3'W'#1#11'Cli'
+  +'entWidth'#3','#3#8'TabOrder'#2#0#0#7'TButton'#9'btnCompra'#4'Left'#3#245#1#6
+  +'Height'#2'4'#4'Hint'#6'#Evite colas y compre ya su entrada.'#3'Top'#2#23#5
+  +'Width'#3#203#0#7'Caption'#6#7'COMPRAR'#11'Font.Height'#2#239#9'Font.Name'#6
+  +#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#14'btnCompraClick'#12'On'
+  +'MouseEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10
+  +'ParentFont'#8#8'TabOrder'#2#0#0#0#7'TButton'#10'btnReserva'#4'Left'#2']'#6
+  +'Height'#2'4'#4'Hint'#6'9Realize su reserva abonando '#195#186'nicamente un '
+  +'10% del total.'#3'Top'#2#23#5'Width'#3#203#0#7'Caption'#6#8'RESERVAR'#11'Fo'
+  +'nt.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnC'
+  +'lick'#7#15'btnReservaClick'#12'OnMouseEnter'#7#15'BotonMouseEnter'#12'OnMou'
+  +'seLeave'#7#15'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#7'TButt'
+  +'on'#16'btnAnularReserva'#4'Left'#2']'#6'Height'#2'4'#4'Hint'#6'<'#194#161'A'
+  +'viso! La anulaci'#195#179'n conlleva la p'#195#169'rdida del 10% abonado.'#3
+  +'Top'#2'g'#5'Width'#3#203#0#7'Caption'#6#14'ANULAR RESERVA'#11'Font.Height'#2
+  +#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#21'bt'
+  +'nAnularReservaClick'#12'OnMouseEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'
+  +#7#15'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2#2#0#0#7'TButton'#15'bt'
+  +'nAnularCompra'#4'Left'#3#245#1#6'Height'#2'4'#3'Top'#2'g'#5'Width'#3#203#0#7
+  +'Caption'#6#13'ANULAR COMPRA'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10
+  +'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#20'btnAnularCompraClick'#10'ParentF'
+  +'ont'#8#8'TabOrder'#2#3#7'Visible'#8#0#0#7'TButton'#10'btnLEspera'#4'Left'#2
+  +']'#6'Height'#2'4'#3'Top'#3#182#0#5'Width'#3#203#0#7'Caption'#6#15'LISTA DE '
+  +'ESPERA'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fs'
+  +'Bold'#0#7'OnClick'#7#15'btnLEsperaClick'#10'ParentFont'#8#8'TabOrder'#2#4#7
+  +'Visible'#8#0#0#7'TButton'#19'btnVisualizarEstado'#4'Left'#2']'#6'Height'#2
+  +'4'#3'Top'#3#5#1#5'Width'#3#203#0#7'Caption'#6#17'VISUALIZAR ESTADO'#11'Font'
+  +'.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnCli'
+  +'ck'#7#24'btnVisualizarEstadoClick'#10'ParentFont'#8#8'TabOrder'#2#5#7'Visib'
+  +'le'#8#0#0#7'TButton'#12'btnLReservas'#4'Left'#3#245#1#6'Height'#2'4'#3'Top'
+  +#3#182#0#5'Width'#3#203#0#7'Caption'#6#17'LISTA DE RESERVAS'#11'Font.Height'
+  +#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#17
+  +'btnLReservasClick'#10'ParentFont'#8#8'TabOrder'#2#6#7'Visible'#8#0#0#0#0#0
 ]);

@@ -101,11 +101,12 @@ type
     function ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
     function ObtenerHuecoVacio: integer;
     function EstaSeleccionada (Tipo: TTipoLocalidad; Fila, Numero: integer): Integer;
-    function HayPalco : boolean;
   public
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
     Fecha       : TDateTime;
+    NumeroVirtual : integer;
+    Aceptado    : boolean;
   end; 
 
 var
@@ -125,7 +126,10 @@ begin
     if NumDeMarcadas = 0 then
         ShowMessage('Ha de seleccionarse al menos una localidad')
     else
+    begin
+        Aceptado := True;
         Self.Close;
+    end;
 end;
 
 procedure TfrmSeleccionButacas.FormCreate(Sender: TObject);
@@ -134,7 +138,8 @@ var
 begin
     for i:=1 to 4 do
         Self.Marcadas[i] := False;
-    uDatos.Sala.LogEnFichero;
+    NumeroVirtual := 0;
+    Aceptado := False;
     CargarEstado;
 end;
 
@@ -291,28 +296,6 @@ begin
     end;
 end;
 
-function TfrmSeleccionButacas.HayPalco: boolean;
-var
-    i: integer;
-    PalcoEncontrado : boolean;
-begin
-    PalcoEncontrado := False;
-    i := 0;
-
-    while (not PalcoEncontrado) and (i <= 4) do
-    begin
-        if Self.Marcadas[i] then
-        begin
-            if Self.Localidades[i].Tipo = Palco then
-                PalcoEncontrado := True;
-        end
-        else
-            i := i + 1;
-    end;
-
-    result := PalcoEncontrado;
-end;
-
 function TfrmSeleccionButacas.ObtenerHuecoVacio: integer;
 var
     Found : boolean;
@@ -388,12 +371,16 @@ begin
                 ShowMessage('No se puede seleccionar más de cuatro localidades o un palco.')
             else
             begin
-                if (NumDeMarcadas > 0) and ((Tipo = Palco) or (HayPalco)) then
+                if (NumeroVirtual >= 4) or ((Tipo = palco) and (NumDeMarcadas > 0)) then
                     ShowMessage ('No se puede seleccionar más de cuatro localidades o un palco')
                 else
                 begin
                     Self.Marcadas[hueco] := True;
                     Self.Localidades[hueco] := Localidad;
+                    if Localidad.Tipo = Palco then
+                        NumeroVirtual := 4
+                    else
+                        NumeroVirtual := NumeroVirtual + 1;
                     Self.ChangeColor(TImage(Sender), Seleccionada);
                 end;
             end;
