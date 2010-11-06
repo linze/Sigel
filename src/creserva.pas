@@ -46,8 +46,6 @@ implementation
 { TReserva }
 
 constructor TReserva.Create;
-var
-    i: integer;
 begin
     Self.FCantidad := 0;
     inherited Create;

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, Spin, CLocalidad, CTipoLocalidad;
+  ExtCtrls, StdCtrls, Spin, CTipoLocalidad;
 
 type
 
@@ -56,8 +56,6 @@ begin
 end;
 
 procedure TfrmDatosEspera.btnAceptarClick(Sender: TObject);
-var
-   Localidad : TLocalidad;
 begin
   if (eNombre.Text <> '') and ((eTelefono.Text <> '') or (eEmail.Text <> '')) and (cbTipo.Text <> '') then
   begin

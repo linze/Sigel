@@ -127,8 +127,6 @@ var
     frmDatosEspera : TfrmDatosEspera;
     frmFecha : TfrmFecha;
     frmSeleccionButaca : TFrmSeleccionButacas;
-    frmDatos : TfrmDatosReserva;
-    Reserva : TReserva;
     i       : integer;
     botonsel : Integer;
     Espera: TEspera;

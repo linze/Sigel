@@ -73,7 +73,6 @@ var
     Objeto      : TPersistent;
     TipoClase   : TPersistentClass;
     NombreClase : string;
-    i           : integer;
 begin
     Reader  := TReader.Create(Stream, $ff);
     try

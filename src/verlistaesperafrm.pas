@@ -24,7 +24,6 @@ type
       procedure ListBox1Click(Sender: TObject);
       procedure Panel3Click(Sender: TObject);
   private
-    { private declarations }
   public
     { public declarations }
   end; 

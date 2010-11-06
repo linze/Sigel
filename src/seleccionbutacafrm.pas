@@ -101,6 +101,7 @@ type
     function ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
     function ObtenerHuecoVacio: integer;
     function EstaSeleccionada (Tipo: TTipoLocalidad; Fila, Numero: integer): Integer;
+    function HayPalco : boolean;
   public
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
@@ -290,6 +291,28 @@ begin
     end;
 end;
 
+function TfrmSeleccionButacas.HayPalco: boolean;
+var
+    i: integer;
+    PalcoEncontrado : boolean;
+begin
+    PalcoEncontrado := False;
+    i := 0;
+
+    while (not PalcoEncontrado) and (i <= 4) do
+    begin
+        if Self.Marcadas[i] then
+        begin
+            if Self.Localidades[i].Tipo = Palco then
+                PalcoEncontrado := True;
+        end
+        else
+            i := i + 1;
+    end;
+
+    result := PalcoEncontrado;
+end;
+
 function TfrmSeleccionButacas.ObtenerHuecoVacio: integer;
 var
     Found : boolean;
@@ -365,7 +388,7 @@ begin
                 ShowMessage('No se puede seleccionar más de cuatro localidades o un palco.')
             else
             begin
-                if ((Tipo = Palco) and (NumDeMarcadas > 0)) then
+                if (NumDeMarcadas > 0) and ((Tipo = Palco) or (HayPalco)) then
                     ShowMessage ('No se puede seleccionar más de cuatro localidades o un palco')
                 else
                 begin
