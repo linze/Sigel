@@ -33,6 +33,7 @@ interface
             { Métodos propios de clase }
             procedure AddLocalidad(Localidad: TLocalidad);
             function GetLocalidad(Indice: Integer): TLocalidad;
+            function PasarString: String;
 
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
@@ -115,6 +116,18 @@ begin
         Self.FLocalidades[i].EscribirDatos(Escritor);
     Escritor.WriteListEnd;
 end;
+
+function TReserva.PasarString: string;
+var
+   strg: string;
+   i: integer;
+begin
+   strg := Self.FNombre + '-' + Self.FDni + '-' + Self.FTelefono + '-' + Self.FEmail + '-' + IntToStr(Self.FCantidad);
+   for i := 1 to Self.FCantidad do
+       strg := strg + '-' + IntToStr(ord(Self.FLocalidades[i].Tipo)) + '-' + IntToStr(Self.FLocalidades[i].Fila) + '-' + IntToStr(Self.FLocalidades[i].Numero);
+   PasarString := strg;
+end;
+
 
 procedure TReserva.LogEnFichero;
 var

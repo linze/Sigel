@@ -4,7 +4,7 @@ unit uDatos;
 
 interface
     uses
-        CSala, CListaObjetos, SysUtils, DateUtils, CReserva;
+        CSala, CListaObjetos, SysUtils, DateUtils, CReserva, Classes;
 
     procedure Cargar(Fecha : TDateTime);
     procedure Guardar(Fecha : TDateTime);
@@ -16,6 +16,7 @@ interface
         Sala     : TSala;
         Reservas : TListaObjetos;
         Esperas  : TListaObjetos;
+        strReservas: TListaObjetos;
 
 implementation
 
@@ -32,11 +33,14 @@ begin
         ListaSala.LoadFromFile(NombreFichero + '.sala');
         Sala := TSala(ListaSala.Items[ListaSala.Count - 1]);
 
-        Reservas := TListaObjetos.Create;
-        Reservas.LoadFromFile(NombreFichero + '.reservas');
+      //  Reservas := TListaObjetos.Create;
+      //  Reservas.LoadFromFile(NombreFichero + '.reservas');
 
         Esperas := TListaObjetos.Create;
         Esperas.LoadFromFile(NombreFichero + '.esperas');
+
+        strReservas := TListaObjetos.Create;
+        strReservas.LoadFromFile(NombreFichero + '.strreservas');
     end
     else
         CrearVacio;
@@ -53,9 +57,10 @@ begin
     ListaSala.Add(Sala);
     ListaSala.SaveToFile(NombreFichero + '.sala');
 
-    Reservas.SaveToFile(NombreFichero + '.reservas');
+    strReservas.SaveToFile(NombreFichero + '.strreservas');
 
     Esperas.SaveToFile(NombreFichero + '.esperas');
+
 end;
 
 procedure LiberarDatos;
@@ -70,6 +75,7 @@ begin
     Sala  := TSala.Create;
     Reservas := TListaObjetos.Create;
     Esperas := TListaObjetos.Create;
+    strReservas := TListaObjetos.Create;
 end;
 
 procedure LogearReservas;

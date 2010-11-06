@@ -9,7 +9,7 @@ uses
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
   AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm,
-  VerListaReservas;
+  VerListaReservas, CLocalidad, CTipoLocalidad;
 
 type
 
@@ -50,6 +50,7 @@ type
   private
     procedure ProcesarListaEspera;
     procedure PasarAListaDeEspera (Fecha : TDateTime);
+    function StringAReserva(str : string): TReserva;
   public
     // Indica si se esta autenticado como administrador o no
     Autenticado : boolean;
@@ -198,6 +199,80 @@ begin
     end;
 end;
 
+function TfrmPrincipal.StringAReserva(str : string): TReserva;
+var
+   straux : string;
+   localidad : TLocalidad;
+   reservaux : TReserva;
+   cantidad : integer;
+   i,j : integer;
+begin
+     i := 1;
+     straux := '';
+     Reservaux := TReserva.Create;
+     while str[i] <> '-' do
+     begin
+           straux:= straux + str[i];
+           i := i + 1;
+     end;
+     Reservaux.Nombre := straux;
+     while str[i] <> '-' do
+     begin
+           straux:= straux + str[i];
+           i := i + 1;
+     end;
+     Reservaux.Dni := straux;
+     while straux[i] <> '-' do
+     begin
+           straux:= straux + str[i];
+           i := i + 1;
+     end;
+     Reservaux.Telefono := straux;
+     while straux[i] <> '-' do
+     begin
+           straux:= straux + str[i];
+           i := i + 1;
+     end;
+     Reservaux.Email := straux;
+     while straux[i] <> '-' do
+     begin
+           straux:= straux + str[i];
+           i := i + 1;
+     end;
+     cantidad := StrToInt(straux);
+     localidad := TLocalidad.Create;
+     for j := 1 to cantidad do
+     begin
+          localidad.Estado := Reservada;
+          while straux[i] <> '-' do
+          begin
+               straux:= straux + str[i];
+               i := i + 1;
+          end;
+          if straux = 'Patio' then
+             localidad.Tipo := Patio
+          else if straux = 'PrimeraPlanta' then
+               localidad.Tipo := PrimeraPlanta
+          else if straux = 'Palco' then
+               localidad.Tipo := Palco;
+          while straux[i] <> '-' do
+          begin
+               straux:= straux + str[i];
+               i := i + 1;
+          end;
+          localidad.Fila := StrToInt(straux);
+          while straux[i] <> '-' do
+          begin
+               straux:= straux + str[i];
+               i := i + 1;
+          end;
+          localidad.Numero := StrToInt(straux);
+          Reservaux.AddLocalidad(localidad);
+     end;
+     StringAReserva := Reservaux;
+end;
+
+
 procedure TfrmPrincipal.btnLReservasClick(Sender: TObject);
 var
     frmFecha : TfrmFecha;
@@ -227,6 +302,7 @@ var
     frmSeleccionButaca : TFrmSeleccionButacas;
     frmDatos : TfrmDatosReserva;
     Reserva  : TReserva;
+    str      : string;
     i       : integer;
 begin
     frmFecha := TFrmFecha.Create(Self);
@@ -265,7 +341,9 @@ begin
                                         uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                     end;
                                 end;
+                                str := Reserva.PasarString;
                                 uDatos.Reservas.Add(Reserva);
+                                uDatos.strReservas.Add(str);
                                 uDatos.Guardar(frmFecha.Fecha);
                                 ShowMessage('Operación realizada con éxito');
                             end;
