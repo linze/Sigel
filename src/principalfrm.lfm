@@ -210,7 +210,6 @@ object frmPrincipal: TfrmPrincipal
         Font.Height = -17
         Font.Name = 'Sans'
         Font.Style = [fsBold]
-        OnClick = btnVisualizarEstadoClick
         ParentFont = False
         TabOrder = 5
         Visible = False

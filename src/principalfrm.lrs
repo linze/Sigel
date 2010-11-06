@@ -1,5 +1,3 @@
-{ Este es un archivo de recurso de Lazarus generado automáticamente }
-
 LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3#202#0#6'Height'#3#14#2#3
   +'Top'#3#151#0#5'Width'#3'0'#3#13'ActiveControl'#7#6'Panel1'#7'Caption'#6#5'S'
@@ -59,6 +57,6 @@ LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   +'nLEsperaClick'#10'ParentFont'#8#8'TabOrder'#2#4#7'Visible'#8#0#0#7'TButton'
   +#19'btnVisualizarEstado'#4'Left'#3#245#1#6'Height'#2'4'#3'Top'#3#214#0#5'Wid'
   +'th'#3#203#0#7'Caption'#6#17'VISUALIZAR ESTADO'#11'Font.Height'#2#239#9'Font'
-  +'.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#24'btnVisualiza'
-  +'rEstadoClick'#10'ParentFont'#8#8'TabOrder'#2#5#7'Visible'#8#0#0#0#0#0
+  +'.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#10'ParentFont'#8#8'TabOrder'
+  +#2#5#7'Visible'#8#0#0#0#0#0
 ]);
