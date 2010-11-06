@@ -58,7 +58,8 @@ begin
         begin
             if Localidad.Estado = Libre then
                 ShowMessage('La localidad seleccionada ya está libre')
-            else
+            else if Localidad.Estado = Reservada then
+                ShowMessage('Esta localidad se encuentra reservada')
             begin
                 Localidad.Estado := Libre;
                 LocalidadAnulada := True;
