@@ -3,11 +3,13 @@ object frmAnularCompra: TfrmAnularCompra
   Height = 174
   Top = 258
   Width = 383
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
   Caption = 'Anular compra'
   ClientHeight = 174
   ClientWidth = 383
   LCLVersion = '0.9.28.2'
-  object Label1: TLabel
+  object lbFila: TLabel
     Left = 214
     Height = 20
     Top = 50
@@ -66,6 +68,7 @@ object frmAnularCompra: TfrmAnularCompra
     MaxValue = 4
     MinValue = 1
     ParentFont = False
+    ReadOnly = True
     TabOrder = 0
     Value = 1
   end
@@ -80,6 +83,7 @@ object frmAnularCompra: TfrmAnularCompra
     MaxValue = 8
     MinValue = 1
     ParentFont = False
+    ReadOnly = True
     TabOrder = 1
     Value = 1
   end
@@ -97,6 +101,7 @@ object frmAnularCompra: TfrmAnularCompra
       'Primera Planta'
       'Palco'
     )
+    OnChange = cbTipoChange
     ParentBidiMode = False
     ParentFont = False
     Style = csDropDownList
@@ -124,6 +129,7 @@ object frmAnularCompra: TfrmAnularCompra
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    OnClick = Button2Click
     ParentFont = False
     TabOrder = 4
   end

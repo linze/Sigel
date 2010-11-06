@@ -72,7 +72,7 @@ begin
     seguirBuscando := True;
     i := 0;
     uDatos.LogearReservas;
-    while seguirBuscando do
+    while (seguirBuscando) and (i < uDatos.Reservas.Count) do
     begin
         if TReserva(Reservas.Items[i]).Dni = sDni then
         begin
@@ -89,14 +89,13 @@ begin
         end
         else
         begin
-            if i = uDatos.Reservas.Count then
-                seguirBuscando := False
-            else
-                i := i + 1;
+            i := i + 1;
         end;
     end;
     if not existeReserva then
-        ShowMessage('No hay ninguna reserva que corresponda con ese DNI');
+        ShowMessage('No hay ninguna reserva que corresponda con ese DNI')
+    else
+        ShowMessage('Reserva anulada con éxito');
 end;
 
 { TfrmAnularReserva }

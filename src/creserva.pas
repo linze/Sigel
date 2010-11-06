@@ -5,7 +5,7 @@ unit CReserva;
 interface
 
     uses
-        CLocalidad, Classes, SysUtils;
+        CLocalidad, Classes, SysUtils, Dialogs;
     type
         { TReserva }
 
@@ -20,6 +20,7 @@ interface
         public
            { Constructores y destructores }
             constructor Create;
+            destructor Destroy; override;
 
             { Propiedades }
             property Nombre: String read FNombre write FNombre;
@@ -51,6 +52,15 @@ begin
     inherited Create;
 end;
 
+destructor TReserva.Destroy;
+var
+    i: integer;
+begin
+    for i:=1 to Cantidad do
+        FLocalidades[i].Free;
+    inherited Destroy;
+end;
+
 procedure TReserva.AddLocalidad(Localidad: TLocalidad);
 begin
     Self.FCantidad := Self.FCantidad + 1;
@@ -62,9 +72,6 @@ begin
     FLocalidades[FCantidad].Fila := Localidad.Fila;
 end;
 
-// NOTICE: En teoria, una clase devuelve siempre un puntero, luego
-// tras realizar el GetLocalidad si se modifica, debería de modificarse
-// el original.
 function TReserva.GetLocalidad(Indice: Integer): TLocalidad;
 begin
     GetLocalidad := FLocalidades[Indice];
@@ -78,7 +85,6 @@ begin
     Self.FDni := Lector.ReadString;
     Self.FTelefono := Lector.ReadString;
     Self.FEmail := Lector.ReadString;
-    //Self.FCantidad := Lector.ReadInteger;
     Lector.ReadListBegin;
     i := 0;
     while not Lector.EndOfList do
@@ -88,6 +94,9 @@ begin
         Self.FLocalidades[i].LeerDatos(Lector);
     end;
     Self.FCantidad := i;
+    if Self.FCantidad > 4 then
+        ShowMessage ('[Reserva:LeerDatos] La cantidad no debería de ser mayor de 4 y es ' +
+                        IntToStr(Self.FCantidad));
 end;
 
 procedure TReserva.EscribirDatos(Escritor: TWriter);
@@ -98,8 +107,10 @@ begin
     Escritor.WriteString(Self.FDni);
     Escritor.WriteString(Self.FTelefono);
     Escritor.WriteString(Self.FEmail);
-    //Escritor.WriteInteger(Self.FCantidad);
     Escritor.WriteListBegin;
+    if Self.FCantidad > 4 then
+        ShowMessage ('[Reserva:EscribirDatos] La cantidad no debería de ser mayor de 4 y es ' +
+                        IntToStr(Self.FCantidad));
     for i:=1 to Self.FCantidad do
         Self.FLocalidades[i].EscribirDatos(Escritor);
     Escritor.WriteListEnd;

@@ -49,6 +49,7 @@ type
       procedure Panel2Click(Sender: TObject);
   private
     procedure ProcesarListaEspera;
+    procedure PasarAListaDeEspera (Fecha : TDateTime);
   public
     // Indica si se esta autenticado como administrador o no
     Autenticado : boolean;
@@ -128,12 +129,9 @@ end;
 
 procedure TfrmPrincipal.btnCompraClick(Sender: TObject);
 var
-    frmDatosEspera : TfrmDatosEspera;
     frmFecha : TfrmFecha;
     frmSeleccionButaca : TFrmSeleccionButacas;
     i       : integer;
-    botonsel : Integer;
-    Espera: TEspera;
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
@@ -143,24 +141,7 @@ begin
         begin
             uDatos.Cargar(frmFecha.Fecha);
             if uDatos.Sala.EstaCompleto then
-            begin
-                botonsel := MessageDlg('La sala se encuentra completa, ¿desea pasar a la lista de espera?', mtConfirmation, [mbYes,mbNo], 0);
-            	if (botonsel = mrYes) then
-            	begin
-                    frmDatosEspera := TfrmDatosEspera.Create(Self);
-                    frmDatosEspera.ShowModal;
-                    Espera := TEspera.Create;
-                    Espera.Nombre := frmDatosEspera.Nombre;
-                    Espera.Telefono:= frmDatosEspera.Telefono;
-                    Espera.TipoLocalidad:= frmDatosEspera.Tipo;
-                    Espera.Numero:= frmDatosEspera.Cantidad;
-                    Espera.Email:= frmDatosEspera.Email;
-                    Esperas.Add(Espera);
-                    uDatos.Guardar(frmFecha.Fecha);
-                end
-                else
-                    Self.Close;
-            end
+                PasarAListaDeEspera(frmFecha.Fecha)
             else
             begin
                 frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
@@ -247,9 +228,6 @@ var
     frmDatos : TfrmDatosReserva;
     Reserva  : TReserva;
     i       : integer;
-    frmDatosEspera : TfrmDatosEspera;
-    botonsel : Integer;
-    Espera : TEspera;
 begin
     frmFecha := TFrmFecha.Create(Self);
     try
@@ -258,77 +236,50 @@ begin
         if frmFecha.FechaMarcada then
         begin
             uDatos.Cargar(frmFecha.Fecha);
+            uDatos.LogearReservas;
             if uDatos.Sala.EstaCompleto then
-            begin
-                botonsel := MessageDlg('La sala se encuentra completa, ¿desea pasar a la lista de espera?', mtConfirmation, [mbYes,mbNo], 0);
-                if (botonsel = mrYes) then
-                begin
-                    frmDatosEspera := TfrmDatosEspera.Create(Self);
-                    try
-                        frmDatosEspera.ShowModal;
-                        if frmDatosEspera.DatosIntroducidos then
-                        begin
-                            Espera := TEspera.Create;
-                            Espera.Nombre := frmDatosEspera.Nombre;
-                            Espera.Telefono:= frmDatosEspera.Telefono;
-                            Espera.TipoLocalidad:= frmDatosEspera.Tipo;
-                            Espera.Numero:= frmDatosEspera.Cantidad;
-                            Espera.Email:= frmDatosEspera.Email;
-                            Espera.Asignada := False;
-                            Espera.LocalidadesAsignadas := '';
-                            Esperas.Add(Espera);
-                            uDatos.Guardar(frmFecha.Fecha);
-                        end;
-                    finally
-                        frmDatosEspera.Free;
-                    end;
-                end;
-            end
+                PasarAListaDeEspera(frmFecha.Fecha)
             else
             begin
-            frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
-            try
-                frmSeleccionButaca.ShowModal;
-                if (frmSeleccionButaca.Aceptado) and (frmSeleccionButaca.NumDeMarcadas > 0) then
-                begin
-                    frmDatos := TfrmDatosReserva.Create(Self);
-                    try
-                        frmDatos.ShowModal;
-                        if frmDatos.DatosIntroducidos then
-                        begin
-                            Reserva := TReserva.Create;
-                            Reserva.Nombre := frmDatos.Nombre;
-                            Reserva.Dni := frmDatos.Dni;
-                            Reserva.Telefono := frmDatos.Telefono;
-                            Reserva.Email := frmDatos.Email;
-                            for i:= 1 to 4 do
+                frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+                try
+                    frmSeleccionButaca.ShowModal;
+                    if (frmSeleccionButaca.Aceptado) and (frmSeleccionButaca.NumDeMarcadas > 0) then
+                    begin
+                        frmDatos := TfrmDatosReserva.Create(Self);
+                        try
+                            frmDatos.ShowModal;
+                            if frmDatos.DatosIntroducidos then
                             begin
-                                if frmSeleccionButaca.Marcadas[i] then
+                                Reserva := TReserva.Create;
+                                Reserva.Nombre := frmDatos.Nombre;
+                                Reserva.Dni := frmDatos.Dni;
+                                Reserva.Telefono := frmDatos.Telefono;
+                                Reserva.Email := frmDatos.Email;
+                                for i:=1 to 4 do
                                 begin
-                                    frmSeleccionButaca.Localidades[i].Estado := Reservada;
-                                    Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
-                                    uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                    if frmSeleccionButaca.Marcadas[i] then
+                                    begin
+                                        frmSeleccionButaca.Localidades[i].Estado := Reservada;
+                                        Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                        uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                    end;
                                 end;
+                                uDatos.Reservas.Add(Reserva);
+                                uDatos.Guardar(frmFecha.Fecha);
+                                ShowMessage('Operación realizada con éxito');
                             end;
-                            uDatos.Reservas.Add(Reserva);
-                            uDatos.Guardar(frmFecha.Fecha);
-                            uDatos.LogearReservas;
-                            ShowMessage('Operación realizada con éxito');
+                        finally
+                            frmDatos.Free;
                         end;
-                    finally
-                        frmDatos.Free;
                     end;
+                finally
+                    frmSeleccionButaca.Free;
                 end;
-            finally
-                frmSeleccionButaca.Free;
-            end;
             end;
             //TODO: Liberar memoria
-            //uDatos.LiberarDatos;
-        end
-        else
-            // TODO: Adapta esto
-            ShowMessage ('No hay fecha. Cancelar proceso');
+            uDatos.LiberarDatos;
+        end;
     finally
         frmFecha.Free;
     end;
@@ -411,7 +362,39 @@ end;
 
 procedure TfrmPrincipal.ProcesarListaEspera;
 begin
+    // TODO: Código para asignar localidades a los de la lista
+    // de espera tras la anulación
+end;
 
+procedure TfrmPrincipal.PasarAListaDeEspera (Fecha: TDateTime);
+var
+    botonsel : integer;
+    frmDatosEspera :TfrmDatosEspera;
+    Espera : TEspera;
+begin
+    botonsel := MessageDlg('La sala se encuentra completa, ¿desea pasar a la lista de espera?', mtConfirmation, [mbYes,mbNo], 0);
+    if (botonsel = mrYes) then
+    begin
+        frmDatosEspera := TfrmDatosEspera.Create(Self);
+        try
+            frmDatosEspera.ShowModal;
+            if frmDatosEspera.DatosIntroducidos then
+            begin
+                Espera := TEspera.Create;
+                Espera.Nombre := frmDatosEspera.Nombre;
+                Espera.Telefono:= frmDatosEspera.Telefono;
+                Espera.TipoLocalidad:= frmDatosEspera.Tipo;
+                Espera.Numero:= frmDatosEspera.Cantidad;
+                Espera.Email:= frmDatosEspera.Email;
+                Espera.Asignada := False;
+                Espera.LocalidadesAsignadas := '';
+                Esperas.Add(Espera);
+                uDatos.Guardar(frmFecha.Fecha);
+            end;
+        finally
+            frmDatosEspera.Free;
+        end;
+    end;
 end;
 
 initialization

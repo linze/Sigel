@@ -85,16 +85,29 @@ end;
 // todo en el mismo puede llegar a ser engorroso.
 function TSala.Buscar(Tipo: TTipoLocalidad; Fila: Integer;
   Numero: Integer): TLocalidad;
+var
+    Localidad : TLocalidad;
 begin
-    try
-        case Tipo of
-        Patio:  result := FPatio[Fila,Numero];
-        PrimeraPlanta: result := FPrimeraPlanta[Fila, Numero];
-        Palco:  result := FPalco[Numero];
+    Localidad := TLocalidad.Create;
+    Localidad.Tipo := Tipo;
+    Localidad.Fila := Fila;
+    Localidad.Numero := Numero;
+
+    if LocalidadValida(Localidad) then
+    begin
+        try
+            case Tipo of
+            Patio:  result := FPatio[Fila,Numero];
+            PrimeraPlanta: result := FPrimeraPlanta[Fila, Numero];
+            Palco:  result := FPalco[Numero];
+            end;
+        except
+            result := nil;
         end;
-    except
-        ShowMessage('[CSala:Buscar] Fuera de índice. Valores: [' + IntToStr(Numero) + ',' + IntToStr(Fila) + ']');
-    end;
+    end
+    else
+        result := nil;
+    Localidad.Free;
 end;
 
 procedure TSala.Cambiar(Localidad: TLocalidad);
@@ -190,9 +203,14 @@ end;
 
 function TSala.LocalidadValida(Localidad: TLocalidad): boolean;
 begin
-     LocalidadValida := not (((Localidad.Fila = 3) and ((Localidad.Numero = 1) or (Localidad.Numero = 8)))
+    if Localidad.Tipo = Patio then
+        LocalidadValida := not (((Localidad.Fila = 3) and ((Localidad.Numero = 1) or (Localidad.Numero = 8)))
                             or ((Localidad.Fila = 4) and((Localidad.Numero = 1) or (Localidad.Numero = 2)
-                            or (Localidad.Numero = 7) or (Localidad.Numero = 8))));
+                            or (Localidad.Numero = 7) or (Localidad.Numero = 8))))
+    else if Localidad.Tipo = Palco then
+        LocalidadValida := ((Localidad.Numero >=1) and (Localidad.Numero <=4))
+    else
+        LocalidadValida := True;
 end;
 
 function TSala.EstaCompleto: boolean;

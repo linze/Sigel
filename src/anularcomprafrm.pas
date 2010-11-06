@@ -16,13 +16,15 @@ type
       Button1: TButton;
       Button2: TButton;
       cbTipo: TComboBox;
-      Label1: TLabel;
+      lbFila: TLabel;
       Label2: TLabel;
       Label3: TLabel;
       Label4: TLabel;
       seFila: TSpinEdit;
       seNumero: TSpinEdit;
       procedure Button1Click(Sender: TObject);
+      procedure Button2Click(Sender: TObject);
+      procedure cbTipoChange(Sender: TObject);
   private
     { private declarations }
   public
@@ -50,13 +52,42 @@ begin
 
     if Localidad <> nil then
     begin
-        Localidad.Estado := Libre;
-        LocalidadAnulada := True;
-        ShowMessage ('Localidad anulada');
-        Self.Close;
+        if not Sala.LocalidadValida(Localidad) then
+            ShowMessage('Localidad no válida')
+        else
+        begin
+            if Localidad.Estado = Libre then
+                ShowMessage('La localidad seleccionada ya está libre')
+            else
+            begin
+                Localidad.Estado := Libre;
+                LocalidadAnulada := True;
+                ShowMessage ('Localidad anulada');
+                Self.Close;
+            end;
+        end;
     end
     else
         ShowMessage ('Localidad no encontrada');
+end;
+
+procedure TfrmAnularCompra.Button2Click(Sender: TObject);
+begin
+    Self.Close;
+end;
+
+procedure TfrmAnularCompra.cbTipoChange(Sender: TObject);
+begin
+    if (Sender as TComboBox).Text = 'Palco' then
+    begin
+        lbFila.Visible := False;
+        seFila.Visible := False;
+    end
+    else
+    begin
+        lbFila.Visible := True;
+        seFila.Visible := True;
+    end;
 end;
 
 initialization

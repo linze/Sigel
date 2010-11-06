@@ -52,9 +52,9 @@ begin
     begin
         Localidad := Reserva.GetLocalidad(i);
         case Localidad.Tipo of
-        Patio: TmpStr := TmpStr + 'Pat:F' + IntToStr(Localidad.Fila) + 'N:' + IntToStr(Localidad.Numero) + ' ';
-        PrimeraPlanta: TmpStr := TmpStr + 'PP:F' + IntToStr(Localidad.Fila) + 'N:' + IntToStr(Localidad.Numero) + ' ';
-        Palco: TmpStr := TmpStr + 'Palco:' + IntToStr(Localidad.Numero) + ' ';
+        Patio: TmpStr := TmpStr + 'Pat: F' + IntToStr(Localidad.Fila) + 'N:' + IntToStr(Localidad.Numero) + '  ';
+        PrimeraPlanta: TmpStr := TmpStr + 'PP: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
+        Palco: TmpStr := TmpStr + 'Palco: ' + IntToStr(Localidad.Numero) + '  ';
         end;
     end;
     Result := TmpStr;

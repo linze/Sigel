@@ -45,7 +45,7 @@ var
     Writer  : TWriter;
     i       : integer;
 begin
-    Writer := TWriter.Create(Stream, $ff);
+    Writer := TWriter.Create(Stream, $ffffff);
     try
         Writer.WriteListBegin;
         for i:=0 to Count - 1 do
@@ -74,7 +74,7 @@ var
     TipoClase   : TPersistentClass;
     NombreClase : string;
 begin
-    Reader  := TReader.Create(Stream, $ff);
+    Reader  := TReader.Create(Stream, $ffffff);
     try
         Reader.ReadListBegin;
         while not Reader.EndOfList do
