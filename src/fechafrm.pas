@@ -38,6 +38,7 @@ implementation
 procedure TfrmFecha.FormCreate(Sender: TObject);
 begin
     Self.FechaMarcada := False;
+    clCalendario.DateTime := Now;
 end;
 
 procedure TfrmFecha.btnCancelarClick(Sender: TObject);

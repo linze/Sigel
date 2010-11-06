@@ -1,7 +1,7 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 202
+  Left = 209
   Height = 526
-  Top = 151
+  Top = 108
   Width = 816
   ActiveControl = Panel1
   Caption = 'Sigel'
@@ -122,8 +122,8 @@ object frmPrincipal: TfrmPrincipal
       Width = 816
       Align = alClient
       Caption = 'Elija la operación a realizar'
-      ClientHeight = 343
-      ClientWidth = 812
+      ClientHeight = 329
+      ClientWidth = 814
       TabOrder = 0
       object btnCompra: TButton
         Left = 501
@@ -161,7 +161,7 @@ object frmPrincipal: TfrmPrincipal
         Left = 93
         Height = 52
         Hint = '¡Aviso! La anulación conlleva la pérdida del 10% abonado.'
-        Top = 119
+        Top = 103
         Width = 203
         Caption = 'ANULAR RESERVA'
         Font.Height = -17
@@ -176,7 +176,7 @@ object frmPrincipal: TfrmPrincipal
       object btnAnularCompra: TButton
         Left = 501
         Height = 52
-        Top = 119
+        Top = 103
         Width = 203
         Caption = 'ANULAR COMPRA'
         Font.Height = -17
@@ -190,9 +190,9 @@ object frmPrincipal: TfrmPrincipal
       object btnLEspera: TButton
         Left = 93
         Height = 52
-        Top = 214
+        Top = 182
         Width = 203
-        Caption = 'LISTA ESPERA'
+        Caption = 'LISTA DE ESPERA'
         Font.Height = -17
         Font.Name = 'Sans'
         Font.Style = [fsBold]
@@ -202,9 +202,9 @@ object frmPrincipal: TfrmPrincipal
         Visible = False
       end
       object btnVisualizarEstado: TButton
-        Left = 501
+        Left = 93
         Height = 52
-        Top = 214
+        Top = 261
         Width = 203
         Caption = 'VISUALIZAR ESTADO'
         Font.Height = -17
@@ -213,6 +213,19 @@ object frmPrincipal: TfrmPrincipal
         OnClick = btnVisualizarEstadoClick
         ParentFont = False
         TabOrder = 5
+        Visible = False
+      end
+      object btnLReservas: TButton
+        Left = 501
+        Height = 52
+        Top = 182
+        Width = 203
+        Caption = 'LISTA DE RESERVAS'
+        Font.Height = -17
+        Font.Name = 'Sans'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 6
         Visible = False
       end
     end

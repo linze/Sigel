@@ -22,6 +22,7 @@ type
       btnLEspera: TButton;
       btnVisualizarEstado: TButton;
       btnSalir: TButton;
+      btnLReservas: TButton;
       GroupBox1: TGroupBox;
       Label1: TLabel;
       Label2: TLabel;
@@ -357,6 +358,7 @@ begin
             begin
                 btnAnularCompra.Visible := True;
                 btnLEspera.Visible := True;
+                btnLReservas.Visible := True;
                 btnVisualizarEstado.Visible := True;
                 lbAdmin.Caption := 'Cerrar administración';
                 Autenticado := True;
@@ -369,6 +371,7 @@ begin
     begin
         btnAnularCompra.Visible := False;
         btnLEspera.Visible := False;
+        btnLReservas.Visible := False;
         btnVisualizarEstado.Visible := False;
         lbAdmin.Caption := 'Acceso administración';
         Autenticado := False;
