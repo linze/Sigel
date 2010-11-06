@@ -71,8 +71,6 @@ procedure TListaObjetos.LoadFromStream(Stream: TStream);
 var
     Reader      :  TReader;
     Objeto      : TPersistent;
-    esp         : TEspera;
-    str         : TPersistent;
     TipoClase   : TPersistentClass;
     NombreClase : string;
 begin
@@ -90,9 +88,7 @@ begin
                 else if TipoClase = TReserva then
                     Objeto := TReserva.Create
                 else if TipoClase = TEspera then
-                begin
-                    Objeto := TEspera.Create;
-                end
+                    Objeto := TEspera.Create
                 else
                     Objeto := TipoClase.Create;
                 try

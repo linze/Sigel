@@ -2259,7 +2259,7 @@ LazarusResources.Add('TfrmSeleccionButacas','FORMDATA',[
   +#200#157#128#252#127#20#144'w'#179#239#231#252'v'#146#172'N'#190'9'#153#146
   +'O'#220#192'g'#254#243#25#145#249'E'#227#190#144#255#11#157#10'X'#145#241#174
   +#23#158#0#0#0#0'IEND'#174'B`'#130#0#0#6'TLabel'#7'Label10'#4'Left'#2#15#6'He'
-  +'ight'#2#23#3'Top'#2#17#5'Width'#3'H'#1#7'Caption'#6'!Indique las localidade'
+  +'ight'#2#20#3'Top'#2#17#5'Width'#3'/'#1#7'Caption'#6'!Indique las localidade'
   +'s deseadas:'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11
   +#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TImage'#6'palco3'#4'Le'
   +'ft'#3#192#1#6'Height'#2';'#4'Hint'#6#2'V3'#3'Top'#3#152#0#5'Width'#2'<'#8'A'

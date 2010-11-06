@@ -1975,9 +1975,9 @@ object frmVerEstadoSala: TfrmVerEstadoSala
   end
   object Label10: TLabel
     Left = 15
-    Height = 23
+    Height = 20
     Top = 17
-    Width = 328
+    Width = 303
     Caption = 'Indique las localidades deseadas:'
     Font.Height = -17
     Font.Name = 'Sans'

@@ -14,9 +14,9 @@ object frmFecha: TfrmFecha
   LCLVersion = '0.9.28.2'
   object Label1: TLabel
     Left = 16
-    Height = 23
+    Height = 20
     Top = 8
-    Width = 164
+    Width = 150
     Caption = 'Indique la fecha:'
     Font.Height = -17
     Font.Name = 'Sans'

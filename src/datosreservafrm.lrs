@@ -6,20 +6,20 @@ LazarusResources.Add('TfrmDatosReserva','FORMDATA',[
   +'ns'#11#12'biSystemMenu'#0#11'BorderStyle'#7#8'bsDialog'#7'Caption'#6#19'Dat'
   +'os de la reserva'#12'ClientHeight'#3'>'#1#11'ClientWidth'#3'?'#1#8'OnCreate'
   +#7#10'FormCreate'#8'Position'#7#14'poScreenCenter'#10'LCLVersion'#6#8'0.9.28'
-  +'.2'#0#6'TLabel'#5'Intro'#4'Left'#2#8#6'Height'#2#23#3'Top'#2#8#5'Width'#3'7'
+  +'.2'#0#6'TLabel'#5'Intro'#4'Left'#2#8#6'Height'#2#20#3'Top'#2#8#5'Width'#3'"'
   +#1#7'Caption'#6' Introduzca los siguientes datos:'#11'Font.Height'#2#239#9'F'
   +'ont.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'Pare'
-  +'ntFont'#8#0#0#6'TLabel'#14'NombreCompleto'#4'Left'#2#24#6'Height'#2#23#3'To'
-  +'p'#2'('#5'Width'#3#197#0#7'Caption'#6#19'Nombre y apellidos:'#11'Font.Heigh'
+  +'ntFont'#8#0#0#6'TLabel'#14'NombreCompleto'#4'Left'#2#24#6'Height'#2#20#3'To'
+  +'p'#2'('#5'Width'#3#180#0#7'Caption'#6#19'Nombre y apellidos:'#11'Font.Heigh'
   +'t'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentColo'
-  +'r'#8#10'ParentFont'#8#0#0#6'TLabel'#5'lbDNI'#4'Left'#2#24#6'Height'#2#23#3
-  +'Top'#2'`'#5'Width'#2'1'#7'Caption'#6#5'DNI: '#11'Font.Height'#2#239#9'Font.'
+  +'r'#8#10'ParentFont'#8#0#0#6'TLabel'#5'lbDNI'#4'Left'#2#24#6'Height'#2#20#3
+  +'Top'#2'`'#5'Width'#2'-'#7'Caption'#6#5'DNI: '#11'Font.Height'#2#239#9'Font.'
   +'Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFo'
-  +'nt'#8#0#0#6'TLabel'#10'lbContacto'#4'Left'#2#24#6'Height'#2#23#3'Top'#3#152
-  +#0#5'Width'#2'\'#7'Caption'#6#10'Tel'#195#169'fono:'#11'Font.Height'#2#239#9
+  +'nt'#8#0#0#6'TLabel'#10'lbContacto'#4'Left'#2#24#6'Height'#2#20#3'Top'#3#152
+  +#0#5'Width'#2'S'#7'Caption'#6#10'Tel'#195#169'fono:'#11'Font.Height'#2#239#9
   +'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'Par'
-  +'entFont'#8#0#0#6'TLabel'#6'Label1'#4'Left'#2#24#6'Height'#2#23#3'Top'#3#208
-  +#0#5'Width'#3#190#0#7'Caption'#6#20'Correo electr'#195#179'nico:'#11'Font.He'
+  +'entFont'#8#0#0#6'TLabel'#6'Label1'#4'Left'#2#24#6'Height'#2#20#3'Top'#3#208
+  +#0#5'Width'#3#173#0#7'Caption'#6#20'Correo electr'#195#179'nico:'#11'Font.He'
   +'ight'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentC'
   +'olor'#8#10'ParentFont'#8#0#0#7'TButton'#10'btnAceptar'#4'Left'#2'h'#6'Heigh'
   +'t'#2')'#3'Top'#3#16#1#5'Width'#2'c'#7'Caption'#6#7'Aceptar'#11'Font.Height'
@@ -28,15 +28,15 @@ LazarusResources.Add('TfrmDatosReserva','FORMDATA',[
   +'elar'#4'Left'#3#216#0#6'Height'#2')'#3'Top'#3#16#1#5'Width'#2'`'#7'Caption'
   +#6#8'Cancelar'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11
   +#6'fsBold'#0#7'OnClick'#7#16'btnCancelarClick'#10'ParentFont'#8#8'TabOrder'#2
-  +#1#0#0#5'TEdit'#7'eNombre'#4'Left'#2#24#6'Height'#2' '#3'Top'#2'@'#5'Width'#3
+  +#1#0#0#5'TEdit'#7'eNombre'#4'Left'#2#24#6'Height'#2#29#3'Top'#2'@'#5'Width'#3
   +' '#1#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBol'
   +'d'#0#10'ParentFont'#8#8'TabOrder'#2#2#0#0#5'TEdit'#4'eDNI'#4'Left'#2#24#6'H'
-  +'eight'#2' '#3'Top'#2'x'#5'Width'#3' '#1#11'Font.Height'#2#239#9'Font.Name'#6
+  +'eight'#2#29#3'Top'#2'x'#5'Width'#3' '#1#11'Font.Height'#2#239#9'Font.Name'#6
   +#4'Sans'#10'Font.Style'#11#6'fsBold'#0#9'MaxLength'#2#9#10'ParentFont'#8#8'T'
-  +'abOrder'#2#3#0#0#5'TEdit'#9'eTelefono'#4'Left'#2#24#6'Height'#2' '#3'Top'#3
+  +'abOrder'#2#3#0#0#5'TEdit'#9'eTelefono'#4'Left'#2#24#6'Height'#2#29#3'Top'#3
   +#176#0#5'Width'#3' '#1#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.'
   +'Style'#11#6'fsBold'#0#10'ParentFont'#8#8'TabOrder'#2#4#0#0#5'TEdit'#6'eEmai'
-  +'l'#4'Left'#2#24#6'Height'#2' '#3'Top'#3#232#0#5'Width'#3' '#1#11'Font.Heigh'
+  +'l'#4'Left'#2#24#6'Height'#2#29#3'Top'#3#232#0#5'Width'#3' '#1#11'Font.Heigh'
   +'t'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#10'ParentFont'
   +#8#8'TabOrder'#2#5#0#0#0
 ]);

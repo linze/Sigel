@@ -14,9 +14,9 @@ object frmDatosReserva: TfrmDatosReserva
   LCLVersion = '0.9.28.2'
   object Intro: TLabel
     Left = 8
-    Height = 23
+    Height = 20
     Top = 8
-    Width = 311
+    Width = 290
     Caption = 'Introduzca los siguientes datos:'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -26,9 +26,9 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object NombreCompleto: TLabel
     Left = 24
-    Height = 23
+    Height = 20
     Top = 40
-    Width = 197
+    Width = 180
     Caption = 'Nombre y apellidos:'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -38,9 +38,9 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object lbDNI: TLabel
     Left = 24
-    Height = 23
+    Height = 20
     Top = 96
-    Width = 49
+    Width = 45
     Caption = 'DNI: '
     Font.Height = -17
     Font.Name = 'Sans'
@@ -50,9 +50,9 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object lbContacto: TLabel
     Left = 24
-    Height = 23
+    Height = 20
     Top = 152
-    Width = 92
+    Width = 83
     Caption = 'Teléfono:'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -62,9 +62,9 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object Label1: TLabel
     Left = 24
-    Height = 23
+    Height = 20
     Top = 208
-    Width = 190
+    Width = 173
     Caption = 'Correo electrónico:'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -100,7 +100,7 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object eNombre: TEdit
     Left = 24
-    Height = 32
+    Height = 29
     Top = 64
     Width = 288
     Font.Height = -17
@@ -111,7 +111,7 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object eDNI: TEdit
     Left = 24
-    Height = 32
+    Height = 29
     Top = 120
     Width = 288
     Font.Height = -17
@@ -123,7 +123,7 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object eTelefono: TEdit
     Left = 24
-    Height = 32
+    Height = 29
     Top = 176
     Width = 288
     Font.Height = -17
@@ -134,7 +134,7 @@ object frmDatosReserva: TfrmDatosReserva
   end
   object eEmail: TEdit
     Left = 24
-    Height = 32
+    Height = 29
     Top = 232
     Width = 288
     Font.Height = -17
