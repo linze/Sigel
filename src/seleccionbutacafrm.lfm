@@ -1,7 +1,7 @@
 object frmSeleccionButacas: TfrmSeleccionButacas
-  Left = 518
+  Left = 275
   Height = 366
-  Top = 127
+  Top = 183
   Width = 712
   ActiveControl = Panel2
   Caption = 'Selección de butacas'

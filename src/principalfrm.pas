@@ -8,7 +8,7 @@ uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
-  AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm;
+  AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera;
 
 type
 
@@ -39,7 +39,6 @@ type
       procedure btnLEsperaClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
       procedure btnSalirClick(Sender: TObject);
-      procedure btnVisualizarEstadoClick(Sender: TObject);
       procedure Button1Click(Sender: TObject);
       procedure FormCreate(Sender: TObject);
       procedure lbAdminClick(Sender: TObject);
@@ -310,29 +309,6 @@ end;
 procedure TfrmPrincipal.btnSalirClick(Sender: TObject);
 begin
     Application.Terminate;
-end;
-
-procedure TfrmPrincipal.btnVisualizarEstadoClick(Sender: TObject);
-var
-    frmFecha : TfrmFecha;
-    frmVerEstadoSala : TfrmVerEstadoSala;
-begin
-    frmFecha := TFrmFecha.Create(Self);
-    try
-        frmFecha.ShowModal;
-        if frmFecha.FechaMarcada then
-        begin
-            uDatos.Cargar(frmFecha.Fecha);
-            frmVerEstadoSala := TfrmVerEstadoSala.Create(Self);
-            try
-                frmVerEstadoSala.ShowModal;
-            finally
-                frmVerEstadoSala.Free;
-            end;
-        end;
-    finally
-        frmFecha.Free;
-    end;
 end;
 
 procedure TfrmPrincipal.Button1Click(Sender: TObject);

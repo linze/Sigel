@@ -10,8 +10,7 @@ uses
   Forms, PrincipalFrm, LResources, CEstadoLocalidad, CLocalidad, CSala,
   ComprarFrm, ReservaFrm, CEspera, CReserva, CTipoLocalidad, LoginFrm, FechaFrm,
   SeleccionButacaFrm, uDatos, AnularReservaFrm, AnularCompraFrm,
-  DatosReservaFrm, CreditosFrm, CListaObjetos, VerListaEsperaFrm, DatosEspera,
-  VerEstadoSalaFrm;
+  DatosReservaFrm, CreditosFrm, CListaObjetos, VerListaEsperaFrm, DatosEspera;
 
 {$IFDEF WINDOWS}{$R Sigel.rc}{$ENDIF}
 
