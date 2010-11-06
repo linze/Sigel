@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="1"/>
+      <ActiveEditorIndexAtStart Value="4"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -320,8 +320,8 @@
         <ComponentName Value="frmAnularCompra"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularCompraFrm"/>
-        <CursorPos X="69" Y="62"/>
-        <TopLine Value="46"/>
+        <CursorPos X="17" Y="63"/>
+        <TopLine Value="53"/>
         <EditorIndex Value="4"/>
         <UsageCount Value="85"/>
         <Loaded Value="True"/>
@@ -580,124 +580,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="creserva.pas"/>
-        <Caret Line="65" Column="1" TopLine="55"/>
+        <Filename Value="principalfrm.pas"/>
+        <Caret Line="52" Column="54" TopLine="12"/>
       </Position1>
       <Position2>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="52" Column="54" TopLine="12"/>
+        <Caret Line="267" Column="43" TopLine="246"/>
       </Position2>
       <Position3>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="267" Column="43" TopLine="246"/>
+        <Caret Line="284" Column="27" TopLine="248"/>
       </Position3>
       <Position4>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="284" Column="27" TopLine="248"/>
+        <Filename Value="udatos.pas"/>
+        <Caret Line="64" Column="12" TopLine="43"/>
       </Position4>
       <Position5>
         <Filename Value="udatos.pas"/>
-        <Caret Line="64" Column="12" TopLine="43"/>
+        <Caret Line="17" Column="26" TopLine="13"/>
       </Position5>
       <Position6>
-        <Filename Value="udatos.pas"/>
-        <Caret Line="17" Column="26" TopLine="13"/>
-      </Position6>
-      <Position7>
         <Filename Value="creserva.pas"/>
         <Caret Line="23" Column="42" TopLine="15"/>
+      </Position6>
+      <Position7>
+        <Filename Value="principalfrm.pas"/>
+        <Caret Line="284" Column="27" TopLine="255"/>
       </Position7>
       <Position8>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="284" Column="27" TopLine="255"/>
+        <Caret Line="137" Column="61" TopLine="136"/>
       </Position8>
       <Position9>
         <Filename Value="principalfrm.pas"/>
-        <Caret Line="137" Column="61" TopLine="136"/>
+        <Caret Line="268" Column="56" TopLine="259"/>
       </Position9>
       <Position10>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="268" Column="56" TopLine="259"/>
+        <Filename Value="anularcomprafrm.pas"/>
+        <Caret Line="34" Column="46" TopLine="25"/>
       </Position10>
       <Position11>
         <Filename Value="anularcomprafrm.pas"/>
-        <Caret Line="34" Column="46" TopLine="25"/>
+        <Caret Line="65" Column="90" TopLine="51"/>
       </Position11>
       <Position12>
         <Filename Value="anularcomprafrm.pas"/>
-        <Caret Line="65" Column="90" TopLine="51"/>
+        <Caret Line="68" Column="73" TopLine="57"/>
       </Position12>
       <Position13>
-        <Filename Value="anularcomprafrm.pas"/>
-        <Caret Line="68" Column="73" TopLine="57"/>
-      </Position13>
-      <Position14>
         <Filename Value="csala.pas"/>
         <Caret Line="98" Column="95" TopLine="83"/>
-      </Position14>
-      <Position15>
+      </Position13>
+      <Position14>
         <Filename Value="anularcomprafrm.pas"/>
         <Caret Line="51" Column="30" TopLine="39"/>
+      </Position14>
+      <Position15>
+        <Filename Value="csala.pas"/>
+        <Caret Line="96" Column="23" TopLine="88"/>
       </Position15>
       <Position16>
         <Filename Value="csala.pas"/>
-        <Caret Line="96" Column="23" TopLine="88"/>
+        <Caret Line="109" Column="23" TopLine="95"/>
       </Position16>
       <Position17>
         <Filename Value="csala.pas"/>
-        <Caret Line="109" Column="23" TopLine="95"/>
+        <Caret Line="111" Column="20" TopLine="106"/>
       </Position17>
       <Position18>
         <Filename Value="csala.pas"/>
-        <Caret Line="111" Column="20" TopLine="106"/>
+        <Caret Line="109" Column="23" TopLine="101"/>
       </Position18>
       <Position19>
         <Filename Value="csala.pas"/>
-        <Caret Line="109" Column="23" TopLine="101"/>
+        <Caret Line="213" Column="33" TopLine="197"/>
       </Position19>
       <Position20>
         <Filename Value="csala.pas"/>
-        <Caret Line="213" Column="33" TopLine="197"/>
+        <Caret Line="96" Column="20" TopLine="92"/>
       </Position20>
       <Position21>
-        <Filename Value="csala.pas"/>
-        <Caret Line="96" Column="20" TopLine="92"/>
-      </Position21>
-      <Position22>
         <Filename Value="anularcomprafrm.pas"/>
         <Caret Line="47" Column="31" TopLine="39"/>
+      </Position21>
+      <Position22>
+        <Filename Value="csala.pas"/>
+        <Caret Line="96" Column="18" TopLine="88"/>
       </Position22>
       <Position23>
         <Filename Value="csala.pas"/>
-        <Caret Line="96" Column="18" TopLine="88"/>
+        <Caret Line="211" Column="77" TopLine="203"/>
       </Position23>
       <Position24>
         <Filename Value="csala.pas"/>
-        <Caret Line="211" Column="77" TopLine="203"/>
+        <Caret Line="201" Column="126" TopLine="196"/>
       </Position24>
       <Position25>
         <Filename Value="csala.pas"/>
-        <Caret Line="201" Column="126" TopLine="196"/>
+        <Caret Line="210" Column="1" TopLine="200"/>
       </Position25>
       <Position26>
         <Filename Value="csala.pas"/>
-        <Caret Line="210" Column="1" TopLine="200"/>
+        <Caret Line="211" Column="1" TopLine="201"/>
       </Position26>
       <Position27>
         <Filename Value="csala.pas"/>
-        <Caret Line="211" Column="1" TopLine="201"/>
+        <Caret Line="214" Column="1" TopLine="204"/>
       </Position27>
       <Position28>
         <Filename Value="csala.pas"/>
-        <Caret Line="214" Column="1" TopLine="204"/>
+        <Caret Line="109" Column="1" TopLine="99"/>
       </Position28>
       <Position29>
         <Filename Value="csala.pas"/>
-        <Caret Line="109" Column="1" TopLine="99"/>
+        <Caret Line="110" Column="57" TopLine="100"/>
       </Position29>
       <Position30>
-        <Filename Value="csala.pas"/>
-        <Caret Line="110" Column="57" TopLine="100"/>
+        <Filename Value="anularcomprafrm.pas"/>
+        <Caret Line="62" Column="69" TopLine="46"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

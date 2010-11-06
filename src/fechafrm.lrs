@@ -1,5 +1,3 @@
-{ Este es un archivo de recurso de Lazarus generado automáticamente }
-
 LazarusResources.Add('TfrmFecha','FORMDATA',[
   'TPF0'#9'TfrmFecha'#8'frmFecha'#4'Left'#3#7#2#6'Height'#3#242#0#3'Top'#3#255#0
   +#5'Width'#3#127#1#13'ActiveControl'#7#10'btnAceptar'#11'BorderIcons'#11#12'b'
@@ -10,12 +8,12 @@ LazarusResources.Add('TfrmFecha','FORMDATA',[
   +#150#0#7'Caption'#6#17'Indique la fecha:'#11'Font.Height'#2#239#9'Font.Name'
   +#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0
   +#0#9'TCalendar'#12'clCalendario'#4'Left'#2#16#6'Height'#3#190#0#3'Top'#2')'#5
-  +'Width'#3#220#0#8'DateTime'#5#0#0#0#0#0#0'%'#158#14'@'#0#0#7'TButton'#10'btn'
-  +'Aceptar'#4'Left'#3#16#1#6'Height'#2'('#3'Top'#2')'#5'Width'#2'c'#7'Caption'
-  +#6#7'Aceptar'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11
-  +#6'fsBold'#0#7'OnClick'#7#15'btnAceptarClick'#10'ParentFont'#8#8'TabOrder'#2
-  +#1#0#0#7'TButton'#11'btnCancelar'#4'Left'#3#16#1#6'Height'#2'('#3'Top'#2'Y'#5
-  +'Width'#2'c'#7'Caption'#6#8'Cancelar'#11'Font.Height'#2#239#9'Font.Name'#6#4
-  +'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#16'btnCancelarClick'#10'Pa'
-  +'rentFont'#8#8'TabOrder'#2#2#0#0#0
+  +'Width'#3#220#0#8'DateTime'#4'%'#158#0#0#0#0#7'TButton'#10'btnAceptar'#4'Lef'
+  +'t'#3#16#1#6'Height'#2'('#3'Top'#2')'#5'Width'#2'c'#7'Caption'#6#7'Aceptar'
+  +#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7
+  +'OnClick'#7#15'btnAceptarClick'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#7'TButt'
+  +'on'#11'btnCancelar'#4'Left'#3#16#1#6'Height'#2'('#3'Top'#2'Y'#5'Width'#2'c'
+  +#7'Caption'#6#8'Cancelar'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Fo'
+  +'nt.Style'#11#6'fsBold'#0#7'OnClick'#7#16'btnCancelarClick'#10'ParentFont'#8
+  +#8'TabOrder'#2#2#0#0#0
 ]);
