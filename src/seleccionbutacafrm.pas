@@ -11,6 +11,7 @@ uses
 type
 
   TColorButaca = (Libre, Ocupada, Seleccionada);
+  TModoSeleccion = (Reserva, Compra);
 
   { TfrmSeleccionButacas }
 
@@ -101,10 +102,12 @@ type
     function ObtenerTipoByHint (Imagen : TImage): TTipoLocalidad;
     function ObtenerHuecoVacio: integer;
     function EstaSeleccionada (Tipo: TTipoLocalidad; Fila, Numero: integer): Integer;
+    function CalcularPrecio (Tipo: TTipoLocalidad): integer;
   public
     Localidades : array [1..4] of TLocalidad;
     Marcadas    : array [1..4] of boolean;
     Fecha       : TDateTime;
+    Modo        : TModoSeleccion;
     NumeroVirtual : integer;
     Aceptado    : boolean;
   end; 
@@ -294,6 +297,22 @@ begin
     except
         ShowMessage('Error al encontrar el estado de la localidad');
     end;
+end;
+
+function TfrmSeleccionButacas.CalcularPrecio(Tipo: TTipoLocalidad): integer;
+begin
+    if Self.Modo = Reserva then
+        case Tipo of
+        Patio: Result := 5;
+        PrimeraPlanta: Result := 2;
+        Palco: Result := 15;
+        end
+    else
+        case Tipo of
+        Patio: Result := 50;
+        PrimeraPlanta: Result := 20;
+        Palco: Result := 150;
+        end;
 end;
 
 function TfrmSeleccionButacas.ObtenerHuecoVacio: integer;
