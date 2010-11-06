@@ -191,14 +191,14 @@ begin
                     else
                         ilPalco.GetBitmap(0, ImagenLista);
                 end;
-            Comprada:
+            Reservada:
                 begin
                     if Tipo <> Palco then
                         ilButacas.GetBitmap(1, ImagenLista)
                     else
                         ilPalco.GetBitmap(1, ImagenLista);
                 end;
-            Reservada:
+            Comprada:
                 begin
                     if Tipo <> Palco then
                         ilButacas.GetBitmap(2, ImagenLista)

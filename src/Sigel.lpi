@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="1"/>
+      <ActiveEditorIndexAtStart Value="7"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -46,7 +46,7 @@
         <ComponentName Value="frmPrincipal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
-        <CursorPos X="49" Y="174"/>
+        <CursorPos X="82" Y="165"/>
         <TopLine Value="160"/>
         <EditorIndex Value="6"/>
         <UsageCount Value="103"/>
@@ -203,7 +203,7 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="CEspera"/>
         <CursorPos X="52" Y="69"/>
-        <TopLine Value="36"/>
+        <TopLine Value="47"/>
         <EditorIndex Value="3"/>
         <UsageCount Value="91"/>
         <Loaded Value="True"/>
@@ -250,7 +250,7 @@
         <ComponentName Value="frmFecha"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="FechaFrm"/>
-        <CursorPos X="39" Y="14"/>
+        <CursorPos X="35" Y="20"/>
         <TopLine Value="10"/>
         <EditorIndex Value="1"/>
         <UsageCount Value="77"/>
@@ -315,7 +315,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularCompraFrm"/>
         <CursorPos X="46" Y="33"/>
-        <TopLine Value="1"/>
+        <TopLine Value="11"/>
         <EditorIndex Value="4"/>
         <UsageCount Value="65"/>
         <Loaded Value="True"/>
@@ -498,8 +498,8 @@
         <ComponentName Value="frmVerEstadoSala"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="VerEstadoSalaFrm"/>
-        <CursorPos X="62" Y="191"/>
-        <TopLine Value="184"/>
+        <CursorPos X="54" Y="185"/>
+        <TopLine Value="186"/>
         <EditorIndex Value="7"/>
         <UsageCount Value="21"/>
         <Loaded Value="True"/>
