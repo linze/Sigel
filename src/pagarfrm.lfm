@@ -1,0 +1,153 @@
+object frmPagar: TfrmPagar
+  Left = 371
+  Height = 238
+  Top = 222
+  Width = 298
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Abone la operación'
+  ClientHeight = 238
+  ClientWidth = 298
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '0.9.28.2'
+  object Label1: TLabel
+    Left = 16
+    Height = 20
+    Top = 9
+    Width = 173
+    Caption = 'Cantidad a abonar:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lbCantidad: TLabel
+    Left = 200
+    Height = 20
+    Top = 9
+    Width = 69
+    Caption = '0 euros'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 20
+    Top = 39
+    Width = 153
+    Caption = 'Método de pago:'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object cbMetodo: TComboBox
+    Left = 16
+    Height = 31
+    Top = 63
+    Width = 153
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    ItemHeight = 0
+    Items.Strings = (
+      'Efectivo'
+      'Tarjeta'
+    )
+    OnChange = cbMetodoChange
+    ParentFont = False
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object pTarjeta: TPanel
+    Left = 8
+    Height = 71
+    Top = 96
+    Width = 280
+    BevelOuter = bvNone
+    ClientHeight = 71
+    ClientWidth = 280
+    TabOrder = 1
+    Visible = False
+    object Label4: TLabel
+      Left = 8
+      Height = 20
+      Top = 7
+      Width = 78
+      Caption = 'Número:'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 216
+      Height = 20
+      Top = 7
+      Width = 37
+      Caption = 'CCV'
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object eNumero: TEdit
+      Left = 8
+      Height = 29
+      Top = 31
+      Width = 192
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      MaxLength = 16
+      ParentFont = False
+      TabOrder = 0
+    end
+    object eCCV: TEdit
+      Left = 216
+      Height = 29
+      Top = 31
+      Width = 58
+      Font.Height = -17
+      Font.Name = 'Sans'
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object btnAceptar: TButton
+    Left = 16
+    Height = 49
+    Top = 176
+    Width = 120
+    Caption = 'ACEPTAR'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnAceptarClick
+    ParentFont = False
+    TabOrder = 2
+  end
+  object btnCancelar: TButton
+    Left = 168
+    Height = 49
+    Top = 176
+    Width = 120
+    Caption = 'CANCELAR'
+    Font.Height = -17
+    Font.Name = 'Sans'
+    Font.Style = [fsBold]
+    OnClick = btnCancelarClick
+    ParentFont = False
+    TabOrder = 3
+  end
+end

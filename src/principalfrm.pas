@@ -9,7 +9,7 @@ uses
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
   AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm,
-  VerListaReservas, CTipoLocalidad, CLocalidad, uFuncionesComunes;
+  VerListaReservas, CTipoLocalidad, CLocalidad, uFuncionesComunes, PagarFrm;
 
 type
 
@@ -47,6 +47,7 @@ type
       procedure FormCreate(Sender: TObject);
       procedure lbAdminClick(Sender: TObject);
       procedure Panel2Click(Sender: TObject);
+      function PedirPago(Cantidad: integer) : boolean;
   private
     procedure ProcesarListaEspera;
     procedure PasarAListaDeEspera (Fecha : TDateTime);
@@ -152,12 +153,15 @@ begin
                     frmSeleccionButaca.ShowModal;
                     if (frmSeleccionButaca.NumDeMarcadas > 0) and (frmSeleccionButaca.Aceptado) then
                     begin
-                        for i:=1 to 4 do
+                        if PedirPago(frmSeleccionButaca.GastoTotal) then
                         begin
-                            if frmSeleccionButaca.Marcadas[i] then
+                            for i:=1 to 4 do
                             begin
-                                frmSeleccionButaca.Localidades[i].Estado := Comprada;
-                                uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                if frmSeleccionButaca.Marcadas[i] then
+                                begin
+                                    frmSeleccionButaca.Localidades[i].Estado := Comprada;
+                                    uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                end;
                             end;
                         end;
                         uDatos.Guardar(frmFecha.Fecha);
@@ -275,24 +279,27 @@ begin
                                     ShowMessage('No se puede realizar más de una reserva por persona')
                                 else
                                 begin
-                                    Reserva := TReserva.Create;
-                                    Reserva.Nombre := frmDatos.Nombre;
-                                    Reserva.Dni := frmDatos.Dni;
-                                    Reserva.Telefono := frmDatos.Telefono;
-                                    Reserva.Email := frmDatos.Email;
-                                    for i:=1 to 4 do
+                                    if PedirPago(frmSeleccionButacas.GastoTotal) then
                                     begin
-                                        if frmSeleccionButaca.Marcadas[i] then
+                                        Reserva := TReserva.Create;
+                                        Reserva.Nombre := frmDatos.Nombre;
+                                        Reserva.Dni := frmDatos.Dni;
+                                        Reserva.Telefono := frmDatos.Telefono;
+                                        Reserva.Email := frmDatos.Email;
+                                        for i:=1 to 4 do
                                         begin
-                                            frmSeleccionButaca.Localidades[i].Estado := Reservada;
-                                            Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
-                                            uDatos.LogearReservas;
-                                            uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                            if frmSeleccionButaca.Marcadas[i] then
+                                            begin
+                                                frmSeleccionButaca.Localidades[i].Estado := Reservada;
+                                                Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                                uDatos.LogearReservas;
+                                                uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                            end;
                                         end;
+                                        uDatos.Reservas.Add(Reserva);
+                                        uDatos.Guardar(frmFecha.Fecha);
+                                        ShowMessage('Operación realizada con éxito');
                                     end;
-                                    uDatos.Reservas.Add(Reserva);
-                                    uDatos.Guardar(frmFecha.Fecha);
-                                    ShowMessage('Operación realizada con éxito');
                                 end;
                             end;
                         finally
@@ -384,6 +391,23 @@ end;
 procedure TfrmPrincipal.Panel2Click(Sender: TObject);
 begin
 
+end;
+
+function TfrmPrincipal.PedirPago(Cantidad: integer): boolean;
+var
+    frmPagar : TFrmPagar;
+    Pagado   : boolean;
+begin
+    frmPagar := TFrmPagar.Create(Self);
+    try
+        frmPagar.Cantidad := Cantidad;
+        frmPagar.ShowModal;
+        Pagado := frmPagar.PagoAceptado;
+    finally
+        frmPagar.Free;
+    end;
+
+    result := Pagado;
 end;
 
 procedure TfrmPrincipal.ProcesarListaEspera;
