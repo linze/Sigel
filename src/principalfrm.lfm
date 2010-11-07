@@ -68,10 +68,10 @@ object frmPrincipal: TfrmPrincipal
     TabOrder = 1
     OnClick = Panel2Click
     object lbDescripcion: TLabel
-      Left = 8
+      Left = 4
       Height = 48
       Top = 3
-      Width = 584
+      Width = 601
       AutoSize = False
       Caption = 'Descripción'
       Font.Height = -23
@@ -123,8 +123,8 @@ object frmPrincipal: TfrmPrincipal
       Width = 816
       Align = alClient
       Caption = 'Elija la operación a realizar'
-      ClientHeight = 343
-      ClientWidth = 812
+      ClientHeight = 329
+      ClientWidth = 814
       TabOrder = 0
       object btnCompra: TButton
         Left = 501

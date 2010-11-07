@@ -67,7 +67,7 @@ end;
 procedure TfrmVerListaReservas.FormShow(Sender: TObject);
 var
     i: integer;
-begin                                                                                                                  1
+begin
     gridVisualizacion.RowCount := 1;
     if uDatos.Reservas.Count <> 0 then
     begin

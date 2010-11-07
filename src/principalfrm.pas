@@ -120,7 +120,7 @@ begin
             begin
                 uDatos.Guardar(frmFecha.Fecha);
             end;
-            uDatos.LiberarDatos;
+            //uDatos.LiberarDatos;
       end;
   finally
          frmFecha.Free;
@@ -278,7 +278,7 @@ begin
                 end;
             end;
             //TODO: Liberar memoria
-            uDatos.LiberarDatos;
+            //uDatos.LiberarDatos;
         end;
     finally
         frmFecha.Free;

@@ -58,6 +58,9 @@ begin
         DNI := eDNI.Text;
         Anular(DNI);
         Self.Close;
+    end else
+    begin
+        ShowMessage('El campo DNI ha de contener 9 carácteres');
     end;
 end;
 

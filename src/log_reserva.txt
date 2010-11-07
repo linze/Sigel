@@ -1,15 +1,948 @@
 
 
-Nombre: Francisco Cantidad: 0
-Dni: 111111111 Telefono: 1111111 Email: dasfas
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
 
-Nombre: AAAAAAAAAA Cantidad: 4
-Dni: BBBBBBBBB Telefono: CCCCCCCCCCC Email: DDDDDDDD
-Fila: 1, Numero: 1
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
 Estado: OCUPADA
 Fila: 2, Numero: 2
 Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
 Fila: 3, Numero: 3
 Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
 Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: Francisco Canela Cantidad: 4
+Dni: 48963191D Telefono: 123123123 Email: dasdfasf@asdfas.com
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 1, Numero: 8
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: Francisco Canela Cantidad: 4
+Dni: 48963191D Telefono: 123123123 Email: dasdfasf@asdfas.com
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 1, Numero: 8
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: asfasd Cantidad: 4
+Dni: 111111111 Telefono: sadfas Email: sadfasdf
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 2, Numero: 8
+Estado: OCUPADA
+
+Nombre: sdf Cantidad: 4
+Dni: FASF Telefono: asdf Email: asdf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+
+Nombre: asdfasdf Cantidad: 4
+Dni: FASFDS Telefono: fasdf Email: fasdfasdf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+
+Nombre: dczdsf Cantidad: 4
+Dni: ASDFASDF Telefono: 33333333 Email: 33333333333
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 1, Numero: 4
+Estado: OCUPADA
+
+Nombre: asdf Cantidad: 3
+Dni: FASDF Telefono: fasdf Email: fasdf
+Fila: 4, Numero: 4
+Estado: OCUPADA
+Fila: 1, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+
+Nombre: asfasd Cantidad: 4
+Dni: 111111111 Telefono: sadfas Email: sadfasdf
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 1, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 2, Numero: 8
 Estado: OCUPADA
