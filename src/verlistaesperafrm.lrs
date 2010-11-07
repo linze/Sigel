@@ -1,5 +1,3 @@
-{ Este es un archivo de recurso de Lazarus generado automáticamente }
-
 LazarusResources.Add('TfrmVerListaEspera','FORMDATA',[
   'TPF0'#18'TfrmVerListaEspera'#17'frmVerListaEspera'#4'Left'#3#2#1#6'Height'#3
   +#162#1#3'Top'#3#222#0#5'Width'#3#179#3#13'ActiveControl'#7#6'Panel4'#7'Capti'

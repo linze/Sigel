@@ -163,9 +163,9 @@ begin
                                     uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                 end;
                             end;
+                            uDatos.Guardar(frmFecha.Fecha);
+                            ShowMessage('Operación realizada con éxito');
                         end;
-                        uDatos.Guardar(frmFecha.Fecha);
-                        ShowMessage('Operación realizada con éxito');
                     end;
                 finally
                     frmSeleccionButaca.Free;
@@ -401,6 +401,7 @@ begin
     frmPagar := TFrmPagar.Create(Self);
     try
         frmPagar.Cantidad := Cantidad;
+        frmPagar.lbCantidad.Caption := IntToStr(Cantidad) + ' euros';
         frmPagar.ShowModal;
         Pagado := frmPagar.PagoAceptado;
     finally

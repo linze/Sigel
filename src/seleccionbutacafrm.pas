@@ -330,6 +330,7 @@ begin
     lbImportePPlanta.Caption := IntToStr(IPP);
     lbImportePalco.Caption := IntToStr(IPalco);
     lbImporteTotal.Caption := IntToStr(IPatio + IPP + IPalco);
+    Self.GastoTotal := IPatio + IPP + IPalco;
 end;
 
 function TfrmSeleccionButacas.CalcularPrecio(Tipo: TTipoLocalidad): integer;

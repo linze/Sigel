@@ -55,7 +55,7 @@ end;
 
 procedure TfrmPagar.FormShow(Sender: TObject);
 begin
-    lbCantidad.Caption := IntToStr(Cantidad) + ' euros';
+
 end;
 
 procedure TfrmPagar.btnCancelarClick(Sender: TObject);
