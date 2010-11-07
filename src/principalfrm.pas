@@ -399,8 +399,6 @@ begin
         Espera := TEspera(Esperas.Items[i]);
         if (Sala.NumeroLibres(Tipo) >= Espera.Numero) then
         begin
-            // TODO: Cambiar el estado de las localidades en TSala y los
-            // atributos FAsignado y FLocalidades de Espera.Items[i]
             Localidad := Sala.ObtenerLibre(Tipo);
             Localidad.Estado := Comprada;
             Espera.Asignada := True;

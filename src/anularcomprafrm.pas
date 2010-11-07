@@ -41,10 +41,6 @@ implementation
 procedure TfrmAnularCompra.Button1Click(Sender: TObject);
 var
     Localidad : TLocalidad;
-    libresPatio : integer;
-    libresPrimeraPlanta : integer;
-    libresPalco : integer;
-    libresTotal : integer;
 begin
     LocalidadAnulada := False;
     if cbTipo.Text = 'Patio' then
