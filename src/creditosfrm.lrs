@@ -1,5 +1,3 @@
-{ Este es un archivo de recurso de Lazarus generado automáticamente }
-
 LazarusResources.Add('TfrmCreditos','FORMDATA',[
   'TPF0'#12'TfrmCreditos'#11'frmCreditos'#4'Left'#3'"'#1#6'Height'#3','#1#3'Top'
   +#3#199#0#5'Width'#3#144#1#7'Caption'#6#11'frmCreditos'#12'ClientHeight'#3','

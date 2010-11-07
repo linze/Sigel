@@ -25,8 +25,7 @@ type
       btnSalir: TButton;
       btnLReservas: TButton;
       GroupBox1: TGroupBox;
-      Label1: TLabel;
-      Label2: TLabel;
+      Image1: TImage;
       lbAdmin: TLabel;
       lbDescripcion: TLabel;
       Panel1: TPanel;

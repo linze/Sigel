@@ -71,8 +71,10 @@ begin
             PagoAceptado := True
         else
             ShowMessage('Es necesario indicar el número y el CCV')
+    else if cbMetodo.Text = 'Efectivo' then
+        PagoAceptado := True
     else
-        PagoAceptado := True;
+        ShowMessage('Es necesario indicar un método de pago');
 
     if PagoAceptado then
         Self.Close;
