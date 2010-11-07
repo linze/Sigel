@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, uDatos, CReserva, CEstadoLocalidad, CLocalidad, CEspera;
+  StdCtrls, uDatos, CReserva, CEstadoLocalidad, CLocalidad, CEspera,
+  uFuncionesComunes;
 
 type
 
@@ -51,16 +52,17 @@ end;
 
 procedure TfrmAnularReserva.btnAceptarClick(Sender: TObject);
 begin
-    if (eDNI.Text <> '') and (Length(eDNI.Text) = 9) then
+    if eDni.Text = '' then
+        ShowMessage('Ha de indicar un DNI')
+    else if not uFuncionesComunes.DNIValido(eDni.Text) then
+        ShowMessage('DNI inválido')
+    else
     begin
         eDNI.Text := UpperCase(eDNI.Text);
         IntroducidoDNI := True;
         DNI := eDNI.Text;
         Anular(DNI);
         Self.Close;
-    end else
-    begin
-        ShowMessage('El campo DNI ha de contener 9 carácteres');
     end;
 end;
 

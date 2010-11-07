@@ -114,6 +114,7 @@ object frmDatosReserva: TfrmDatosReserva
     Height = 29
     Top = 120
     Width = 288
+    CharCase = ecUppercase
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
@@ -129,6 +130,7 @@ object frmDatosReserva: TfrmDatosReserva
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    OnKeyPress = eTelefonoKeyPress
     ParentFont = False
     TabOrder = 4
   end
@@ -137,6 +139,7 @@ object frmDatosReserva: TfrmDatosReserva
     Height = 29
     Top = 232
     Width = 288
+    CharCase = ecLowerCase
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]

@@ -26,6 +26,7 @@ type
     lbContacto: TLabel;
     procedure btnAceptarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure eTelefonoKeyPress(Sender: TObject; var Key: char);
     procedure FormCreate(Sender: TObject);
   private
     { private declarations }
@@ -50,6 +51,10 @@ begin
     Self.Close;
 end;
 
+procedure TfrmDatosReserva.eTelefonoKeyPress(Sender: TObject; var Key: char);
+begin
+end;
+
 procedure TfrmDatosReserva.FormCreate(Sender: TObject);
 begin
     Self.DatosIntroducidos := False;
@@ -57,7 +62,7 @@ end;
 
 procedure TfrmDatosReserva.btnAceptarClick(Sender: TObject);
 begin
-    if (eNombre.Text <> '') and (eDNI.Text <> '') and ((eTelefono.Text <> '') or (eEmail.Text <> '')) then
+    if (eNombre.Text <> '') and (DNIValido(eDNI.Text)) and ((eTelefono.Text <> '') or (not EsEmail(eEmail.Text))) then
     begin
         Self.DatosIntroducidos := True;
         Nombre := eNombre.Text;
