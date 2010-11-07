@@ -50,10 +50,10 @@ object frmAnularReserva: TfrmAnularReserva
     TabOrder = 0
   end
   object btnAceptar: TButton
-    Left = 14
+    Left = 12
     Height = 41
     Top = 88
-    Width = 104
+    Width = 112
     Caption = 'ACEPTAR'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -63,10 +63,10 @@ object frmAnularReserva: TfrmAnularReserva
     TabOrder = 1
   end
   object btnCancelar: TButton
-    Left = 136
+    Left = 135
     Height = 41
     Top = 88
-    Width = 104
+    Width = 112
     Caption = 'CANCELAR'
     Font.Height = -17
     Font.Name = 'Sans'

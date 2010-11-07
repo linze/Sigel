@@ -1,3 +1,5 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmAnularReserva','FORMDATA',[
   'TPF0'#17'TfrmAnularReserva'#16'frmAnularReserva'#4'Left'#3''''#2#6'Height'#3
   +#139#0#3'Top'#3#187#0#5'Width'#3#9#1#13'ActiveControl'#7#4'eDNI'#11'BorderIc'
@@ -13,11 +15,11 @@ LazarusResources.Add('TfrmAnularReserva','FORMDATA',[
   +#2'@'#6'Height'#2#29#3'Top'#2'('#5'Width'#3#176#0#11'Font.Height'#2#239#9'Fo'
   +'nt.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#9'MaxLength'#2#9#8'OnChang'
   +'e'#7#10'eDNIChange'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#7'TButton'#10'btnA'
-  +'ceptar'#4'Left'#2#14#6'Height'#2')'#3'Top'#2'X'#5'Width'#2'h'#7'Caption'#6#7
+  +'ceptar'#4'Left'#2#12#6'Height'#2')'#3'Top'#2'X'#5'Width'#2'p'#7'Caption'#6#7
   +'ACEPTAR'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'f'
   +'sBold'#0#7'OnClick'#7#15'btnAceptarClick'#10'ParentFont'#8#8'TabOrder'#2#1#0
-  +#0#7'TButton'#11'btnCancelar'#4'Left'#3#136#0#6'Height'#2')'#3'Top'#2'X'#5'W'
-  +'idth'#2'h'#7'Caption'#6#8'CANCELAR'#11'Font.Height'#2#239#9'Font.Name'#6#4
+  +#0#7'TButton'#11'btnCancelar'#4'Left'#3#135#0#6'Height'#2')'#3'Top'#2'X'#5'W'
+  +'idth'#2'p'#7'Caption'#6#8'CANCELAR'#11'Font.Height'#2#239#9'Font.Name'#6#4
   +'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#16'btnCancelarClick'#10'Pa'
   +'rentFont'#8#8'TabOrder'#2#2#0#0#0
 ]);

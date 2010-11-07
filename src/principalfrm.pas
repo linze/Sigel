@@ -163,7 +163,7 @@ begin
                 finally
                     frmSeleccionButaca.Free;
                 end;
-            uDatos.LiberarDatos;
+                //uDatos.LiberarDatos;
             end;
         end;
     finally
@@ -193,7 +193,7 @@ begin
         finally
             frmFecha.Free;
         end;
-        uDatos.LiberarDatos;
+        //uDatos.LiberarDatos;
     except
     end;
 end;
@@ -222,6 +222,23 @@ begin
 end;
 
 procedure TfrmPrincipal.btnReservaClick(Sender: TObject);
+    function HayReservaPrevia (Dni : string): boolean;
+    var
+        i       : integer;
+        Found   : boolean;
+    begin
+        Found := False;
+        i := 0;
+        while (not Found) and (i < Reservas.Count) do
+        begin
+            if TReserva(Reservas.Items[i]).Dni = Dni then
+                Found := True
+            else
+                i := i + 1;
+        end;
+        result := Found;
+    end;
+
 var
     frmFecha : TfrmFecha;
     frmSeleccionButaca : TFrmSeleccionButacas;
@@ -250,24 +267,29 @@ begin
                             frmDatos.ShowModal;
                             if frmDatos.DatosIntroducidos then
                             begin
-                                Reserva := TReserva.Create;
-                                Reserva.Nombre := frmDatos.Nombre;
-                                Reserva.Dni := frmDatos.Dni;
-                                Reserva.Telefono := frmDatos.Telefono;
-                                Reserva.Email := frmDatos.Email;
-                                for i:=1 to 4 do
+                                if HayReservaPrevia(frmDatos.DNI) then
+                                    ShowMessage('No se puede realizar más de una reserva por persona')
+                                else
                                 begin
-                                    if frmSeleccionButaca.Marcadas[i] then
+                                    Reserva := TReserva.Create;
+                                    Reserva.Nombre := frmDatos.Nombre;
+                                    Reserva.Dni := frmDatos.Dni;
+                                    Reserva.Telefono := frmDatos.Telefono;
+                                    Reserva.Email := frmDatos.Email;
+                                    for i:=1 to 4 do
                                     begin
-                                        frmSeleccionButaca.Localidades[i].Estado := Reservada;
-                                        Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
-                                        uDatos.LogearReservas;
-                                        uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                        if frmSeleccionButaca.Marcadas[i] then
+                                        begin
+                                            frmSeleccionButaca.Localidades[i].Estado := Reservada;
+                                            Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                            uDatos.LogearReservas;
+                                            uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
+                                        end;
                                     end;
+                                    uDatos.Reservas.Add(Reserva);
+                                    uDatos.Guardar(frmFecha.Fecha);
+                                    ShowMessage('Operación realizada con éxito');
                                 end;
-                                uDatos.Reservas.Add(Reserva);
-                                uDatos.Guardar(frmFecha.Fecha);
-                                ShowMessage('Operación realizada con éxito');
                             end;
                         finally
                             frmDatos.Free;

@@ -108,10 +108,10 @@ object frmAnularCompra: TfrmAnularCompra
     TabOrder = 2
   end
   object Button1: TButton
-    Left = 120
+    Left = 96
     Height = 40
     Top = 117
-    Width = 112
+    Width = 128
     Caption = 'ACEPTAR'
     Font.Height = -17
     Font.Name = 'Sans'
@@ -121,10 +121,10 @@ object frmAnularCompra: TfrmAnularCompra
     TabOrder = 3
   end
   object Button2: TButton
-    Left = 248
+    Left = 233
     Height = 40
     Top = 117
-    Width = 112
+    Width = 127
     Caption = 'CANCELAR'
     Font.Height = -17
     Font.Name = 'Sans'
