@@ -43,34 +43,39 @@ var
     Localidad : TLocalidad;
 begin
     LocalidadAnulada := False;
-    if cbTipo.Text = 'Patio' then
-        Localidad := Sala.Buscar(Patio, seFila.Value, seNumero.Value)
-    else if cbTipo.Text = 'Primera Planta' then
-        Localidad := Sala.Buscar(PrimeraPlanta, seFila.Value, seNumero.Value)
-    else if cbTipo.Text = 'Palco' then
-        Localidad := Sala.Buscar(Palco, seNumero.Value, seNumero.Value);
-
-    if Localidad <> nil then
+    if cbTipo.Text = '' then
     begin
-        if not Sala.LocalidadValida(Localidad) then
-            ShowMessage('Localidad no válida')
-        else
+        if cbTipo.Text = 'Patio' then
+            Localidad := Sala.Buscar(Patio, seFila.Value, seNumero.Value)
+        else if cbTipo.Text = 'Primera Planta' then
+            Localidad := Sala.Buscar(PrimeraPlanta, seFila.Value, seNumero.Value)
+        else if cbTipo.Text = 'Palco' then
+            Localidad := Sala.Buscar(Palco, seNumero.Value, seNumero.Value);
+
+        if Localidad <> nil then
         begin
-            if Localidad.Estado = Libre then
-                ShowMessage('La localidad seleccionada ya está libre')
-            else if Localidad.Estado = Reservada then
-                ShowMessage('Esta localidad se encuentra reservada')
+            if not Sala.LocalidadValida(Localidad) then
+                ShowMessage('Localidad no válida')
             else
             begin
-                Localidad.Estado := Libre;
-                LocalidadAnulada := True;
-                ShowMessage ('Localidad anulada');
-                Self.Close;
+                if Localidad.Estado = Libre then
+                    ShowMessage('La localidad seleccionada ya está libre')
+                else if Localidad.Estado = Reservada then
+                    ShowMessage('Esta localidad se encuentra reservada')
+                else
+                begin
+                    Localidad.Estado := Libre;
+                    LocalidadAnulada := True;
+                    ShowMessage ('Localidad anulada');
+                    Self.Close;
+                end;
             end;
-        end;
+        end
+        else
+            ShowMessage ('Localidad no encontrada');
     end
     else
-        ShowMessage ('Localidad no encontrada');
+        ShowMessage('Es necesario indicar el tipo de localidad');
 end;
 
 procedure TfrmAnularCompra.Button2Click(Sender: TObject);

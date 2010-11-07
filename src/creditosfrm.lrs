@@ -1,21 +1,11 @@
 { Este es un archivo de recurso de Lazarus generado automáticamente }
 
-LazarusResources.Add('TForm1','FORMDATA',[
-  'TPF0'#6'TForm1'#5'Form1'#4'Left'#3'"'#1#6'Height'#3','#1#3'Top'#3#199#0#5'Wi'
-  +'dth'#3#144#1#7'Caption'#6#5'Form1'#12'ClientHeight'#3','#1#11'ClientWidth'#3
-  +#144#1#10'LCLVersion'#6#8'0.9.28.2'#0#9'TNotebook'#9'Notebook1'#4'Left'#2#127
-  +#6'Height'#3#200#0#3'Top'#2'E'#5'Width'#3#200#0#8'TabOrder'#2#0#0#0#9'TCheck'
-  +'Box'#9'CheckBox1'#4'Left'#3#210#0#6'Height'#2#22#3'Top'#2#17#5'Width'#2'a'#7
-  +'Caption'#6#9'CheckBox1'#8'OnChange'#7#15'CheckBox1Change'#8'TabOrder'#2#1#0
-  +#0#0
-]);
-
 LazarusResources.Add('TfrmCreditos','FORMDATA',[
   'TPF0'#12'TfrmCreditos'#11'frmCreditos'#4'Left'#3'"'#1#6'Height'#3','#1#3'Top'
   +#3#199#0#5'Width'#3#144#1#7'Caption'#6#11'frmCreditos'#12'ClientHeight'#3','
   +#1#11'ClientWidth'#3#144#1#8'OnCreate'#7#10'FormCreate'#10'LCLVersion'#6#8'0'
-  +'.9.28.2'#0#6'TLabel'#6'Label1'#4'Left'#2'0'#6'Height'#2#24#3'Top'#2' '#5'Wi'
-  +'dth'#2'='#7'Caption'#6#5'SIGEL'#11'Font.Height'#2#231#9'Font.Name'#6#4'Sans'
+  +'.9.28.2'#0#6'TLabel'#6'Label1'#4'Left'#2'0'#6'Height'#2#30#3'Top'#2' '#5'Wi'
+  +'dth'#2'N'#7'Caption'#6#5'SIGEL'#11'Font.Height'#2#231#9'Font.Name'#6#4'Sans'
   +#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#0#0#6'TLab'
   +'el'#6'Label2'#4'Left'#2'x'#6'Height'#2#18#3'Top'#2'&'#5'Width'#3#224#0#7'Ca'
   +'ption'#6'"Sistema de gesti'#195#179'n de localidades'#11'ParentColor'#8#0#0

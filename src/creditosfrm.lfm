@@ -10,9 +10,9 @@ object frmCreditos: TfrmCreditos
   LCLVersion = '0.9.28.2'
   object Label1: TLabel
     Left = 48
-    Height = 24
+    Height = 30
     Top = 32
-    Width = 61
+    Width = 78
     Caption = 'SIGEL'
     Font.Height = -25
     Font.Name = 'Sans'

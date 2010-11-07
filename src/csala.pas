@@ -207,8 +207,8 @@ begin
                             or (Localidad.Numero = 7) or (Localidad.Numero = 8))))
     else if Localidad.Tipo = Palco then
         LocalidadValida := ((Localidad.Numero >=1) and (Localidad.Numero <=4))
-    else
-        LocalidadValida := True;
+    else if Localidad.Tipo = PrimeraPlanta then
+        LocalidadValida := (Localidad.Fila = 1) or (Localidad.Fila = 2);
 end;
 
 function TSala.EstaCompleto: boolean;
