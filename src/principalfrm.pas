@@ -236,7 +236,6 @@ begin
         if frmFecha.FechaMarcada then
         begin
             uDatos.Cargar(frmFecha.Fecha);
-            uDatos.LogearReservas;
             if uDatos.Sala.EstaCompleto then
                 PasarAListaDeEspera(frmFecha.Fecha)
             else
@@ -262,6 +261,7 @@ begin
                                     begin
                                         frmSeleccionButaca.Localidades[i].Estado := Reservada;
                                         Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                        uDatos.LogearReservas;
                                         uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                     end;
                                 end;

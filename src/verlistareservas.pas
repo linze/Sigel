@@ -52,7 +52,7 @@ begin
     begin
         Localidad := Reserva.GetLocalidad(i);
         case Localidad.Tipo of
-        Patio: TmpStr := TmpStr + 'Pat: F' + IntToStr(Localidad.Fila) + 'N:' + IntToStr(Localidad.Numero) + '  ';
+        Patio: TmpStr := TmpStr + 'Pat: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
         PrimeraPlanta: TmpStr := TmpStr + 'PP: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
         Palco: TmpStr := TmpStr + 'Palco: ' + IntToStr(Localidad.Numero) + '  ';
         end;
@@ -67,7 +67,7 @@ end;
 procedure TfrmVerListaReservas.FormShow(Sender: TObject);
 var
     i: integer;
-begin
+begin                                                                                                                  1
     gridVisualizacion.RowCount := 1;
     if uDatos.Reservas.Count <> 0 then
     begin

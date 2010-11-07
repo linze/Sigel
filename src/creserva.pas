@@ -67,6 +67,8 @@ begin
 
     if Localidad.Tipo = Palco then
         Localidad.Fila := Localidad.Numero;
+
+    Result := Localidad;
 end;
 
 function TReserva.LocalidadToStr(Localidad: TLocalidad): String;
@@ -88,12 +90,14 @@ begin
         else
             TmpStr := TmpStr + IntToStr(Localidad.Fila);
         TmpStr := TmpStr + IntToStr(Localidad.Numero);
+        Result := TmpStr;
     end;
 end;
 
 function TReserva.GetFLocalidad(Indice: integer): TLocalidad;
 var
     TmpStr : String;
+    i,j    : integer;
 begin
     {* Formato:
      * -TFN
@@ -101,7 +105,11 @@ begin
      * En el caso del paco, F es siempre 0.
      * En caso de estar vacío, F y N son 0.
      * T valdra A(Patio) B(P.Planta), C(Palco) o X(Vacio) }
-    TmpStr := Copy(Self.FLocalidades,Indice + 1,3);
+    j := 1;
+    if Indice <> 1 then
+        for i:=1 to Indice - 1 do
+            j := j + 3;
+    TmpStr := Copy(Self.FLocalidades,j,3);
     Result := StrToLocalidad(TmpStr);
 end;
 
