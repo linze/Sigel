@@ -1435,3 +1435,14 @@ Fila: 2, Numero: 7
 Estado: OCUPADA
 Fila: 1, Numero: 8
 Estado: OCUPADA
+
+Nombre: Mario Fernandez Cantidad: 4
+Dni: 111111111 Telefono: 123123123 Email: asdfasf
+Fila: 4, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 1, Numero: 8
+Estado: OCUPADA

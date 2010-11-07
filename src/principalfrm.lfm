@@ -1,7 +1,7 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 206
+  Left = 332
   Height = 526
-  Top = 108
+  Top = 137
   Width = 816
   ActiveControl = Panel1
   Caption = 'Sigel'

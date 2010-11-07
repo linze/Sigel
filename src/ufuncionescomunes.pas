@@ -33,7 +33,6 @@ end;
 function LocalidadToString(Localidad: TLocalidad): string;
 var
     TmpStr    : string;
-    i         : integer;
 begin
     case Localidad.Tipo of
         Patio: TmpStr := 'Pat: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';

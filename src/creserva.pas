@@ -156,8 +156,6 @@ begin
 end;
 
 procedure TReserva.LeerDatos(Lector: TReader);
-var
-    i: integer;
 begin
     Self.FNombre := Lector.ReadString;
     Self.FDni := Lector.ReadString;
@@ -168,8 +166,6 @@ begin
 end;
 
 procedure TReserva.EscribirDatos(Escritor: TWriter);
-var
-    i : integer;
 begin
     Escritor.WriteString(Self.FNombre);
     Escritor.WriteString(Self.FDni);

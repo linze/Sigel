@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, Grids, StdCtrls, uDatos, CReserva, CTipoLocalidad, CLocalidad,
+  ExtCtrls, Grids, StdCtrls, uDatos, CReserva, CLocalidad,
   uFuncionesComunes;
 
 type
