@@ -31,7 +31,8 @@ interface
             function LocalidadValida(Localidad: TLocalidad): boolean;
             function EstaCompleto : boolean;
             // Devuelve un número de 1..4
-            function NumeroLibres : integer;
+            function NumeroLibres(Tipo: TTipoLocalidad) : integer;
+            function ObtenerLibre (Tipo:TTipoLocalidad) : TLocalidad;
 
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
@@ -80,9 +81,6 @@ begin
     inherited Create;
 end;
 
-// TODO: Estudiar si este método ha de separarse en varios métodos
-// privados de búsqueda para cada tipo de localidad. Implementarlo
-// todo en el mismo puede llegar a ser engorroso.
 function TSala.Buscar(Tipo: TTipoLocalidad; Fila: Integer;
   Numero: Integer): TLocalidad;
 var
@@ -255,7 +253,7 @@ begin
     EstaCompleto := not EncontradoLibre;
 end;
 
-function TSala.NumeroLibres: integer;
+function TSala.NumeroLibres (Tipo : TTipoLocalidad): integer;
 var
     i,j     : integer;
     cuenta  : integer;
@@ -264,50 +262,108 @@ begin
     EncontradasCuatro := False;
     cuenta := 0;
 
-    i := 1;
-    while (not EncontradasCuatro) and (i <=4) do
-    begin
-        j := 1;
-        while (not EncontradasCuatro) and (j <= 8) do
-        begin
-             if LocalidadValida(Self.FPatio[i,j]) then
-                if not Self.FPatio[i,j].EstaOcupado then
-                begin
-                    cuenta := cuenta + 1;
-                    EncontradasCuatro := (cuenta >= 4);
-                end;
-            j := j + 1;
-        end;
-        i := i + 1;
-    end;
-
-    i := 1;
-    while (not EncontradasCuatro) and (i <=2) do
-    begin
-        j := 1;
-        while (not EncontradasCuatro) and (j <= 8) do
-        begin
-            if not Self.FPrimeraPlanta[i,j].EstaOcupado then
-            begin
-                cuenta := cuenta + 1;
-                EncontradasCuatro := (cuenta >= 4);
-            end;
-        end;
-        i := i + 1;
-    end;
-
-    i := 1;
-    while (not EncontradasCuatro) and (i <= 4) do
-    begin
-        if not Self.FPalco[i].EstaOcupado then
-        begin
-            cuenta := cuenta + 4;
-            EncontradasCuatro := (cuenta >= 4);
-        end;
-        i := i + 1;
+    case Tipo of
+    Patio:          begin
+                        i := 1;
+                        while (not EncontradasCuatro) and (i <=4) do
+                        begin
+                            j := 1;
+                            while (not EncontradasCuatro) and (j <= 8) do
+                            begin
+                                 if LocalidadValida(Self.FPatio[i,j]) then
+                                    if not Self.FPatio[i,j].EstaOcupado then
+                                    begin
+                                        cuenta := cuenta + 1;
+                                        EncontradasCuatro := (cuenta >= 4);
+                                    end;
+                                j := j + 1;
+                            end;
+                            i := i + 1;
+                        end;
+                    end;
+    PrimeraPlanta:  begin
+                        i := 1;
+                        while (not EncontradasCuatro) and (i <=2) do
+                        begin
+                            j := 1;
+                            while (not EncontradasCuatro) and (j <= 8) do
+                            begin
+                                if not Self.FPrimeraPlanta[i,j].EstaOcupado then
+                                begin
+                                    cuenta := cuenta + 1;
+                                    EncontradasCuatro := (cuenta >= 4);
+                                end;
+                            end;
+                            i := i + 1;
+                        end;
+                    end;
+    Palco:          begin
+                        i := 1;
+                        while (not EncontradasCuatro) and (i <= 4) do
+                        begin
+                            if not Self.FPalco[i].EstaOcupado then
+                            begin
+                                cuenta := cuenta + 4;
+                                EncontradasCuatro := (cuenta >= 4);
+                            end;
+                            i := i + 1;
+                        end;
+                    end;
     end;
 
     result := cuenta;
+end;
+
+function TSala.ObtenerLibre(Tipo: TTipoLocalidad): TLocalidad;
+var
+    i,j     : integer;
+begin
+
+    case Tipo of
+    Patio:          begin
+                        i := 1;
+                        while (i <=4) do
+                        begin
+                            j := 1;
+                            while (j <= 8) do
+                            begin
+                                 if LocalidadValida(Self.FPatio[i,j]) then
+                                    if not Self.FPatio[i,j].EstaOcupado then
+                                    begin
+                                        result := Self.FPatio[i,j];
+                                    end;
+                                j := j + 1;
+                            end;
+                            i := i + 1;
+                        end;
+                    end;
+    PrimeraPlanta:  begin
+                        i := 1;
+                        while (i <=2) do
+                        begin
+                            j := 1;
+                            while (j <= 8) do
+                            begin
+                                if not Self.FPrimeraPlanta[i,j].EstaOcupado then
+                                begin
+                                    result := Self.FPrimeraPlanta[i,j];
+                                end;
+                            end;
+                            i := i + 1;
+                        end;
+                    end;
+    Palco:          begin
+                        i := 1;
+                        while (i <= 4) do
+                        begin
+                            if not Self.FPalco[i].EstaOcupado then
+                            begin
+                                result := Self.FPalco[i];
+                            end;
+                            i := i + 1;
+                        end;
+                    end;
+    end;
 end;
 
 initialization

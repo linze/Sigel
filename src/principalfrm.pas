@@ -9,7 +9,7 @@ uses
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
   AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm,
-  VerListaReservas;
+  VerListaReservas, CTipoLocalidad, CLocalidad;
 
 type
 
@@ -383,9 +383,31 @@ begin
 end;
 
 procedure TfrmPrincipal.ProcesarListaEspera;
+var
+    SalaLlena, FinDeLaLista : boolean;
+    i : integer;
+    Tipo : TTipoLocalidad;
+    Localidad: TLocalidad;
 begin
-    // TODO: Código para asignar localidades a los de la lista
-    // de espera tras la anulación
+    SalaLlena := False;
+    FinDeLaLista := False;
+    i := 0;
+    while (not SalaLlena) and (not FinDeLaLista) do
+    begin
+        Tipo := TEspera(Esperas.Items[i]).TipoLocalidad;
+        if (Sala.NumeroLibres(Tipo) >= TEspera(Esperas.Items[i]).Numero) then
+        begin
+            // TODO: Cambiar el estado de las localidades en TSala y los
+            // atributos FAsignado y FLocalidades de Espera.Items[i]
+            Localidad := Sala.ObtenerLibre(Tipo);
+            Localidad.Estado := Comprada;
+
+
+        end;
+        i := i + 1;
+        FinDeLaLista := (i = Esperas.Count);
+        SalaLlena := Sala.EstaCompleto;
+    end;
 end;
 
 procedure TfrmPrincipal.PasarAListaDeEspera (Fecha: TDateTime);

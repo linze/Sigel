@@ -50,7 +50,6 @@ procedure TfrmFecha.ComprobarFecha (Fecha : TDateTime);
 var
     TmpFecha : TDateTime;
 begin
-    // TODO: Hacer usable para reservas
     TmpFecha := IncMonth(DateOf(Now));
     if CompareDate(Fecha, TmpFecha) = -1 then
     begin
