@@ -425,10 +425,14 @@ begin
         Espera := TEspera(Esperas.Items[i]);
         if (Sala.NumeroLibres(Tipo) >= Espera.Numero) then
         begin
-            Localidad := Sala.ObtenerLibre(Tipo);
-            Localidad.Estado := Comprada;
-            Espera.Asignada := True;
-            Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+            for j:=1 to Espera.Numero do
+            begin
+                Localidad := Sala.ObtenerLibre(Tipo);
+                Localidad.Estado := Comprada;
+                Espera.Asignada := True;
+                Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+
+            end;
             Esperas.Items[i] := Espera;
         end;
         i := i + 1;

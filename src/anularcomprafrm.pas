@@ -43,7 +43,7 @@ var
     Localidad : TLocalidad;
 begin
     LocalidadAnulada := False;
-    if cbTipo.Text = '' then
+    if cbTipo.Text <> '' then
     begin
         if cbTipo.Text = 'Patio' then
             Localidad := Sala.Buscar(Patio, seFila.Value, seNumero.Value)
