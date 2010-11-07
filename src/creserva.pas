@@ -109,12 +109,14 @@ procedure TReserva.SetFLocalidad(Indice: integer; Localidad: TLocalidad);
 var
     Localidades : array [1..4] of TLocalidad;
     TmpStr : string;
-    i      : integer;
+    i,j      : integer;
 begin
+    j := 1;
     for i:=1 to 4 do
     begin
         Localidades[i] := TLocalidad.Create;
-        Localidades[i] := StrToLocalidad(Copy(Self.FLocalidades,Indice + 1,3));
+        Localidades[i] := StrToLocalidad(Copy(Self.FLocalidades,j,3));
+        j := j + 3;
     end;
 
     Localidades[Indice] := Localidad;
@@ -122,8 +124,7 @@ begin
     TmpStr := '';
     for i:=1 to 4 do
     begin
-        TmpStr := TmpStr + LocalidadToStr(Localidades[Indice]);
-        Localidades[Indice].Free;
+        TmpStr := TmpStr + LocalidadToStr(Localidades[i]);
     end;
     Self.FLocalidades := TmpStr;
 end;
@@ -131,6 +132,7 @@ end;
 constructor TReserva.Create;
 begin
     Self.FCantidad := 0;
+    Self.FLocalidades := 'X00X00X00X00';
     inherited Create;
 end;
 
