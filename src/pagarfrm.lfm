@@ -2,12 +2,12 @@ object frmPagar: TfrmPagar
   Left = 371
   Height = 238
   Top = 222
-  Width = 298
+  Width = 316
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Abone la operación'
   ClientHeight = 238
-  ClientWidth = 298
+  ClientWidth = 316
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poScreenCenter
@@ -25,7 +25,7 @@ object frmPagar: TfrmPagar
     ParentFont = False
   end
   object lbCantidad: TLabel
-    Left = 200
+    Left = 219
     Height = 20
     Top = 9
     Width = 69

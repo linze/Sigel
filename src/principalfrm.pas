@@ -279,7 +279,7 @@ begin
                                     ShowMessage('No se puede realizar más de una reserva por persona')
                                 else
                                 begin
-                                    if PedirPago(frmSeleccionButacas.GastoTotal) then
+                                    if PedirPago(frmSeleccionButaca.GastoTotal) = True then
                                     begin
                                         Reserva := TReserva.Create;
                                         Reserva.Nombre := frmDatos.Nombre;
@@ -401,13 +401,11 @@ begin
     frmPagar := TFrmPagar.Create(Self);
     try
         frmPagar.Cantidad := Cantidad;
-        frmPagar.lbCantidad.Caption := IntToStr(Cantidad) + ' euros';
         frmPagar.ShowModal;
         Pagado := frmPagar.PagoAceptado;
     finally
         frmPagar.Free;
     end;
-
     result := Pagado;
 end;
 
