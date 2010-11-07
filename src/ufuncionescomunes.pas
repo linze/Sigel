@@ -4,8 +4,11 @@ unit uFuncionesComunes;
 
 interface
 
-uses
-  Classes, SysUtils; 
+    uses
+        Classes, SysUtils, CLocalidad, CTipoLocalidad;
+
+    function EsEmail(EMail: string): Boolean;
+    function LocalidadesToString(Localidad: TLocalidad): string;
 
 implementation
 
@@ -25,6 +28,19 @@ begin
         end
     else
         Result := false;
+end;
+
+function LocalidadesToString(Localidad: TLocalidad): string;
+var
+    TmpStr    : string;
+    i         : integer;
+begin
+    case Localidad.Tipo of
+        Patio: TmpStr := 'Pat: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
+        PrimeraPlanta: TmpStr := 'PP: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
+        Palco: TmpStr := 'Palco: ' + IntToStr(Localidad.Numero) + '  ';
+    end;
+    Result := TmpStr;
 end;
 
 

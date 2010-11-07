@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, Grids, StdCtrls, uDatos, CReserva, CTipoLocalidad, CLocalidad;
+  ExtCtrls, Grids, StdCtrls, uDatos, CReserva, CTipoLocalidad, CLocalidad,
+  uFuncionesComunes;
 
 type
 
@@ -51,11 +52,7 @@ begin
     for i:=1 to Reserva.Cantidad do
     begin
         Localidad := Reserva.GetLocalidad(i);
-        case Localidad.Tipo of
-        Patio: TmpStr := TmpStr + 'Pat: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
-        PrimeraPlanta: TmpStr := TmpStr + 'PP: F' + IntToStr(Localidad.Fila) + 'N' + IntToStr(Localidad.Numero) + '  ';
-        Palco: TmpStr := TmpStr + 'Palco: ' + IntToStr(Localidad.Numero) + '  ';
-        end;
+        TmpStr := TmpStr + uFuncionesComunes.LocalidadesToString(Localidad);
     end;
     Result := TmpStr;
 end;
