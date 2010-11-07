@@ -946,3 +946,470 @@ Fila: 2, Numero: 7
 Estado: OCUPADA
 Fila: 2, Numero: 8
 Estado: OCUPADA
+
+Nombre: dafs Cantidad: 2
+Dni: SADF Telefono: sdf Email: fasd
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: sdfas Cantidad: 2
+Dni: SDFADS Telefono: dfs Email: dfsdf
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 1, Numero: 7
+Estado: OCUPADA
+
+Nombre: dafs Cantidad: 2
+Dni: SADF Telefono: sdf Email: fasd
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: re Cantidad: 1
+Dni: 333333333 Telefono: ds Email: sf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+
+Nombre: dafs Cantidad: 2
+Dni: SADF Telefono: sdf Email: fasd
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: re Cantidad: 1
+Dni: 333333333 Telefono: ds Email: sf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+
+Nombre: dafs Cantidad: 2
+Dni: SADF Telefono: sdf Email: fasd
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: re Cantidad: 1
+Dni: 333333333 Telefono: ds Email: sf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+
+Nombre: dafs Cantidad: 2
+Dni: SADF Telefono: sdf Email: fasd
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: re Cantidad: 1
+Dni: 333333333 Telefono: ds Email: sf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+
+Nombre: asd Cantidad: 3
+Dni: 222222222 Telefono: sd Email: d
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+
+Nombre: dafs Cantidad: 2
+Dni: SADF Telefono: sdf Email: fasd
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: re Cantidad: 1
+Dni: 333333333 Telefono: ds Email: sf
+Fila: 3, Numero: 3
+Estado: OCUPADA
+
+Nombre: asd Cantidad: 3
+Dni: 222222222 Telefono: sd Email: d
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 1, Numero: 2
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: t Cantidad: 4
+Dni: 555555555 Telefono: 5 Email: 5
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 2, Numero: 8
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: t Cantidad: 4
+Dni: 555555555 Telefono: 5 Email: 5
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 2, Numero: 8
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: t Cantidad: 4
+Dni: 555555555 Telefono: 5 Email: 5
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 2, Numero: 8
+Estado: OCUPADA
+
+Nombre: laura Cantidad: 3
+Dni: 222222222 Telefono: a Email: a
+Fila: 3, Numero: 2
+Estado: OCUPADA
+Fila: 3, Numero: 3
+Estado: OCUPADA
+Fila: 3, Numero: 4
+Estado: OCUPADA
+
+Nombre: fran Cantidad: 3
+Dni: 333333333 Telefono: b Email: b
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+Fila: 3, Numero: 7
+Estado: OCUPADA
+
+Nombre: pepe Cantidad: 4
+Dni: 444444444 Telefono: c Email: c
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: t Cantidad: 4
+Dni: 555555555 Telefono: 5 Email: 5
+Fila: 2, Numero: 5
+Estado: OCUPADA
+Fila: 2, Numero: 6
+Estado: OCUPADA
+Fila: 2, Numero: 7
+Estado: OCUPADA
+Fila: 2, Numero: 8
+Estado: OCUPADA

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, uDatos, CReserva, CEstadoLocalidad, CLocalidad;
+  StdCtrls, uDatos, CReserva, CEstadoLocalidad, CLocalidad, CEspera;
 
 type
 
@@ -68,25 +68,60 @@ procedure TfrmAnularReserva.Anular(sDni : String);
 var
     existeReserva : boolean;
     seguirBuscando : boolean;
-    i,j, cantidad : integer;
+    i,j,k, cantidad : integer;
+    numEsperas      : integer;
     Localidad : TLocalidad;
+    completo  : boolean;
+    esperado : boolean;
+    asignadas : string;
 begin
     existeReserva := False;
     seguirBuscando := True;
+    esperado := False;
     i := 0;
     uDatos.LogearReservas;
+    completo := uDatos.Sala.EstaCompleto;
     while (seguirBuscando) and (i < uDatos.Reservas.Count) do
     begin
         if TReserva(Reservas.Items[i]).Dni = sDni then
         begin
             existeReserva := True;
             seguirBuscando := False;
+            asignadas := '';
             cantidad := TReserva(Reservas.Items[i]).Cantidad;
+            if completo then
+            begin
+                 numEsperas := uDatos.Esperas.Count;
+                 k := 0;
+                 while not esperado do
+                 begin
+                     if (TEspera(uDatos.Esperas.Items[i]).Numero) < (cantidad + 1) then
+                     begin
+                          TEspera(uDatos.Esperas.Items[i]).Asignada := True;
+                          for j := 0 to cantidad do
+                          begin
+                               Localidad := TReserva(Reservas.Items[i]).GetLocalidad(j);
+                               Localidad.Estado := Comprada;
+                               Sala.Cambiar(Localidad);
+                               asignadas := asignadas + ' Tipo: ' + IntToStr(Ord(Localidad.Tipo)) + ' Fila: ' + IntToStr(Localidad.Fila) + ' Numero: ' + IntToStr(Localidad.Numero) + ' || ';
+                          end;
+                          TEspera(uDatos.Esperas.Items[i]).LocalidadesAsignadas := asignadas;
+                          esperado := True;
+                     end;
+                     if k = numEsperas then
+                        esperado := True
+                     else
+                         k := k + 1;
+                 end;
+            end
+            else
+            begin
             for j := 0 to cantidad do
             begin
                 Localidad := TReserva(Reservas.Items[i]).GetLocalidad(j);
                 Localidad.Estado := Libre;
                 Sala.Cambiar(Localidad);
+            end;
             end;
             Reservas.Delete(i);
         end

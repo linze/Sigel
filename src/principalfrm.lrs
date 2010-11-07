@@ -1,5 +1,7 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmPrincipal','FORMDATA',[
-  'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3#209#0#6'Height'#3#14#2#3
+  'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3#206#0#6'Height'#3#14#2#3
   +'Top'#2'l'#5'Width'#3'0'#3#13'ActiveControl'#7#6'Panel1'#7'Caption'#6#5'Sige'
   +'l'#12'ClientHeight'#3#14#2#11'ClientWidth'#3'0'#3#8'OnCreate'#7#10'FormCrea'
   +'te'#8'Position'#7#14'poScreenCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TPane'
@@ -30,8 +32,8 @@ LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   +'lign'#7#8'alClient'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'['#1#11'C'
   +'lientWidth'#3'0'#3#8'TabOrder'#2#2#0#9'TGroupBox'#9'GroupBox1'#4'Left'#2#0#6
   +'Height'#3'['#1#3'Top'#2#0#5'Width'#3'0'#3#5'Align'#7#8'alClient'#7'Caption'
-  +#6#30'Elija la operaci'#195#179'n a realizar'#12'ClientHeight'#3'I'#1#11'Cli'
-  +'entWidth'#3'.'#3#8'TabOrder'#2#0#0#7'TButton'#9'btnCompra'#4'Left'#3#245#1#6
+  +#6#30'Elija la operaci'#195#179'n a realizar'#12'ClientHeight'#3'W'#1#11'Cli'
+  +'entWidth'#3','#3#8'TabOrder'#2#0#0#7'TButton'#9'btnCompra'#4'Left'#3#245#1#6
   +'Height'#2'4'#4'Hint'#6'#Evite colas y compre ya su entrada.'#3'Top'#2#23#5
   +'Width'#3#203#0#7'Caption'#6#7'COMPRAR'#11'Font.Height'#2#239#9'Font.Name'#6
   +#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#14'btnCompraClick'#12'On'
