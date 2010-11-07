@@ -11,7 +11,7 @@ uses
 type
 
   TColorButaca = (Libre, Ocupada, Seleccionada);
-  TModoSeleccion = (Reserva, Compra);
+  TModoSeleccion = (ModoReserva, ModoCompra);
 
   { TfrmSeleccionButacas }
 
@@ -334,7 +334,7 @@ end;
 
 function TfrmSeleccionButacas.CalcularPrecio(Tipo: TTipoLocalidad): integer;
 begin
-    if Self.Modo = Reserva then
+    if Self.Modo = ModoReserva then
         case Tipo of
         Patio: Result := 5;
         PrimeraPlanta: Result := 2;

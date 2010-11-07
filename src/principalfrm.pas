@@ -147,6 +147,7 @@ begin
             else
             begin
                 frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+                frmSeleccionButaca.Modo := ModoCompra;
                 try
                     frmSeleccionButaca.ShowModal;
                     if (frmSeleccionButaca.NumDeMarcadas > 0) and (frmSeleccionButaca.Aceptado) then
@@ -260,6 +261,7 @@ begin
             else
             begin
                 frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+                frmSeleccionButaca.Modo := ModoReserva;
                 try
                     frmSeleccionButaca.ShowModal;
                     if (frmSeleccionButaca.Aceptado) and (frmSeleccionButaca.NumDeMarcadas > 0) then
