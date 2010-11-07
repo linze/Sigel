@@ -1,46 +1,48 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmPrincipal','FORMDATA',[
-  'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3'L'#1#6'Height'#3#14#2#3'T'
-  +'op'#3#137#0#5'Width'#3'0'#3#13'ActiveControl'#7#6'Panel1'#7'Caption'#6#5'Si'
-  +'gel'#12'ClientHeight'#3#14#2#11'ClientWidth'#3'0'#3#8'OnCreate'#7#10'FormCr'
-  +'eate'#8'Position'#7#14'poScreenCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TPa'
-  +'nel'#6'Panel1'#4'Left'#2#0#6'Height'#2'z'#3'Top'#2#0#5'Width'#3'0'#3#5'Alig'
-  +'n'#7#5'alTop'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'z'#11'ClientWid'
-  +'th'#3'0'#3#8'TabOrder'#2#0#0#6'TLabel'#7'lbAdmin'#4'Left'#3#176#2#6'Height'
-  +#2#14#3'Top'#2#2#5'Width'#2'|'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6
-  +#22'Acceso administraci'#195#179'n'#11'Font.Height'#2#245#9'Font.Name'#6#4'S'
-  +'ans'#11'ParentColor'#8#10'ParentFont'#8#7'OnClick'#7#12'lbAdminClick'#0#0#6
-  +'TImage'#6'Image1'#4'Left'#3#224#0#6'Height'#2'K'#3'Top'#2#24#5'Width'#3#128
-  +#1#8'AutoSize'#9#12'Picture.Data'#10#223'C'#0#0#23'TPortableNetworkGraphic'
-  +#195'C'#0#0#137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#1#128#0#0#0'K'#8#6#0#0#0
-  +'y'#159'P|'#0#0#0#9'pHYs'#0#0#14#196#0#0#14#196#1#149'+'#14#27#0#0#10'OiCCPP'
-  +'hotoshop ICC profile'#0#0'x'#218#157'SgTS'#233#22'='#247#222#244'BK'#136#128
-  +#148'KoR'#21#8' RB'#139#128#20#145'&*!'#9#16'J'#136'!'#161#217#21'Q'#193#17
-  +'EE'#4#27#200#160#136#3#142#142#128#140#21'Q,'#12#138#10#216#7#228'!'#162#142
-  +#131#163#136#138#202#251#225'{'#163'k'#214#188#247#230#205#254#181#215'>'#231
-  +#172#243#157#179#207#7#192#8#12#150'H3Q5'#128#12#169'B'#30#17#224#131#199#196
-  +#198#225#228'.@'#129#10'$p'#0#16#8#179'd!s'#253'#'#1#0#248'~<<+"'#192#7#190#0
-  +#1'x'#211#11#8#0#192'M'#155#192'0'#28#135#255#15#234'B'#153'\'#1#128#132#1
-  +#192't'#145'8K'#8#128#20#0'@z'#142'B'#166#0'@F'#1#128#157#152'&S'#0#160#4#0
-  +'`'#203'cb'#227#0'P-'#0'`'''#127#230#211#0#128#157#248#153'{'#1#0'['#148'!'
-  +#21#1#160#145#0' '#19'e'#136'D'#0'h;'#0#172#207'V'#138'E'#0'X0'#0#20'fK'#196
-  +'9'#0#216'-'#0'0IWfH'#0#176#183#0#192#206#16#11#178#0#8#12#0'0Q'#136#133')'#0
-  +#4'{'#0'`'#200'##x'#0#132#153#0#20'F'#242'W<'#241'+'#174#16#231'*'#0#0'x'#153
-  +#178'<'#185'$9E'#129'['#8'-q'#7'WW.'#30'('#206'I'#23'+'#20'6a'#2'a'#154'@.'
-  +#194'y'#153#25'2'#129'4'#15#224#243#204#0#0#160#145#21#17#224#131#243#253'x'
-  +#206#14#174#206#206'6'#142#182#14'_-'#234#191#6#255'"bb'#227#254#229#207#171
-  +'p@'#0#0#225't~'#209#254',/'#179#26#128';'#6#128'm'#254#162'%'#238#4'h^'#11
-  +#160'u'#247#139'f'#178#15'@'#181#0#160#233#218'W'#243'p'#248'~<<E'#161#144
-  +#185#217#217#229#228#228#216'J'#196'B[a'#202'W}'#254'g'#194'_'#192'W'#253'l'
-  +#249'~<'#252#247#245#224#190#226'$'#129'2]'#129'G'#4#248#224#194#204#244'L'
-  +#165#28#207#146#9#132'b'#220#230#143'G'#252#183#11#255#252#29#211'"'#196'Ib'
-  +#185'X*'#20#227'Q'#18'q'#142'D'#154#140#243'2'#165'"'#137'B'#146')'#197'%'
-  +#210#255'd'#226#223','#251#3'>'#223'5'#0#176'j>'#1'{'#145'-'#168']c'#3#246'K'
-  +''''#16'Xt'#192#226#247#0#0#242#187'o'#193#212'('#8#3#128'h'#131#225#207'w'
-  +#255#239'?'#253'G'#160'%'#0#128'fI'#146'q'#0#0'^D$.T'#202#179'?'#199#8#0#0'D'
-  +#160#129'*'#176'A'#27#244#193#24','#192#6#28#193#5#220#193#11#252'`6'#132'B$'
-  +#196#194'B'#16'B'#10'd'#128#28'r`)'#172#130'B('#134#205#176#29'*`/'#212'@'#29
-  +'4'#192'Qh'#134#147'p'#14'.'#194'U'#184#14'=p'#15#250'a'#8#158#193'('#188#129
-  +#9#4'A'#200#8#19'a!'#218#136#1'b'#138'X#'#142#8#23#153#133#248'!'#193'H'#4#18
+  'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3' '#1#6'Height'#3#18#2#3'T'
+  +'op'#2'z'#5'Width'#3'0'#3#13'ActiveControl'#7#6'Panel1'#7'Caption'#6#5'Sigel'
+  +#12'ClientHeight'#3#18#2#11'ClientWidth'#3'0'#3#8'OnCreate'#7#10'FormCreate'
+  +#8'Position'#7#14'poScreenCenter'#10'LCLVersion'#6#8'0.9.28.2'#0#6'TPanel'#6
+  +'Panel1'#4'Left'#2#0#6'Height'#2'z'#3'Top'#2#0#5'Width'#3'0'#3#5'Align'#7#5
+  +'alTop'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'z'#11'ClientWidth'#3'0'
+  +#3#8'TabOrder'#2#0#0#6'TLabel'#7'lbAdmin'#4'Left'#3#176#2#6'Height'#2#14#3'T'
+  +'op'#2#2#5'Width'#2'|'#9'Alignment'#7#14'taRightJustify'#7'Caption'#6#22'Acc'
+  +'eso administraci'#195#179'n'#11'Font.Height'#2#245#9'Font.Name'#6#4'Sans'#11
+  +'ParentColor'#8#10'ParentFont'#8#7'OnClick'#7#12'lbAdminClick'#0#0#6'TImage'
+  +#6'Image1'#4'Left'#3#224#0#6'Height'#2'K'#3'Top'#2#24#5'Width'#3#128#1#8'Aut'
+  +'oSize'#9#12'Picture.Data'#10#223'C'#0#0#23'TPortableNetworkGraphic'#195'C'#0
+  +#0#137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#1#128#0#0#0'K'#8#6#0#0#0'y'#159'P'
+  +'|'#0#0#0#9'pHYs'#0#0#14#196#0#0#14#196#1#149'+'#14#27#0#0#10'OiCCPPhotoshop'
+  +' ICC profile'#0#0'x'#218#157'SgTS'#233#22'='#247#222#244'BK'#136#128#148'Ko'
+  +'R'#21#8' RB'#139#128#20#145'&*!'#9#16'J'#136'!'#161#217#21'Q'#193#17'EE'#4
+  +#27#200#160#136#3#142#142#128#140#21'Q,'#12#138#10#216#7#228'!'#162#142#131
+  +#163#136#138#202#251#225'{'#163'k'#214#188#247#230#205#254#181#215'>'#231#172
+  +#243#157#179#207#7#192#8#12#150'H3Q5'#128#12#169'B'#30#17#224#131#199#196#198
+  +#225#228'.@'#129#10'$p'#0#16#8#179'd!s'#253'#'#1#0#248'~<<+"'#192#7#190#0#1
+  +'x'#211#11#8#0#192'M'#155#192'0'#28#135#255#15#234'B'#153'\'#1#128#132#1#192
+  +'t'#145'8K'#8#128#20#0'@z'#142'B'#166#0'@F'#1#128#157#152'&S'#0#160#4#0'`'
+  +#203'cb'#227#0'P-'#0'`'''#127#230#211#0#128#157#248#153'{'#1#0'['#148'!'#21#1
+  +#160#145#0' '#19'e'#136'D'#0'h;'#0#172#207'V'#138'E'#0'X0'#0#20'fK'#196'9'#0
+  +#216'-'#0'0IWfH'#0#176#183#0#192#206#16#11#178#0#8#12#0'0Q'#136#133')'#0#4'{'
+  +#0'`'#200'##x'#0#132#153#0#20'F'#242'W<'#241'+'#174#16#231'*'#0#0'x'#153#178
+  +'<'#185'$9E'#129'['#8'-q'#7'WW.'#30'('#206'I'#23'+'#20'6a'#2'a'#154'@.'#194
+  +'y'#153#25'2'#129'4'#15#224#243#204#0#0#160#145#21#17#224#131#243#253'x'#206
+  +#14#174#206#206'6'#142#182#14'_-'#234#191#6#255'"bb'#227#254#229#207#171'p@'
+  +#0#0#225't~'#209#254',/'#179#26#128';'#6#128'm'#254#162'%'#238#4'h^'#11#160
+  +'u'#247#139'f'#178#15'@'#181#0#160#233#218'W'#243'p'#248'~<<E'#161#144#185
+  +#217#217#229#228#228#216'J'#196'B[a'#202'W}'#254'g'#194'_'#192'W'#253'l'#249
+  +'~<'#252#247#245#224#190#226'$'#129'2]'#129'G'#4#248#224#194#204#244'L'#165
+  +#28#207#146#9#132'b'#220#230#143'G'#252#183#11#255#252#29#211'"'#196'Ib'#185
+  +'X*'#20#227'Q'#18'q'#142'D'#154#140#243'2'#165'"'#137'B'#146')'#197'%'#210
+  +#255'd'#226#223','#251#3'>'#223'5'#0#176'j>'#1'{'#145'-'#168']c'#3#246'K'''
+  +#16'Xt'#192#226#247#0#0#242#187'o'#193#212'('#8#3#128'h'#131#225#207'w'#255
+  +#239'?'#253'G'#160'%'#0#128'fI'#146'q'#0#0'^D$.T'#202#179'?'#199#8#0#0'D'#160
+  +#129'*'#176'A'#27#244#193#24','#192#6#28#193#5#220#193#11#252'`6'#132'B$'#196
+  +#194'B'#16'B'#10'd'#128#28'r`)'#172#130'B('#134#205#176#29'*`/'#212'@'#29'4'
+  +#192'Qh'#134#147'p'#14'.'#194'U'#184#14'=p'#15#250'a'#8#158#193'('#188#129#9
+  +#4'A'#200#8#19'a!'#218#136#1'b'#138'X#'#142#8#23#153#133#248'!'#193'H'#4#18
   +#139'$ '#201#136#20'Q"K'#145'5H1R'#138'T UH'#29#242'=r'#2'9'#135'\F'#186#145
   +';'#200#0'2'#130#252#134#188'G1'#148#129#178'Q='#212#12#181'C'#185#168'7'#26
   +#132'F'#162#11#208'dt1'#154#143#22#160#155#208'r'#180#26'='#140'6'#161#231
@@ -737,53 +739,60 @@ LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   +#8#16' '#12#0#1#2#4#8#16' '#12#0#1#2#4#8#16' '#12#0#1#2#4#8#16' '#12#0#1#2#4
   +#8#16' '#12#0#1#2#4#8#16' '#12#0#1#2#4#8#16' '#12#0#1#2#4#8#16' '#12#0#1#2#4
   +#8#16#248'5'#226#255#15#0#250#167#8#159'EvP'#146#0#0#0#0'IEND'#174'B`'#130#0
-  +#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'Height'#2'9'#3'Top'#3#213#1#5'Width'#3
-  +'0'#3#5'Align'#7#8'alBottom'#12'ClientHeight'#2'9'#11'ClientWidth'#3'0'#3#8
+  +#0#0#6'TPanel'#6'Panel2'#4'Left'#2#0#6'Height'#2'?'#3'Top'#3#211#1#5'Width'#3
+  +'0'#3#5'Align'#7#8'alBottom'#12'ClientHeight'#2'?'#11'ClientWidth'#3'0'#3#8
   +'TabOrder'#2#1#7'OnClick'#7#11'Panel2Click'#0#6'TLabel'#13'lbDescripcion'#4
-  +'Left'#2#4#6'Height'#2'0'#3'Top'#2#3#5'Width'#3'Y'#2#8'AutoSize'#8#7'Caption'
-  +#6#12'Descripci'#195#179'n'#11'Font.Height'#2#233#9'Font.Name'#6#4'Sans'#10
-  +'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#7'Visible'#8#0
-  +#0#6'TPanel'#6'Panel4'#4'Left'#3'Y'#2#6'Height'#2'7'#3'Top'#2#1#5'Width'#3
-  +#214#0#5'Align'#7#7'alRight'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2'7'
-  +#11'ClientWidth'#3#214#0#8'TabOrder'#2#0#0#7'TButton'#8'btnSalir'#4'Left'#2#9
-  +#6'Height'#2'4'#3'Top'#2#2#5'Width'#3#203#0#7'Caption'#6#5'SALIR'#11'Font.He'
-  +'ight'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'
-  +#7#13'btnSalirClick'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#0#0#6'TPanel'#6'Pa'
-  +'nel3'#4'Left'#2#0#6'Height'#3'['#1#3'Top'#2'z'#5'Width'#3'0'#3#5'Align'#7#8
-  +'alClient'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'['#1#11'ClientWidth'
-  +#3'0'#3#8'TabOrder'#2#2#0#9'TGroupBox'#9'GroupBox1'#4'Left'#2#0#6'Height'#3
-  +'['#1#3'Top'#2#0#5'Width'#3'0'#3#5'Align'#7#8'alClient'#7'Caption'#6#30'Elij'
-  +'a la operaci'#195#179'n a realizar'#12'ClientHeight'#3'W'#1#11'ClientWidth'
-  +#3','#3#8'TabOrder'#2#0#0#7'TButton'#9'btnCompra'#4'Left'#3#245#1#6'Height'#2
-  +'4'#4'Hint'#6'#Evite colas y compre ya su entrada.'#3'Top'#2#23#5'Width'#3
-  +#203#0#7'Caption'#6#7'COMPRAR'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'
-  +#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#14'btnCompraClick'#12'OnMouseEnt'
-  +'er'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'ParentF'
-  +'ont'#8#8'TabOrder'#2#0#0#0#7'TButton'#10'btnReserva'#4'Left'#2']'#6'Height'
-  +#2'4'#4'Hint'#6'9Realize su reserva abonando '#195#186'nicamente un 10% del '
-  +'total.'#3'Top'#2#23#5'Width'#3#203#0#7'Caption'#6#8'RESERVAR'#11'Font.Heigh'
-  +'t'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7
-  +#15'btnReservaClick'#12'OnMouseEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'
-  +#7#15'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#7'TButton'#16'bt'
-  +'nAnularReserva'#4'Left'#2']'#6'Height'#2'4'#4'Hint'#6'<'#194#161'Aviso! La '
-  +'anulaci'#195#179'n conlleva la p'#195#169'rdida del 10% abonado.'#3'Top'#2
-  ,'g'#5'Width'#3#203#0#7'Caption'#6#14'ANULAR RESERVA'#11'Font.Height'#2#239#9
-  +'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#21'btnAnula'
-  +'rReservaClick'#12'OnMouseEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15
-  +'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2#2#0#0#7'TButton'#15'btnAnul'
-  +'arCompra'#4'Left'#3#245#1#6'Height'#2'4'#3'Top'#2'g'#5'Width'#3#203#0#7'Cap'
-  +'tion'#6#13'ANULAR COMPRA'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'F'
-  +'ont.Style'#11#6'fsBold'#0#7'OnClick'#7#20'btnAnularCompraClick'#10'ParentFo'
-  +'nt'#8#8'TabOrder'#2#3#7'Visible'#8#0#0#7'TButton'#10'btnLEspera'#4'Left'#3
-  +#245#1#6'Height'#2'4'#3'Top'#3#182#0#5'Width'#3#203#0#7'Caption'#6#15'LISTA '
-  +'DE ESPERA'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6
-  +'fsBold'#0#7'OnClick'#7#15'btnLEsperaClick'#10'ParentFont'#8#8'TabOrder'#2#4
-  +#7'Visible'#8#0#0#7'TButton'#19'btnVisualizarEstado'#4'Left'#2']'#6'Height'#2
-  +'4'#3'Top'#3#5#1#5'Width'#3#203#0#7'Caption'#6#17'VISUALIZAR ESTADO'#11'Font'
-  +'.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnCli'
-  +'ck'#7#24'btnVisualizarEstadoClick'#10'ParentFont'#8#8'TabOrder'#2#5#7'Visib'
-  +'le'#8#0#0#7'TButton'#12'btnLReservas'#4'Left'#2']'#6'Height'#2'4'#3'Top'#3
-  +#182#0#5'Width'#3#203#0#7'Caption'#6#17'LISTA DE RESERVAS'#11'Font.Height'#2
-  +#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#17'bt'
-  +'nLReservasClick'#10'ParentFont'#8#8'TabOrder'#2#6#7'Visible'#8#0#0#0#0#0
+  +'Left'#2#4#6'Height'#2'<'#3'Top'#2#255#5'Width'#3'Y'#2#8'AutoSize'#8#7'Capti'
+  +'on'#6#12'Descripci'#195#179'n'#11'Font.Height'#2#233#9'Font.Name'#6#4'Sans'
+  +#10'Font.Style'#11#6'fsBold'#0#11'ParentColor'#8#10'ParentFont'#8#7'Visible'
+  +#8#0#0#6'TPanel'#6'Panel4'#4'Left'#3'Y'#2#6'Height'#2'='#3'Top'#2#1#5'Width'
+  +#3#214#0#5'Align'#7#7'alRight'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#2
+  +'='#11'ClientWidth'#3#214#0#8'TabOrder'#2#0#0#7'TButton'#8'btnSalir'#4'Left'
+  +#2#9#6'Height'#2'4'#3'Top'#2#2#5'Width'#3#203#0#7'Caption'#6#5'SALIR'#11'Fon'
+  +'t.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnCl'
+  +'ick'#7#13'btnSalirClick'#10'ParentFont'#8#8'TabOrder'#2#0#0#0#0#0#6'TPanel'
+  +#6'Panel3'#4'Left'#2#0#6'Height'#3'Y'#1#3'Top'#2'z'#5'Width'#3'0'#3#5'Align'
+  +#7#8'alClient'#10'BevelOuter'#7#6'bvNone'#12'ClientHeight'#3'Y'#1#11'ClientW'
+  +'idth'#3'0'#3#8'TabOrder'#2#2#0#9'TGroupBox'#9'GroupBox1'#4'Left'#2#0#6'Heig'
+  +'ht'#3'Y'#1#3'Top'#2#0#5'Width'#3'0'#3#5'Align'#7#8'alClient'#7'Caption'#6#30
+  +'Elija la operaci'#195#179'n a realizar'#12'ClientHeight'#3'G'#1#11'ClientWi'
+  +'dth'#3'.'#3#8'TabOrder'#2#0#0#7'TButton'#9'btnCompra'#4'Left'#3#245#1#6'Hei'
+  +'ght'#2'4'#4'Hint'#6'#Evite colas y compre ya su entrada.'#3'Top'#2#23#5'Wid'
+  +'th'#3#203#0#7'Caption'#6#7'COMPRAR'#11'Font.Height'#2#239#9'Font.Name'#6#4
+  +'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#14'btnCompraClick'#12'OnMo'
+  +'useEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'P'
+  +'arentFont'#8#8'TabOrder'#2#0#0#0#7'TButton'#10'btnReserva'#4'Left'#2']'#6'H'
+  +'eight'#2'4'#4'Hint'#6':Realize su reserva abonando '#195#186'nicamente un '
+  +#10'10% del total.'#3'Top'#2#23#5'Width'#3#203#0#7'Caption'#6#8'RESERVAR'#11
+  +'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'O'
+  +'nClick'#7#15'btnReservaClick'#12'OnMouseEnter'#7#15'BotonMouseEnter'#12'OnM'
+  +'ouseLeave'#7#15'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#7'TBu'
+  +'tton'#16'btnAnularReserva'#4'Left'#2']'#6'Height'#2'4'#4'Hint'#6'='#194#161
+  +'Aviso! La anulaci'#195#179'n conlleva la p'#195#169'rdida '#10'del 10% abon'
+  ,'ado.'#3'Top'#2'g'#5'Width'#3#203#0#7'Caption'#6#14'ANULAR RESERVA'#11'Font.'
+  +'Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClic'
+  +'k'#7#21'btnAnularReservaClick'#12'OnMouseEnter'#7#15'BotonMouseEnter'#12'On'
+  +'MouseLeave'#7#15'BotonMouseLeave'#10'ParentFont'#8#8'TabOrder'#2#2#0#0#7'TB'
+  +'utton'#15'btnAnularCompra'#4'Left'#3#245#1#6'Height'#2'4'#3'Top'#2'g'#5'Wid'
+  +'th'#3#203#0#7'Caption'#6#13'ANULAR COMPRA'#11'Font.Height'#2#239#9'Font.Nam'
+  +'e'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#20'btnAnularCompraC'
+  +'lick'#10'ParentFont'#8#8'TabOrder'#2#3#7'Visible'#8#0#0#7'TButton'#10'btnLE'
+  +'spera'#4'Left'#3#245#1#6'Height'#2'4'#4'Hint'#6';Visualice la lista de espe'
+  +'ra para una'#10'determinada funci'#195#179'n.'#3'Top'#3#182#0#5'Width'#3#203
+  +#0#7'Caption'#6#15'LISTA DE ESPERA'#11'Font.Height'#2#239#9'Font.Name'#6#4'S'
+  +'ans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#15'btnLEsperaClick'#12'OnMo'
+  +'useEnter'#7#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'P'
+  +'arentFont'#8#8'TabOrder'#2#4#7'Visible'#8#0#0#7'TButton'#19'btnVisualizarEs'
+  +'tado'#4'Left'#2']'#6'Height'#2'4'#4'Hint'#6'*Conozca r'#195#161'pidamente e'
+  +'l estado de la'#10'sala.'#3'Top'#3#5#1#5'Width'#3#203#0#7'Caption'#6#17'VIS'
+  +'UALIZAR ESTADO'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'
+  +#11#6'fsBold'#0#7'OnClick'#7#24'btnVisualizarEstadoClick'#12'OnMouseEnter'#7
+  +#15'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'ParentFont'#8
+  +#8'TabOrder'#2#5#7'Visible'#8#0#0#7'TButton'#12'btnLReservas'#4'Left'#2']'#6
+  +'Height'#2'4'#4'Hint'#6'@Visualice las reservas realizadas para una'#10'dete'
+  +'rminada funci'#195#179'n.'#3'Top'#3#182#0#5'Width'#3#203#0#7'Caption'#6#17
+  +'LISTA DE RESERVAS'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Sty'
+  +'le'#11#6'fsBold'#0#7'OnClick'#7#17'btnLReservasClick'#12'OnMouseEnter'#7#15
+  +'BotonMouseEnter'#12'OnMouseLeave'#7#15'BotonMouseLeave'#10'ParentFont'#8#8
+  +'TabOrder'#2#6#7'Visible'#8#0#0#0#0#0
 ]);

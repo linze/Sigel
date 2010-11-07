@@ -1,11 +1,11 @@
 object frmPrincipal: TfrmPrincipal
-  Left = 332
-  Height = 526
-  Top = 137
+  Left = 288
+  Height = 530
+  Top = 122
   Width = 816
   ActiveControl = Panel1
   Caption = 'Sigel'
-  ClientHeight = 526
+  ClientHeight = 530
   ClientWidth = 816
   OnCreate = FormCreate
   Position = poScreenCenter
@@ -588,18 +588,18 @@ object frmPrincipal: TfrmPrincipal
   end
   object Panel2: TPanel
     Left = 0
-    Height = 57
-    Top = 469
+    Height = 63
+    Top = 467
     Width = 816
     Align = alBottom
-    ClientHeight = 57
+    ClientHeight = 63
     ClientWidth = 816
     TabOrder = 1
     OnClick = Panel2Click
     object lbDescripcion: TLabel
       Left = 4
-      Height = 48
-      Top = 3
+      Height = 60
+      Top = -1
       Width = 601
       AutoSize = False
       Caption = 'Descripción'
@@ -612,12 +612,12 @@ object frmPrincipal: TfrmPrincipal
     end
     object Panel4: TPanel
       Left = 601
-      Height = 55
+      Height = 61
       Top = 1
       Width = 214
       Align = alRight
       BevelOuter = bvNone
-      ClientHeight = 55
+      ClientHeight = 61
       ClientWidth = 214
       TabOrder = 0
       object btnSalir: TButton
@@ -637,23 +637,23 @@ object frmPrincipal: TfrmPrincipal
   end
   object Panel3: TPanel
     Left = 0
-    Height = 347
+    Height = 345
     Top = 122
     Width = 816
     Align = alClient
     BevelOuter = bvNone
-    ClientHeight = 347
+    ClientHeight = 345
     ClientWidth = 816
     TabOrder = 2
     object GroupBox1: TGroupBox
       Left = 0
-      Height = 347
+      Height = 345
       Top = 0
       Width = 816
       Align = alClient
       Caption = 'Elija la operación a realizar'
-      ClientHeight = 343
-      ClientWidth = 812
+      ClientHeight = 327
+      ClientWidth = 814
       TabOrder = 0
       object btnCompra: TButton
         Left = 501
@@ -674,7 +674,7 @@ object frmPrincipal: TfrmPrincipal
       object btnReserva: TButton
         Left = 93
         Height = 52
-        Hint = 'Realize su reserva abonando únicamente un 10% del total.'
+        Hint = 'Realize su reserva abonando únicamente un '#10'10% del total.'
         Top = 23
         Width = 203
         Caption = 'RESERVAR'
@@ -690,7 +690,7 @@ object frmPrincipal: TfrmPrincipal
       object btnAnularReserva: TButton
         Left = 93
         Height = 52
-        Hint = '¡Aviso! La anulación conlleva la pérdida del 10% abonado.'
+        Hint = '¡Aviso! La anulación conlleva la pérdida '#10'del 10% abonado.'
         Top = 103
         Width = 203
         Caption = 'ANULAR RESERVA'
@@ -720,6 +720,7 @@ object frmPrincipal: TfrmPrincipal
       object btnLEspera: TButton
         Left = 501
         Height = 52
+        Hint = 'Visualice la lista de espera para una'#10'determinada función.'
         Top = 182
         Width = 203
         Caption = 'LISTA DE ESPERA'
@@ -727,6 +728,8 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Sans'
         Font.Style = [fsBold]
         OnClick = btnLEsperaClick
+        OnMouseEnter = BotonMouseEnter
+        OnMouseLeave = BotonMouseLeave
         ParentFont = False
         TabOrder = 4
         Visible = False
@@ -734,6 +737,7 @@ object frmPrincipal: TfrmPrincipal
       object btnVisualizarEstado: TButton
         Left = 93
         Height = 52
+        Hint = 'Conozca rápidamente el estado de la'#10'sala.'
         Top = 261
         Width = 203
         Caption = 'VISUALIZAR ESTADO'
@@ -741,6 +745,8 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Sans'
         Font.Style = [fsBold]
         OnClick = btnVisualizarEstadoClick
+        OnMouseEnter = BotonMouseEnter
+        OnMouseLeave = BotonMouseLeave
         ParentFont = False
         TabOrder = 5
         Visible = False
@@ -748,6 +754,7 @@ object frmPrincipal: TfrmPrincipal
       object btnLReservas: TButton
         Left = 93
         Height = 52
+        Hint = 'Visualice las reservas realizadas para una'#10'determinada función.'
         Top = 182
         Width = 203
         Caption = 'LISTA DE RESERVAS'
@@ -755,6 +762,8 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Sans'
         Font.Style = [fsBold]
         OnClick = btnLReservasClick
+        OnMouseEnter = BotonMouseEnter
+        OnMouseLeave = BotonMouseLeave
         ParentFont = False
         TabOrder = 6
         Visible = False

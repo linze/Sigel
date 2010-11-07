@@ -38,6 +38,7 @@ type
       procedure btnAnularReservaClick(Sender: TObject);
       procedure btnCompraClick(Sender: TObject);
       procedure btnLEsperaClick(Sender: TObject);
+      procedure btnLEsperaMouseEnter(Sender: TObject);
       procedure btnLReservasClick(Sender: TObject);
       procedure btnReservaClick(Sender: TObject);
       procedure btnSalirClick(Sender: TObject);
@@ -202,6 +203,11 @@ begin
         //uDatos.LiberarDatos;
     except
     end;
+end;
+
+procedure TfrmPrincipal.btnLEsperaMouseEnter(Sender: TObject);
+begin
+
 end;
 
 procedure TfrmPrincipal.btnLReservasClick(Sender: TObject);
