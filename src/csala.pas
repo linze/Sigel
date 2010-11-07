@@ -260,56 +260,57 @@ var
     EncontradasCuatro : boolean;
 begin
     EncontradasCuatro := False;
+
     cuenta := 0;
     case tipo of
     Patio: begin
            i := 1;
            while (not EncontradasCuatro) and (i <=4) do
            begin
-           j := 1;
-           while (not EncontradasCuatro) and (j <= 8) do
-           begin
-                if LocalidadValida(Self.FPatio[i,j]) then
-                   if not Self.FPatio[i,j].EstaOcupado then
-                   begin
-                        cuenta := cuenta + 1;
-                        EncontradasCuatro := (cuenta >= 4);
-                   end;
-                j := j + 1;
-           end;
-           i := i + 1;
-           end;
-           end;
-
-    PrimeraPlanta :begin
-                  i := 1;
-                  while (not EncontradasCuatro) and (i <=2) do
-                  begin
-                  j := 1;
-                  while (not EncontradasCuatro) and (j <= 8) do
-                  begin
-                       if not Self.FPrimeraPlanta[i,j].EstaOcupado then
+               j := 1;
+               while (not EncontradasCuatro) and (j <= 8) do
+               begin
+                    if LocalidadValida(Self.FPatio[i,j]) then
+                       if not Self.FPatio[i,j].EstaOcupado then
                        begin
                             cuenta := cuenta + 1;
                             EncontradasCuatro := (cuenta >= 4);
                        end;
-                  end;
-                  i := i + 1;
-                  end;
-                  end;
-
-    Palco : begin
-          i := 1;
-          while (not EncontradasCuatro) and (i <= 4) do
-          begin
-               if not Self.FPalco[i].EstaOcupado then
-               begin
-                    cuenta := cuenta + 4;
-                    EncontradasCuatro := (cuenta >= 4);
+                    j := j + 1;
                end;
                i := i + 1;
                end;
-          end;
+           end;
+
+    PrimeraPlanta :begin
+                      i := 1;
+                      while (not EncontradasCuatro) and (i <=2) do
+                      begin
+                          j := 1;
+                          while (not EncontradasCuatro) and (j <= 8) do
+                          begin
+                               if not Self.FPrimeraPlanta[i,j].EstaOcupado then
+                               begin
+                                    cuenta := cuenta + 1;
+                                    EncontradasCuatro := (cuenta >= 4);
+                               end;
+                          end;
+                          i := i + 1;
+                      end;
+                  end;
+
+    Palco : begin
+                i := 1;
+                while (not EncontradasCuatro) and (i <= 4) do
+                begin
+                   if not Self.FPalco[i].EstaOcupado then
+                   begin
+                        cuenta := cuenta + 4;
+                        EncontradasCuatro := (cuenta >= 4);
+                   end;
+                   i := i + 1;
+                   end;
+                end;
     end;
     result := cuenta;
 
@@ -368,8 +369,9 @@ end;
 function TSala.ObtenerLibre(Tipo: TTipoLocalidad): TLocalidad;
 var
     i,j     : integer;
+    Found   : boolean;
 begin
-
+    Found := False;
     case Tipo of
     Patio:          begin
                         i := 1;
@@ -381,6 +383,7 @@ begin
                                  if LocalidadValida(Self.FPatio[i,j]) then
                                     if not Self.FPatio[i,j].EstaOcupado then
                                     begin
+                                        Found := True;
                                         result := Self.FPatio[i,j];
                                     end;
                                 j := j + 1;
@@ -397,6 +400,7 @@ begin
                             begin
                                 if not Self.FPrimeraPlanta[i,j].EstaOcupado then
                                 begin
+                                    Found := True;
                                     result := Self.FPrimeraPlanta[i,j];
                                 end;
                             end;
@@ -409,11 +413,18 @@ begin
                         begin
                             if not Self.FPalco[i].EstaOcupado then
                             begin
+                                Found := True;
                                 result := Self.FPalco[i];
                             end;
                             i := i + 1;
                         end;
                     end;
+    end;
+
+    if not Found then
+    begin
+        ShowMessage('[CSala:ObtenerLibre] No había ninguna localidad libre para este tipo');
+        result := nil;
     end;
 end;
 
