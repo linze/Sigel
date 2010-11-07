@@ -31,12 +31,8 @@ interface
             function LocalidadValida(Localidad: TLocalidad): boolean;
             function EstaCompleto : boolean;
             // Devuelve un número de 1..4
-<<<<<<< HEAD
-            function NumeroLibres(tipo : TTipoLocalidad) : integer;
-=======
             function NumeroLibres(Tipo: TTipoLocalidad) : integer;
             function ObtenerLibre (Tipo:TTipoLocalidad) : TLocalidad;
->>>>>>> 0738a2fa212a69e52ffa3acb488449f8885cfba6
 
             { Para guardar-extraer desde ficheros }
             procedure LeerDatos (Lector : TReader); dynamic;
@@ -85,13 +81,6 @@ begin
     inherited Create;
 end;
 
-<<<<<<< HEAD
-
-// TODO: Estudiar si este método ha de separarse en varios métodos
-// privados de búsqueda para cada tipo de localidad. Implementarlo
-// todo en el mismo puede llegar a ser engorroso.
-=======
->>>>>>> 0738a2fa212a69e52ffa3acb488449f8885cfba6
 function TSala.Buscar(Tipo: TTipoLocalidad; Fila: Integer;
   Numero: Integer): TLocalidad;
 var
@@ -264,11 +253,7 @@ begin
     EstaCompleto := not EncontradoLibre;
 end;
 
-<<<<<<< HEAD
-function TSala.NumeroLibres(tipo : TTipoLocalidad):integer;
-=======
 function TSala.NumeroLibres (Tipo : TTipoLocalidad): integer;
->>>>>>> 0738a2fa212a69e52ffa3acb488449f8885cfba6
 var
     i,j     : integer;
     cuenta  : integer;
@@ -276,8 +261,6 @@ var
 begin
     EncontradasCuatro := False;
     cuenta := 0;
-
-<<<<<<< HEAD
     case tipo of
     Patio: begin
            i := 1;
@@ -329,7 +312,7 @@ begin
           end;
     end;
     result := cuenta;
-=======
+
     case Tipo of
     Patio:          begin
                         i := 1;
@@ -432,7 +415,6 @@ begin
                         end;
                     end;
     end;
->>>>>>> 0738a2fa212a69e52ffa3acb488449f8885cfba6
 end;
 
 initialization

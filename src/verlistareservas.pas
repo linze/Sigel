@@ -52,7 +52,7 @@ begin
     for i:=1 to Reserva.Cantidad do
     begin
         Localidad := Reserva.GetLocalidad(i);
-        TmpStr := TmpStr + uFuncionesComunes.LocalidadesToString(Localidad);
+        TmpStr := TmpStr + uFuncionesComunes.LocalidadToString(Localidad);
     end;
     Result := TmpStr;
 end;

@@ -66,35 +66,10 @@ begin
                 ShowMessage('Esta localidad se encuentra reservada')
             else
             begin
-
-            libresPatio := Sala.NumeroLibres(Patio);
-            libresPrimeraPlanta := Sala.NumeroLibres(PrimeraPlanta);
-            libresPalco := Sala.NumeroLibres(Palco);
-            libresTotal := libresPatio + libresPrimeraPlanta + libresPalco;
-            Localidad.Estado := Libre;
-            LocalidadAnulada := True;
-            // TODO: si existe lista de espera...
-            if libresTotal > 0 then
-               if libresPatio > 0 then
-                  for i := 0 to Esperas.Count -1 do
-                  begin
-                  if (TEspera(uDatos.Esperas.Items[i].TipoLocalidad) = Patio) or TEspera(uDatos.Esperas.Items[i].TipoLocalidad) = Indiferente) then
-                  begin
-                       if Esperas.Items[i].Numero < libresPatio + 1 then
-                       begin
-                            Esperas.Items[i].Asignada := True;
-
-                       end;
-                  end;
-               if libresPrimeraPlanta > 0 then
-
-               if libresPatio > 0 then
-
-                  end;
-
-
-            ShowMessage ('Localidad anulada');
-            Self.Close;
+                Localidad.Estado := Libre;
+                LocalidadAnulada := True;
+                ShowMessage ('Localidad anulada');
+                Self.Close;
             end;
         end;
     end

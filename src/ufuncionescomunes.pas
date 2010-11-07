@@ -8,7 +8,7 @@ interface
         Classes, SysUtils, CLocalidad, CTipoLocalidad;
 
     function EsEmail(EMail: string): Boolean;
-    function LocalidadesToString(Localidad: TLocalidad): string;
+    function LocalidadToString(Localidad: TLocalidad): string;
 
 implementation
 
@@ -30,7 +30,7 @@ begin
         Result := false;
 end;
 
-function LocalidadesToString(Localidad: TLocalidad): string;
+function LocalidadToString(Localidad: TLocalidad): string;
 var
     TmpStr    : string;
     i         : integer;

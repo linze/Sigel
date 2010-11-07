@@ -9,7 +9,7 @@ uses
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
   AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm,
-  VerListaReservas, CTipoLocalidad, CLocalidad;
+  VerListaReservas, CTipoLocalidad, CLocalidad, uFuncionesComunes;
 
 type
 
@@ -388,6 +388,7 @@ var
     i : integer;
     Tipo : TTipoLocalidad;
     Localidad: TLocalidad;
+    Espera : TEspera;
 begin
     SalaLlena := False;
     FinDeLaLista := False;
@@ -395,14 +396,16 @@ begin
     while (not SalaLlena) and (not FinDeLaLista) do
     begin
         Tipo := TEspera(Esperas.Items[i]).TipoLocalidad;
-        if (Sala.NumeroLibres(Tipo) >= TEspera(Esperas.Items[i]).Numero) then
+        Espera := TEspera(Esperas.Items[i]);
+        if (Sala.NumeroLibres(Tipo) >= Espera.Numero) then
         begin
             // TODO: Cambiar el estado de las localidades en TSala y los
             // atributos FAsignado y FLocalidades de Espera.Items[i]
             Localidad := Sala.ObtenerLibre(Tipo);
             Localidad.Estado := Comprada;
-
-
+            Espera.Asignada := True;
+            Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+            Esperas.Items[i] := Espera;
         end;
         i := i + 1;
         FinDeLaLista := (i = Esperas.Count);
