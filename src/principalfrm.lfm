@@ -4766,6 +4766,7 @@ object frmPrincipal: TfrmPrincipal
       object btnSalir: TButton
         Left = 9
         Height = 52
+        Hint = 'Cerrar la aplicación.'
         Top = 2
         Width = 203
         Caption = 'SALIR'
@@ -4773,6 +4774,8 @@ object frmPrincipal: TfrmPrincipal
         Font.Name = 'Sans'
         Font.Style = [fsBold]
         OnClick = btnSalirClick
+        OnMouseEnter = BotonMouseEnter
+        OnMouseLeave = BotonMouseLeave
         ParentFont = False
         TabOrder = 0
       end

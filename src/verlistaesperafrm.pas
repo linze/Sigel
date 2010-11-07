@@ -46,11 +46,12 @@ begin
         gridVisualizacion.Cells[0,i+1] := TEspera(uDatos.Esperas.Items[i]).Nombre;
         gridVisualizacion.Cells[1,i+1] := TEspera(uDatos.Esperas.Items[i]).Telefono;
         gridVisualizacion.Cells[2,i+1] := TEspera(uDatos.Esperas.Items[i]).Email;
+        gridVisualizacion.Cells[3,i+1] := IntToStr(TEspera(uDatos.Esperas.Items[i]).Numero);
         if TEspera(uDatos.Esperas.Items[i]).Asignada then
-            gridVisualizacion.Cells[3,i+1] := 'Si'
+            gridVisualizacion.Cells[4,i+1] := 'Si'
         else
-            gridVisualizacion.Cells[3,i+1] := 'No';
-        gridVisualizacion.Cells[4,i+1] := TEspera(uDatos.Esperas.Items[i]).LocalidadesAsignadas;
+            gridVisualizacion.Cells[4,i+1] := 'No';
+        gridVisualizacion.Cells[5,i+1] := TEspera(uDatos.Esperas.Items[i]).LocalidadesAsignadas;
     end;
 end;
 

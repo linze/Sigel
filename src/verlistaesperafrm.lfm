@@ -1,12 +1,12 @@
 object frmVerListaEspera: TfrmVerListaEspera
   Left = 258
-  Height = 418
+  Height = 405
   Top = 222
-  Width = 947
+  Width = 977
   ActiveControl = Panel4
   Caption = 'Estado actual de la lista de espera'
-  ClientHeight = 418
-  ClientWidth = 947
+  ClientHeight = 405
+  ClientWidth = 977
   Font.Height = -14
   Font.Name = 'Sans'
   Font.Style = [fsBold]
@@ -15,21 +15,22 @@ object frmVerListaEspera: TfrmVerListaEspera
   LCLVersion = '0.9.28.2'
   object Panel1: TPanel
     Left = 0
-    Height = 330
+    Height = 317
     Top = 28
-    Width = 947
+    Width = 977
     Align = alClient
     BevelOuter = bvNone
     Caption = 'Panel1'
-    ClientHeight = 330
-    ClientWidth = 947
+    ClientHeight = 317
+    ClientWidth = 977
     TabOrder = 0
     object gridVisualizacion: TStringGrid
       Left = 0
-      Height = 330
+      Height = 317
       Top = 0
-      Width = 947
+      Width = 977
       Align = alClient
+      ColCount = 6
       FixedCols = 0
       Font.Height = -14
       Font.Name = 'Sans'
@@ -40,14 +41,15 @@ object frmVerListaEspera: TfrmVerListaEspera
       TitleFont.Name = 'Sans'
       TitleFont.Style = [fsBold]
       ColWidths = (
-        294
-        108
-        186
+        236
+        100
+        184
+        75
         105
-        190
+        258
       )
       Cells = (
-        5
+        6
         0
         0
         'Nombre'
@@ -59,8 +61,11 @@ object frmVerListaEspera: TfrmVerListaEspera
         'Email'
         3
         0
-        'Asignada'
+        'Cantidad'
         4
+        0
+        'Asignada'
+        5
         0
         'Localidades'
       )
@@ -69,15 +74,15 @@ object frmVerListaEspera: TfrmVerListaEspera
   object Panel2: TPanel
     Left = 0
     Height = 60
-    Top = 358
-    Width = 947
+    Top = 345
+    Width = 977
     Align = alBottom
     BevelOuter = bvNone
     ClientHeight = 60
-    ClientWidth = 947
+    ClientWidth = 977
     TabOrder = 1
     object Panel3: TPanel
-      Left = 827
+      Left = 857
       Height = 60
       Top = 0
       Width = 120
@@ -106,7 +111,7 @@ object frmVerListaEspera: TfrmVerListaEspera
     Left = 0
     Height = 28
     Top = 0
-    Width = 947
+    Width = 977
     Align = alTop
     Alignment = taLeftJustify
     BevelOuter = bvNone

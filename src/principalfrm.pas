@@ -92,7 +92,7 @@ begin
                 frmAnularCompra.ShowModal;
                 if frmAnularCompra.LocalidadAnulada then
                 begin
-                    //ProcesarListaEspera;
+                    ProcesarListaEspera;
                     uDatos.Guardar(frmFecha.Fecha);
                 end;
                 //uDatos.LiberarDatos;
@@ -121,7 +121,7 @@ begin
             frmAnular.ShowModal;
             if frmAnular.IntroducidoDni then
             begin
-                //ProcesarListaEspera;
+                ProcesarListaEspera;
                 uDatos.Guardar(frmFecha.Fecha);
             end;
             //uDatos.LiberarDatos;
@@ -298,7 +298,6 @@ begin
                                             begin
                                                 frmSeleccionButaca.Localidades[i].Estado := Reservada;
                                                 Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
-                                                uDatos.LogearReservas;
                                                 uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                             end;
                                         end;
@@ -419,7 +418,6 @@ procedure TfrmPrincipal.ProcesarListaEspera;
 var
     SalaLlena, FinDeLaLista : boolean;
     i, j : integer;
-    Tipo : TTipoLocalidad;
     Localidad: TLocalidad;
     Espera : TEspera;
 begin
@@ -428,17 +426,16 @@ begin
     i := 0;
     while (not SalaLlena) and (not FinDeLaLista) do
     begin
-        Tipo := TEspera(Esperas.Items[i]).TipoLocalidad;
         Espera := TEspera(Esperas.Items[i]);
-        if (Sala.NumeroLibres(Tipo) >= Espera.Numero) then
+        if (Sala.NumeroLibres(Espera.TipoLocalidad) >= Espera.Numero) then
         begin
             for j:=1 to Espera.Numero do
             begin
-                Localidad := Sala.ObtenerLibre(Tipo);
+                Localidad := Sala.ObtenerLibre(Espera.TipoLocalidad);
                 Localidad.Estado := Comprada;
+                Sala.Cambiar(Localidad);
                 Espera.Asignada := True;
                 Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
-
             end;
             Esperas.Items[i] := Espera;
         end;
