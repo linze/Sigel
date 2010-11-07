@@ -278,6 +278,7 @@ begin
                                     ShowMessage('No se puede realizar más de una reserva por persona')
                                 else
                                 begin
+                                    ShowMessage(IntToStr(frmSeleccionButaca.GastoTotal));
                                     if PedirPago(frmSeleccionButaca.GastoTotal) = True then
                                     begin
                                         Reserva := TReserva.Create;
@@ -411,7 +412,7 @@ end;
 procedure TfrmPrincipal.ProcesarListaEspera;
 var
     SalaLlena, FinDeLaLista : boolean;
-    i : integer;
+    i, j : integer;
     Tipo : TTipoLocalidad;
     Localidad: TLocalidad;
     Espera : TEspera;

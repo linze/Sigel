@@ -25,7 +25,7 @@ object frmPagar: TfrmPagar
     ParentFont = False
   end
   object lbCantidad: TLabel
-    Left = 219
+    Left = 211
     Height = 20
     Top = 9
     Width = 69

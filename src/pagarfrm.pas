@@ -51,12 +51,11 @@ end;
 procedure TfrmPagar.FormCreate(Sender: TObject);
 begin
     PagoAceptado := False;
-    lbCantidad.Caption := IntToStr(Self.Cantidad) + ' euros';
 end;
 
 procedure TfrmPagar.FormShow(Sender: TObject);
 begin
-
+    lbCantidad.Caption := IntToStr(Self.Cantidad) + ' euros';
 end;
 
 procedure TfrmPagar.btnCancelarClick(Sender: TObject);
