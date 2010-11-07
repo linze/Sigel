@@ -1446,3 +1446,17 @@ Fila: 2, Numero: 7
 Estado: OCUPADA
 Fila: 1, Numero: 8
 Estado: OCUPADA
+
+Nombre: Francisco Cantidad: 2
+Dni: 111111111 Telefono: 1111111111 Email: 11111111
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA
+
+Nombre: Francisco Cantidad: 2
+Dni: 111111111 Telefono: 1111111111 Email: 11111111
+Fila: 3, Numero: 5
+Estado: OCUPADA
+Fila: 3, Numero: 6
+Estado: OCUPADA

@@ -427,21 +427,24 @@ begin
     while (not SalaLlena) and (not FinDeLaLista) do
     begin
         Espera := TEspera(Esperas.Items[i]);
-        if (Sala.NumeroLibres(Espera.TipoLocalidad) >= Espera.Numero) then
+        if Espera.Asignada = False then
         begin
-            for j:=1 to Espera.Numero do
+            if (Sala.NumeroLibres(Espera.TipoLocalidad) >= Espera.Numero) then
             begin
-                Localidad := Sala.ObtenerLibre(Espera.TipoLocalidad);
-                Localidad.Estado := Comprada;
-                Sala.Cambiar(Localidad);
-                Espera.Asignada := True;
-                Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+                for j:=1 to Espera.Numero do
+                begin
+                    Localidad := Sala.ObtenerLibre(Espera.TipoLocalidad);
+                    Localidad.Estado := Comprada;
+                    Sala.Cambiar(Localidad);
+                    Espera.Asignada := True;
+                    Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+                end;
+                Esperas.Items[i] := Espera;
             end;
-            Esperas.Items[i] := Espera;
+            i := i + 1;
+            FinDeLaLista := (i = Esperas.Count);
+            SalaLlena := Sala.EstaCompleto;
         end;
-        i := i + 1;
-        FinDeLaLista := (i = Esperas.Count);
-        SalaLlena := Sala.EstaCompleto;
     end;
 end;
 
