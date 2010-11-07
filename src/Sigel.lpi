@@ -30,7 +30,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="67">
+    <Units Count="66">
       <Unit0>
         <Filename Value="Sigel.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -48,8 +48,8 @@
         <ComponentName Value="frmPrincipal"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="PrincipalFrm"/>
-        <CursorPos X="5" Y="210"/>
-        <TopLine Value="208"/>
+        <CursorPos X="97" Y="275"/>
+        <TopLine Value="264"/>
         <EditorIndex Value="10"/>
         <UsageCount Value="141"/>
         <Loaded Value="True"/>
@@ -108,22 +108,14 @@
         <SyntaxHighlighter Value="Delphi"/>
       </Unit6>
       <Unit7>
-        <Filename Value="cptipoespera.pas"/>
-        <UnitName Value="CPTipoEspera"/>
-        <CursorPos X="1" Y="1"/>
-        <TopLine Value="1"/>
-        <UsageCount Value="0"/>
-        <SyntaxHighlighter Value="Delphi"/>
-      </Unit7>
-      <Unit8>
         <Filename Value="ctipoespera.pas"/>
         <UnitName Value="CTipoEspera"/>
         <CursorPos X="35" Y="14"/>
         <TopLine Value="1"/>
         <UsageCount Value="19"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit8>
-      <Unit9>
+      </Unit7>
+      <Unit8>
         <Filename Value="comprarfrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmComprar"/>
@@ -133,8 +125,8 @@
         <TopLine Value="3"/>
         <UsageCount Value="137"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit9>
-      <Unit10>
+      </Unit8>
+      <Unit9>
         <Filename Value="reservafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmReserva"/>
@@ -144,48 +136,48 @@
         <TopLine Value="14"/>
         <UsageCount Value="137"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit10>
-      <Unit11>
+      </Unit9>
+      <Unit10>
         <Filename Value="clistareservas.pas"/>
         <UnitName Value="CListaReservas"/>
         <CursorPos X="41" Y="37"/>
         <TopLine Value="37"/>
         <UsageCount Value="67"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit11>
-      <Unit12>
+      </Unit10>
+      <Unit11>
         <Filename Value="ctipolistaespera.pas"/>
         <UnitName Value="CTipoListaEspera"/>
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
         <UsageCount Value="19"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit12>
-      <Unit13>
+      </Unit11>
+      <Unit12>
         <Filename Value="crepresentacion.pas"/>
         <UnitName Value="CRepresentacion"/>
         <CursorPos X="1" Y="7"/>
         <TopLine Value="1"/>
         <UsageCount Value="47"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit13>
-      <Unit14>
+      </Unit12>
+      <Unit13>
         <Filename Value="cptlistareservas.pas"/>
         <UnitName Value="CPTListaReservas"/>
         <CursorPos X="9" Y="6"/>
         <TopLine Value="1"/>
         <UsageCount Value="19"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit14>
-      <Unit15>
+      </Unit13>
+      <Unit14>
         <Filename Value="cprepresentacion.pas"/>
         <UnitName Value="CPRepresentacion"/>
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
         <UsageCount Value="19"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit15>
-      <Unit16>
+      </Unit14>
+      <Unit15>
         <Filename Value="creserva.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CReserva"/>
@@ -195,16 +187,16 @@
         <UsageCount Value="136"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit16>
-      <Unit17>
+      </Unit15>
+      <Unit16>
         <Filename Value="cptreserva.pas"/>
         <UnitName Value="CPTReserva"/>
         <CursorPos X="38" Y="11"/>
         <TopLine Value="1"/>
         <UsageCount Value="18"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit17>
-      <Unit18>
+      </Unit16>
+      <Unit17>
         <Filename Value="cespera.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CEspera"/>
@@ -214,32 +206,32 @@
         <UsageCount Value="129"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit18>
-      <Unit19>
+      </Unit17>
+      <Unit18>
         <Filename Value="clistaespera.pas"/>
         <UnitName Value="CListaEspera"/>
         <CursorPos X="59" Y="8"/>
         <TopLine Value="1"/>
         <UsageCount Value="59"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit19>
-      <Unit20>
+      </Unit18>
+      <Unit19>
         <Filename Value="cobjectlist.pas"/>
         <UnitName Value="CObjectList"/>
         <CursorPos X="69" Y="70"/>
         <TopLine Value="68"/>
         <UsageCount Value="51"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit20>
-      <Unit21>
+      </Unit19>
+      <Unit20>
         <Filename Value="cobjectlistitem.pas"/>
         <UnitName Value="CObjectListItem"/>
         <CursorPos X="43" Y="16"/>
         <TopLine Value="1"/>
         <UsageCount Value="49"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit21>
-      <Unit22>
+      </Unit20>
+      <Unit21>
         <Filename Value="loginfrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmLogin"/>
@@ -251,8 +243,8 @@
         <UsageCount Value="116"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit22>
-      <Unit23>
+      </Unit21>
+      <Unit22>
         <Filename Value="fechafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmFecha"/>
@@ -264,14 +256,14 @@
         <UsageCount Value="115"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit23>
-      <Unit24>
+      </Unit22>
+      <Unit23>
         <Filename Value="../../../../usr/share/fpcsrc/2.4.0/rtl/inc/systemh.inc"/>
         <CursorPos X="3" Y="300"/>
         <TopLine Value="290"/>
         <UsageCount Value="3"/>
-      </Unit24>
-      <Unit25>
+      </Unit23>
+      <Unit24>
         <Filename Value="seleccionbutacafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmSeleccionButacas"/>
@@ -283,8 +275,8 @@
         <UsageCount Value="112"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit25>
-      <Unit26>
+      </Unit24>
+      <Unit25>
         <Filename Value="udatos.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uDatos"/>
@@ -294,16 +286,16 @@
         <UsageCount Value="109"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit26>
-      <Unit27>
+      </Unit25>
+      <Unit26>
         <Filename Value="clistasalas.pas"/>
         <UnitName Value="CListaSalas"/>
         <CursorPos X="34" Y="54"/>
         <TopLine Value="30"/>
         <UsageCount Value="34"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit27>
-      <Unit28>
+      </Unit26>
+      <Unit27>
         <Filename Value="anularreservafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmAnularReserva"/>
@@ -315,8 +307,8 @@
         <UsageCount Value="103"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit28>
-      <Unit29>
+      </Unit27>
+      <Unit28>
         <Filename Value="anularcomprafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmAnularCompra"/>
@@ -328,56 +320,56 @@
         <UsageCount Value="103"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit29>
-      <Unit30>
+      </Unit28>
+      <Unit29>
         <Filename Value="../../../../usr/share/fpcsrc/2.4.0/rtl/objpas/classes/classesh.inc"/>
         <CursorPos X="22" Y="234"/>
         <TopLine Value="224"/>
         <UsageCount Value="5"/>
-      </Unit30>
-      <Unit31>
+      </Unit29>
+      <Unit30>
         <Filename Value="../../../../usr/share/fpcsrc/2.4.0/rtl/inc/objpash.inc"/>
         <CursorPos X="8" Y="170"/>
         <TopLine Value="160"/>
         <UsageCount Value="5"/>
-      </Unit31>
-      <Unit32>
+      </Unit30>
+      <Unit31>
         <Filename Value="cobjectlistlist.pas"/>
         <UnitName Value="CObjectListList"/>
         <CursorPos X="21" Y="87"/>
         <TopLine Value="63"/>
         <UsageCount Value="28"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit32>
-      <Unit33>
+      </Unit31>
+      <Unit32>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/control.inc"/>
         <CursorPos X="16" Y="2123"/>
         <TopLine Value="2112"/>
         <UsageCount Value="5"/>
-      </Unit33>
-      <Unit34>
+      </Unit32>
+      <Unit33>
         <Filename Value="cgestionlistareserva.pas"/>
         <UnitName Value="CGestionListaReserva"/>
         <CursorPos X="61" Y="9"/>
         <TopLine Value="9"/>
         <UsageCount Value="20"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit34>
-      <Unit35>
+      </Unit33>
+      <Unit34>
         <Filename Value="cgestionlistaespera.pas"/>
         <UnitName Value="CGestionListaEspera"/>
         <CursorPos X="30" Y="38"/>
         <TopLine Value="28"/>
         <UsageCount Value="19"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit35>
-      <Unit36>
+      </Unit34>
+      <Unit35>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/customform.inc"/>
         <CursorPos X="57" Y="699"/>
         <TopLine Value="684"/>
         <UsageCount Value="5"/>
-      </Unit36>
-      <Unit37>
+      </Unit35>
+      <Unit36>
         <Filename Value="datosreservafrm.pas"/>
         <ComponentName Value="frmDatosReserva"/>
         <HasResources Value="True"/>
@@ -389,8 +381,8 @@
         <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit37>
-      <Unit38>
+      </Unit36>
+      <Unit37>
         <Filename Value="clistaobjetos.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="CListaObjetos"/>
@@ -400,59 +392,59 @@
         <UsageCount Value="84"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit38>
-      <Unit39>
+      </Unit37>
+      <Unit38>
         <Filename Value="Sigel.lrs"/>
         <CursorPos X="1" Y="1"/>
         <TopLine Value="1"/>
         <UsageCount Value="16"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit39>
-      <Unit40>
+      </Unit38>
+      <Unit39>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/messagedialogs.inc"/>
         <CursorPos X="1" Y="230"/>
         <TopLine Value="220"/>
         <UsageCount Value="6"/>
-      </Unit40>
-      <Unit41>
+      </Unit39>
+      <Unit40>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/lclintf.inc"/>
         <CursorPos X="120" Y="393"/>
         <TopLine Value="380"/>
         <UsageCount Value="6"/>
-      </Unit41>
-      <Unit42>
+      </Unit40>
+      <Unit41>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/buttoncontrol.inc"/>
         <CursorPos X="1" Y="27"/>
         <TopLine Value="17"/>
         <UsageCount Value="6"/>
-      </Unit42>
-      <Unit43>
+      </Unit41>
+      <Unit42>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/buttons.inc"/>
         <CursorPos X="1" Y="332"/>
         <TopLine Value="317"/>
         <UsageCount Value="6"/>
-      </Unit43>
-      <Unit44>
+      </Unit42>
+      <Unit43>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/include/wincontrol.inc"/>
         <CursorPos X="1" Y="4921"/>
         <TopLine Value="4911"/>
         <UsageCount Value="6"/>
-      </Unit44>
-      <Unit45>
+      </Unit43>
+      <Unit44>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/lclmessageglue.pas"/>
         <UnitName Value="LCLMessageGlue"/>
         <CursorPos X="1" Y="121"/>
         <TopLine Value="111"/>
         <UsageCount Value="6"/>
-      </Unit45>
-      <Unit46>
+      </Unit44>
+      <Unit45>
         <Filename Value="../../../../usr/lib/lazarus/0.9.28.2/lcl/interfaces/gtk2/gtk2wsstdctrls.pp"/>
         <UnitName Value="Gtk2WSStdCtrls"/>
         <CursorPos X="4" Y="1846"/>
         <TopLine Value="1836"/>
         <UsageCount Value="6"/>
-      </Unit46>
-      <Unit47>
+      </Unit45>
+      <Unit46>
         <Filename Value="frmdatoscompra.pas"/>
         <ComponentName Value="frmDatosCompra"/>
         <ResourceBaseClass Value="Form"/>
@@ -461,8 +453,8 @@
         <TopLine Value="15"/>
         <UsageCount Value="25"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit47>
-      <Unit48>
+      </Unit46>
+      <Unit47>
         <Filename Value="verlistaesperafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVerListaEspera"/>
@@ -474,20 +466,20 @@
         <UsageCount Value="74"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit48>
-      <Unit49>
+      </Unit47>
+      <Unit48>
         <Filename Value="../../../../../usr/share/fpcsrc/2.4.0/rtl/objpas/classes/classesh.inc"/>
         <CursorPos X="14" Y="276"/>
         <TopLine Value="266"/>
         <UsageCount Value="6"/>
-      </Unit49>
-      <Unit50>
+      </Unit48>
+      <Unit49>
         <Filename Value="../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/control.inc"/>
         <CursorPos X="1" Y="2228"/>
         <TopLine Value="2218"/>
         <UsageCount Value="7"/>
-      </Unit50>
-      <Unit51>
+      </Unit49>
+      <Unit50>
         <Filename Value="datosespera.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDatosEspera"/>
@@ -499,8 +491,8 @@
         <UsageCount Value="68"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit51>
-      <Unit52>
+      </Unit50>
+      <Unit51>
         <Filename Value="verestadosalafrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVerEstadoSala"/>
@@ -512,8 +504,8 @@
         <UsageCount Value="59"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit52>
-      <Unit53>
+      </Unit51>
+      <Unit52>
         <Filename Value="verlistareservas.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmVerListaReservas"/>
@@ -525,52 +517,52 @@
         <UsageCount Value="53"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit53>
-      <Unit54>
+      </Unit52>
+      <Unit53>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/forms.pp"/>
         <UnitName Value="Forms"/>
         <CursorPos X="17" Y="637"/>
         <TopLine Value="627"/>
         <UsageCount Value="7"/>
-      </Unit54>
-      <Unit55>
+      </Unit53>
+      <Unit54>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/control.inc"/>
         <CursorPos X="1" Y="994"/>
         <TopLine Value="984"/>
         <UsageCount Value="7"/>
-      </Unit55>
-      <Unit56>
+      </Unit54>
+      <Unit55>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/wincontrol.inc"/>
         <CursorPos X="1" Y="4921"/>
         <TopLine Value="4911"/>
         <UsageCount Value="7"/>
-      </Unit56>
-      <Unit57>
+      </Unit55>
+      <Unit56>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/lclmessageglue.pas"/>
         <UnitName Value="LCLMessageGlue"/>
         <CursorPos X="1" Y="121"/>
         <TopLine Value="111"/>
         <UsageCount Value="7"/>
-      </Unit57>
-      <Unit58>
+      </Unit56>
+      <Unit57>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/interfaces/gtk/gtkproc.inc"/>
         <CursorPos X="1" Y="3710"/>
         <TopLine Value="3700"/>
         <UsageCount Value="7"/>
-      </Unit58>
-      <Unit59>
+      </Unit57>
+      <Unit58>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/interfaces/gtk/gtkcallback.inc"/>
         <CursorPos X="1" Y="1790"/>
         <TopLine Value="1780"/>
         <UsageCount Value="7"/>
-      </Unit59>
-      <Unit60>
+      </Unit58>
+      <Unit59>
         <Filename Value="../../../../../../../usr/lib/lazarus/0.9.28.2/lcl/include/customform.inc"/>
         <CursorPos X="34" Y="1055"/>
         <TopLine Value="1047"/>
         <UsageCount Value="7"/>
-      </Unit60>
-      <Unit61>
+      </Unit59>
+      <Unit60>
         <Filename Value="ufuncionescomunes.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uFuncionesComunes"/>
@@ -580,8 +572,8 @@
         <UsageCount Value="50"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit61>
-      <Unit62>
+      </Unit60>
+      <Unit61>
         <Filename Value="pagarfrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmPagar"/>
@@ -593,20 +585,20 @@
         <UsageCount Value="29"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="creditosfrm.lrs"/>
+        <IsPartOfProject Value="True"/>
+        <UsageCount Value="23"/>
+        <SyntaxHighlighter Value="Text"/>
       </Unit62>
       <Unit63>
-        <Filename Value="creditosfrm.lrs"/>
+        <Filename Value="creditosfrm.o"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="23"/>
         <SyntaxHighlighter Value="Text"/>
       </Unit63>
       <Unit64>
-        <Filename Value="creditosfrm.o"/>
-        <IsPartOfProject Value="True"/>
-        <UsageCount Value="23"/>
-        <SyntaxHighlighter Value="Text"/>
-      </Unit64>
-      <Unit65>
         <Filename Value="creditosfrm.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmCreditos"/>
@@ -619,13 +611,13 @@
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
-      </Unit65>
-      <Unit66>
+      </Unit64>
+      <Unit65>
         <Filename Value="creditosfrm.ppu"/>
         <IsPartOfProject Value="True"/>
         <UsageCount Value="23"/>
         <SyntaxHighlighter Value="Text"/>
-      </Unit66>
+      </Unit65>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
