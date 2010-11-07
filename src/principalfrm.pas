@@ -26,6 +26,7 @@ type
       btnLReservas: TButton;
       GroupBox1: TGroupBox;
       Image1: TImage;
+      Image2: TImage;
       lbAdmin: TLabel;
       lbDescripcion: TLabel;
       Panel1: TPanel;
