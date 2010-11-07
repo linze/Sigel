@@ -90,9 +90,10 @@ begin
                 frmAnularCompra.ShowModal;
                 if frmAnularCompra.LocalidadAnulada then
                 begin
+                    ProcesarListaEspera;
                     uDatos.Guardar(frmFecha.Fecha);
                 end;
-                uDatos.LiberarDatos;
+                //uDatos.LiberarDatos;
             finally
                 frmAnularCompra.Free;
             end;
@@ -118,6 +119,7 @@ begin
             frmAnular.ShowModal;
             if frmAnular.IntroducidoDni then
             begin
+                ProcesarListaEspera;
                 uDatos.Guardar(frmFecha.Fecha);
             end;
             //uDatos.LiberarDatos;
@@ -434,7 +436,7 @@ begin
                 Espera.Asignada := False;
                 Espera.LocalidadesAsignadas := '';
                 Esperas.Add(Espera);
-                uDatos.Guardar(frmFecha.Fecha);
+                uDatos.Guardar(Fecha);
             end;
         finally
             frmDatosEspera.Free;
