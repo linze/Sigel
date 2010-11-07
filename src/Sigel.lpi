@@ -322,7 +322,7 @@
         <ComponentName Value="frmAnularCompra"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularCompraFrm"/>
-        <CursorPos X="28" Y="43"/>
+        <CursorPos X="50" Y="46"/>
         <TopLine Value="34"/>
         <EditorIndex Value="5"/>
         <UsageCount Value="91"/>
