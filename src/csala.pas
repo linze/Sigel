@@ -294,6 +294,7 @@ begin
                                     cuenta := cuenta + 1;
                                     EncontradasCuatro := (cuenta >= 4);
                                end;
+                               j := j + 1;
                           end;
                           i := i + 1;
                       end;
@@ -309,8 +310,8 @@ begin
                         EncontradasCuatro := (cuenta >= 4);
                    end;
                    i := i + 1;
-                   end;
                 end;
+            end;
     end;
     result := cuenta;
 end;
@@ -352,6 +353,7 @@ begin
                                     Found := True;
                                     result := Self.FPrimeraPlanta[i,j];
                                 end;
+                                j := j + 1;
                             end;
                             i := i + 1;
                         end;

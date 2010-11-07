@@ -4,7 +4,9 @@ object frmVerEstadoSala: TfrmVerEstadoSala
   Top = 191
   Width = 705
   ActiveControl = Panel2
-  Caption = 'frmVerEstadoSala'
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Estado de la sala'
   ClientHeight = 305
   ClientWidth = 705
   OnCreate = FormCreate
@@ -1977,8 +1979,8 @@ object frmVerEstadoSala: TfrmVerEstadoSala
     Left = 15
     Height = 20
     Top = 17
-    Width = 303
-    Caption = 'Indique las localidades deseadas:'
+    Width = 162
+    Caption = 'Estado de la sala:'
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]

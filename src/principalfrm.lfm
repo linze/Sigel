@@ -4798,15 +4798,15 @@ object frmPrincipal: TfrmPrincipal
       Width = 816
       Align = alClient
       Caption = 'Elija la operación a realizar'
-      ClientHeight = 327
-      ClientWidth = 814
+      ClientHeight = 341
+      ClientWidth = 812
       TabOrder = 0
       object btnCompra: TButton
-        Left = 501
+        Left = 500
         Height = 52
         Hint = 'Evite colas y compre ya su entrada.'
         Top = 23
-        Width = 203
+        Width = 206
         Caption = 'COMPRAR'
         Font.Height = -17
         Font.Name = 'Sans'
@@ -4818,11 +4818,11 @@ object frmPrincipal: TfrmPrincipal
         TabOrder = 0
       end
       object btnReserva: TButton
-        Left = 93
+        Left = 92
         Height = 52
         Hint = 'Realize su reserva abonando únicamente un '#10'10% del total.'
         Top = 23
-        Width = 203
+        Width = 206
         Caption = 'RESERVAR'
         Font.Height = -17
         Font.Name = 'Sans'
@@ -4834,11 +4834,11 @@ object frmPrincipal: TfrmPrincipal
         TabOrder = 1
       end
       object btnAnularReserva: TButton
-        Left = 93
+        Left = 92
         Height = 52
         Hint = '¡Aviso! La anulación conlleva la pérdida '#10'del 10% abonado.'
         Top = 103
-        Width = 203
+        Width = 206
         Caption = 'ANULAR RESERVA'
         Font.Height = -17
         Font.Name = 'Sans'
@@ -4850,11 +4850,11 @@ object frmPrincipal: TfrmPrincipal
         TabOrder = 2
       end
       object btnAnularCompra: TButton
-        Left = 501
+        Left = 500
         Height = 52
         Hint = 'Cancelar localidades compradas'
         Top = 103
-        Width = 203
+        Width = 206
         Caption = 'ANULAR COMPRA'
         Font.Height = -17
         Font.Name = 'Sans'
@@ -4865,11 +4865,11 @@ object frmPrincipal: TfrmPrincipal
         Visible = False
       end
       object btnLEspera: TButton
-        Left = 501
+        Left = 500
         Height = 52
         Hint = 'Visualice la lista de espera para una'#10'determinada función.'
         Top = 182
-        Width = 203
+        Width = 206
         Caption = 'LISTA DE ESPERA'
         Font.Height = -17
         Font.Name = 'Sans'
@@ -4882,11 +4882,11 @@ object frmPrincipal: TfrmPrincipal
         Visible = False
       end
       object btnVisualizarEstado: TButton
-        Left = 93
+        Left = 92
         Height = 52
         Hint = 'Conozca rápidamente el estado de la'#10'sala.'
         Top = 261
-        Width = 203
+        Width = 206
         Caption = 'VISUALIZAR ESTADO'
         Font.Height = -17
         Font.Name = 'Sans'
@@ -4899,11 +4899,11 @@ object frmPrincipal: TfrmPrincipal
         Visible = False
       end
       object btnLReservas: TButton
-        Left = 93
+        Left = 92
         Height = 52
         Hint = 'Visualice las reservas realizadas para una'#10'determinada función.'
         Top = 182
-        Width = 203
+        Width = 206
         Caption = 'LISTA DE RESERVAS'
         Font.Height = -17
         Font.Name = 'Sans'

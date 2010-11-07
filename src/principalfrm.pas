@@ -421,9 +421,9 @@ var
     Localidad: TLocalidad;
     Espera : TEspera;
 begin
-    SalaLlena := False;
-    FinDeLaLista := False;
     i := 0;
+    SalaLlena := Sala.EstaCompleto;
+    FinDeLaLista := (i = Esperas.Count);
     while (not SalaLlena) and (not FinDeLaLista) do
     begin
         Espera := TEspera(Esperas.Items[i]);
