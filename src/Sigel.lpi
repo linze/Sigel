@@ -8,7 +8,7 @@
       <Title Value="Sigel"/>
       <Icon Value="0"/>
       <UseXPManifest Value="True"/>
-      <ActiveEditorIndexAtStart Value="20"/>
+      <ActiveEditorIndexAtStart Value="1"/>
     </General>
     <VersionInfo>
       <ProjectVersion Value=""/>
@@ -38,7 +38,7 @@
         <CursorPos X="128" Y="24"/>
         <TopLine Value="1"/>
         <EditorIndex Value="15"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit0>
@@ -51,7 +51,7 @@
         <CursorPos X="103" Y="434"/>
         <TopLine Value="1"/>
         <EditorIndex Value="10"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit1>
@@ -62,7 +62,7 @@
         <CursorPos X="11" Y="9"/>
         <TopLine Value="1"/>
         <EditorIndex Value="14"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit2>
@@ -73,7 +73,7 @@
         <CursorPos X="9" Y="7"/>
         <TopLine Value="1"/>
         <EditorIndex Value="9"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit3>
@@ -84,7 +84,7 @@
         <CursorPos X="1" Y="43"/>
         <TopLine Value="28"/>
         <EditorIndex Value="8"/>
-        <UsageCount Value="148"/>
+        <UsageCount Value="149"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit4>
@@ -103,7 +103,7 @@
         <CursorPos X="44" Y="356"/>
         <TopLine Value="334"/>
         <EditorIndex Value="0"/>
-        <UsageCount Value="146"/>
+        <UsageCount Value="147"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit6>
@@ -123,7 +123,7 @@
         <UnitName Value="ComprarFrm"/>
         <CursorPos X="78" Y="8"/>
         <TopLine Value="3"/>
-        <UsageCount Value="144"/>
+        <UsageCount Value="145"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit8>
       <Unit9>
@@ -134,7 +134,7 @@
         <UnitName Value="ReservaFrm"/>
         <CursorPos X="5" Y="31"/>
         <TopLine Value="14"/>
-        <UsageCount Value="144"/>
+        <UsageCount Value="145"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit9>
       <Unit10>
@@ -184,7 +184,7 @@
         <CursorPos X="40" Y="20"/>
         <TopLine Value="1"/>
         <EditorIndex Value="7"/>
-        <UsageCount Value="143"/>
+        <UsageCount Value="144"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit15>
@@ -203,7 +203,7 @@
         <CursorPos X="33" Y="12"/>
         <TopLine Value="8"/>
         <EditorIndex Value="4"/>
-        <UsageCount Value="136"/>
+        <UsageCount Value="137"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit17>
@@ -240,7 +240,7 @@
         <CursorPos X="18" Y="61"/>
         <TopLine Value="29"/>
         <EditorIndex Value="16"/>
-        <UsageCount Value="123"/>
+        <UsageCount Value="124"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit21>
@@ -253,7 +253,7 @@
         <CursorPos X="47" Y="53"/>
         <TopLine Value="40"/>
         <EditorIndex Value="2"/>
-        <UsageCount Value="122"/>
+        <UsageCount Value="123"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit22>
@@ -272,7 +272,7 @@
         <CursorPos X="58" Y="51"/>
         <TopLine Value="36"/>
         <EditorIndex Value="18"/>
-        <UsageCount Value="119"/>
+        <UsageCount Value="120"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit24>
@@ -283,7 +283,7 @@
         <CursorPos X="75" Y="9"/>
         <TopLine Value="1"/>
         <EditorIndex Value="11"/>
-        <UsageCount Value="116"/>
+        <UsageCount Value="117"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit25>
@@ -301,10 +301,10 @@
         <ComponentName Value="frmAnularReserva"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularReservaFrm"/>
-        <CursorPos X="27" Y="56"/>
+        <CursorPos X="22" Y="64"/>
         <TopLine Value="52"/>
         <EditorIndex Value="21"/>
-        <UsageCount Value="110"/>
+        <UsageCount Value="111"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit27>
@@ -314,10 +314,10 @@
         <ComponentName Value="frmAnularCompra"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="AnularCompraFrm"/>
-        <CursorPos X="72" Y="57"/>
+        <CursorPos X="108" Y="58"/>
         <TopLine Value="48"/>
         <EditorIndex Value="6"/>
-        <UsageCount Value="110"/>
+        <UsageCount Value="111"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit28>
@@ -375,10 +375,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DatosReservaFrm"/>
-        <CursorPos X="30" Y="9"/>
-        <TopLine Value="1"/>
+        <CursorPos X="35" Y="57"/>
+        <TopLine Value="41"/>
         <EditorIndex Value="20"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="47"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit36>
@@ -389,7 +389,7 @@
         <CursorPos X="131" Y="7"/>
         <TopLine Value="1"/>
         <EditorIndex Value="12"/>
-        <UsageCount Value="91"/>
+        <UsageCount Value="92"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit37>
@@ -463,7 +463,7 @@
         <CursorPos X="104" Y="74"/>
         <TopLine Value="45"/>
         <EditorIndex Value="19"/>
-        <UsageCount Value="81"/>
+        <UsageCount Value="82"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit47>
@@ -485,10 +485,10 @@
         <ComponentName Value="frmDatosEspera"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="DatosEspera"/>
-        <CursorPos X="58" Y="11"/>
-        <TopLine Value="11"/>
+        <CursorPos X="84" Y="101"/>
+        <TopLine Value="96"/>
         <EditorIndex Value="3"/>
-        <UsageCount Value="75"/>
+        <UsageCount Value="76"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit50>
@@ -501,7 +501,7 @@
         <CursorPos X="120" Y="53"/>
         <TopLine Value="39"/>
         <EditorIndex Value="17"/>
-        <UsageCount Value="66"/>
+        <UsageCount Value="67"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit51>
@@ -514,7 +514,7 @@
         <CursorPos X="75" Y="2"/>
         <TopLine Value="1"/>
         <EditorIndex Value="13"/>
-        <UsageCount Value="60"/>
+        <UsageCount Value="61"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit52>
@@ -566,10 +566,10 @@
         <Filename Value="ufuncionescomunes.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uFuncionesComunes"/>
-        <CursorPos X="43" Y="20"/>
-        <TopLine Value="37"/>
+        <CursorPos X="17" Y="80"/>
+        <TopLine Value="61"/>
         <EditorIndex Value="1"/>
-        <UsageCount Value="57"/>
+        <UsageCount Value="58"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit60>
@@ -581,20 +581,20 @@
         <UnitName Value="PagarFrm"/>
         <CursorPos X="1" Y="1594"/>
         <TopLine Value="1584"/>
-        <UsageCount Value="36"/>
+        <UsageCount Value="37"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit61>
       <Unit62>
         <Filename Value="creditosfrm.lrs"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <SyntaxHighlighter Value="Text"/>
       </Unit62>
       <Unit63>
         <Filename Value="creditosfrm.o"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <SyntaxHighlighter Value="Text"/>
       </Unit63>
       <Unit64>
@@ -607,14 +607,14 @@
         <CursorPos X="65" Y="9"/>
         <TopLine Value="1"/>
         <EditorIndex Value="5"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <Loaded Value="True"/>
         <SyntaxHighlighter Value="Delphi"/>
       </Unit64>
       <Unit65>
         <Filename Value="creditosfrm.ppu"/>
         <IsPartOfProject Value="True"/>
-        <UsageCount Value="31"/>
+        <UsageCount Value="32"/>
         <SyntaxHighlighter Value="Text"/>
       </Unit65>
       <Unit66>
@@ -632,124 +632,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="443" Column="1" TopLine="433"/>
+        <Filename Value="anularreservafrm.pas"/>
+        <Caret Line="39" Column="64" TopLine="36"/>
       </Position1>
       <Position2>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="444" Column="1" TopLine="434"/>
+        <Filename Value="anularreservafrm.pas"/>
+        <Caret Line="54" Column="50" TopLine="52"/>
       </Position2>
       <Position3>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="427" Column="1" TopLine="417"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="15" Column="51" TopLine="35"/>
       </Position3>
       <Position4>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="429" Column="1" TopLine="419"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="8" Column="63" TopLine="1"/>
       </Position4>
       <Position5>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="430" Column="1" TopLine="420"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="62" Column="40" TopLine="35"/>
       </Position5>
       <Position6>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="432" Column="1" TopLine="422"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="64" Column="54" TopLine="35"/>
       </Position6>
       <Position7>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="434" Column="45" TopLine="424"/>
+        <Filename Value="anularreservafrm.pas"/>
+        <Caret Line="55" Column="49" TopLine="51"/>
       </Position7>
       <Position8>
-        <Filename Value="csala.pas"/>
-        <Caret Line="356" Column="44" TopLine="326"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="83" Column="13" TopLine="56"/>
       </Position8>
       <Position9>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="95" Column="1" TopLine="85"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="54" Column="28" TopLine="38"/>
       </Position9>
       <Position10>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="96" Column="1" TopLine="86"/>
+        <Filename Value="anularreservafrm.pas"/>
+        <Caret Line="66" Column="9" TopLine="39"/>
       </Position10>
       <Position11>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="100" Column="1" TopLine="90"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="83" Column="80" TopLine="58"/>
       </Position11>
       <Position12>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="95" Column="1" TopLine="85"/>
+        <Filename Value="anularreservafrm.pas"/>
+        <Caret Line="57" Column="41" TopLine="52"/>
       </Position12>
       <Position13>
-        <Filename Value="principalfrm.pas"/>
-        <Caret Line="96" Column="1" TopLine="86"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="65" Column="22" TopLine="33"/>
       </Position13>
       <Position14>
         <Filename Value="datosreservafrm.pas"/>
-        <Caret Line="52" Column="53" TopLine="39"/>
+        <Caret Line="65" Column="43" TopLine="45"/>
       </Position14>
       <Position15>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="39" Column="64" TopLine="36"/>
+        <Filename Value="datosreservafrm.pas"/>
+        <Caret Line="56" Column="72" TopLine="50"/>
       </Position15>
       <Position16>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="54" Column="50" TopLine="52"/>
+        <Filename Value="datosreservafrm.pas"/>
+        <Caret Line="65" Column="49" TopLine="49"/>
       </Position16>
       <Position17>
-        <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="15" Column="51" TopLine="35"/>
+        <Filename Value="datosespera.pas"/>
+        <Caret Line="9" Column="62" TopLine="1"/>
       </Position17>
       <Position18>
-        <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="8" Column="63" TopLine="1"/>
+        <Filename Value="datosespera.pas"/>
+        <Caret Line="113" Column="15" TopLine="84"/>
       </Position18>
       <Position19>
         <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="62" Column="40" TopLine="35"/>
+        <Caret Line="19" Column="43" TopLine="2"/>
       </Position19>
       <Position20>
         <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="64" Column="54" TopLine="35"/>
+        <Caret Line="95" Column="39" TopLine="74"/>
       </Position20>
       <Position21>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="55" Column="49" TopLine="51"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="102" Column="24" TopLine="74"/>
       </Position21>
       <Position22>
         <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="83" Column="13" TopLine="56"/>
+        <Caret Line="96" Column="52" TopLine="74"/>
       </Position22>
       <Position23>
         <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="54" Column="28" TopLine="38"/>
+        <Caret Line="98" Column="21" TopLine="74"/>
       </Position23>
       <Position24>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="66" Column="9" TopLine="39"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="97" Column="60" TopLine="72"/>
       </Position24>
       <Position25>
-        <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="83" Column="80" TopLine="58"/>
+        <Filename Value="datosespera.pas"/>
+        <Caret Line="108" Column="23" TopLine="90"/>
       </Position25>
       <Position26>
-        <Filename Value="anularreservafrm.pas"/>
-        <Caret Line="57" Column="41" TopLine="52"/>
+        <Filename Value="datosespera.pas"/>
+        <Caret Line="109" Column="5" TopLine="90"/>
       </Position26>
       <Position27>
-        <Filename Value="ufuncionescomunes.pas"/>
-        <Caret Line="65" Column="22" TopLine="33"/>
+        <Filename Value="datosreservafrm.pas"/>
+        <Caret Line="8" Column="92" TopLine="1"/>
       </Position27>
       <Position28>
         <Filename Value="datosreservafrm.pas"/>
-        <Caret Line="65" Column="43" TopLine="45"/>
+        <Caret Line="66" Column="43" TopLine="56"/>
       </Position28>
       <Position29>
         <Filename Value="datosreservafrm.pas"/>
-        <Caret Line="56" Column="72" TopLine="50"/>
+        <Caret Line="57" Column="12" TopLine="21"/>
       </Position29>
       <Position30>
-        <Filename Value="datosreservafrm.pas"/>
-        <Caret Line="65" Column="49" TopLine="49"/>
+        <Filename Value="ufuncionescomunes.pas"/>
+        <Caret Line="68" Column="14" TopLine="54"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

@@ -10,6 +10,7 @@ object frmDatosReserva: TfrmDatosReserva
   ClientHeight = 318
   ClientWidth = 319
   OnCreate = FormCreate
+  OnKeyPress = FormKeyPress
   Position = poScreenCenter
   LCLVersion = '0.9.28.2'
   object Intro: TLabel

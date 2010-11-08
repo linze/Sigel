@@ -28,6 +28,7 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure eTelefonoKeyPress(Sender: TObject; var Key: char);
     procedure FormCreate(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: char);
   private
     { private declarations }
   public
@@ -53,11 +54,17 @@ end;
 
 procedure TfrmDatosReserva.eTelefonoKeyPress(Sender: TObject; var Key: char);
 begin
+    Key := uFuncionesComunes.EsNumero(Key);
 end;
 
 procedure TfrmDatosReserva.FormCreate(Sender: TObject);
 begin
     Self.DatosIntroducidos := False;
+end;
+
+procedure TfrmDatosReserva.FormKeyPress(Sender: TObject; var Key: char);
+begin
+    Key := uFuncionesComunes.EsLetra(Key);
 end;
 
 procedure TfrmDatosReserva.btnAceptarClick(Sender: TObject);

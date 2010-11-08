@@ -13,6 +13,10 @@ interface
     function EsEmail(EMail: string): Boolean;
     function LocalidadToString(Localidad: TLocalidad): string;
     function DNIValido (Cadena : String): boolean;
+    function IsNumero (Caracter : Char) : boolean;
+    function IsLetra (Caracter : Char) : boolean;
+    function EsNumero (Tecla : Char) : Char;
+    function EsLetra (Tecla : Char) : Char;
 
 implementation
 
@@ -58,14 +62,44 @@ begin
     else
     begin
         for i:=1 to 8 do
-            if not ((Cadena[i] >= '0') and (Cadena[i] <= '9')) then
+            if not IsNumero(Cadena[i]) then
                 valido := false;
 
-        if ((Cadena[9] >= '0') and (Cadena[9] <= '9')) then
+        if IsNumero(Cadena[9]) then
             valido := false;
     end;
 
     result := valido;
+end;
+
+function IsNumero (Caracter : Char) : boolean;
+begin
+    result := ((Caracter >= '0') and (Caracter <= '9'))
+end;
+
+function IsLetra (Caracter : Char) : boolean;
+begin
+    result := ((Caracter >= 'a') and (Caracter <= 'z')) or
+                ((Caracter >= 'A') and (Caracter <= 'Z'));
+end;
+
+function EsNumero (Tecla : Char) : Char;
+begin
+    if not (Tecla in [#8, '0'..'9']) then
+        result := #0
+    else
+        result := Tecla;
+
+end;
+
+function EsLetra (Tecla : Char) : Char;
+begin
+    if not (Tecla in [#8, 'a'..'z', 'A'..'Z', #20]) then
+    begin
+        result := Tecla;
+    end
+    else
+        result := Tecla;
 end;
 
 end.

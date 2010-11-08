@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ExtCtrls, StdCtrls, Spin, CTipoLocalidad;
+  ExtCtrls, StdCtrls, Spin, CTipoLocalidad, uFuncionesComunes;
 
 type
 
@@ -31,6 +31,9 @@ type
       procedure btnAceptarClick(Sender: TObject);
       procedure btnCancelarClick(Sender: TObject);
       procedure cbTipoChange(Sender: TObject);
+      procedure eNombreKeyPress(Sender: TObject; var Key: char);
+      procedure eTelefonoKeyPress(Sender: TObject; var Key: char);
+      procedure FormKeyPress(Sender: TObject; var Key: char);
       procedure GroupBox2Click(Sender: TObject);
   private
     { private declarations }
@@ -97,6 +100,21 @@ begin
 end;
 
 procedure TfrmDatosEspera.cbTipoChange(Sender: TObject);
+begin
+
+end;
+
+procedure TfrmDatosEspera.eNombreKeyPress(Sender: TObject; var Key: char);
+begin
+    Key := uFuncionesComunes.EsLetra(Key);
+end;
+
+procedure TfrmDatosEspera.eTelefonoKeyPress(Sender: TObject; var Key: char);
+begin
+    Key := uFuncionesComunes.EsNumero(Key);
+end;
+
+procedure TfrmDatosEspera.FormKeyPress(Sender: TObject; var Key: char);
 begin
 
 end;
