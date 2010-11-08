@@ -52,7 +52,6 @@ end;
 
 function DNIValido (Cadena : String): boolean;
 var
-    NumeroStr : String;
     i         : integer;
     valido  : boolean;
 begin
@@ -94,9 +93,9 @@ end;
 
 function EsLetra (Tecla : Char) : Char;
 begin
-    if not (Tecla in [#8, 'a'..'z', 'A'..'Z', #20]) then
+    if not (Tecla in [#8, 'a'..'z', 'A'..'Z', #32]) then
     begin
-        result := Tecla;
+        result := #0;
     end
     else
         result := Tecla;

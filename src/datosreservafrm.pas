@@ -26,6 +26,7 @@ type
     lbContacto: TLabel;
     procedure btnAceptarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure eTelefonoExit(Sender: TObject);
     procedure eTelefonoKeyPress(Sender: TObject; var Key: char);
     procedure FormCreate(Sender: TObject);
     procedure FormKeyPress(Sender: TObject; var Key: char);
@@ -50,6 +51,29 @@ implementation
 procedure TfrmDatosReserva.btnCancelarClick(Sender: TObject);
 begin
     Self.Close;
+end;
+
+procedure TfrmDatosReserva.eTelefonoExit(Sender: TObject);
+var
+    LongitudErronea, ComienzoErroneo : boolean;
+begin
+    if (Sender as TEdit).Text <> '' then
+    begin
+        LongitudErronea := (Length((Sender as TEdit).Text) < 9) or (Length((Sender as TEdit).Text) > 9);
+        if LongitudErronea then
+        begin
+            ShowMessage('Numero de teléfono incorrecto. Se han de introducir 9 dígitos');
+            (Sender as TEdit).Focused;
+        end
+        else
+        begin
+            ComienzoErroneo := (((Sender as TEdit).Text[1] <> '9') and ((Sender as TEdit).Text[1] <> '6'));
+            if ComienzoErroneo then
+            begin
+                ShowMessage('Numero de teléfono incorrecto. Debe comenzar por 9 o por 6');
+            end;
+        end;
+    end;
 end;
 
 procedure TfrmDatosReserva.eTelefonoKeyPress(Sender: TObject; var Key: char);

@@ -14,5 +14,5 @@ LazarusResources.Add('TfrmLogin','FORMDATA',[
   +'ion'#6#8'Cancelar'#7'OnClick'#7#16'btnCancelarClick'#8'TabOrder'#2#1#0#0#5
   +'TEdit'#9'ePassword'#4'Left'#2#10#6'Height'#2#27#3'Top'#2' '#5'Width'#3#214#0
   +#8'EchoMode'#7#10'emPassword'#14'ParentShowHint'#8#12'PasswordChar'#6#1'*'#8
-  +'TabOrder'#2#2#4'Text'#6#1'a'#0#0#0
+  +'TabOrder'#2#2#0#0#0
 ]);

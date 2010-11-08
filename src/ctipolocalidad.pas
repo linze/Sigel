@@ -4,7 +4,7 @@ unit CTipoLocalidad;
 
 interface
     type
-        TTipoLocalidad = (Patio, PrimeraPlanta, Palco, Indiferente);
+        TTipoLocalidad = (Patio, PrimeraPlanta, Palco);
 
 implementation
 end.

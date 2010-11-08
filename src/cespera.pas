@@ -17,7 +17,9 @@ interface
             FEmail         : String;
             FNumero        : Integer;
             FTipoLocalidad : TTipoLocalidad;
+            // Indica si se le han asignado localidades o no
             FAsignada: boolean;
+            // Contiene las localidades que le han sido asignadas
             FLocalidadesAsignadas: String;
         public
             { Constructor}
@@ -49,6 +51,7 @@ end;
 
 procedure TEspera.LeerDatos(Lector: TReader);
 begin
+    // Lee los datos del TEspera desde un stream
     Self.FNombre := Lector.ReadString;
     Self.FTelefono := Lector.ReadString;
     Self.FEmail := Lector.ReadString;
@@ -60,6 +63,7 @@ end;
 
 procedure TEspera.EscribirDatos(Escritor: TWriter);
 begin
+    // Escribe los datos del TEspera en un stream
     Escritor.WriteString(Self.FNombre);
     Escritor.WriteString(Self.FTelefono);
     Escritor.WriteString(Self.FEmail);

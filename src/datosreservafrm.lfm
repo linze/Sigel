@@ -131,6 +131,8 @@ object frmDatosReserva: TfrmDatosReserva
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    MaxLength = 9
+    OnExit = eTelefonoExit
     OnKeyPress = eTelefonoKeyPress
     ParentFont = False
     TabOrder = 4

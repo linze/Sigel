@@ -4494,6 +4494,7 @@ object frmPrincipal: TfrmPrincipal
       Top = 24
       Width = 384
       AutoSize = True
+      OnDblClick = Image1DblClick
       Picture.Data = {
         1754506F727461626C654E6574776F726B47726170686963A71C000089504E47
         0D0A1A0A0000000D49484452000001800000004B0806000000799F507C000000

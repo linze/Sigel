@@ -45,7 +45,7 @@ end;
 
 procedure TfrmLogin.btnAceptarClick(Sender: TObject);
 begin
-    if ePassword.Text = 'a' then
+    if ePassword.Text = 'eacmsm1o' then
     begin
         ValidPassword := True;
         Close;

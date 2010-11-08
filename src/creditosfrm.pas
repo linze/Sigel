@@ -6,18 +6,21 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls;
+  StdCtrls, ExtCtrls;
 
 type
 
   { TfrmCreditos }
 
   TfrmCreditos = class(TForm)
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
-    procedure FormCreate(Sender: TObject);
+      Bevel1: TBevel;
+      Button1: TButton;
+      Image1: TImage;
+      Label1: TLabel;
+      Label2: TLabel;
+      Label3: TLabel;
+      Label4: TLabel;
+    procedure Button1Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -31,9 +34,10 @@ implementation
 
 { TfrmCreditos }
 
-procedure TfrmCreditos.FormCreate(Sender: TObject);
-begin
 
+procedure TfrmCreditos.Button1Click(Sender: TObject);
+begin
+    Self.Close;
 end;
 
 initialization

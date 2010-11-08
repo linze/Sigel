@@ -47,6 +47,5 @@ object frmLogin: TfrmLogin
     ParentShowHint = False
     PasswordChar = '*'
     TabOrder = 2
-    Text = 'a'
   end
 end

@@ -9,7 +9,6 @@ object frmDatosEspera: TfrmDatosEspera
   Caption = 'Datos para la espera'
   ClientHeight = 347
   ClientWidth = 400
-  OnKeyPress = FormKeyPress
   Position = poScreenCenter
   LCLVersion = '0.9.28.2'
   object Label6: TLabel
@@ -72,7 +71,7 @@ object frmDatosEspera: TfrmDatosEspera
     object eNombre: TEdit
       Left = 6
       Height = 29
-      Top = 36
+      Top = 30
       Width = 363
       Font.Height = -17
       Font.Name = 'Sans'
@@ -89,6 +88,8 @@ object frmDatosEspera: TfrmDatosEspera
       Font.Height = -17
       Font.Name = 'Sans'
       Font.Style = [fsBold]
+      MaxLength = 9
+      OnExit = eTelefonoExit
       OnKeyPress = eTelefonoKeyPress
       ParentFont = False
       TabOrder = 1

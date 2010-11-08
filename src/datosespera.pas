@@ -32,8 +32,8 @@ type
       procedure btnCancelarClick(Sender: TObject);
       procedure cbTipoChange(Sender: TObject);
       procedure eNombreKeyPress(Sender: TObject; var Key: char);
+      procedure eTelefonoExit(Sender: TObject);
       procedure eTelefonoKeyPress(Sender: TObject; var Key: char);
-      procedure FormKeyPress(Sender: TObject; var Key: char);
       procedure GroupBox2Click(Sender: TObject);
   private
     { private declarations }
@@ -109,14 +109,32 @@ begin
     Key := uFuncionesComunes.EsLetra(Key);
 end;
 
+procedure TfrmDatosEspera.eTelefonoExit(Sender: TObject);
+var
+    LongitudErronea, ComienzoErroneo : boolean;
+begin
+    if (Sender as TEdit).Text <> '' then
+    begin
+        LongitudErronea := (Length((Sender as TEdit).Text) < 9) or (Length((Sender as TEdit).Text) > 9);
+        if LongitudErronea then
+        begin
+            ShowMessage('Numero de teléfono incorrecto. Se han de introducir 9 dígitos');
+            (Sender as TEdit).Focused;
+        end
+        else
+        begin
+            ComienzoErroneo := (((Sender as TEdit).Text[1] <> '9') and ((Sender as TEdit).Text[1] <> '6'));
+            if ComienzoErroneo then
+            begin
+                ShowMessage('Numero de teléfono incorrecto. Debe comenzar por 9 o por 6');
+            end;
+        end;
+    end;
+end;
+
 procedure TfrmDatosEspera.eTelefonoKeyPress(Sender: TObject; var Key: char);
 begin
     Key := uFuncionesComunes.EsNumero(Key);
-end;
-
-procedure TfrmDatosEspera.FormKeyPress(Sender: TObject; var Key: char);
-begin
-
 end;
 
 

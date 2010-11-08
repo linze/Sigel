@@ -9,7 +9,7 @@ uses
   ExtCtrls, StdCtrls, LoginFrm, FechaFrm, SeleccionButacaFrm, uDatos,
   CSala, AnularReservaFrm, DatosReservaFrm, CEstadoLocalidad, CReserva,
   AnularCompraFrm, VerListaEsperaFrm, DatosEspera, CEspera, VerEstadoSalaFrm,
-  VerListaReservas, CTipoLocalidad, CLocalidad, uFuncionesComunes, PagarFrm;
+  VerListaReservas, CLocalidad, uFuncionesComunes, PagarFrm, CreditosFrm;
 
 type
 
@@ -46,6 +46,7 @@ type
       procedure btnVisualizarEstadoClick(Sender: TObject);
       procedure Button1Click(Sender: TObject);
       procedure FormCreate(Sender: TObject);
+      procedure Image1DblClick(Sender: TObject);
       procedure lbAdminClick(Sender: TObject);
       procedure Panel2Click(Sender: TObject);
       function PedirPago(Cantidad: integer) : boolean;
@@ -124,7 +125,6 @@ begin
                 ProcesarListaEspera;
                 uDatos.Guardar(frmFecha.Fecha);
             end;
-            //uDatos.LiberarDatos;
       end;
   finally
          frmFecha.Free;
@@ -137,25 +137,40 @@ var
     frmSeleccionButaca : TFrmSeleccionButacas;
     i       : integer;
 begin
+    // Creamos el formulario de fechas
     frmFecha := TFrmFecha.Create(Self);
     try
+        // Lo abrimos en modo compra
         frmFecha.EsReserva := False;
+        // Mostramos la ventana
         frmFecha.ShowModal;
+        // Si la fecha está marcada y se ha pulsado aceptar
         if frmFecha.FechaMarcada then
         begin
+            // Cargamos el fichero de datos para la fecha indicada
             uDatos.Cargar(frmFecha.Fecha);
+            // Si la sala está completa...
             if uDatos.Sala.EstaCompleto then
+                // Invocamos el procedimiento de introducción en la lista
+                // de espera.
                 PasarAListaDeEspera(frmFecha.Fecha)
             else
             begin
+                // Creamos la ventana de selección de butacas
                 frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+                // ... en modo compra
                 frmSeleccionButaca.Modo := ModoCompra;
                 try
+                    // Mostramos la ventana
                     frmSeleccionButaca.ShowModal;
+                    // Si se ha marcado alguna butaca y se ha pulsado aceptar
                     if (frmSeleccionButaca.NumDeMarcadas > 0) and (frmSeleccionButaca.Aceptado) then
                     begin
+                        // Se muestra la ventana de pago
                         if PedirPago(frmSeleccionButaca.GastoTotal) then
                         begin
+                            // Se establecen las localidades del array que estén marcadas
+                            // como compradas.
                             for i:=1 to 4 do
                             begin
                                 if frmSeleccionButaca.Marcadas[i] then
@@ -164,6 +179,7 @@ begin
                                     uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                 end;
                             end;
+                            // Guardamos el estado de todo para la fecha indicada
                             uDatos.Guardar(frmFecha.Fecha);
                             ShowMessage('Operación realizada con éxito');
                         end;
@@ -171,7 +187,6 @@ begin
                 finally
                     frmSeleccionButaca.Free;
                 end;
-                //uDatos.LiberarDatos;
             end;
         end;
     finally
@@ -201,7 +216,6 @@ begin
         finally
             frmFecha.Free;
         end;
-        //uDatos.LiberarDatos;
     except
     end;
 end;
@@ -259,49 +273,78 @@ var
     Reserva  : TReserva;
     i       : integer;
 begin
+    // Creamos la ventana de fechas
     frmFecha := TFrmFecha.Create(Self);
     try
+        // ... en modo reservas
         frmFecha.EsReserva := True;
+        // La mostramos
         frmFecha.ShowModal;
+        // Si se ha marcado una fecha y se ha pulsado aceptar...
         if frmFecha.FechaMarcada then
         begin
+            // Se carga el fichero de datos correspondiente
             uDatos.Cargar(frmFecha.Fecha);
+            // Si la sala está completa...
             if uDatos.Sala.EstaCompleto then
+                // ... se invoca el proceso de introducción en la lista
+                // de espera
                 PasarAListaDeEspera(frmFecha.Fecha)
             else
+            // Si quedan huecos vacíos
             begin
+                // Creamos la ventana de selección de ventana
                 frmSeleccionButaca := TFrmSeleccionButacas.Create(Self);
+                // La cargamos en modo reserva
                 frmSeleccionButaca.Modo := ModoReserva;
                 try
+                    // Mostramos la pantalla
                     frmSeleccionButaca.ShowModal;
+                    // Si se ha aceptado y se ha seleccionado alguna butaca
                     if (frmSeleccionButaca.Aceptado) and (frmSeleccionButaca.NumDeMarcadas > 0) then
                     begin
+                        // Creamos la ventana de introducción de datos de reservas
                         frmDatos := TfrmDatosReserva.Create(Self);
                         try
+                            // Se muestra la ventana de petición de datos
                             frmDatos.ShowModal;
+                            // Si se ha introducido datos...
                             if frmDatos.DatosIntroducidos then
                             begin
+                                // Comprobamos que no se ha realizado una reserva anterior
+                                // con el mismo DNI para esa fecha
                                 if HayReservaPrevia(frmDatos.DNI) then
                                     ShowMessage('No se puede realizar más de una reserva por persona')
                                 else
+                                // En caso contrario...
                                 begin
+                                    // Mostramos la pantalla de petición de pago
                                     if PedirPago(frmSeleccionButaca.GastoTotal) = True then
                                     begin
+                                        // Si paga, creamos una reserva
                                         Reserva := TReserva.Create;
+                                        // Rellenamos los campos
                                         Reserva.Nombre := frmDatos.Nombre;
                                         Reserva.Dni := frmDatos.Dni;
                                         Reserva.Telefono := frmDatos.Telefono;
                                         Reserva.Email := frmDatos.Email;
+                                        // Para cada una de los huecos de las localidades
+                                        // en el formulario de selección
                                         for i:=1 to 4 do
                                         begin
+                                            // Si está marcada
                                             if frmSeleccionButaca.Marcadas[i] then
                                             begin
+                                                //... añadimos la localidad
                                                 frmSeleccionButaca.Localidades[i].Estado := Reservada;
                                                 Reserva.AddLocalidad(frmSeleccionButaca.Localidades[i]);
+                                                // Cambiamos el estado de la butaca
                                                 uDatos.Sala.Cambiar(frmSeleccionButaca.Localidades[i]);
                                             end;
                                         end;
+                                        // Añadimos la reserva a la lista de reservas
                                         uDatos.Reservas.Add(Reserva);
+                                        // Guardamos los cambios
                                         uDatos.Guardar(frmFecha.Fecha);
                                         ShowMessage('Operación realizada con éxito');
                                     end;
@@ -315,8 +358,6 @@ begin
                     frmSeleccionButaca.Free;
                 end;
             end;
-            //TODO: Liberar memoria
-            //uDatos.LiberarDatos;
         end;
     finally
         frmFecha.Free;
@@ -357,7 +398,20 @@ end;
 
 procedure TfrmPrincipal.FormCreate(Sender: TObject);
 begin
+    // Establecemos el usuario como no autenticado
     Self.Autenticado := False;
+end;
+
+procedure TfrmPrincipal.Image1DblClick(Sender: TObject);
+var
+    frmCreditos : TFrmCreditos;
+begin
+    frmCreditos := TFrmCreditos.Create(Self);
+    try
+        frmCreditos.ShowModal;
+    finally
+        frmCreditos.Free;
+    end;
 end;
 
 procedure TfrmPrincipal.lbAdminClick(Sender: TObject);

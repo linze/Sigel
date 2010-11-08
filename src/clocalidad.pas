@@ -49,8 +49,7 @@ end;
 
 procedure TLocalidad.LeerDatos(Lector: TReader);
 begin
-    // NOTICE: Desconozco si ReadValue es lo correcto. Si
-    // hay conflictos, usar IntVar := Ord (MyEnumVal);
+    // Lee los datos de la localidad desde un stream
     Self.FTipo := TTipoLocalidad(Lector.ReadInteger);
     Self.FEstado := TEstadoLocalidad(Lector.ReadInteger);
     Self.FNumero := Lector.ReadInteger;
@@ -59,6 +58,7 @@ end;
 
 procedure TLocalidad.EscribirDatos(Escritor: TWriter);
 begin
+    // Escribe los datos de la localidad en un stream
     Escritor.WriteInteger(ord(Self.FTipo));
     Escritor.WriteInteger(ord(Self.FEstado));
     Escritor.WriteInteger(Self.FNumero);
