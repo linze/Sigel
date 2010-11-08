@@ -1,3 +1,5 @@
+{ Este es un archivo de recurso de Lazarus generado automáticamente }
+
 LazarusResources.Add('TfrmPrincipal','FORMDATA',[
   'TPF0'#13'TfrmPrincipal'#12'frmPrincipal'#4'Left'#3' '#1#6'Height'#3#18#2#3'T'
   +'op'#2'z'#5'Width'#3'0'#3#13'ActiveControl'#7#6'Panel1'#7'Caption'#6#5'Sigel'

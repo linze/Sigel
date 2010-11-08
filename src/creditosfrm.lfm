@@ -1,12 +1,13 @@
 object frmCreditos: TfrmCreditos
   Left = 290
-  Height = 363
+  Height = 428
   Top = 199
   Width = 400
+  ActiveControl = Button1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Acerca de Sigel...'
-  ClientHeight = 363
+  ClientHeight = 428
   ClientWidth = 400
   Position = poScreenCenter
   LCLVersion = '0.9.28.2'
@@ -584,7 +585,7 @@ object frmCreditos: TfrmCreditos
   end
   object Bevel1: TBevel
     Left = 16
-    Height = 213
+    Height = 288
     Top = 80
     Width = 370
   end
@@ -599,15 +600,32 @@ object frmCreditos: TfrmCreditos
   object Label4: TLabel
     Left = 24
     Height = 60
-    Top = 216
+    Top = 293
     Width = 285
     Caption = 'Sigel es software libre bajo licencia GPL 3.0'#10'Código fuente disponible en:'#10'    http://github.com/linze/Sigel'
+    ParentColor = False
+    OnClick = Label4Click
+  end
+  object Label5: TLabel
+    Left = 24
+    Height = 18
+    Top = 216
+    Width = 115
+    Caption = 'Agradecimientos:'
+    ParentColor = False
+  end
+  object Label6: TLabel
+    Left = 41
+    Height = 60
+    Top = 233
+    Width = 170
+    Caption = 'Xavier Martinez Garsaball'#10'Jachguate'#10'Caelan Burris'
     ParentColor = False
   end
   object Button1: TButton
     Left = 274
     Height = 48
-    Top = 304
+    Top = 376
     Width = 112
     Caption = 'CERRAR'
     Font.Height = -17

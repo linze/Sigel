@@ -34,7 +34,10 @@ type
       Label2: TLabel;
       Label3: TLabel;
       Label4: TLabel;
+      Label5: TLabel;
+      Label6: TLabel;
     procedure Button1Click(Sender: TObject);
+    procedure Label4Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -52,6 +55,11 @@ implementation
 procedure TfrmCreditos.Button1Click(Sender: TObject);
 begin
     Self.Close;
+end;
+
+procedure TfrmCreditos.Label4Click(Sender: TObject);
+begin
+
 end;
 
 initialization
