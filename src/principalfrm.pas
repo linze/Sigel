@@ -110,7 +110,6 @@ begin
                     ProcesarListaEspera;
                     uDatos.Guardar(frmFecha.Fecha);
                 end;
-                //uDatos.LiberarDatos;
             finally
                 frmAnularCompra.Free;
             end;
@@ -505,14 +504,14 @@ begin
                     Localidad.Estado := Comprada;
                     Sala.Cambiar(Localidad);
                     Espera.Asignada := True;
-                    Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+                    Espera.LocalidadesAsignadas := Esp8era.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
                 end;
                 Esperas.Items[i] := Espera;
             end;
-            i := i + 1;
-            FinDeLaLista := (i = Esperas.Count);
-            SalaLlena := Sala.EstaCompleto;
         end;
+        i := i + 1;
+        FinDeLaLista := (i = Esperas.Count);
+        SalaLlena := Sala.EstaCompleto;
     end;
 end;
 
