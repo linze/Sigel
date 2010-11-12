@@ -504,7 +504,7 @@ begin
                     Localidad.Estado := Comprada;
                     Sala.Cambiar(Localidad);
                     Espera.Asignada := True;
-                    Espera.LocalidadesAsignadas := Esp8era.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
+                    Espera.LocalidadesAsignadas := Espera.LocalidadesAsignadas + uFuncionesComunes.LocalidadToString(Localidad);
                 end;
                 Esperas.Items[i] := Espera;
             end;
