@@ -30,15 +30,16 @@ LazarusResources.Add('TfrmDatosReserva','FORMDATA',[
   +'me'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#7'OnClick'#7#16'btnCancelarClic'
   +'k'#10'ParentFont'#8#8'TabOrder'#2#1#0#0#5'TEdit'#7'eNombre'#4'Left'#2#24#6
   +'Height'#2#29#3'Top'#2'@'#5'Width'#3' '#1#11'Font.Height'#2#239#9'Font.Name'
-  +#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#10'ParentFont'#8#8'TabOrder'#2#2#0#0
-  +#5'TEdit'#4'eDNI'#4'Left'#2#24#6'Height'#2#29#3'Top'#2'x'#5'Width'#3' '#1#8
-  +'CharCase'#7#11'ecUppercase'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10
-  +'Font.Style'#11#6'fsBold'#0#9'MaxLength'#2#9#10'ParentFont'#8#8'TabOrder'#2#3
-  +#0#0#5'TEdit'#9'eTelefono'#4'Left'#2#24#6'Height'#2#29#3'Top'#3#176#0#5'Widt'
-  +'h'#3' '#1#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6
-  +'fsBold'#0#9'MaxLength'#2#9#6'OnExit'#7#13'eTelefonoExit'#10'OnKeyPress'#7#17
-  +'eTelefonoKeyPress'#10'ParentFont'#8#8'TabOrder'#2#4#0#0#5'TEdit'#6'eEmail'#4
-  +'Left'#2#24#6'Height'#2#29#3'Top'#3#232#0#5'Width'#3' '#1#8'CharCase'#7#11'e'
-  +'cLowerCase'#11'Font.Height'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6
-  +'fsBold'#0#10'ParentFont'#8#8'TabOrder'#2#5#0#0#0
+  +#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#10'OnKeyPress'#7#15'eNombreKeyPress'
+  +#10'ParentFont'#8#8'TabOrder'#2#2#0#0#5'TEdit'#4'eDNI'#4'Left'#2#24#6'Height'
+  +#2#29#3'Top'#2'x'#5'Width'#3' '#1#8'CharCase'#7#11'ecUppercase'#11'Font.Heig'
+  +'ht'#2#239#9'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#9'MaxLength'
+  +#2#9#10'ParentFont'#8#8'TabOrder'#2#3#0#0#5'TEdit'#9'eTelefono'#4'Left'#2#24
+  +#6'Height'#2#29#3'Top'#3#176#0#5'Width'#3' '#1#11'Font.Height'#2#239#9'Font.'
+  +'Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#9'MaxLength'#2#9#6'OnExit'#7
+  +#13'eTelefonoExit'#10'OnKeyPress'#7#17'eTelefonoKeyPress'#10'ParentFont'#8#8
+  +'TabOrder'#2#4#0#0#5'TEdit'#6'eEmail'#4'Left'#2#24#6'Height'#2#29#3'Top'#3
+  +#232#0#5'Width'#3' '#1#8'CharCase'#7#11'ecLowerCase'#11'Font.Height'#2#239#9
+  +'Font.Name'#6#4'Sans'#10'Font.Style'#11#6'fsBold'#0#10'ParentFont'#8#8'TabOr'
+  +'der'#2#5#0#0#0
 ]);

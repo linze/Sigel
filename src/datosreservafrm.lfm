@@ -107,6 +107,7 @@ object frmDatosReserva: TfrmDatosReserva
     Font.Height = -17
     Font.Name = 'Sans'
     Font.Style = [fsBold]
+    OnKeyPress = eNombreKeyPress
     ParentFont = False
     TabOrder = 2
   end

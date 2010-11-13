@@ -1460,3 +1460,35 @@ Fila: 3, Numero: 5
 Estado: OCUPADA
 Fila: 3, Numero: 6
 Estado: OCUPADA
+
+Nombre: Juan Sánchez Garcia Cantidad: 1
+Dni: 43546891E Telefono: 679525088 Email: j.sanchez@gmail.com
+Fila: 1, Numero: 1
+Estado: OCUPADA
+
+Nombre: Maria Díaz Alonso Cantidad: 4
+Dni: 34855896F Telefono: 690137745 Email: md.alonso@gmail.com
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA
+
+Nombre: Juan Sánchez Garcia Cantidad: 1
+Dni: 43546891E Telefono: 679525088 Email: j.sanchez@gmail.com
+Fila: 1, Numero: 1
+Estado: OCUPADA
+
+Nombre: Maria Díaz Alonso Cantidad: 4
+Dni: 34855896F Telefono: 690137745 Email: md.alonso@gmail.com
+Fila: 2, Numero: 1
+Estado: OCUPADA
+Fila: 2, Numero: 2
+Estado: OCUPADA
+Fila: 2, Numero: 3
+Estado: OCUPADA
+Fila: 2, Numero: 4
+Estado: OCUPADA

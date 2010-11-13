@@ -40,6 +40,7 @@ type
     lbContacto: TLabel;
     procedure btnAceptarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure eNombreKeyPress(Sender: TObject; var Key: char);
     procedure eTelefonoExit(Sender: TObject);
     procedure eTelefonoKeyPress(Sender: TObject; var Key: char);
     procedure FormCreate(Sender: TObject);
@@ -65,6 +66,11 @@ implementation
 procedure TfrmDatosReserva.btnCancelarClick(Sender: TObject);
 begin
     Self.Close;
+end;
+
+procedure TfrmDatosReserva.eNombreKeyPress(Sender: TObject; var Key: char);
+begin
+    Key := uFuncionesComunes.EsLetra(Key);
 end;
 
 procedure TfrmDatosReserva.eTelefonoExit(Sender: TObject);
